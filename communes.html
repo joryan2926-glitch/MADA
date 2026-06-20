@@ -69,7 +69,53 @@
         </div>
       </section>
 
-      <section class="page-section section-light">
+      <section class="page-section section-light" id="carte-interactive">
+        <div class="section-heading center">
+          <p class="section-label">Carte interactive des communes</p>
+          <h2>Suivre les diagnostics et contributions par commune.</h2>
+          <p>La carte est prête à recevoir depuis Supabase les diagnostics, besoins remontés, projets proposés, référents et synthèses de contributions.</p>
+        </div>
+        <div class="commune-map-layout">
+          <div class="commune-map-visual">
+            <img src="assets/mada-logo-reference.png" alt="Carte stylisée de la Martinique">
+            <div class="territory-marker north-atlantic">Nord Atlantique</div>
+            <div class="territory-marker north-caribbean">Nord Caraïbe</div>
+            <div class="territory-marker center-zone">Centre</div>
+            <div class="territory-marker south-zone">Sud</div>
+          </div>
+          <div class="commune-selector">
+            <h3>34 communes à documenter</h3>
+            <div class="commune-chip-grid" aria-label="Liste des communes de Martinique">
+              <a href="#contribution-commune">Ajoupa-Bouillon</a><a href="#contribution-commune">Anses-d'Arlet</a><a href="#contribution-commune">Basse-Pointe</a><a href="#contribution-commune">Bellefontaine</a><a href="#contribution-commune">Case-Pilote</a><a href="#contribution-commune">Diamant</a><a href="#contribution-commune">Ducos</a><a href="#contribution-commune">Fonds-Saint-Denis</a><a href="#contribution-commune">Fort-de-France</a><a href="#contribution-commune">François</a><a href="#contribution-commune">Grand'Rivière</a><a href="#contribution-commune">Gros-Morne</a><a href="#contribution-commune">Lamentin</a><a href="#contribution-commune">Lorrain</a><a href="#contribution-commune">Macouba</a><a href="#contribution-commune">Marin</a><a href="#contribution-commune">Marigot</a><a href="#contribution-commune">Morne-Rouge</a><a href="#contribution-commune">Morne-Vert</a><a href="#contribution-commune">Prêcheur</a><a href="#contribution-commune">Rivière-Pilote</a><a href="#contribution-commune">Rivière-Salée</a><a href="#contribution-commune">Robert</a><a href="#contribution-commune">Saint-Esprit</a><a href="#contribution-commune">Saint-Joseph</a><a href="#contribution-commune">Saint-Pierre</a><a href="#contribution-commune">Sainte-Anne</a><a href="#contribution-commune">Sainte-Luce</a><a href="#contribution-commune">Sainte-Marie</a><a href="#contribution-commune">Schoelcher</a><a href="#contribution-commune">Trinité</a><a href="#contribution-commune">Trois-Îlets</a><a href="#contribution-commune">Vauclin</a><a href="#contribution-commune">Carbet</a>
+            </div>
+          </div>
+        </div>
+        <div class="commune-profile-grid" data-commune-profiles>
+          <article class="commune-profile-card"><h3>Fort-de-France</h3><p class="article-meta">Centre</p><p><strong>Diagnostic :</strong> centralité, logement, mobilité et activité économique.</p><p><strong>Besoins remontés :</strong> stationnement, sécurité, commerces, jeunesse.</p><p><strong>Projets proposés :</strong> mobilité, habitat, revitalisation et services publics.</p><p><strong>Référent :</strong> à désigner</p><p><strong>Contributions :</strong> en attente de remontées citoyennes.</p></article>
+          <article class="commune-profile-card"><h3>Trinité</h3><p class="article-meta">Nord Atlantique</p><p><strong>Diagnostic :</strong> potentiel agricole, littoral et équipements de proximité.</p><p><strong>Besoins remontés :</strong> eau, mobilités, emploi local.</p><p><strong>Projets proposés :</strong> agriculture, tourisme durable, relais communal.</p><p><strong>Référent :</strong> à désigner</p><p><strong>Contributions :</strong> en attente de remontées citoyennes.</p></article>
+          <article class="commune-profile-card"><h3>Marin</h3><p class="article-meta">Sud</p><p><strong>Diagnostic :</strong> pôle nautique, tourisme, logement et jeunesse.</p><p><strong>Besoins remontés :</strong> accès, emploi, formation, cadre de vie.</p><p><strong>Projets proposés :</strong> mobilité maritime, économie bleue, formation.</p><p><strong>Référent :</strong> à désigner</p><p><strong>Contributions :</strong> en attente de remontées citoyennes.</p></article>
+        </div>
+      </section>
+
+      <section class="page-section section-soft" id="contribution-commune">
+        <div class="two-column">
+          <div class="section-heading">
+            <p class="section-label">Contribution communale</p>
+            <h2>Déposer un diagnostic, un besoin ou un projet pour sa commune.</h2>
+            <p>Les contributions sont enregistrées dans Supabase et pourront nourrir les fiches communales.</p>
+          </div>
+          <form class="form-shell" data-supabase-table="program_contributions">
+            <input type="hidden" name="theme" value="Carte interactive des communes">
+            <p class="form-note">Contribution commune</p>
+            <div class="form-grid"><label>Nom<input name="full_name" required></label><label>Email<input name="email" type="email" required></label></div>
+            <label>Commune et contribution<textarea name="proposal" required></textarea></label>
+            <label class="consent"><input name="consent" type="checkbox" required> J'accepte que MADA conserve cette contribution pour le travail territorial. <a href="politique-confidentialite.html">Politique de confidentialité</a></label>
+            <button type="submit">Envoyer la contribution</button>
+          </form>
+        </div>
+      </section>
+
+      <section class="page-section section-light" id="relais">
         <div class="two-column">
           <div class="section-heading">
             <p class="section-label">Devenir relais</p>

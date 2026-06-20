@@ -131,6 +131,12 @@
       { table: "program_contributions", label: "Contributions programme", columns: "id, created_at, full_name, email, theme, proposal" },
       { table: "local_relays", label: "Relais communaux", columns: "id, created_at, full_name, email, city, message" },
       { table: "donation_intents", label: "Intentions de don", columns: "id, created_at, full_name, email, amount, city, message" },
+      { table: "project_votes", label: "Votes citoyens", columns: "id, created_at, full_name, email, project_key, priority_level, comment" },
+      { table: "territory_indicators", label: "Observatoire", columns: "id, updated_at, label, category, value, unit, period, status" },
+      { table: "team_profiles", label: "Équipe & gouvernance", columns: "id, updated_at, full_name, role_title, team_area, city, status" },
+      { table: "documents_library", label: "Documentation", columns: "id, published_at, title, document_type, related_project, status" },
+      { table: "commune_profiles", label: "Fiches communales", columns: "id, updated_at, city, territory_area, local_referent, status" },
+      { table: "project_progress", label: "Avancement projets", columns: "id, updated_at, project_title, phase, progress_percent, status" },
     ];
     submissions.innerHTML = "";
     for (const source of sources) {
@@ -158,11 +164,13 @@
         ul.className = "admin-news-list";
         rows.forEach((row) => {
           const item = document.createElement("li");
-          const detail = row.engagement_type || row.theme || row.subject || row.city || row.amount || "";
-          const date = row.created_at ? new Date(row.created_at).toLocaleString("fr-FR") : "";
+          const detail = row.engagement_type || row.theme || row.subject || row.city || row.amount || row.project_key || row.category || row.team_area || row.document_type || row.phase || "";
+          const primary = row.full_name || row.email || row.title || row.label || row.project_title || row.role_title || row.city || row.id || "";
+          const dateValue = row.created_at || row.updated_at || row.published_at;
+          const date = dateValue ? new Date(dateValue).toLocaleString("fr-FR") : "";
           item.innerHTML = `
-            <strong>${escapeHtml(row.full_name || row.email)}</strong>
-            <span>${escapeHtml(row.email)}${detail ? " - " + escapeHtml(detail) : ""}${date ? " - " + escapeHtml(date) : ""}</span>
+            <strong>${escapeHtml(primary)}</strong>
+            <span>${row.email ? escapeHtml(row.email) : ""}${detail ? " - " + escapeHtml(detail) : ""}${date ? " - " + escapeHtml(date) : ""}</span>
           `;
           ul.appendChild(item);
         });

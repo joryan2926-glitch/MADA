@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Observatoire MADA - Indicateurs de Martinique</title>
+    <meta name="description" content="Observatoire territorial MADA : population, emploi, logement, santé, éducation, agriculture, tourisme, sécurité et transition écologique en Martinique.">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html"><img src="assets/mada-logo-horizontal.png" alt="Logo MADA"></a>
+      <input class="nav-toggle" type="checkbox" id="nav-toggle" aria-label="Ouvrir le menu">
+      <label class="nav-button" for="nav-toggle" aria-hidden="true"><span></span><span></span><span></span></label>
+      <nav class="main-nav" aria-label="Navigation principale">
+        <a href="index.html">Accueil</a>
+        <a href="mouvement.html">Le Mouvement</a>
+        <a href="programme-2028.html">Programme 2028</a>
+        <a class="active" href="observatoire.html">Observatoire</a>
+        <a href="communes.html">Nos communes</a>
+        <a href="agir.html">Agir avec nous</a>
+        <a href="actualites.html">Actualités</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <a class="join-button" href="agir.html#adherer">Adhérer</a>
+    </header>
+
+    <main>
+      <section class="page-hero">
+        <div class="page-hero-content">
+          <p class="kicker">Observatoire MADA</p>
+          <h1>Mesurer pour décider.</h1>
+          <p>Un tableau d'indicateurs pour suivre les réalités de la Martinique et éclairer les priorités du programme territorial.</p>
+        </div>
+        <div class="page-hero-media"><img src="assets/mada-flag-official.jfif" alt="Drapeau officiel rouge, vert et noir"></div>
+      </section>
+
+      <div class="objective-bar">Objectif : disposer d'une base de données publique, actualisable depuis Supabase.</div>
+
+      <section class="page-section section-light">
+        <div class="section-heading center">
+          <p class="section-label">Indicateurs du territoire</p>
+          <h2>Les données clés à suivre pour construire MADA 2040.</h2>
+          <p>Les valeurs ci-dessous peuvent être remplacées automatiquement par les données publiées dans la table Supabase `territory_indicators`.</p>
+        </div>
+        <div class="metric-grid" data-observatory-list>
+          <article class="metric-card"><p class="article-meta">Démographie</p><h3>Population</h3><strong>À renseigner</strong><p>Évolution de la population, soldes migratoires et répartition par âge.</p><span>Période à préciser</span></article>
+          <article class="metric-card"><p class="article-meta">Économie</p><h3>Emploi</h3><strong>À renseigner</strong><p>Volume d'emplois, secteurs porteurs et besoins en compétences.</p><span>Période à préciser</span></article>
+          <article class="metric-card"><p class="article-meta">Économie</p><h3>Chômage</h3><strong>À renseigner</strong><p>Suivi du chômage par âge, commune et bassin de vie.</p><span>Période à préciser</span></article>
+          <article class="metric-card"><p class="article-meta">Habitat</p><h3>Logement</h3><strong>À renseigner</strong><p>Offre disponible, besoins sociaux, rénovation et adaptation climatique.</p><span>Période à préciser</span></article>
+          <article class="metric-card"><p class="article-meta">Habitat</p><h3>Vacance immobilière</h3><strong>À renseigner</strong><p>Repérage des logements vacants et potentiel de remise sur le marché.</p><span>Période à préciser</span></article>
+          <article class="metric-card"><p class="article-meta">Santé</p><h3>Santé</h3><strong>À renseigner</strong><p>Accès aux soins, prévention, vieillissement et proximité médicale.</p><span>Période à préciser</span></article>
+          <article class="metric-card"><p class="article-meta">Jeunesse</p><h3>Éducation</h3><strong>À renseigner</strong><p>Formation, réussite, orientation et insertion professionnelle.</p><span>Période à préciser</span></article>
+          <article class="metric-card"><p class="article-meta">Production</p><h3>Agriculture</h3><strong>À renseigner</strong><p>Surfaces, productions locales, transformation et souveraineté alimentaire.</p><span>Période à préciser</span></article>
+          <article class="metric-card"><p class="article-meta">Attractivité</p><h3>Tourisme</h3><strong>À renseigner</strong><p>Fréquentation, retombées locales, patrimoine et saisonnalité.</p><span>Période à préciser</span></article>
+          <article class="metric-card"><p class="article-meta">Entrepreneuriat</p><h3>Création d'entreprises</h3><strong>À renseigner</strong><p>Dynamique entrepreneuriale, filières et accompagnement.</p><span>Période à préciser</span></article>
+          <article class="metric-card"><p class="article-meta">Cadre de vie</p><h3>Sécurité</h3><strong>À renseigner</strong><p>Indicateurs de tranquillité publique, prévention et médiation.</p><span>Période à préciser</span></article>
+          <article class="metric-card"><p class="article-meta">Climat</p><h3>Transition écologique</h3><strong>À renseigner</strong><p>Énergie, déchets, eau, biodiversité et adaptation climatique.</p><span>Période à préciser</span></article>
+        </div>
+      </section>
+
+      <section class="page-section section-soft">
+        <div class="two-column">
+          <div class="section-heading">
+            <p class="section-label">Contribuer aux données</p>
+            <h2>Signaler une donnée, une étude ou un besoin local.</h2>
+            <p>Citoyens, associations, entreprises et experts peuvent proposer des sources pour enrichir l'observatoire.</p>
+          </div>
+          <form class="form-shell" data-supabase-table="program_contributions">
+            <input type="hidden" name="theme" value="Observatoire MADA">
+            <p class="form-note">Contribution observatoire</p>
+            <div class="form-grid"><label>Nom<input name="full_name" required></label><label>Email<input name="email" type="email" required></label></div>
+            <label>Donnée, source ou observation<textarea name="proposal" required></textarea></label>
+            <label class="consent"><input name="consent" type="checkbox" required> J'accepte que MADA conserve cette contribution pour le travail programmatique. <a href="politique-confidentialite.html">Politique de confidentialité</a></label>
+            <button type="submit">Transmettre</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div><img src="assets/mada-logo-horizontal.png" alt="MADA"><p>Construire la Martinique de demain.</p></div>
+      <nav class="footer-nav" aria-label="Navigation secondaire"><a href="mouvement.html">Le Mouvement</a><a href="programme-2028.html">Programme 2028</a><a href="observatoire.html">Observatoire</a><a href="communes.html">Nos communes</a><a href="agir.html">Agir avec nous</a><a href="equipe-gouvernance.html">Équipe & Gouvernance</a><a href="tableau-bord.html">Tableau de bord</a><a href="mentions-legales.html">Mentions légales</a></nav>
+      <img class="footer-flag" src="assets/mada-flag-official.jfif" alt="Drapeau officiel rouge, vert et noir">
+      <p class="legal">© 2026 MADA - Tous droits réservés</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="assets/js/supabase-config.js"></script>
+    <script src="assets/js/mada-supabase.js"></script>
+  </body>
+</html>

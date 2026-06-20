@@ -101,6 +101,141 @@
     data.forEach((post) => target.appendChild(renderPost(post)));
   }
 
+  function setTextList(target, rows, renderer) {
+    if (!target || !rows || rows.length === 0) return;
+    target.innerHTML = "";
+    rows.forEach((row) => target.appendChild(renderer(row)));
+  }
+
+  async function loadObservatoryIndicators() {
+    const target = document.querySelector("[data-observatory-list]");
+    if (!target || !client) return;
+    const { data, error } = await client
+      .from("territory_indicators")
+      .select("label, category, value, unit, period, trend, description")
+      .eq("status", "published")
+      .order("display_order", { ascending: true });
+    if (error) return;
+    setTextList(target, data, (indicator) => {
+      const article = document.createElement("article");
+      article.className = "metric-card";
+      article.innerHTML = `
+        <p class="article-meta">${escapeHtml(indicator.category || "Indicateur")}</p>
+        <h3>${escapeHtml(indicator.label || "")}</h3>
+        <strong>${escapeHtml(indicator.value || "À renseigner")}${indicator.unit ? ` ${escapeHtml(indicator.unit)}` : ""}</strong>
+        <p>${escapeHtml(indicator.description || "Donnée actualisable depuis Supabase.")}</p>
+        <span>${escapeHtml(indicator.period || "Période à préciser")}${indicator.trend ? ` - ${escapeHtml(indicator.trend)}` : ""}</span>
+      `;
+      return article;
+    });
+  }
+
+  async function loadDocuments() {
+    const target = document.querySelector("[data-documents-list]");
+    if (!target || !client) return;
+    const { data, error } = await client
+      .from("documents_library")
+      .select("title, document_type, summary, file_url, related_project, published_at")
+      .eq("status", "published")
+      .order("display_order", { ascending: true })
+      .order("published_at", { ascending: false });
+    if (error) return;
+    setTextList(target, data, (documentItem) => {
+      const article = document.createElement("article");
+      article.className = "card";
+      article.innerHTML = `
+        <p class="article-meta">${escapeHtml(documentItem.document_type || "Document")}</p>
+        <h3>${escapeHtml(documentItem.title || "")}</h3>
+        <p>${escapeHtml(documentItem.summary || "")}</p>
+        ${documentItem.related_project ? `<p class="form-note">${escapeHtml(documentItem.related_project)}</p>` : ""}
+        ${documentItem.file_url ? `<div class="cta-row"><a class="btn btn-line" href="${escapeHtml(documentItem.file_url)}">Télécharger</a></div>` : ""}
+      `;
+      return article;
+    });
+  }
+
+  async function loadTeamProfiles() {
+    const target = document.querySelector("[data-team-profiles]");
+    if (!target || !client) return;
+    const { data, error } = await client
+      .from("team_profiles")
+      .select("full_name, role_title, team_area, city, biography, skills, photo_url")
+      .eq("status", "published")
+      .order("display_order", { ascending: true });
+    if (error) return;
+    setTextList(target, data, (profile) => {
+      const article = document.createElement("article");
+      article.className = "profile-card";
+      article.innerHTML = `
+        <img src="${escapeHtml(profile.photo_url || "assets/mada-logo-reference.png")}" alt="${escapeHtml(profile.full_name || "Profil MADA")}">
+        <div>
+          <p class="article-meta">${escapeHtml(profile.role_title || "Équipe MADA")}</p>
+          <h3>${escapeHtml(profile.full_name || "Profil à compléter")}</h3>
+          <p>${escapeHtml(profile.biography || "Biographie à publier depuis Supabase.")}</p>
+          <span>${escapeHtml(profile.skills || profile.team_area || "Compétences à préciser")}</span>
+          <strong>Commune : ${escapeHtml(profile.city || "à préciser")}</strong>
+        </div>
+      `;
+      return article;
+    });
+  }
+
+  async function loadProjectProgress() {
+    const target = document.querySelector("[data-project-progress]");
+    if (!target || !client) return;
+    const { data, error } = await client
+      .from("project_progress")
+      .select("project_key, project_title, phase, progress_percent, next_milestone")
+      .eq("status", "published")
+      .order("project_title", { ascending: true });
+    if (error) return;
+    setTextList(target, data, (project) => {
+      const article = document.createElement("article");
+      article.className = "progress-card";
+      const progress = Math.max(0, Math.min(100, Number(project.progress_percent) || 0));
+      article.innerHTML = `
+        <h3>${escapeHtml(project.project_title || "")}</h3>
+        <p>${escapeHtml(project.phase || "Phase à renseigner")}</p>
+        <div class="progress-track"><span style="width: ${progress}%"></span></div>
+        <strong>${progress}%</strong>
+        <p>${escapeHtml(project.next_milestone || "Prochaine étape à préciser.")}</p>
+      `;
+      return article;
+    });
+  }
+
+  async function loadCommuneProfiles() {
+    const target = document.querySelector("[data-commune-profiles]");
+    if (!target || !client) return;
+    const { data, error } = await client
+      .from("commune_profiles")
+      .select("city, territory_area, diagnostic, needs, proposed_projects, local_referent, contributions_summary")
+      .eq("status", "published")
+      .order("city", { ascending: true });
+    if (error) return;
+    setTextList(target, data, (commune) => {
+      const article = document.createElement("article");
+      article.className = "commune-profile-card";
+      article.innerHTML = `
+        <h3>${escapeHtml(commune.city || "")}</h3>
+        <p class="article-meta">${escapeHtml(commune.territory_area || "Commune")}</p>
+        <p><strong>Diagnostic :</strong> ${escapeHtml(commune.diagnostic || "À compléter.")}</p>
+        <p><strong>Besoins remontés :</strong> ${escapeHtml(commune.needs || "À compléter.")}</p>
+        <p><strong>Projets proposés :</strong> ${escapeHtml(commune.proposed_projects || "À compléter.")}</p>
+        <p><strong>Référent :</strong> ${escapeHtml(commune.local_referent || "À désigner")}</p>
+        <p><strong>Contributions :</strong> ${escapeHtml(commune.contributions_summary || "En attente de contributions citoyennes.")}</p>
+      `;
+      return article;
+    });
+  }
+
   document.addEventListener("submit", handleFormSubmit);
-  document.addEventListener("DOMContentLoaded", loadPublicNews);
+  document.addEventListener("DOMContentLoaded", () => {
+    loadPublicNews();
+    loadObservatoryIndicators();
+    loadDocuments();
+    loadTeamProfiles();
+    loadProjectProgress();
+    loadCommuneProfiles();
+  });
 })();

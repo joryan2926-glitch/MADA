@@ -39,14 +39,17 @@
 
       <section class="page-section section-light">
         <div class="section-heading center">
-          <p class="section-label">S'engager</p>
-          <h2>Choisir son rôle dans le mouvement.</h2>
+          <p class="section-label">Réseau territorial MADA</p>
+          <h2>Rejoindre le mouvement.</h2>
+          <p>MADA structure un réseau militant, communal, expert et partenarial pour préparer 2028 et construire une plateforme territoriale durable.</p>
         </div>
         <div class="grid-4">
           <article class="card" id="adherer"><h3>Adhérer</h3><p>Rejoindre officiellement le mouvement et participer à sa construction politique.</p></article>
           <article class="card" id="benevole"><h3>Devenir bénévole</h3><p>Aider lors des réunions, campagnes, événements et actions de terrain.</p></article>
-          <article class="card"><h3>Contribuer au programme</h3><p>Participer aux groupes de travail liés aux 8 axes officiels de MADA.</p></article>
-          <article class="card"><h3>Relayer MADA</h3><p>Diffuser les messages, inviter autour de soi et renforcer la communauté.</p></article>
+          <article class="card" id="relais-communal"><h3>Devenir relais communal</h3><p>Organiser l'écoute citoyenne et faire remonter les priorités de sa commune.</p></article>
+          <article class="card" id="expert"><h3>Devenir expert</h3><p>Apporter une compétence économique, sociale, juridique, sanitaire, agricole ou numérique.</p></article>
+          <article class="card" id="partenaire"><h3>Devenir partenaire</h3><p>Associer une structure, une association, une entreprise ou un réseau local.</p></article>
+          <article class="card" id="equipe-2028"><h3>Rejoindre l'équipe MADA 2028</h3><p>Prendre part à l'organisation politique, territoriale et programmatique.</p></article>
         </div>
       </section>
 
@@ -63,7 +66,7 @@
               <li>Participer aux réunions publiques.</li>
               <li>Contribuer aux 8 axes officiels du programme 2028.</li>
               <li>Créer un relais dans sa commune.</li>
-              <li>Aider à la communication numérique.</li>
+              <li>Rejoindre une équipe experte ou territoriale.</li>
             </ul>
           </div>
           <form class="form-shell" data-supabase-table="memberships" data-engagement-router="true">
@@ -76,10 +79,28 @@
               <label>Téléphone<input name="phone"></label>
               <label>Commune<input name="city"></label>
             </div>
-            <label>Je souhaite<select name="engagement_type"><option>Adhérer</option><option>Devenir bénévole</option><option>Rejoindre un groupe programme sur les 8 axes</option><option>Créer un relais communal</option><option>Relayer sur les réseaux</option></select></label>
+            <label>Je souhaite<select name="engagement_type"><option>Adhérer</option><option>Devenir bénévole</option><option>Devenir expert</option><option>Devenir partenaire</option><option>Rejoindre l'équipe MADA 2028</option><option>Rejoindre un groupe programme sur les 8 axes</option><option>Relayer sur les réseaux</option></select></label>
             <label>Message<textarea name="message"></textarea></label>
             <label class="consent"><input name="consent" type="checkbox" required> J'accepte que MADA conserve ces informations pour traiter ma demande d'engagement. <a href="politique-confidentialite.html">Politique de confidentialité</a></label>
             <button type="submit">Envoyer ma demande</button>
+          </form>
+        </div>
+      </section>
+
+      <section class="page-section section-light">
+        <div class="two-column">
+          <div class="section-heading">
+            <p class="section-label">Relais communal</p>
+            <h2>Ouvrir un point d'écoute MADA dans sa commune.</h2>
+            <p>Ce formulaire alimente directement la table Supabase `local_relays` pour organiser les référents et les remontées territoriales.</p>
+          </div>
+          <form class="form-shell" data-supabase-table="local_relays">
+            <p class="form-note">Devenir relais communal</p>
+            <div class="form-grid"><label>Nom<input name="full_name" required></label><label>Email<input name="email" type="email" required></label></div>
+            <label>Commune<input name="city" required></label>
+            <label>Besoins observés, disponibilité ou idée d'action<textarea name="message"></textarea></label>
+            <label class="consent"><input name="consent" type="checkbox" required> J'accepte que MADA conserve ces informations pour organiser un relais local. <a href="politique-confidentialite.html">Politique de confidentialité</a></label>
+            <button type="submit">Créer un relais communal</button>
           </form>
         </div>
       </section>

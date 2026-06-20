@@ -88,6 +88,92 @@ create table if not exists public.donation_intents (
   created_at timestamptz not null default now()
 );
 
+create table if not exists public.territory_indicators (
+  id uuid primary key default gen_random_uuid(),
+  indicator_key text not null unique,
+  label text not null,
+  category text not null,
+  value text,
+  unit text,
+  period text,
+  trend text,
+  description text,
+  source_name text,
+  source_url text,
+  display_order integer not null default 0,
+  status text not null default 'published',
+  updated_at timestamptz not null default now(),
+  created_at timestamptz not null default now()
+);
+
+create table if not exists public.team_profiles (
+  id uuid primary key default gen_random_uuid(),
+  full_name text not null,
+  role_title text not null,
+  team_area text,
+  city text,
+  biography text,
+  skills text,
+  photo_url text,
+  display_order integer not null default 0,
+  status text not null default 'draft',
+  updated_at timestamptz not null default now(),
+  created_at timestamptz not null default now()
+);
+
+create table if not exists public.documents_library (
+  id uuid primary key default gen_random_uuid(),
+  title text not null,
+  document_type text not null,
+  summary text,
+  file_url text,
+  related_project text,
+  published_at timestamptz,
+  display_order integer not null default 0,
+  status text not null default 'draft',
+  updated_at timestamptz not null default now(),
+  created_at timestamptz not null default now()
+);
+
+create table if not exists public.commune_profiles (
+  id uuid primary key default gen_random_uuid(),
+  city text not null unique,
+  territory_area text,
+  diagnostic text,
+  needs text,
+  proposed_projects text,
+  local_referent text,
+  contributions_summary text,
+  status text not null default 'published',
+  updated_at timestamptz not null default now(),
+  created_at timestamptz not null default now()
+);
+
+create table if not exists public.project_progress (
+  id uuid primary key default gen_random_uuid(),
+  project_key text not null unique,
+  project_title text not null,
+  phase text,
+  progress_percent integer not null default 0 check (progress_percent between 0 and 100),
+  next_milestone text,
+  updated_at timestamptz not null default now(),
+  status text not null default 'published',
+  created_at timestamptz not null default now()
+);
+
+create table if not exists public.project_votes (
+  id uuid primary key default gen_random_uuid(),
+  full_name text not null,
+  email text not null,
+  project_key text not null,
+  priority_level text not null,
+  comment text,
+  consent boolean not null default false,
+  source_page text,
+  user_agent text,
+  created_at timestamptz not null default now()
+);
+
 create table if not exists public.admin_profiles (
   user_id uuid primary key references auth.users(id) on delete cascade,
   email text not null,
@@ -200,6 +286,12 @@ alter table public.donation_intents enable row level security;
 alter table public.admin_profiles enable row level security;
 alter table public.admin_invites enable row level security;
 alter table public.news_posts enable row level security;
+alter table public.territory_indicators enable row level security;
+alter table public.team_profiles enable row level security;
+alter table public.documents_library enable row level security;
+alter table public.commune_profiles enable row level security;
+alter table public.project_progress enable row level security;
+alter table public.project_votes enable row level security;
 
 drop policy if exists "public insert memberships" on public.memberships;
 drop policy if exists "public insert volunteers" on public.volunteers;
@@ -221,6 +313,18 @@ drop policy if exists "public read published news" on public.news_posts;
 drop policy if exists "admins insert news" on public.news_posts;
 drop policy if exists "admins update news" on public.news_posts;
 drop policy if exists "admins delete news" on public.news_posts;
+drop policy if exists "public read published territory indicators" on public.territory_indicators;
+drop policy if exists "admins manage territory indicators" on public.territory_indicators;
+drop policy if exists "public read published team profiles" on public.team_profiles;
+drop policy if exists "admins manage team profiles" on public.team_profiles;
+drop policy if exists "public read published documents" on public.documents_library;
+drop policy if exists "admins manage documents" on public.documents_library;
+drop policy if exists "public read published commune profiles" on public.commune_profiles;
+drop policy if exists "admins manage commune profiles" on public.commune_profiles;
+drop policy if exists "public read published project progress" on public.project_progress;
+drop policy if exists "admins manage project progress" on public.project_progress;
+drop policy if exists "public insert project votes" on public.project_votes;
+drop policy if exists "admins read project votes" on public.project_votes;
 
 create policy "public insert memberships" on public.memberships for insert to anon, authenticated with check (consent = true);
 create policy "public insert volunteers" on public.volunteers for insert to anon, authenticated with check (consent = true);
@@ -245,8 +349,27 @@ create policy "admins insert news" on public.news_posts for insert to authentica
 create policy "admins update news" on public.news_posts for update to authenticated using (public.is_admin()) with check (public.is_admin());
 create policy "admins delete news" on public.news_posts for delete to authenticated using (public.is_admin());
 
+create policy "public read published territory indicators" on public.territory_indicators for select to anon, authenticated using (status = 'published' or public.is_admin());
+create policy "admins manage territory indicators" on public.territory_indicators for all to authenticated using (public.is_admin()) with check (public.is_admin());
+create policy "public read published team profiles" on public.team_profiles for select to anon, authenticated using (status = 'published' or public.is_admin());
+create policy "admins manage team profiles" on public.team_profiles for all to authenticated using (public.is_admin()) with check (public.is_admin());
+create policy "public read published documents" on public.documents_library for select to anon, authenticated using (status = 'published' or public.is_admin());
+create policy "admins manage documents" on public.documents_library for all to authenticated using (public.is_admin()) with check (public.is_admin());
+create policy "public read published commune profiles" on public.commune_profiles for select to anon, authenticated using (status = 'published' or public.is_admin());
+create policy "admins manage commune profiles" on public.commune_profiles for all to authenticated using (public.is_admin()) with check (public.is_admin());
+create policy "public read published project progress" on public.project_progress for select to anon, authenticated using (status = 'published' or public.is_admin());
+create policy "admins manage project progress" on public.project_progress for all to authenticated using (public.is_admin()) with check (public.is_admin());
+create policy "public insert project votes" on public.project_votes for insert to anon, authenticated with check (consent = true);
+create policy "admins read project votes" on public.project_votes for select to authenticated using (public.is_admin());
+
 create index if not exists news_posts_status_published_at_idx on public.news_posts(status, published_at desc);
 create index if not exists admin_profiles_email_lower_idx on public.admin_profiles (lower(email));
 create index if not exists memberships_created_at_idx on public.memberships(created_at desc);
 create index if not exists volunteers_created_at_idx on public.volunteers(created_at desc);
 create index if not exists newsletter_created_at_idx on public.newsletter_subscribers(created_at desc);
+create index if not exists territory_indicators_status_order_idx on public.territory_indicators(status, display_order);
+create index if not exists team_profiles_status_order_idx on public.team_profiles(status, display_order);
+create index if not exists documents_library_status_order_idx on public.documents_library(status, display_order, published_at desc);
+create index if not exists commune_profiles_city_idx on public.commune_profiles(city);
+create index if not exists project_progress_status_title_idx on public.project_progress(status, project_title);
+create index if not exists project_votes_project_created_idx on public.project_votes(project_key, created_at desc);
