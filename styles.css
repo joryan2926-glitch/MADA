@@ -514,6 +514,168 @@ textarea {
   background: radial-gradient(circle at 8px 10px, var(--gold) 0 5px, transparent 6px) no-repeat;
 }
 
+.mada-2040 {
+  position: relative;
+  overflow: hidden;
+}
+
+.mada-2040 .section-heading p:not(.section-label) {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.mada-2040-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 18px;
+  align-items: stretch;
+}
+
+.mada-2040-panel,
+.emblem-project {
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+}
+
+.mada-2040-panel {
+  display: grid;
+  gap: 24px;
+  padding: clamp(24px, 4vw, 36px);
+  border: 1px solid var(--line);
+  background: var(--paper);
+}
+
+.mada-2040-panel.dark {
+  border-color: rgba(255, 194, 10, 0.24);
+  background:
+    linear-gradient(135deg, rgba(255, 194, 10, 0.08), transparent 44%),
+    linear-gradient(150deg, var(--green-950), var(--green-850));
+  color: var(--white);
+}
+
+.panel-heading {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+}
+
+.panel-heading span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: var(--green-950);
+  color: var(--gold);
+  font-weight: 950;
+}
+
+.mada-2040-panel.dark .panel-heading span {
+  background: var(--gold);
+  color: #171400;
+}
+
+.panel-heading h3,
+.emblem-project h3 {
+  margin: 0;
+  color: var(--green-950);
+  font-size: clamp(22px, 3vw, 34px);
+  line-height: 1.05;
+  font-weight: 950;
+  text-transform: uppercase;
+}
+
+.mada-2040-panel.dark .panel-heading h3 {
+  color: var(--white);
+}
+
+.strategy-list {
+  display: grid;
+  gap: 12px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  counter-reset: strategy;
+}
+
+.strategy-list li {
+  position: relative;
+  min-height: 52px;
+  padding: 14px 16px 14px 56px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--white);
+  color: var(--green-950);
+  font-weight: 850;
+  overflow-wrap: anywhere;
+}
+
+.strategy-list li::before {
+  position: absolute;
+  top: 14px;
+  left: 16px;
+  color: var(--gold-700);
+  font-weight: 950;
+  counter-increment: strategy;
+  content: counter(strategy, decimal-leading-zero);
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.project-grid span {
+  display: grid;
+  align-items: center;
+  min-height: 74px;
+  padding: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--white);
+  font-weight: 950;
+  text-transform: uppercase;
+  overflow-wrap: anywhere;
+}
+
+.emblem-project {
+  display: grid;
+  grid-template-columns: minmax(240px, 0.86fr) minmax(0, 1.2fr);
+  gap: clamp(22px, 4vw, 42px);
+  align-items: center;
+  margin-top: 18px;
+  padding: clamp(26px, 5vw, 46px);
+  border-left: 8px solid var(--red);
+  background:
+    linear-gradient(90deg, rgba(255, 194, 10, 0.14), transparent 55%),
+    var(--green-950);
+  color: var(--white);
+}
+
+.emblem-project h3 {
+  color: var(--gold);
+}
+
+.emblem-project p {
+  margin: 0;
+  color: #edf4ee;
+  font-size: 18px;
+}
+
+.emblem-project .section-label {
+  color: var(--white);
+}
+
+.emblem-subtitle {
+  margin-top: 10px !important;
+  color: var(--white) !important;
+  font-weight: 950;
+  text-transform: uppercase;
+}
+
 .timeline {
   display: grid;
   gap: 16px;
@@ -787,7 +949,9 @@ textarea {
   .news-layout,
   .territory-layout,
   .contact-card,
-  .don-panel {
+  .don-panel,
+  .mada-2040-layout,
+  .emblem-project {
     grid-template-columns: 1fr;
   }
 
@@ -855,6 +1019,10 @@ textarea {
 
   .card {
     min-height: 0;
+  }
+
+  .project-grid {
+    grid-template-columns: 1fr;
   }
 
   .map-panel {
