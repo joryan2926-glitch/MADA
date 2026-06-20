@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Contact - MADA</title>
+    <meta name="description" content="Contacter MADA, Mouvement pour l'Avenir, le Développement et l'Autodétermination.">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html"><img src="assets/mada-logo-horizontal.png" alt="Logo MADA"></a>
+      <input class="nav-toggle" type="checkbox" id="nav-toggle" aria-label="Ouvrir le menu">
+      <label class="nav-button" for="nav-toggle" aria-hidden="true"><span></span><span></span><span></span></label>
+      <nav class="main-nav" aria-label="Navigation principale">
+        <a href="index.html">Accueil</a>
+        <a href="mouvement.html">Le Mouvement</a>
+        <a href="programme-2028.html">Programme 2028</a>
+        <a href="actualites.html">Actualités</a>
+        <a href="communes.html">Nos communes</a>
+        <a href="agir.html">Agir avec nous</a>
+        <a href="don.html">Faire un don</a>
+        <a class="active" href="contact.html">Contact</a>
+      </nav>
+      <a class="join-button" href="agir.html#adherer">Adhérer</a>
+    </header>
+
+    <main>
+      <section class="page-hero">
+        <div class="page-hero-content">
+          <p class="kicker">Contact</p>
+          <h1>Créer du lien avec les citoyens.</h1>
+          <p>Une question, une proposition, une demande presse, une initiative locale ou une volonté d'engagement : MADA doit rester accessible.</p>
+        </div>
+        <div class="page-hero-media"><img src="assets/mada-flag-official.jfif" alt="Drapeau officiel rouge, vert et noir"></div>
+      </section>
+
+      <div class="objective-bar">Objectif de la page : faciliter la prise de contact et le lien citoyen.</div>
+
+      <section class="page-section section-light">
+        <div class="contact-card">
+          <div>
+            <p class="section-label">Coordonnées officielles</p>
+            <h2>Nous contacter.</h2>
+            <p class="large-copy">Mouvement pour l'Avenir, le Développement et l'Autodétermination.</p>
+          </div>
+          <address>
+            <a href="tel:+33605939844">06 05 93 98 44</a>
+            <a href="mailto:contact@mada-martinique.fr">contact@mada-martinique.fr</a>
+            <span>mada-martinique.fr</span>
+            <span>25 rue Élise Gervais, 42000 Saint-Étienne</span>
+            <span>Association loi 1901</span>
+          </address>
+        </div>
+      </section>
+
+      <section class="page-section section-soft">
+        <div class="two-column">
+          <div class="section-heading">
+            <p class="section-label">Message citoyen</p>
+            <h2>Écrire au mouvement.</h2>
+            <p>Utilisez ce formulaire pour proposer une idée, demander un échange, rejoindre une action ou signaler une priorité locale.</p>
+          </div>
+          <form class="form-shell" action="mailto:contact@mada-martinique.fr" method="post" enctype="text/plain">
+            <p class="form-note">Formulaire de contact</p>
+            <div class="form-grid">
+              <label>Nom<input name="Nom" required></label>
+              <label>Email<input name="Email" type="email" required></label>
+            </div>
+            <label>Sujet<select name="Sujet"><option>Question générale</option><option>Adhésion</option><option>Bénévolat</option><option>Presse</option><option>Commune</option><option>Don</option></select></label>
+            <label>Message<textarea name="Message" required></textarea></label>
+            <button type="submit">Envoyer le message</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div><img src="assets/mada-logo-horizontal.png" alt="MADA"><p>Construire la Martinique de demain.</p></div>
+      <nav class="footer-nav" aria-label="Navigation secondaire"><a href="mouvement.html">Le Mouvement</a><a href="programme-2028.html">Programme 2028</a><a href="actualites.html">Actualités</a><a href="communes.html">Nos communes</a><a href="agir.html">Agir avec nous</a><a href="contact.html">Contact</a></nav>
+      <img class="footer-flag" src="assets/mada-flag-official.jfif" alt="Drapeau officiel rouge, vert et noir">
+      <p class="legal">© 2026 MADA - Tous droits réservés</p>
+    </footer>
+  </body>
+</html>

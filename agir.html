@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Agir avec nous - MADA</title>
+    <meta name="description" content="Adhérer à MADA, devenir bénévole, rejoindre un groupe programme ou créer un relais communal.">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html"><img src="assets/mada-logo-horizontal.png" alt="Logo MADA"></a>
+      <input class="nav-toggle" type="checkbox" id="nav-toggle" aria-label="Ouvrir le menu">
+      <label class="nav-button" for="nav-toggle" aria-hidden="true"><span></span><span></span><span></span></label>
+      <nav class="main-nav" aria-label="Navigation principale">
+        <a href="index.html">Accueil</a>
+        <a href="mouvement.html">Le Mouvement</a>
+        <a href="programme-2028.html">Programme 2028</a>
+        <a href="actualites.html">Actualités</a>
+        <a href="communes.html">Nos communes</a>
+        <a class="active" href="agir.html">Agir avec nous</a>
+        <a href="don.html">Faire un don</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <a class="join-button" href="#adherer">Adhérer</a>
+    </header>
+
+    <main>
+      <section class="page-hero">
+        <div class="page-hero-content">
+          <p class="kicker">Agir avec nous</p>
+          <h1>Transformer les visiteurs en militants.</h1>
+          <p>Adhésion, bénévolat, programme, relais communal, mobilisation numérique : chacun peut contribuer à construire MADA.</p>
+        </div>
+        <div class="page-hero-media"><img src="assets/mada-flag-official.jfif" alt="Drapeau officiel rouge, vert et noir"></div>
+      </section>
+
+      <div class="objective-bar">Objectif de la page : convertir l'intérêt citoyen en engagement concret.</div>
+
+      <section class="page-section section-light">
+        <div class="section-heading center">
+          <p class="section-label">S'engager</p>
+          <h2>Choisir son rôle dans le mouvement.</h2>
+        </div>
+        <div class="grid-4">
+          <article class="card" id="adherer"><h3>Adhérer</h3><p>Rejoindre officiellement le mouvement et participer à sa construction politique.</p></article>
+          <article class="card" id="benevole"><h3>Devenir bénévole</h3><p>Aider lors des réunions, campagnes, événements et actions de terrain.</p></article>
+          <article class="card"><h3>Contribuer au programme</h3><p>Participer aux groupes de travail liés aux 8 axes officiels de MADA.</p></article>
+          <article class="card"><h3>Relayer MADA</h3><p>Diffuser les messages, inviter autour de soi et renforcer la communauté.</p></article>
+        </div>
+      </section>
+
+      <section class="page-section section-soft">
+        <div class="two-column">
+          <div class="section-heading">
+            <p class="section-label">Formulaire d'engagement</p>
+            <h2>Rejoindre l'équipe MADA.</h2>
+            <p>
+              Ce formulaire permet de prendre contact avec le mouvement pour adhérer,
+              devenir bénévole, aider dans une commune ou rejoindre un groupe de travail.
+            </p>
+            <ul class="check-list">
+              <li>Participer aux réunions publiques.</li>
+              <li>Contribuer aux 8 axes officiels du programme 2028.</li>
+              <li>Créer un relais dans sa commune.</li>
+              <li>Aider à la communication numérique.</li>
+            </ul>
+          </div>
+          <form class="form-shell" action="mailto:contact@mada-martinique.fr" method="post" enctype="text/plain">
+            <p class="form-note">Je veux agir avec MADA</p>
+            <div class="form-grid">
+              <label>Nom<input name="Nom" required></label>
+              <label>Email<input name="Email" type="email" required></label>
+            </div>
+            <div class="form-grid">
+              <label>Téléphone<input name="Telephone"></label>
+              <label>Commune<input name="Commune"></label>
+            </div>
+            <label>Je souhaite<select name="Engagement"><option>Adhérer</option><option>Devenir bénévole</option><option>Rejoindre un groupe programme sur les 8 axes</option><option>Créer un relais communal</option><option>Relayer sur les réseaux</option></select></label>
+            <label>Message<textarea name="Message"></textarea></label>
+            <button type="submit">Envoyer ma demande</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div><img src="assets/mada-logo-horizontal.png" alt="MADA"><p>Construire la Martinique de demain.</p></div>
+      <nav class="footer-nav" aria-label="Navigation secondaire"><a href="mouvement.html">Le Mouvement</a><a href="programme-2028.html">Programme 2028</a><a href="actualites.html">Actualités</a><a href="communes.html">Nos communes</a><a href="agir.html">Agir avec nous</a><a href="contact.html">Contact</a></nav>
+      <img class="footer-flag" src="assets/mada-flag-official.jfif" alt="Drapeau officiel rouge, vert et noir">
+      <p class="legal">© 2026 MADA - Tous droits réservés</p>
+    </footer>
+  </body>
+</html>
