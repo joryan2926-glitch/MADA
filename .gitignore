@@ -12,6 +12,10 @@ Desktop.ini
 *.temp
 *.log
 
+# Local secrets
+.env
+.env.*
+
 # Dependency folders, if the project evolves later
 node_modules/
 dist/

@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Administration MADA - Espace sécurisé</title>
+    <meta name="description" content="Espace sécurisé d'administration MADA pour gérer les actualités et les demandes citoyennes.">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html"><img src="assets/mada-logo-horizontal.png" alt="Logo MADA"></a>
+      <nav class="main-nav" aria-label="Navigation principale"><a href="index.html">Accueil</a><a href="actualites.html">Actualités</a><a class="active" href="admin.html">Administration</a></nav>
+      <a class="join-button" href="agir.html#adherer">Adhérer</a>
+    </header>
+    <main>
+      <section class="page-hero">
+        <div class="page-hero-content">
+          <p class="kicker">Administration</p>
+          <h1>Administration MADA.</h1>
+          <p>Espace sécurisé pour gérer les actualités et suivre les demandes du mouvement.</p>
+        </div>
+        <div class="page-hero-media"><img src="assets/mada-flag-official.jfif" alt="Drapeau officiel rouge, vert et noir"></div>
+      </section>
+      <section class="page-section section-light">
+        <div class="two-column">
+          <form class="form-shell" data-admin-login>
+            <p class="form-note">Connexion administrateur</p>
+            <label>Email<input name="email" type="email" autocomplete="username" required></label>
+            <label>Mot de passe<input name="password" type="password" autocomplete="current-password" required></label>
+            <button type="submit">Se connecter</button>
+          </form>
+          <div class="info-panel">
+            <h2>Statut d'accès</h2>
+            <p data-admin-status>Connexion administrateur requise.</p>
+          </div>
+        </div>
+      </section>
+      <section class="page-section section-soft" data-admin-app hidden>
+        <div class="two-column">
+          <form class="form-shell" data-admin-post>
+            <p class="form-note">Créer une actualité</p>
+            <label>Titre<input name="title" required></label>
+            <label>Slug<input name="slug"></label>
+            <label>Catégorie<select name="category"><option>Communiqué</option><option>Terrain</option><option>Programme</option><option>Médias</option><option>Agenda</option></select></label>
+            <label>Résumé<textarea name="excerpt" required></textarea></label>
+            <label>Contenu<textarea name="content" required></textarea></label>
+            <label>Statut<select name="status"><option value="draft">Brouillon</option><option value="published">Publié</option></select></label>
+            <button type="submit">Enregistrer</button>
+            <button type="button" class="btn btn-line" data-admin-logout>Se déconnecter</button>
+          </form>
+          <div class="info-panel">
+            <h2>Actualités enregistrées</h2>
+            <ul class="admin-news-list" data-admin-news-list></ul>
+          </div>
+        </div>
+        <div class="info-panel">
+          <h2>Demandes reçues</h2>
+          <div class="admin-submissions" data-admin-submissions></div>
+        </div>
+      </section>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="assets/js/supabase-config.js"></script>
+    <script src="assets/js/mada-admin.js"></script>
+  </body>
+</html>

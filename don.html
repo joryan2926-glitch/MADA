@@ -43,16 +43,22 @@
             <p class="section-label">Soutien financier</p>
             <h2>Choisir un montant.</h2>
             <p class="large-copy">
-              Cette interface est prête pour une future connexion à un paiement sécurisé.
-              Pour l'instant, chaque choix ouvre une demande de contact par email.
+              Cette interface enregistre une intention de don dans Supabase.
+              Elle pourra ensuite être reliée à un module de paiement sécurisé.
             </p>
           </div>
-          <div class="don-amounts">
-            <a class="btn" href="mailto:contact@mada-martinique.fr?subject=Don%20MADA%2020">20 €</a>
-            <a class="btn" href="mailto:contact@mada-martinique.fr?subject=Don%20MADA%2050">50 €</a>
-            <a class="btn" href="mailto:contact@mada-martinique.fr?subject=Don%20MADA%20100">100 €</a>
-            <a class="btn" href="mailto:contact@mada-martinique.fr?subject=Don%20MADA">Autre</a>
-          </div>
+          <form class="form-shell" data-supabase-table="donation_intents">
+            <p class="form-note">Intention de don</p>
+            <label>Montant souhaité<select name="amount"><option value="20">20 €</option><option value="50">50 €</option><option value="100">100 €</option><option value="">Autre montant</option></select></label>
+            <div class="form-grid">
+              <label>Nom<input name="full_name" required></label>
+              <label>Email<input name="email" type="email" required></label>
+            </div>
+            <label>Commune<input name="city"></label>
+            <label>Message<textarea name="message"></textarea></label>
+            <label class="consent"><input name="consent" type="checkbox" required> J'accepte que MADA conserve ces informations pour me recontacter au sujet du don. <a href="politique-confidentialite.html">Politique de confidentialité</a></label>
+            <button type="submit">Enregistrer mon intention</button>
+          </form>
         </div>
       </section>
 
@@ -72,9 +78,12 @@
 
     <footer class="site-footer">
       <div><img src="assets/mada-logo-horizontal.png" alt="MADA"><p>Construire la Martinique de demain.</p></div>
-      <nav class="footer-nav" aria-label="Navigation secondaire"><a href="mouvement.html">Le Mouvement</a><a href="programme-2028.html">Programme 2028</a><a href="actualites.html">Actualités</a><a href="communes.html">Nos communes</a><a href="agir.html">Agir avec nous</a><a href="contact.html">Contact</a></nav>
+      <nav class="footer-nav" aria-label="Navigation secondaire"><a href="mouvement.html">Le Mouvement</a><a href="programme-2028.html">Programme 2028</a><a href="actualites.html">Actualités</a><a href="communes.html">Nos communes</a><a href="agir.html">Agir avec nous</a><a href="contact.html">Contact</a><a href="mentions-legales.html">Mentions légales</a><a href="politique-confidentialite.html">Confidentialité</a></nav>
       <img class="footer-flag" src="assets/mada-flag-official.jfif" alt="Drapeau officiel rouge, vert et noir">
       <p class="legal">© 2026 MADA - Tous droits réservés</p>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="assets/js/supabase-config.js"></script>
+    <script src="assets/js/mada-supabase.js"></script>
   </body>
 </html>

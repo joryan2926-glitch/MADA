@@ -94,11 +94,12 @@
               <article><h3>2028 - Campagne</h3><p>Présentation d'un programme politique complet pour la Collectivité Territoriale de Martinique.</p></article>
             </div>
           </div>
-          <form class="form-shell" action="mailto:contact@mada-martinique.fr" method="post" enctype="text/plain">
+          <form class="form-shell" data-supabase-table="newsletter_subscribers">
             <p class="form-note">Recevoir les informations du mouvement</p>
-            <label>Nom<input name="Nom" required></label>
-            <label>Email<input name="Email" type="email" required></label>
-            <label>Commune<input name="Commune"></label>
+            <label>Nom<input name="full_name" required></label>
+            <label>Email<input name="email" type="email" required></label>
+            <label>Commune<input name="city"></label>
+            <label class="consent"><input name="consent" type="checkbox" required> J'accepte que MADA conserve ces informations pour me contacter. <a href="politique-confidentialite.html">Politique de confidentialité</a></label>
             <button type="submit">Rester informé</button>
           </form>
         </div>
@@ -107,9 +108,12 @@
 
     <footer class="site-footer">
       <div><img src="assets/mada-logo-horizontal.png" alt="MADA"><p>Construire la Martinique de demain.</p></div>
-      <nav class="footer-nav" aria-label="Navigation secondaire"><a href="mouvement.html">Le Mouvement</a><a href="programme-2028.html">Programme 2028</a><a href="actualites.html">Actualités</a><a href="communes.html">Nos communes</a><a href="agir.html">Agir avec nous</a><a href="contact.html">Contact</a></nav>
+      <nav class="footer-nav" aria-label="Navigation secondaire"><a href="mouvement.html">Le Mouvement</a><a href="programme-2028.html">Programme 2028</a><a href="actualites.html">Actualités</a><a href="communes.html">Nos communes</a><a href="agir.html">Agir avec nous</a><a href="contact.html">Contact</a><a href="mentions-legales.html">Mentions légales</a><a href="politique-confidentialite.html">Confidentialité</a></nav>
       <img class="footer-flag" src="assets/mada-flag-official.jfif" alt="Drapeau officiel rouge, vert et noir">
       <p class="legal">© 2026 MADA - Tous droits réservés</p>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="assets/js/supabase-config.js"></script>
+    <script src="assets/js/mada-supabase.js"></script>
   </body>
 </html>

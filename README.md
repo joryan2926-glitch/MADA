@@ -71,3 +71,18 @@ Point d'entrée local :
 ```text
 C:\Users\jowst\Documents\MADA\index.html
 ```
+
+## Fonctionnel Supabase
+
+Le site contient maintenant une intégration Supabase côté client :
+
+- formulaires d'adhésion et bénévolat ;
+- inscriptions newsletter ;
+- contributions au programme 2028 ;
+- relais communaux ;
+- formulaire de contact ;
+- intentions de don ;
+- administration des actualités ;
+- affichage public des actualités publiées.
+
+Avant production, renseigner `assets/js/supabase-config.js`, exécuter `supabase/schema.sql`, puis suivre `SUPABASE_SETUP.md`.

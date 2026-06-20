@@ -71,14 +71,15 @@
               <article><h3>Présentation publique</h3><p>Publication progressive des propositions jusqu'à la campagne 2028.</p></article>
             </div>
           </div>
-          <form class="form-shell" id="contribuer" action="mailto:contact@mada-martinique.fr" method="post" enctype="text/plain">
+          <form class="form-shell" id="contribuer" data-supabase-table="program_contributions">
             <p class="form-note">Contribuer au programme</p>
             <div class="form-grid">
-              <label>Nom<input name="Nom" required></label>
-              <label>Email<input name="Email" type="email" required></label>
+              <label>Nom<input name="full_name" required></label>
+              <label>Email<input name="email" type="email" required></label>
             </div>
-            <label>Thème<select name="Theme"><option>Relance économique & Entrepreneuriat</option><option>Jeunesse, Aînés & Emploi</option><option>Infrastructures, Eau & Modernisation</option><option>Lutte contre la vie chère</option><option>Autonomie alimentaire & Chlordécone</option><option>Autodétermination responsable & Ouverture caribéenne</option><option>Qualité de vie, Santé, Sécurité & Logement</option><option>Transparence & Bonne gestion du territoire</option></select></label>
-            <label>Proposition<textarea name="Proposition" required></textarea></label>
+            <label>Thème<select name="theme"><option>Relance économique & Entrepreneuriat</option><option>Jeunesse, Aînés & Emploi</option><option>Infrastructures, Eau & Modernisation</option><option>Lutte contre la vie chère</option><option>Autonomie alimentaire & Chlordécone</option><option>Autodétermination responsable & Ouverture caribéenne</option><option>Qualité de vie, Santé, Sécurité & Logement</option><option>Transparence & Bonne gestion du territoire</option></select></label>
+            <label>Proposition<textarea name="proposal" required></textarea></label>
+            <label class="consent"><input name="consent" type="checkbox" required> J'accepte que MADA conserve cette contribution pour le travail programmatique. <a href="politique-confidentialite.html">Politique de confidentialité</a></label>
             <button type="submit">Envoyer ma contribution</button>
           </form>
         </div>
@@ -87,9 +88,12 @@
 
     <footer class="site-footer">
       <div><img src="assets/mada-logo-horizontal.png" alt="MADA"><p>Construire la Martinique de demain.</p></div>
-      <nav class="footer-nav" aria-label="Navigation secondaire"><a href="mouvement.html">Le Mouvement</a><a href="programme-2028.html">Programme 2028</a><a href="actualites.html">Actualités</a><a href="communes.html">Nos communes</a><a href="agir.html">Agir avec nous</a><a href="contact.html">Contact</a></nav>
+      <nav class="footer-nav" aria-label="Navigation secondaire"><a href="mouvement.html">Le Mouvement</a><a href="programme-2028.html">Programme 2028</a><a href="actualites.html">Actualités</a><a href="communes.html">Nos communes</a><a href="agir.html">Agir avec nous</a><a href="contact.html">Contact</a><a href="mentions-legales.html">Mentions légales</a><a href="politique-confidentialite.html">Confidentialité</a></nav>
       <img class="footer-flag" src="assets/mada-flag-official.jfif" alt="Drapeau officiel rouge, vert et noir">
       <p class="legal">© 2026 MADA - Tous droits réservés</p>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="assets/js/supabase-config.js"></script>
+    <script src="assets/js/mada-supabase.js"></script>
   </body>
 </html>

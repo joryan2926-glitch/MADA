@@ -60,7 +60,7 @@ Les contenus de l'accueil, du mouvement, des actualités, de l'engagement et du 
 
 ## Formulaires
 
-Statut : fonctionnel en statique, à renforcer avant production
+Statut : branché sur Supabase, configuration projet requise avant production
 
 Formulaires présents :
 
@@ -71,16 +71,18 @@ Formulaires présents :
 - Contribution programme : `programme-2028.html`
 - Information mouvement : `mouvement.html`
 
-Limite actuelle :
+État actuel :
 
-- Les formulaires utilisent `mailto:`. C'est acceptable pour une maquette statique, mais insuffisant pour une plateforme politique en production.
+- Les formulaires utilisent `data-supabase-table` et le script `assets/js/mada-supabase.js`.
+- Les consentements sont présents sur les formulaires.
+- Les données sont segmentées : adhérents, bénévoles, donateurs, relais communaux, contributeurs programme, contacts et newsletter.
 
-À corriger avant mise en ligne :
+À finaliser avant mise en ligne :
 
-- Brancher les formulaires sur un vrai traitement serveur ou un service de collecte sécurisé.
-- Ajouter une protection anti-spam.
-- Ajouter une mention RGPD et une case de consentement.
-- Prévoir une base de contacts segmentée : adhérents, bénévoles, donateurs, relais communaux, contributeurs programme.
+- Renseigner les clés Supabase dans `assets/js/supabase-config.js`.
+- Exécuter `supabase/schema.sql` dans Supabase.
+- Tester chaque formulaire avec un vrai projet Supabase.
+- Ajouter une protection anti-spam si les formulaires deviennent publics à fort trafic.
 
 ## Responsive
 
