@@ -9,18 +9,49 @@
   </head>
   <body>
     <header class="site-header">
-      <a class="brand" href="index.html"><img src="assets/mada-logo-horizontal.png" alt="Logo MADA"></a>
+      <a class="brand" href="index.html" aria-label="Accueil MADA"><img src="assets/mada-logo-horizontal.png" alt="Logo MADA"></a>
       <input class="nav-toggle" type="checkbox" id="nav-toggle" aria-label="Ouvrir le menu">
       <label class="nav-button" for="nav-toggle" aria-hidden="true"><span></span><span></span><span></span></label>
       <nav class="main-nav" aria-label="Navigation principale">
         <a href="index.html">Accueil</a>
-        <a href="mouvement.html">Le Mouvement</a>
-        <a href="programme-2028.html">Programme 2028</a>
-        <a class="active" href="observatoire.html">Observatoire</a>
-        <a href="communes.html">Nos communes</a>
-        <a href="agir.html">Agir avec nous</a>
+        <div class="nav-item">
+          <button class="nav-parent" type="button" aria-haspopup="true">Le Mouvement <span class="chevron">&#9662;</span></button>
+          <div class="dropdown-menu">
+            <a href="mouvement.html">Présentation</a>
+            <a href="index.html#vision-2040">Vision 2040</a>
+            <a href="equipe-gouvernance.html">Équipe &amp; Gouvernance</a>
+          </div>
+        </div>
+        <div class="nav-item">
+          <button class="nav-parent" type="button" aria-haspopup="true">Objectif CTM 2028 <span class="chevron">&#9662;</span></button>
+          <div class="dropdown-menu">
+            <a href="programme-2028.html">Notre ambition</a>
+            <a href="programme-2028.html">Programme 2028</a>
+            <a href="programme-2028.html#axes-strategiques">Les 8 axes stratégiques</a>
+            <a href="index.html#grands-projets">Grands projets</a>
+            <a href="tableau-bord.html">Tableau de bord des engagements</a>
+          </div>
+        </div>
+        <div class="nav-item">
+          <button class="nav-parent" type="button" aria-haspopup="true">Territoires <span class="chevron">&#9662;</span></button>
+          <div class="dropdown-menu">
+            <a href="communes.html">Nos communes</a>
+            <a href="communes.html#carte-interactive">Carte des communes</a>
+            <a href="communes.html#relais">Relais communaux</a>
+          </div>
+        </div>
+        <div class="nav-item">
+          <button class="nav-parent" type="button" aria-haspopup="true">Participer <span class="chevron">&#9662;</span></button>
+          <div class="dropdown-menu">
+            <a href="agir.html">Agir avec nous</a>
+            <a href="agir.html#benevole">Devenir bénévole</a>
+            <a href="tableau-bord.html#proposer-idee">Proposer une idée</a>
+            <a href="don.html">Faire un don</a>
+          </div>
+        </div>
         <a href="actualites.html">Actualités</a>
         <a href="contact.html">Contact</a>
+        <a class="mobile-join-link" href="agir.html#adherer">Adhérer</a>
       </nav>
       <a class="join-button" href="agir.html#adherer">Adhérer</a>
     </header>
