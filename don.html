@@ -1,10 +1,10 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="fr">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Faire un don - MADA</title>
-    <meta name="description" content="Soutenir financièrement le mouvement MADA et contribuer à la construction de la plateforme politique martiniquaise.">
+    <meta name="description" content="Soutenir financiÃ¨rement le mouvement MADA et contribuer Ã  la construction de la plateforme politique martiniquaise.">
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
@@ -17,18 +17,19 @@
         <div class="nav-item">
           <button class="nav-parent" type="button" aria-haspopup="true">Le Mouvement <span class="chevron">&#9662;</span></button>
           <div class="dropdown-menu">
-            <a href="mouvement.html">Présentation</a>
-            <a href="index.html#vision-2040">Vision 2040</a>
-            <a href="equipe-gouvernance.html">Équipe &amp; Gouvernance</a>
+            <a href="mouvement.html">PrÃ©sentation</a>
+            <a href="vision-2040.html">Vision 2040</a>
+            <a href="equipe-gouvernance.html">Ã‰quipe &amp; Gouvernance</a>
+            <a href="serment-mada.html">Serment MADA</a>
           </div>
         </div>
         <div class="nav-item">
-          <button class="nav-parent" type="button" aria-haspopup="true">Objectif CTM 2028 <span class="chevron">&#9662;</span></button>
+          <button class="nav-parent" type="button" aria-haspopup="true">Objectif Ã‰lection CTM 2028 <span class="chevron">&#9662;</span></button>
           <div class="dropdown-menu">
             <a href="programme-2028.html">Notre ambition</a>
             <a href="programme-2028.html">Programme 2028</a>
-            <a href="programme-2028.html#axes-strategiques">Les 8 axes stratégiques</a>
-            <a href="index.html#grands-projets">Grands projets</a>
+            <a href="les-8-axes.html">Les 8 Axes</a>
+            <a href="grands-projets.html">Grands projets</a>
             <a href="tableau-bord.html">Tableau de bord des engagements</a>
           </div>
         </div>
@@ -44,16 +45,16 @@
           <button class="nav-parent active" type="button" aria-haspopup="true">Participer <span class="chevron">&#9662;</span></button>
           <div class="dropdown-menu">
             <a href="agir.html">Agir avec nous</a>
-            <a href="agir.html#benevole">Devenir bénévole</a>
-            <a href="tableau-bord.html#proposer-idee">Proposer une idée</a>
+            <a href="agir.html#benevole">Devenir bÃ©nÃ©vole</a>
+            <a href="tableau-bord.html#proposer-idee">Proposer une idÃ©e</a>
             <a href="don.html">Faire un don</a>
           </div>
         </div>
-        <a href="actualites.html">Actualités</a>
+        <a href="actualites.html">ActualitÃ©s</a>
         <a href="contact.html">Contact</a>
-        <a class="mobile-join-link" href="agir.html#adherer">Adhérer</a>
+        <a class="mobile-join-link" href="agir.html#adherer">AdhÃ©rer</a>
       </nav>
-      <a class="join-button" href="agir.html#adherer">Adhérer</a>
+      <a class="join-button" href="agir.html#adherer">AdhÃ©rer</a>
     </header>
 
     <main>
@@ -61,12 +62,12 @@
         <div class="page-hero-content">
           <p class="kicker">Faire un don</p>
           <h1>Financer le mouvement.</h1>
-          <p>Les dons soutiennent les outils numériques, les réunions, les supports de terrain, la communication et la préparation des campagnes électorales.</p>
+          <p>Les dons soutiennent les outils numÃ©riques, les rÃ©unions, les supports de terrain, la communication et la prÃ©paration des campagnes Ã©lectorales.</p>
         </div>
         <div class="page-hero-media"><img src="assets/mada-flag-official.jfif" alt="Drapeau officiel rouge, vert et noir"></div>
       </section>
 
-      <div class="objective-bar">Objectif de la page : donner les moyens matériels d'agir.</div>
+      <div class="objective-bar">Objectif de la page : donner les moyens matÃ©riels d'agir.</div>
 
       <section class="page-section section-light">
         <div class="don-panel">
@@ -75,19 +76,19 @@
             <h2>Choisir un montant.</h2>
             <p class="large-copy">
               Cette interface enregistre une intention de don dans Supabase.
-              Elle pourra ensuite être reliée à un module de paiement sécurisé.
+              Elle pourra ensuite Ãªtre reliÃ©e Ã  un module de paiement sÃ©curisÃ©.
             </p>
           </div>
           <form class="form-shell" data-supabase-table="donation_intents">
             <p class="form-note">Intention de don</p>
-            <label>Montant souhaité<select name="amount"><option value="20">20 €</option><option value="50">50 €</option><option value="100">100 €</option><option value="">Autre montant</option></select></label>
+            <label>Montant souhaitÃ©<select name="amount"><option value="20">20 â‚¬</option><option value="50">50 â‚¬</option><option value="100">100 â‚¬</option><option value="">Autre montant</option></select></label>
             <div class="form-grid">
               <label>Nom<input name="full_name" required></label>
               <label>Email<input name="email" type="email" required></label>
             </div>
             <label>Commune<input name="city"></label>
             <label>Message<textarea name="message"></textarea></label>
-            <label class="consent"><input name="consent" type="checkbox" required> J'accepte que MADA conserve ces informations pour me recontacter au sujet du don. <a href="politique-confidentialite.html">Politique de confidentialité</a></label>
+            <label class="consent"><input name="consent" type="checkbox" required> J'accepte que MADA conserve ces informations pour me recontacter au sujet du don. <a href="politique-confidentialite.html">Politique de confidentialitÃ©</a></label>
             <button type="submit">Enregistrer mon intention</button>
           </form>
         </div>
@@ -95,23 +96,23 @@
 
       <section class="page-section section-soft">
         <div class="section-heading center">
-          <p class="section-label">À quoi servent les dons ?</p>
+          <p class="section-label">Ã€ quoi servent les dons ?</p>
           <h2>Financer une organisation politique durable.</h2>
         </div>
         <div class="grid-4">
-          <article class="card"><h3>Réunions</h3><p>Location, logistique, matériel et déplacements.</p></article>
-          <article class="card"><h3>Terrain</h3><p>Supports imprimés, opérations locales et mobilisation militante.</p></article>
-          <article class="card"><h3>Numérique</h3><p>Site, outils d'information, campagnes et communication.</p></article>
-          <article class="card"><h3>Programme</h3><p>Consultations, ateliers, synthèses et publications autour des 8 axes officiels.</p></article>
+          <article class="card"><h3>RÃ©unions</h3><p>Location, logistique, matÃ©riel et dÃ©placements.</p></article>
+          <article class="card"><h3>Terrain</h3><p>Supports imprimÃ©s, opÃ©rations locales et mobilisation militante.</p></article>
+          <article class="card"><h3>NumÃ©rique</h3><p>Site, outils d'information, campagnes et communication.</p></article>
+          <article class="card"><h3>Programme</h3><p>Consultations, ateliers, synthÃ¨ses et publications autour des 8 axes officiels.</p></article>
         </div>
       </section>
     </main>
 
     <footer class="site-footer">
       <div><img src="assets/mada-logo-horizontal.png" alt="MADA"><p>Construire la Martinique de demain.</p></div>
-      <nav class="footer-nav" aria-label="Navigation secondaire"><a href="mouvement.html">Le Mouvement</a><a href="programme-2028.html">Programme 2028</a><a href="actualites.html">Actualités</a><a href="communes.html">Nos communes</a><a href="agir.html">Agir avec nous</a><a href="contact.html">Contact</a><a href="mentions-legales.html">Mentions légales</a><a href="politique-confidentialite.html">Confidentialité</a></nav>
+      <nav class="footer-nav" aria-label="Navigation secondaire"><a href="mouvement.html">Le Mouvement</a><a href="programme-2028.html">Programme 2028</a><a href="actualites.html">ActualitÃ©s</a><a href="communes.html">Nos communes</a><a href="agir.html">Agir avec nous</a><a href="contact.html">Contact</a><a href="mentions-legales.html">Mentions lÃ©gales</a><a href="politique-confidentialite.html">ConfidentialitÃ©</a></nav>
       <img class="footer-flag" src="assets/mada-flag-official.jfif" alt="Drapeau officiel rouge, vert et noir">
-      <p class="legal">© 2026 MADA - Tous droits réservés</p>
+      <p class="legal">Â© 2026 MADA - Tous droits rÃ©servÃ©s</p>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <script src="assets/js/supabase-config.js"></script>
