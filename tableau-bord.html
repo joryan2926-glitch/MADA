@@ -1,10 +1,10 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="fr">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Tableau de bord citoyen - MADA</title>
-    <meta name="description" content="Tableau de bord citoyen MADA pour suivre les projets, proposer des idÃ©es, voter sur les prioritÃ©s et consulter les rÃ©sultats.">
+    <title>Tableau de Bord Martinique 2040 - MADA</title>
+    <meta name="description" content="Tableau de Bord Martinique 2040 de MADA : indicateurs, progression des axes, suivi des projets, carte des communes et engagements publics.">
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
@@ -17,20 +17,20 @@
         <div class="nav-item">
           <button class="nav-parent" type="button" aria-haspopup="true">Le Mouvement <span class="chevron">&#9662;</span></button>
           <div class="dropdown-menu">
-            <a href="mouvement.html">PrÃ©sentation</a>
+            <a href="mouvement.html">Présentation</a>
             <a href="vision-2040.html">Vision 2040</a>
-            <a href="equipe-gouvernance.html">Ã‰quipe &amp; Gouvernance</a>
+            <a href="equipe-gouvernance.html">Équipe &amp; Gouvernance</a>
             <a href="serment-mada.html">Serment MADA</a>
           </div>
         </div>
         <div class="nav-item">
-          <button class="nav-parent active" type="button" aria-haspopup="true">Objectif Ã‰lection CTM 2028 <span class="chevron">&#9662;</span></button>
+          <button class="nav-parent active" type="button" aria-haspopup="true">Objectif Élection CTM 2028 <span class="chevron">&#9662;</span></button>
           <div class="dropdown-menu">
             <a href="programme-2028.html">Notre ambition</a>
             <a href="programme-2028.html">Programme 2028</a>
             <a href="les-8-axes.html">Les 8 Axes</a>
             <a href="grands-projets.html">Grands projets</a>
-            <a href="tableau-bord.html">Tableau de bord des engagements</a>
+            <a class="active" href="tableau-bord.html">Tableau de Bord</a>
           </div>
         </div>
         <div class="nav-item">
@@ -45,95 +45,161 @@
           <button class="nav-parent" type="button" aria-haspopup="true">Participer <span class="chevron">&#9662;</span></button>
           <div class="dropdown-menu">
             <a href="agir.html">Agir avec nous</a>
-            <a href="agir.html#benevole">Devenir bÃ©nÃ©vole</a>
-            <a href="tableau-bord.html#proposer-idee">Proposer une idÃ©e</a>
+            <a href="agir.html#benevole">Devenir bénévole</a>
+            <a href="tableau-bord.html#proposer-idee">Proposer une idée</a>
             <a href="don.html">Faire un don</a>
           </div>
         </div>
-        <a href="actualites.html">ActualitÃ©s</a>
+        <a href="actualites.html">Actualités</a>
         <a href="contact.html">Contact</a>
-        <a class="mobile-join-link" href="agir.html#adherer">AdhÃ©rer</a>
+        <a class="mobile-join-link" href="agir.html#adherer">Adhérer</a>
       </nav>
-      <a class="join-button" href="agir.html#adherer">AdhÃ©rer</a>
+      <a class="join-button" href="agir.html#adherer">Adhérer</a>
     </header>
 
     <main>
-      <section class="page-hero">
-        <div class="page-hero-content">
-          <p class="kicker">Tableau de bord citoyen</p>
-          <h1>Suivre, proposer, prioriser.</h1>
-          <p>Un espace public pour consulter les projets MADA 2040, suivre leur avancement et participer aux arbitrages citoyens.</p>
+      <section class="dashboard-hero">
+        <div class="dashboard-hero-inner">
+          <p class="section-label">MADA 2040</p>
+          <h1>Tableau de Bord Martinique 2040</h1>
+          <p>La transparence au service du peuple martiniquais.</p>
+          <div class="dashboard-hero-actions">
+            <a class="btn btn-gold" href="#indicateurs">Voir les indicateurs</a>
+            <a class="btn btn-outline" href="#carte-communes">Suivi commune par commune</a>
+          </div>
         </div>
-        <div class="page-hero-media"><img src="assets/mada-flag-official.jfif" alt="Drapeau officiel rouge, vert et noir"></div>
       </section>
 
-      <div class="objective-bar">Objectif : transformer la plateforme en outil de suivi et de participation citoyenne.</div>
+      <section class="page-section dashboard-kpi-section" id="indicateurs">
+        <div class="section-heading center">
+          <p class="section-label">Indicateurs territoriaux</p>
+          <h2>Suivre les priorités publiques avec des repères lisibles.</h2>
+          <p>Ces indicateurs sont conçus pour être actualisés depuis Supabase à mesure que les données publiques et les engagements MADA seront consolidés.</p>
+        </div>
+        <div class="dashboard-indicator-grid">
+          <article class="dashboard-indicator-card"><span>Population</span><strong><b data-dashboard-count="349000">0</b></strong><p>habitants suivis dans la trajectoire territoriale</p></article>
+          <article class="dashboard-indicator-card"><span>Emploi</span><strong><b data-dashboard-count="100000">0</b></strong><p>emplois durables soutenus ou créés à horizon 2040</p></article>
+          <article class="dashboard-indicator-card"><span>Santé</span><strong><b data-dashboard-count="100" data-suffix="%">0</b></strong><p>communes visées par un service de santé de proximité</p></article>
+          <article class="dashboard-indicator-card"><span>Éducation</span><strong><b data-dashboard-count="35">0</b></strong><p>filières, campus ou parcours territoriaux à structurer</p></article>
+          <article class="dashboard-indicator-card"><span>Sécurité</span><strong><b data-dashboard-count="34">0</b></strong><p>communes intégrées au suivi prévention et tranquillité</p></article>
+          <article class="dashboard-indicator-card"><span>Logement</span><strong><b data-dashboard-count="5000">0</b></strong><p>logements à réhabiliter, adapter ou remettre en usage</p></article>
+          <article class="dashboard-indicator-card"><span>Énergie</span><strong><b data-dashboard-count="70" data-suffix="%">0</b></strong><p>objectif d'énergies renouvelables à horizon 2040</p></article>
+          <article class="dashboard-indicator-card"><span>Environnement</span><strong><b data-dashboard-count="50" data-suffix="%">0</b></strong><p>objectif d'autonomie alimentaire et de résilience écologique</p></article>
+        </div>
+      </section>
+
+      <section class="page-section section-light">
+        <div class="dashboard-summary-grid">
+          <article class="dashboard-kpi-card"><span>Objectif 2028</span><strong>Installer le pilotage public</strong><p>Publier les premiers engagements, les indicateurs de départ et les priorités par commune.</p></article>
+          <article class="dashboard-kpi-card"><span>Situation actuelle</span><strong>Phase de structuration</strong><p>Les données territoriales, projets et remontées citoyennes sont en cours d'organisation.</p></article>
+          <article class="dashboard-kpi-card"><span>Progression</span><strong>18%</strong><p>Architecture politique, pages programmes, formulaires citoyens et premiers tableaux de suivi.</p></article>
+          <article class="dashboard-kpi-card"><span>Échéance</span><strong>2040</strong><p>Un suivi public continu de la transformation économique, sociale et écologique.</p></article>
+        </div>
+      </section>
+
+      <section class="page-section dashboard-progress-section">
+        <div class="section-heading center">
+          <p class="section-label">Progression par axe</p>
+          <h2>Mesurer l'avancement des engagements du programme.</h2>
+        </div>
+        <div class="dashboard-axis-list">
+          <article class="dashboard-axis-row" style="--progress: 22%"><div><span>01</span><strong>Relance économique &amp; Entrepreneuriat</strong></div><div class="dashboard-progress-track"><span></span></div><b>22%</b></article>
+          <article class="dashboard-axis-row" style="--progress: 18%"><div><span>02</span><strong>Jeunesse, Aînés &amp; Emploi</strong></div><div class="dashboard-progress-track"><span></span></div><b>18%</b></article>
+          <article class="dashboard-axis-row" style="--progress: 16%"><div><span>03</span><strong>Infrastructures, Eau &amp; Modernisation</strong></div><div class="dashboard-progress-track"><span></span></div><b>16%</b></article>
+          <article class="dashboard-axis-row" style="--progress: 14%"><div><span>04</span><strong>Lutte contre la vie chère</strong></div><div class="dashboard-progress-track"><span></span></div><b>14%</b></article>
+          <article class="dashboard-axis-row" style="--progress: 20%"><div><span>05</span><strong>Autonomie alimentaire &amp; Chlordécone</strong></div><div class="dashboard-progress-track"><span></span></div><b>20%</b></article>
+          <article class="dashboard-axis-row" style="--progress: 12%"><div><span>06</span><strong>Autodétermination responsable &amp; Caraïbe</strong></div><div class="dashboard-progress-track"><span></span></div><b>12%</b></article>
+          <article class="dashboard-axis-row" style="--progress: 17%"><div><span>07</span><strong>Qualité de vie, Santé, Sécurité &amp; Logement</strong></div><div class="dashboard-progress-track"><span></span></div><b>17%</b></article>
+          <article class="dashboard-axis-row" style="--progress: 24%"><div><span>08</span><strong>Transparence &amp; Bonne gestion du territoire</strong></div><div class="dashboard-progress-track"><span></span></div><b>24%</b></article>
+        </div>
+      </section>
+
+      <section class="page-section section-light" id="carte-communes">
+        <div class="section-heading center">
+          <p class="section-label">Carte territoriale</p>
+          <h2>Suivre la Martinique commune par commune.</h2>
+          <p>La carte interactive permet de visualiser les priorités locales, les projets engagés et les points de vigilance par bassin de vie.</p>
+        </div>
+        <div class="dashboard-map-layout">
+          <div class="dashboard-map-panel" aria-label="Carte interactive de la Martinique">
+            <img src="assets/mada-logo-reference.png" alt="Carte stylisée de la Martinique MADA">
+            <button class="commune-dot dot-nord active" type="button" data-commune="nord">Nord Caraïbe</button>
+            <button class="commune-dot dot-centre" type="button" data-commune="centre">Centre</button>
+            <button class="commune-dot dot-atlantique" type="button" data-commune="atlantique">Atlantique</button>
+            <button class="commune-dot dot-sud" type="button" data-commune="sud">Sud</button>
+          </div>
+          <article class="dashboard-commune-card" data-commune-panel>
+            <span>Suivi territorial</span>
+            <h3>Nord Caraïbe</h3>
+            <p>Priorités suivies : santé de proximité, mobilité, revitalisation des bourgs, agriculture et protection du littoral.</p>
+            <div class="commune-status-grid">
+              <div><strong>8</strong><small>communes suivies</small></div>
+              <div><strong>14</strong><small>projets recensés</small></div>
+              <div><strong>32%</strong><small>diagnostic consolidé</small></div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="page-section dashboard-status-section">
+        <div class="dashboard-status-grid">
+          <article class="dashboard-status-card status-done"><p class="section-label">Promesses tenues</p><h2>Ce qui est déjà engagé.</h2><ul class="check-list"><li>Publication des 8 axes officiels du programme CTM 2028</li><li>Création des pages Vision 2040 et Grands Projets</li><li>Mise en place des formulaires citoyens connectés à Supabase</li><li>Ajout d'un espace de suivi public des engagements</li></ul></article>
+          <article class="dashboard-status-card status-current"><p class="section-label">Projets en cours</p><h2>Les chantiers actifs.</h2><ul class="check-list"><li>Consolidation des indicateurs territoriaux</li><li>Structuration des fiches projets détaillées</li><li>Collecte des contributions citoyennes</li><li>Préparation du suivi commune par commune</li></ul></article>
+          <article class="dashboard-status-card status-next"><p class="section-label">Projets à lancer</p><h2>Les prochaines étapes.</h2><ul class="check-list"><li>Publication des données consolidées par commune</li><li>Tableaux d'administration des indicateurs</li><li>Suivi public des votes et propositions</li><li>Rapports trimestriels d'avancement MADA 2040</li></ul></article>
+        </div>
+      </section>
 
       <section class="page-section section-light">
         <div class="section-heading center">
-          <p class="section-label">Avancement des projets</p>
-          <h2>Consulter les projets et suivre leur progression.</h2>
-          <p>Les cartes peuvent Ãªtre alimentÃ©es depuis Supabase via `project_progress`.</p>
+          <p class="section-label">Calendrier stratégique</p>
+          <h2>Une trajectoire de transformation jusqu'en 2040.</h2>
         </div>
-        <div class="progress-grid" data-project-progress>
-          <article class="progress-card"><h3>Martinique Ã‰nergie 2040</h3><p>Phase de cadrage stratÃ©gique</p><div class="progress-track"><span style="width: 15%"></span></div><strong>15%</strong><p>Prochaine Ã©tape : prioriser les sites pilotes.</p></article>
-          <article class="progress-card"><h3>Martinique Tech &amp; IA</h3><p>Phase de consultation</p><div class="progress-track"><span style="width: 10%"></span></div><strong>10%</strong><p>Prochaine Ã©tape : identifier les partenaires de formation.</p></article>
-          <article class="progress-card"><h3>Martinique Alimentaire</h3><p>Phase de diagnostic</p><div class="progress-track"><span style="width: 12%"></span></div><strong>12%</strong><p>Prochaine Ã©tape : cartographier les besoins agricoles.</p></article>
-          <article class="progress-card"><h3>Martinique MobilitÃ©</h3><p>Phase de remontÃ©e terrain</p><div class="progress-track"><span style="width: 8%"></span></div><strong>8%</strong><p>Prochaine Ã©tape : recueillir les prioritÃ©s par bassin de vie.</p></article>
+        <div class="dashboard-timeline">
+          <article><strong>2028</strong><span>Lancement du pilotage, contractualisation territoriale et premiers indicateurs publics.</span></article>
+          <article><strong>2032</strong><span>Déploiement des projets structurants, premiers bilans et ajustements par commune.</span></article>
+          <article><strong>2036</strong><span>Accélération des projets à fort impact et évaluation citoyenne des engagements.</span></article>
+          <article><strong>2040</strong><span>Martinique plus autonome, plus forte, mieux équipée et plus solidaire.</span></article>
         </div>
       </section>
 
       <section class="page-section section-soft" id="proposer-idee">
         <div class="dashboard-actions">
           <article>
-            <p class="section-label">DÃ©poser une proposition</p>
-            <h2>Contribuer Ã  un projet MADA 2040.</h2>
+            <p class="section-label">Déposer une proposition</p>
+            <h2>Contribuer à un projet MADA 2040.</h2>
             <form class="form-shell" data-supabase-table="program_contributions">
               <div class="form-grid"><label>Nom<input name="full_name" required></label><label>Email<input name="email" type="email" required></label></div>
-              <label>Projet<select name="theme" required><option>Martinique Ã‰nergie 2040</option><option>Martinique Tech &amp; IA</option><option>Martinique Alimentaire</option><option>Martinique MobilitÃ©</option><option>Martinique Talents</option><option>Martinique SantÃ©</option><option>Martinique Habitat</option><option>Martinique Culture &amp; CaraÃ¯be</option></select></label>
+              <label>Projet<select name="theme" required><option>Santé 2040</option><option>Campus des Métiers</option><option>Martinique Alimentaire</option><option>Martinique Énergie</option><option>Martinique Bleue</option><option>Revitalisation des Communes</option><option>Retour des Talents</option><option>Martinique Culture Monde</option></select></label>
               <label>Proposition<textarea name="proposal" required></textarea></label>
-              <label class="consent"><input name="consent" type="checkbox" required> J'accepte que MADA conserve cette contribution. <a href="politique-confidentialite.html">Politique de confidentialitÃ©</a></label>
-              <button type="submit">DÃ©poser ma proposition</button>
+              <label class="consent"><input name="consent" type="checkbox" required> J'accepte que MADA conserve cette contribution. <a href="politique-confidentialite.html">Politique de confidentialité</a></label>
+              <button type="submit">Déposer ma proposition</button>
             </form>
           </article>
           <article>
-            <p class="section-label">Voter une prioritÃ©</p>
-            <h2>Indiquer les projets Ã  accÃ©lÃ©rer.</h2>
+            <p class="section-label">Voter une priorité</p>
+            <h2>Indiquer les projets à accélérer.</h2>
             <form class="form-shell" data-supabase-table="project_votes">
               <div class="form-grid"><label>Nom<input name="full_name" required></label><label>Email<input name="email" type="email" required></label></div>
-              <label>Projet<select name="project_key" required><option value="energie">Martinique Ã‰nergie 2040</option><option value="tech-ia">Martinique Tech &amp; IA</option><option value="alimentaire">Martinique Alimentaire</option><option value="mobilite">Martinique MobilitÃ©</option><option value="talents">Martinique Talents</option><option value="sante">Martinique SantÃ©</option><option value="habitat">Martinique Habitat</option><option value="culture-caraibe">Martinique Culture &amp; CaraÃ¯be</option></select></label>
-              <label>PrioritÃ©<select name="priority_level" required><option>TrÃ¨s prioritaire</option><option>Prioritaire</option><option>Ã€ approfondir</option></select></label>
+              <label>Projet<select name="project_key" required><option value="sante-2040">Santé 2040</option><option value="campus-metiers">Campus des Métiers</option><option value="martinique-alimentaire">Martinique Alimentaire</option><option value="martinique-energie">Martinique Énergie</option><option value="martinique-bleue">Martinique Bleue</option><option value="revitalisation-communes">Revitalisation des Communes</option><option value="retour-talents">Retour des Talents</option><option value="culture-monde">Martinique Culture Monde</option></select></label>
+              <label>Priorité<select name="priority_level" required><option>Très prioritaire</option><option>Prioritaire</option><option>À approfondir</option></select></label>
               <label>Commentaire<textarea name="comment"></textarea></label>
-              <label class="consent"><input name="consent" type="checkbox" required> J'accepte que MADA conserve ce vote citoyen. <a href="politique-confidentialite.html">Politique de confidentialitÃ©</a></label>
+              <label class="consent"><input name="consent" type="checkbox" required> J'accepte que MADA conserve ce vote citoyen. <a href="politique-confidentialite.html">Politique de confidentialité</a></label>
               <button type="submit">Enregistrer mon vote</button>
             </form>
           </article>
         </div>
       </section>
-
-      <section class="page-section section-light">
-        <div class="section-heading center">
-          <p class="section-label">RÃ©sultats</p>
-          <h2>Restituer les prioritÃ©s citoyennes.</h2>
-          <p>Cette zone est prÃ©vue pour publier les rÃ©sultats consolidÃ©s : votes, propositions frÃ©quentes, prioritÃ©s par commune et arbitrages du mouvement.</p>
-        </div>
-        <div class="grid-4">
-          <article class="card"><h3>Votes par projet</h3><p>Nombre de prioritÃ©s exprimÃ©es et tendances de classement.</p></article>
-          <article class="card"><h3>Propositions reÃ§ues</h3><p>IdÃ©es citoyennes classÃ©es par projet et par bassin de vie.</p></article>
-          <article class="card"><h3>RÃ©ponses MADA</h3><p>Suites donnÃ©es aux propositions et intÃ©gration au programme.</p></article>
-          <article class="card"><h3>Restitutions publiques</h3><p>Comptes rendus des consultations et ateliers citoyens.</p></article>
-        </div>
-      </section>
     </main>
 
     <footer class="site-footer">
-      <div><img src="assets/mada-logo-horizontal.png" alt="MADA"><p>Construire la Martinique de demain.</p></div>
-      <nav class="footer-nav" aria-label="Navigation secondaire"><a href="mouvement.html">Le Mouvement</a><a href="programme-2028.html">Programme 2028</a><a href="observatoire.html">Observatoire</a><a href="communes.html">Nos communes</a><a href="agir.html">Agir avec nous</a><a href="equipe-gouvernance.html">Ã‰quipe & Gouvernance</a><a href="actualites.html">ActualitÃ©s</a><a href="mentions-legales.html">Mentions lÃ©gales</a></nav>
+      <a class="footer-brand" href="index.html"><img src="assets/mada-logo-horizontal.png" alt="Logo MADA"></a>
+      <nav class="footer-nav" aria-label="Navigation secondaire"><a href="mouvement.html">Le Mouvement</a><a href="vision-2040.html">Vision 2040</a><a href="programme-2028.html">Programme 2028</a><a href="les-8-axes.html">Les 8 Axes</a><a href="grands-projets.html">Grands projets</a><a href="tableau-bord.html">Tableau de Bord</a><a href="communes.html">Nos communes</a><a href="agir.html">Agir avec nous</a><a href="contact.html">Contact</a></nav>
       <img class="footer-flag" src="assets/mada-flag-official.jfif" alt="Drapeau officiel rouge, vert et noir">
-      <p class="legal">Â© 2026 MADA - Tous droits rÃ©servÃ©s</p>
+      <p class="legal">© 2026 MADA - Tous droits réservés</p>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <script src="assets/js/supabase-config.js"></script>
     <script src="assets/js/mada-supabase.js"></script>
+    <script src="assets/js/tableau-bord-2040.js"></script>
   </body>
 </html>
