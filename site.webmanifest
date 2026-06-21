@@ -1,0 +1,21 @@
+{
+  "name": "MADA",
+  "short_name": "MADA",
+  "description": "Mouvement pour l'Avenir, le Developpement et l'Autodetermination.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#002b18",
+  "theme_color": "#002b18",
+  "icons": [
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

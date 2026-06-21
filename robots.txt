@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /admin.html
 
-Sitemap: https://mada-martinique.fr/sitemap.xml
+Sitemap: https://www.mada-martinique.fr/sitemap.xml

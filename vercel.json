@@ -1,0 +1,33 @@
+{
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "Content-Security-Policy",
+          "value": "default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'none'; script-src 'self' https://cdn.jsdelivr.net https://challenges.cloudflare.com 'sha256-4AEx1YLmRvafDqkk3H6v5qorZPuakF8ZC3xNc+J/t+E=' 'sha256-AK1aPz76PIjyyuGDc261//wZIbEBVjt1wmQ2SYQYek8=' 'sha256-DZYQaLsikcUBci9PgMrctFC04wLTyzaXgnfgL+WXMK0=' 'sha256-I3VzwnZkWuiIEIBw9yFkE38VllY9JoZfXUcb3D5IMjg=' 'sha256-M+DGqrhzC1UG1RHxKxN8FQC7yqm2Pb1dMBkEIziIvXM=' 'sha256-MaRg5KIukSeutBxKPJGNtFEPREFUhzGirNl7LwleObg=' 'sha256-Pckoe2+ZvRzbAZCUGEuF/N8ZkEIp+TZnfe6aCSZOT90=' 'sha256-Q+vTwfYQtsiHbB+5tWU0bc7C4iurwqmnbe2Rg7yzBMY=' 'sha256-T3dtfQjX9hja/+cIWQ7ZYPHty3U1RflvJ9/JSQo2UC0=' 'sha256-UaoVmzs7uZipbX3mL3fLXqtgmAPG53P9wIdo6a6pvsU=' 'sha256-W3ZsOwu+W+GR59y22EyDwGgamhL230QAC0FL0djB9Qk=' 'sha256-XbaboeOrxeGIc8+tzf1mxAwJPF2FLUF4d9ladQFXwFQ=' 'sha256-azKep8Ya/ZjoVq5EwICWzd57t9AuCTffcwcK6dtpuao=' 'sha256-gZAiUdRUiYShzkV6VUQYJ10atysl9KLcZtk46zpTpxA=' 'sha256-3AmtXZWNQsh5HgnnhHu+doeLk3/aM84DPkgDcFjiCDs=' 'sha256-rvRhRV3+1FjzxXtHCGBEGNflsJgI5/az3XWrdqPAKIA=' 'sha256-wdpGH14iat2QGclRN8/AGyqSUBsGM03WmU6JuPQjZe0=' 'sha256-yvXAs29S+GLqMkJkO1b/iTgzVNIEUpeT4j0EAcizMTE=' 'sha256-zfVtBglrDenAVkoNlYfhlfA92mngyQ81MmrxmBMn1EE='; script-src-elem 'self' https://cdn.jsdelivr.net https://challenges.cloudflare.com 'sha256-4AEx1YLmRvafDqkk3H6v5qorZPuakF8ZC3xNc+J/t+E=' 'sha256-AK1aPz76PIjyyuGDc261//wZIbEBVjt1wmQ2SYQYek8=' 'sha256-DZYQaLsikcUBci9PgMrctFC04wLTyzaXgnfgL+WXMK0=' 'sha256-I3VzwnZkWuiIEIBw9yFkE38VllY9JoZfXUcb3D5IMjg=' 'sha256-M+DGqrhzC1UG1RHxKxN8FQC7yqm2Pb1dMBkEIziIvXM=' 'sha256-MaRg5KIukSeutBxKPJGNtFEPREFUhzGirNl7LwleObg=' 'sha256-Pckoe2+ZvRzbAZCUGEuF/N8ZkEIp+TZnfe6aCSZOT90=' 'sha256-Q+vTwfYQtsiHbB+5tWU0bc7C4iurwqmnbe2Rg7yzBMY=' 'sha256-T3dtfQjX9hja/+cIWQ7ZYPHty3U1RflvJ9/JSQo2UC0=' 'sha256-UaoVmzs7uZipbX3mL3fLXqtgmAPG53P9wIdo6a6pvsU=' 'sha256-W3ZsOwu+W+GR59y22EyDwGgamhL230QAC0FL0djB9Qk=' 'sha256-XbaboeOrxeGIc8+tzf1mxAwJPF2FLUF4d9ladQFXwFQ=' 'sha256-azKep8Ya/ZjoVq5EwICWzd57t9AuCTffcwcK6dtpuao=' 'sha256-gZAiUdRUiYShzkV6VUQYJ10atysl9KLcZtk46zpTpxA=' 'sha256-3AmtXZWNQsh5HgnnhHu+doeLk3/aM84DPkgDcFjiCDs=' 'sha256-rvRhRV3+1FjzxXtHCGBEGNflsJgI5/az3XWrdqPAKIA=' 'sha256-wdpGH14iat2QGclRN8/AGyqSUBsGM03WmU6JuPQjZe0=' 'sha256-yvXAs29S+GLqMkJkO1b/iTgzVNIEUpeT4j0EAcizMTE=' 'sha256-zfVtBglrDenAVkoNlYfhlfA92mngyQ81MmrxmBMn1EE='; style-src 'self' 'unsafe-inline'; style-src-attr 'unsafe-inline'; img-src 'self' data: blob: https:; font-src 'self' data:; connect-src 'self' https://iwzdpmtlcirtdaseyqdi.supabase.co https://*.supabase.co https://challenges.cloudflare.com; frame-src https://challenges.cloudflare.com; worker-src 'self' blob:; manifest-src 'self'; form-action 'self'; upgrade-insecure-requests"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "DENY"
+        },
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        },
+        {
+          "key": "Permissions-Policy",
+          "value": "accelerometer=(), autoplay=(), camera=(), display-capture=(), encrypted-media=(), fullscreen=(self), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), midi=(), payment=(), picture-in-picture=(), publickey-credentials-get=(), usb=(), xr-spatial-tracking=()"
+        },
+        {
+          "key": "Strict-Transport-Security",
+          "value": "max-age=63072000; includeSubDomains; preload"
+        }
+      ]
+    }
+  ]
+}

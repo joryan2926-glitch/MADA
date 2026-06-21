@@ -17,6 +17,21 @@
   --paper: #fbfcf8;
   --white: #ffffff;
   --shadow: 0 20px 44px rgba(0, 31, 18, 0.12);
+  --martinique-landscape-image: url("assets/martinique-landscape-only-1600.webp");
+  --mada-logo-reference-image: url("assets/mada-logo-reference-800.webp");
+}
+
+@media (max-width: 760px) {
+  :root {
+    --martinique-landscape-image: url("assets/martinique-landscape-only-768.webp");
+    --mada-logo-reference-image: url("assets/mada-logo-reference-480.webp");
+  }
+}
+
+@media (min-width: 761px) and (max-width: 1200px) {
+  :root {
+    --martinique-landscape-image: url("assets/martinique-landscape-only-1200.webp");
+  }
 }
 
 * {
@@ -284,7 +299,7 @@ textarea {
   overflow: hidden;
   background:
     linear-gradient(90deg, rgba(0, 31, 18, 0.99) 0%, rgba(0, 31, 18, 0.88) 38%, rgba(0, 31, 18, 0.26) 78%),
-    url("assets/martinique-landscape-only.png") center / cover no-repeat;
+    var(--martinique-landscape-image) center / cover no-repeat;
   color: var(--white);
 }
 
@@ -1576,7 +1591,7 @@ textarea {
   overflow: hidden;
   background:
     linear-gradient(90deg, rgba(0, 31, 18, 0.98), rgba(0, 31, 18, 0.78)),
-    url("assets/martinique-landscape-only.png") center / cover no-repeat;
+    var(--martinique-landscape-image) center / cover no-repeat;
   color: var(--white);
 }
 
@@ -2093,7 +2108,7 @@ textarea {
   background:
     linear-gradient(110deg, rgba(0, 31, 18, 0.96), rgba(0, 31, 18, 0.76) 48%, rgba(0, 0, 0, 0.3)),
     radial-gradient(circle at 78% 22%, rgba(255, 194, 10, 0.38), transparent 34%),
-    url("assets/martinique-landscape-only.png") center / cover no-repeat;
+    var(--martinique-landscape-image) center / cover no-repeat;
   color: var(--white);
 }
 
@@ -2317,7 +2332,7 @@ textarea {
   padding: clamp(70px, 9vw, 128px) clamp(18px, 5vw, 72px);
   background:
     linear-gradient(120deg, rgba(0, 31, 18, 0.97), rgba(0, 31, 18, 0.88)),
-    url("assets/martinique-landscape-only.png") center / cover no-repeat;
+    var(--martinique-landscape-image) center / cover no-repeat;
   color: var(--white);
 }
 
@@ -2467,7 +2482,7 @@ textarea {
   background:
     linear-gradient(110deg, rgba(0, 31, 18, 0.94) 0%, rgba(0, 31, 18, 0.76) 42%, rgba(0, 0, 0, 0.26) 100%),
     radial-gradient(circle at 85% 20%, rgba(255, 169, 25, 0.62), rgba(255, 169, 25, 0.08) 28%, transparent 56%),
-    url("assets/martinique-landscape-only.png") center / cover no-repeat;
+    var(--martinique-landscape-image) center / cover no-repeat;
 }
 
 .welcome-screen::after {
@@ -2948,7 +2963,7 @@ textarea {
   background:
     linear-gradient(115deg, rgba(0, 31, 18, 0.96), rgba(0, 31, 18, 0.72) 48%, rgba(0, 0, 0, 0.2)),
     radial-gradient(circle at 82% 18%, rgba(255, 194, 10, 0.42), transparent 32%),
-    url("assets/martinique-landscape-only.png") center / cover no-repeat;
+    var(--martinique-landscape-image) center / cover no-repeat;
   color: var(--white);
 }
 
@@ -2970,7 +2985,7 @@ textarea {
   width: min(620px, 68vw);
   aspect-ratio: 1;
   opacity: 0.12;
-  background: url("assets/mada-logo-reference.png") center / contain no-repeat;
+  background: var(--mada-logo-reference-image) center / contain no-repeat;
   filter: saturate(0.8);
 }
 
@@ -3182,7 +3197,7 @@ textarea {
   padding: clamp(70px, 10vw, 132px) clamp(18px, 5vw, 72px);
   background:
     linear-gradient(120deg, rgba(0, 31, 18, 0.96), rgba(0, 31, 18, 0.82)),
-    url("assets/martinique-landscape-only.png") center / cover no-repeat;
+    var(--martinique-landscape-image) center / cover no-repeat;
   color: var(--white);
 }
 
@@ -3281,7 +3296,7 @@ textarea {
   background:
     linear-gradient(112deg, rgba(0, 31, 18, 0.96), rgba(0, 31, 18, 0.72) 48%, rgba(0, 0, 0, 0.2)),
     radial-gradient(circle at 84% 18%, rgba(255, 194, 10, 0.38), transparent 32%),
-    url("assets/martinique-landscape-only.png") center / cover no-repeat;
+    var(--martinique-landscape-image) center / cover no-repeat;
   color: var(--white);
 }
 
@@ -3452,7 +3467,7 @@ textarea {
   padding: clamp(72px, 10vw, 132px) clamp(18px, 5vw, 72px);
   background:
     linear-gradient(120deg, rgba(0, 31, 18, 0.97), rgba(0, 31, 18, 0.84)),
-    url("assets/martinique-landscape-only.png") center / cover no-repeat;
+    var(--martinique-landscape-image) center / cover no-repeat;
   color: var(--white);
 }
 
@@ -3537,7 +3552,7 @@ textarea {
   padding: clamp(76px, 10vw, 140px) clamp(18px, 5vw, 78px);
   background:
     linear-gradient(90deg, rgba(0, 31, 18, 0.96), rgba(0, 31, 18, 0.74) 46%, rgba(0, 0, 0, 0.38)),
-    url("assets/martinique-landscape-only.png") center/cover;
+    var(--martinique-landscape-image) center/cover;
 }
 
 .projects-hero::before,
@@ -3871,7 +3886,7 @@ textarea {
   padding: clamp(72px, 10vw, 132px) clamp(18px, 5vw, 72px);
   background:
     linear-gradient(120deg, rgba(0, 31, 18, 0.98), rgba(0, 31, 18, 0.84)),
-    url("assets/martinique-landscape-only.png") center/cover;
+    var(--martinique-landscape-image) center/cover;
   color: var(--white);
 }
 
@@ -3978,7 +3993,7 @@ textarea {
   padding: clamp(76px, 10vw, 140px) clamp(18px, 5vw, 78px);
   background:
     linear-gradient(90deg, rgba(0, 31, 18, 0.98), rgba(0, 31, 18, 0.78) 50%, rgba(0, 0, 0, 0.36)),
-    url("assets/martinique-landscape-only.png") center/cover;
+    var(--martinique-landscape-image) center/cover;
   color: var(--white);
 }
 

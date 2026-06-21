@@ -326,13 +326,8 @@ drop policy if exists "admins manage project progress" on public.project_progres
 drop policy if exists "public insert project votes" on public.project_votes;
 drop policy if exists "admins read project votes" on public.project_votes;
 
-create policy "public insert memberships" on public.memberships for insert to anon, authenticated with check (consent = true);
-create policy "public insert volunteers" on public.volunteers for insert to anon, authenticated with check (consent = true);
-create policy "public insert newsletter" on public.newsletter_subscribers for insert to anon, authenticated with check (consent = true);
-create policy "public insert contacts" on public.contacts for insert to anon, authenticated with check (consent = true);
-create policy "public insert program contributions" on public.program_contributions for insert to anon, authenticated with check (consent = true);
-create policy "public insert local relays" on public.local_relays for insert to anon, authenticated with check (consent = true);
-create policy "public insert donation intents" on public.donation_intents for insert to anon, authenticated with check (consent = true);
+-- Public form inserts are intentionally blocked by RLS.
+-- They must go through the submit-form Edge Function, which validates Cloudflare Turnstile server-side.
 
 create policy "admins read memberships" on public.memberships for select to authenticated using (public.is_admin());
 create policy "admins read volunteers" on public.volunteers for select to authenticated using (public.is_admin());
@@ -359,7 +354,8 @@ create policy "public read published commune profiles" on public.commune_profile
 create policy "admins manage commune profiles" on public.commune_profiles for all to authenticated using (public.is_admin()) with check (public.is_admin());
 create policy "public read published project progress" on public.project_progress for select to anon, authenticated using (status = 'published' or public.is_admin());
 create policy "admins manage project progress" on public.project_progress for all to authenticated using (public.is_admin()) with check (public.is_admin());
-create policy "public insert project votes" on public.project_votes for insert to anon, authenticated with check (consent = true);
+-- Public project votes are intentionally blocked by RLS.
+-- They must go through the submit-form Edge Function, which validates Cloudflare Turnstile server-side.
 create policy "admins read project votes" on public.project_votes for select to authenticated using (public.is_admin());
 
 create index if not exists news_posts_status_published_at_idx on public.news_posts(status, published_at desc);

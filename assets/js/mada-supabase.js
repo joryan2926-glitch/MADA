@@ -5,6 +5,7 @@
   const turnstileConfig = window.MADA_TURNSTILE || {};
   const TURNSTILE_SITE_KEY = turnstileConfig.siteKey || "0x4AAAAAADopHOCEnvKcciaG";
   const TURNSTILE_SCRIPT_SRC = "https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit";
+  const FORM_FUNCTION_URL = ready ? `${config.url}/functions/v1/submit-form` : "";
   const turnstileTokens = new WeakMap();
   const turnstileWidgetIds = new WeakMap();
   let turnstileScriptPromise = null;
@@ -147,12 +148,41 @@
     return true;
   }
 
+  async function submitSecureForm(table, payload, turnstileToken) {
+    const response = await fetch(FORM_FUNCTION_URL, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        apikey: config.anonKey,
+        Authorization: `Bearer ${config.anonKey}`,
+      },
+      body: JSON.stringify({
+        table,
+        payload,
+        turnstileToken,
+      }),
+    });
+
+    let result = {};
+    try {
+      result = await response.json();
+    } catch (error) {
+      result = {};
+    }
+
+    if (!response.ok) {
+      return { error: new Error(result.error || "Erreur serveur.") };
+    }
+
+    return { error: null };
+  }
+
   async function handleFormSubmit(event) {
     const form = event.target;
     if (!form.matches("[data-supabase-table]")) return;
     event.preventDefault();
 
-    if (!client) {
+    if (!ready) {
       setStatus(form, "Configuration Supabase manquante. Renseignez assets/js/supabase-config.js.", "error");
       return;
     }
@@ -164,6 +194,7 @@
 
     await setupTurnstile(form);
     if (!validateTurnstile(form)) return;
+    const turnstileToken = turnstileTokens.get(form);
 
     const payload = serialize(form);
     let table = form.dataset.supabaseTable;
@@ -174,10 +205,11 @@
     if (button) button.disabled = true;
     setStatus(form, "Envoi en cours...", "info");
 
-    const { error } = await client.from(table).insert(payload);
+    const { error } = await submitSecureForm(table, payload, turnstileToken);
     if (button) button.disabled = false;
 
     if (error) {
+      resetTurnstile(form);
       setStatus(form, "Erreur : " + error.message, "error");
       return;
     }
@@ -289,7 +321,7 @@
       const article = document.createElement("article");
       article.className = "profile-card";
       article.innerHTML = `
-        <img src="${escapeHtml(profile.photo_url || "assets/mada-logo-reference.png")}" alt="${escapeHtml(profile.full_name || "Profil MADA")}">
+        <img src="${escapeHtml(profile.photo_url || "assets/mada-logo-reference-480.webp")}" alt="${escapeHtml(profile.full_name || "Profil MADA")}" loading="lazy" decoding="async">
         <div>
           <p class="article-meta">${escapeHtml(profile.role_title || "Équipe MADA")}</p>
           <h3>${escapeHtml(profile.full_name || "Profil à compléter")}</h3>
