@@ -2,6 +2,12 @@
   const config = window.MADA_SUPABASE || {};
   const ready = config.url && config.anonKey && !config.url.includes("VOTRE-PROJET") && !config.anonKey.includes("VOTRE_CLE");
   const client = ready && window.supabase ? window.supabase.createClient(config.url, config.anonKey) : null;
+  const turnstileConfig = window.MADA_TURNSTILE || {};
+  const TURNSTILE_SITE_KEY = turnstileConfig.siteKey || "0x4AAAAAADopHOCEnvKcciaG";
+  const TURNSTILE_SCRIPT_SRC = "https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit";
+  const turnstileTokens = new WeakMap();
+  const turnstileWidgetIds = new WeakMap();
+  let turnstileScriptPromise = null;
 
   function setStatus(form, message, type) {
     let status = form.querySelector("[data-form-status]");
@@ -19,6 +25,7 @@
     const formData = new FormData(form);
     const payload = {};
     formData.forEach((value, key) => {
+      if (key === "cf-turnstile-response") return;
       payload[key] = value === "on" ? true : value === "" ? null : value;
     });
     form.querySelectorAll("input[type='checkbox']").forEach((input) => {
@@ -27,6 +34,117 @@
     payload.source_page = window.location.pathname.split("/").pop() || "index.html";
     payload.user_agent = navigator.userAgent;
     return payload;
+  }
+
+  function isTurnstileConfigured() {
+    return TURNSTILE_SITE_KEY && !TURNSTILE_SITE_KEY.includes("VOTRE_CLE");
+  }
+
+  function loadTurnstileScript() {
+    if (window.turnstile) return Promise.resolve(window.turnstile);
+    if (turnstileScriptPromise) return turnstileScriptPromise;
+
+    turnstileScriptPromise = new Promise((resolve, reject) => {
+      const existing = document.querySelector(`script[src="${TURNSTILE_SCRIPT_SRC}"]`);
+      if (existing) {
+        existing.addEventListener("load", () => resolve(window.turnstile));
+        existing.addEventListener("error", reject);
+        return;
+      }
+
+      const script = document.createElement("script");
+      script.src = TURNSTILE_SCRIPT_SRC;
+      script.async = true;
+      script.defer = true;
+      script.addEventListener("load", () => resolve(window.turnstile));
+      script.addEventListener("error", reject);
+      document.head.appendChild(script);
+    });
+
+    return turnstileScriptPromise;
+  }
+
+  function createTurnstileContainer(form) {
+    let container = form.querySelector("[data-turnstile-container]");
+    if (container) return container;
+
+    container = document.createElement("div");
+    container.className = "turnstile-field";
+    container.setAttribute("data-turnstile-container", "");
+    container.setAttribute("aria-label", "Vérification anti-spam");
+
+    const note = document.createElement("p");
+    note.className = "form-note";
+    note.textContent = "Vérification anti-spam";
+    container.appendChild(note);
+
+    const widget = document.createElement("div");
+    widget.className = "turnstile-widget";
+    widget.setAttribute("data-turnstile-widget", "");
+    container.appendChild(widget);
+
+    const submitButton = form.querySelector("button[type='submit']");
+    if (submitButton) {
+      submitButton.insertAdjacentElement("beforebegin", container);
+    } else {
+      form.appendChild(container);
+    }
+
+    return container;
+  }
+
+  async function setupTurnstile(form) {
+    if (!form.matches("[data-supabase-table]")) return;
+    const container = createTurnstileContainer(form);
+    const widget = container.querySelector("[data-turnstile-widget]");
+
+    if (!isTurnstileConfigured()) {
+      widget.innerHTML = '<p class="turnstile-warning">Protection anti-spam à configurer.</p>';
+      return;
+    }
+
+    try {
+      const turnstile = await loadTurnstileScript();
+      if (!turnstile || turnstileWidgetIds.has(form)) return;
+      const widgetId = turnstile.render(widget, {
+        sitekey: TURNSTILE_SITE_KEY,
+        callback(token) {
+          turnstileTokens.set(form, token);
+        },
+        "expired-callback"() {
+          turnstileTokens.delete(form);
+        },
+        "error-callback"() {
+          turnstileTokens.delete(form);
+          setStatus(form, "La vérification anti-spam a échoué. Veuillez réessayer.", "error");
+        },
+      });
+      turnstileWidgetIds.set(form, widgetId);
+    } catch (error) {
+      widget.innerHTML = '<p class="turnstile-warning">Vérification anti-spam indisponible.</p>';
+    }
+  }
+
+  function resetTurnstile(form) {
+    turnstileTokens.delete(form);
+    const widgetId = turnstileWidgetIds.get(form);
+    if (window.turnstile && widgetId !== undefined) {
+      window.turnstile.reset(widgetId);
+    }
+  }
+
+  function validateTurnstile(form) {
+    if (!isTurnstileConfigured()) {
+      setStatus(form, "Protection anti-spam non configurée. Renseignez la clé site Cloudflare Turnstile.", "error");
+      return false;
+    }
+
+    if (!turnstileTokens.get(form)) {
+      setStatus(form, "Veuillez valider la vérification anti-spam avant l'envoi.", "error");
+      return false;
+    }
+
+    return true;
   }
 
   async function handleFormSubmit(event) {
@@ -43,6 +161,9 @@
       form.reportValidity();
       return;
     }
+
+    await setupTurnstile(form);
+    if (!validateTurnstile(form)) return;
 
     const payload = serialize(form);
     let table = form.dataset.supabaseTable;
@@ -62,6 +183,7 @@
     }
 
     form.reset();
+    resetTurnstile(form);
     setStatus(form, "Merci. Votre demande a bien été enregistrée.", "success");
   }
 
@@ -231,6 +353,9 @@
 
   document.addEventListener("submit", handleFormSubmit);
   document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll("form[data-supabase-table]").forEach((form) => {
+      setupTurnstile(form);
+    });
     loadPublicNews();
     loadObservatoryIndicators();
     loadDocuments();
