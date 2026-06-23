@@ -5767,3 +5767,681 @@ textarea {
     width: fit-content;
   }
 }
+/* Citizen guide: institutions, responsibilities and public finance */
+.citizen-guide-hero .vision-page-hero-inner {
+  max-width: 980px;
+}
+
+.citizen-guide-intro {
+  padding-bottom: 3rem;
+}
+
+.citizen-guide-nav {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1px;
+  width: min(1120px, 100%);
+  margin: 2rem auto 0;
+  overflow: hidden;
+  border: 1px solid rgba(2, 64, 38, 0.14);
+  border-radius: 6px;
+  background: rgba(2, 64, 38, 0.14);
+}
+
+.citizen-guide-nav a {
+  display: flex;
+  align-items: center;
+  min-width: 0;
+  min-height: 72px;
+  padding: 1rem 1.15rem;
+  gap: 0.8rem;
+  color: var(--deep-green);
+  background: #fff;
+  font-weight: 800;
+  text-decoration: none;
+  transition: background-color 180ms ease, color 180ms ease;
+}
+
+.citizen-guide-nav a:hover,
+.citizen-guide-nav a:focus-visible {
+  color: #fff;
+  background: var(--deep-green);
+}
+
+.citizen-guide-nav span {
+  flex: 0 0 auto;
+  color: var(--gold);
+  font-size: 0.78rem;
+  letter-spacing: 0;
+}
+
+.institution-accordion-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  width: min(1180px, 100%);
+  margin: 2rem auto 0;
+}
+
+.citizen-institution-card {
+  max-width: 100%;
+  overflow: clip;
+  border: 1px solid rgba(2, 64, 38, 0.14);
+  border-radius: 6px;
+  background: #fff;
+  box-shadow: 0 12px 30px rgba(0, 42, 25, 0.07);
+}
+
+.citizen-institution-card summary {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  min-height: 92px;
+  padding: 1.15rem;
+  cursor: pointer;
+  list-style: none;
+  color: var(--deep-green);
+}
+
+.citizen-institution-card summary::-webkit-details-marker {
+  display: none;
+}
+
+.citizen-institution-card summary::after {
+  content: "+";
+  margin-left: auto;
+  color: var(--gold);
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 1;
+}
+
+.citizen-institution-card[open] summary::after {
+  content: "-";
+}
+
+.citizen-institution-card[open] summary {
+  border-bottom: 1px solid rgba(2, 64, 38, 0.12);
+  background: #f5f8f5;
+}
+
+.citizen-institution-card summary strong,
+.citizen-institution-card summary small {
+  display: block;
+  letter-spacing: 0;
+}
+
+.citizen-institution-card summary strong {
+  font-size: 1rem;
+}
+
+.citizen-institution-card summary small {
+  margin-top: 0.25rem;
+  color: #607168;
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+
+.institution-symbol {
+  display: grid;
+  flex: 0 0 48px;
+  width: 48px;
+  height: 48px;
+  place-items: center;
+  border: 1px solid rgba(244, 178, 27, 0.65);
+  border-radius: 50%;
+  color: var(--deep-green);
+  background: #fffaf0;
+  font-size: 0.78rem;
+  font-weight: 900;
+}
+
+.institution-facts {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0;
+  margin: 0;
+  padding: 0.4rem 1.15rem 1.15rem;
+}
+
+.institution-facts div {
+  min-width: 0;
+  padding: 0.85rem 0.8rem 0.85rem 0;
+  border-bottom: 1px solid rgba(2, 64, 38, 0.09);
+}
+
+.institution-facts div:nth-child(even) {
+  padding-right: 0;
+  padding-left: 0.8rem;
+  border-left: 1px solid rgba(2, 64, 38, 0.09);
+}
+
+.institution-facts dt {
+  margin-bottom: 0.25rem;
+  color: #8c6200;
+  font-size: 0.7rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0;
+}
+
+.institution-facts dd {
+  margin: 0;
+  color: #28372f;
+  font-size: 0.85rem;
+  line-height: 1.55;
+}
+
+.responsibility-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  width: min(1180px, 100%);
+  margin: 1.5rem auto 1rem;
+}
+
+.responsibility-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 100%;
+  min-height: 26px;
+  padding: 0.3rem 0.55rem;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  font-size: 0.68rem;
+  font-weight: 800;
+  line-height: 1.2;
+  text-align: center;
+  letter-spacing: 0;
+}
+
+.responsibility-badge.is-lead {
+  color: #fff;
+  background: #075d38;
+}
+
+.responsibility-badge.is-shared {
+  color: #183e68;
+  border-color: #9fbad7;
+  background: #eaf2fa;
+}
+
+.responsibility-badge.is-funder {
+  color: #6a4700;
+  border-color: #edc65a;
+  background: #fff4cc;
+}
+
+.responsibility-badge.is-control {
+  color: #7a2c21;
+  border-color: #e4aaa1;
+  background: #fff0ed;
+}
+
+.responsibility-badge.is-none {
+  color: #66706a;
+  border-color: #d4dad6;
+  background: #f2f4f3;
+}
+
+.responsibility-table-wrap {
+  width: min(1180px, 100%);
+  max-width: 100%;
+  margin-inline: auto;
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+  border: 1px solid rgba(2, 64, 38, 0.14);
+  border-radius: 6px;
+  background: #fff;
+  box-shadow: 0 14px 34px rgba(0, 42, 25, 0.06);
+}
+
+.responsibility-table,
+.budget-detail-table,
+.recovery-table {
+  width: 100%;
+  min-width: 980px;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.responsibility-table th,
+.responsibility-table td,
+.budget-detail-table th,
+.budget-detail-table td,
+.recovery-table th,
+.recovery-table td {
+  padding: 0.75rem;
+  border-bottom: 1px solid #e3e9e5;
+  border-right: 1px solid #edf0ee;
+  vertical-align: top;
+  color: #2b3931;
+  font-size: 0.78rem;
+  line-height: 1.45;
+  overflow-wrap: anywhere;
+}
+
+.responsibility-table thead th,
+.budget-detail-table thead th,
+.recovery-table thead th {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  color: #fff;
+  background: var(--deep-green);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0;
+}
+
+.responsibility-table tbody th,
+.budget-detail-table tbody th,
+.recovery-table tbody th {
+  color: var(--deep-green);
+  background: #f5f8f5;
+  font-weight: 850;
+}
+
+.responsibility-table th:first-child,
+.responsibility-table td:first-child {
+  width: 150px;
+}
+
+.responsibility-table tbody tr:hover td,
+.budget-detail-table tbody tr:hover td,
+.recovery-table tbody tr:hover td {
+  background: #fbfcfb;
+}
+
+.citizen-data-note {
+  width: min(1180px, 100%);
+  margin: 1rem auto 0;
+  color: #5d6c64;
+  font-size: 0.78rem;
+  line-height: 1.55;
+}
+
+.budget-kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+  width: min(1180px, 100%);
+  margin: 2rem auto;
+}
+
+.budget-kpi-grid article {
+  min-width: 0;
+  padding: 1.3rem;
+  border-top: 4px solid var(--gold);
+  border-radius: 4px;
+  color: #fff;
+  background: var(--deep-green);
+}
+
+.budget-kpi-grid span,
+.budget-kpi-grid strong,
+.budget-kpi-grid small {
+  display: block;
+  letter-spacing: 0;
+}
+
+.budget-kpi-grid span {
+  color: #dbe9df;
+  font-size: 0.75rem;
+  font-weight: 750;
+}
+
+.budget-kpi-grid strong {
+  margin: 0.45rem 0;
+  color: #fff;
+  font-family: "Arial Black", Arial, sans-serif;
+  font-size: clamp(1.45rem, 3vw, 2.25rem);
+  line-height: 1;
+}
+
+.budget-kpi-grid small {
+  color: #f1c85f;
+  font-size: 0.7rem;
+}
+
+.budget-source-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(250px, 0.34fr);
+  gap: 1rem;
+  width: min(1180px, 100%);
+  margin-inline: auto;
+}
+
+.budget-source-layout .responsibility-table-wrap {
+  width: 100%;
+}
+
+.budget-detail-table {
+  min-width: 900px;
+}
+
+.budget-detail-table th:nth-child(1) { width: 22%; }
+.budget-detail-table th:nth-child(2) { width: 14%; }
+.budget-detail-table th:nth-child(3) { width: 10%; }
+.budget-detail-table th:nth-child(4) { width: 22%; }
+
+.budget-reading-card {
+  align-self: start;
+  padding: 1.35rem;
+  border-radius: 6px;
+  color: #fff;
+  background: #153d2b;
+}
+
+.budget-reading-card h3 {
+  margin: 0.35rem 0 0.8rem;
+  font-size: 1.25rem;
+}
+
+.budget-reading-card p {
+  color: #e0ebe4;
+  font-size: 0.84rem;
+  line-height: 1.6;
+}
+
+.budget-reading-card .text-link {
+  display: inline-block;
+  margin-top: 0.6rem;
+  color: #ffd36b;
+  font-weight: 800;
+}
+
+.public-spending-chart {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.8rem 1.2rem;
+  width: min(1180px, 100%);
+  margin: 2rem auto;
+}
+
+.public-spending-chart article {
+  min-width: 0;
+  padding: 1rem;
+  border: 1px solid rgba(2, 64, 38, 0.12);
+  border-radius: 5px;
+  background: #fff;
+}
+
+.public-spending-chart article.is-crosscutting {
+  border-style: dashed;
+  background: #fffaf0;
+}
+
+.public-spending-chart article > div {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0.65rem;
+}
+
+.public-spending-chart strong {
+  color: var(--deep-green);
+  font-size: 0.86rem;
+}
+
+.public-spending-chart div span {
+  color: #765300;
+  font-size: 0.72rem;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.spending-track {
+  display: block;
+  height: 8px;
+  overflow: hidden;
+  border-radius: 2px;
+  background: #e5ebe7;
+}
+
+.spending-track i {
+  display: block;
+  width: var(--share);
+  min-width: 8px;
+  height: 100%;
+  background: linear-gradient(90deg, #087246, #eeb329);
+}
+
+.spending-summary-grid,
+.mada-change-grid,
+.autonomy-method,
+.source-link-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+  width: min(1180px, 100%);
+  margin: 1.5rem auto 0;
+}
+
+.spending-summary-grid article {
+  padding: 1rem;
+  border-left: 3px solid var(--gold);
+  background: #f5f8f5;
+}
+
+.spending-summary-grid strong,
+.spending-summary-grid span {
+  display: block;
+  letter-spacing: 0;
+}
+
+.spending-summary-grid strong {
+  color: var(--deep-green);
+  font-size: 0.82rem;
+}
+
+.spending-summary-grid span {
+  margin-top: 0.35rem;
+  color: #55655c;
+  font-size: 0.75rem;
+  line-height: 1.5;
+}
+
+.mada-change-grid article {
+  min-width: 0;
+  padding: 1.2rem;
+  border: 1px solid rgba(255, 255, 255, 0.13);
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.mada-change-grid article > span {
+  color: #f5be38;
+  font-size: 0.72rem;
+  font-weight: 900;
+}
+
+.mada-change-grid h3 {
+  margin: 0.55rem 0;
+  color: #fff;
+  font-size: 1rem;
+}
+
+.mada-change-grid p {
+  margin: 0;
+  color: #dce8e0;
+  font-size: 0.8rem;
+  line-height: 1.55;
+}
+
+.mada-citizen-pledge {
+  width: min(900px, 100%);
+  margin: 2rem auto 0;
+  padding: 1.2rem 1.4rem;
+  border-left: 4px solid var(--gold);
+  color: #fff;
+  background: rgba(255, 255, 255, 0.06);
+  font-size: clamp(1.05rem, 2.3vw, 1.45rem);
+  font-weight: 800;
+  line-height: 1.45;
+  text-align: center;
+}
+
+.recovery-table th:nth-child(1) { width: 14%; }
+.recovery-table th:nth-child(2) { width: 27%; }
+.recovery-table th:nth-child(3) { width: 31%; }
+
+.autonomy-method article {
+  padding: 1rem;
+  border-top: 3px solid var(--gold);
+  background: #fff;
+}
+
+.autonomy-method span,
+.autonomy-method strong {
+  display: block;
+  letter-spacing: 0;
+}
+
+.autonomy-method span {
+  color: #9c6e00;
+  font-size: 0.7rem;
+  font-weight: 900;
+}
+
+.autonomy-method strong {
+  margin: 0.35rem 0;
+  color: var(--deep-green);
+}
+
+.autonomy-method p {
+  margin: 0;
+  color: #59685f;
+  font-size: 0.78rem;
+  line-height: 1.5;
+}
+
+.source-link-grid a {
+  min-width: 0;
+  padding: 1rem;
+  border: 1px solid rgba(2, 64, 38, 0.13);
+  border-radius: 4px;
+  color: inherit;
+  background: #fff;
+  text-decoration: none;
+}
+
+.source-link-grid a:hover,
+.source-link-grid a:focus-visible {
+  border-color: var(--gold);
+  box-shadow: 0 8px 22px rgba(0, 42, 25, 0.08);
+}
+
+.source-link-grid strong,
+.source-link-grid span {
+  display: block;
+  letter-spacing: 0;
+}
+
+.source-link-grid strong {
+  color: var(--deep-green);
+}
+
+.source-link-grid span {
+  margin-top: 0.35rem;
+  color: #5b6a61;
+  font-size: 0.76rem;
+  line-height: 1.45;
+}
+
+.center-actions {
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.anchor-offset {
+  display: block;
+  position: relative;
+  top: -110px;
+  height: 0;
+  overflow: hidden;
+}
+
+@media (max-width: 980px) {
+  .citizen-guide-nav,
+  .budget-kpi-grid,
+  .spending-summary-grid,
+  .mada-change-grid,
+  .autonomy-method,
+  .source-link-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .institution-accordion-grid,
+  .budget-source-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .budget-reading-card {
+    width: 100%;
+  }
+}
+
+@media (max-width: 700px) {
+  .citizen-guide-nav,
+  .budget-kpi-grid,
+  .public-spending-chart,
+  .spending-summary-grid,
+  .mada-change-grid,
+  .autonomy-method,
+  .source-link-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .citizen-guide-nav a {
+    min-height: 58px;
+  }
+
+  .citizen-institution-card summary {
+    min-height: 78px;
+    padding: 0.9rem;
+  }
+
+  .institution-symbol {
+    flex-basis: 42px;
+    width: 42px;
+    height: 42px;
+  }
+
+  .institution-facts {
+    grid-template-columns: 1fr;
+    padding-inline: 0.9rem;
+  }
+
+  .institution-facts div,
+  .institution-facts div:nth-child(even) {
+    padding: 0.75rem 0;
+    border-left: 0;
+  }
+
+  .public-spending-chart article > div {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .public-spending-chart div span {
+    white-space: normal;
+  }
+
+  .responsibility-table,
+  .budget-detail-table,
+  .recovery-table {
+    min-width: 820px;
+  }
+
+  .responsibility-legend {
+    gap: 0.35rem;
+  }
+
+  .responsibility-badge {
+    font-size: 0.62rem;
+  }
+}
