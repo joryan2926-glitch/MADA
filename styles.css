@@ -19,18 +19,48 @@
   --shadow: 0 20px 44px rgba(0, 31, 18, 0.12);
   --martinique-landscape-image: url("assets/martinique-landscape-only-1600.webp");
   --mada-logo-reference-image: url("assets/mada-logo-reference-800.webp");
+  --hero-accueil-image: url("assets/hero-accueil-martinique-1600.webp");
+  --hero-programme-image: url("assets/hero-programme-fort-de-france-1600.webp");
+  --hero-communes-image: url("assets/hero-communes-mairie-1600.webp");
+  --hero-observatoire-image: url("assets/hero-observatoire-territoire-1600.webp");
+  --hero-projects-image: url("assets/hero-programme-fort-de-france-1600.webp");
+  --photo-eau-image: url("assets/photo-eau-resilience-1600.webp");
+  --photo-agriculture-image: url("assets/photo-agriculture-martinique-1600.webp");
+  --photo-culture-image: url("assets/photo-culture-carnaval-1600.webp");
+  --photo-talents-image: url("assets/photo-retour-talents-1600.webp");
+  --photo-peche-image: url("assets/photo-peche-martinique-1600.webp");
 }
 
 @media (max-width: 760px) {
   :root {
     --martinique-landscape-image: url("assets/martinique-landscape-only-768.webp");
     --mada-logo-reference-image: url("assets/mada-logo-reference-480.webp");
+    --hero-accueil-image: url("assets/hero-accueil-martinique-768.webp");
+    --hero-programme-image: url("assets/hero-programme-fort-de-france-768.webp");
+    --hero-communes-image: url("assets/hero-communes-mairie-768.webp");
+    --hero-observatoire-image: url("assets/hero-observatoire-territoire-768.webp");
+    --hero-projects-image: url("assets/hero-programme-fort-de-france-768.webp");
+    --photo-eau-image: url("assets/photo-eau-resilience-768.webp");
+    --photo-agriculture-image: url("assets/photo-agriculture-martinique-768.webp");
+    --photo-culture-image: url("assets/photo-culture-carnaval-768.webp");
+    --photo-talents-image: url("assets/photo-retour-talents-768.webp");
+    --photo-peche-image: url("assets/photo-peche-martinique-768.webp");
   }
 }
 
 @media (min-width: 761px) and (max-width: 1200px) {
   :root {
     --martinique-landscape-image: url("assets/martinique-landscape-only-1200.webp");
+    --hero-accueil-image: url("assets/hero-accueil-martinique-1200.webp");
+    --hero-programme-image: url("assets/hero-programme-fort-de-france-1200.webp");
+    --hero-communes-image: url("assets/hero-communes-mairie-1200.webp");
+    --hero-observatoire-image: url("assets/hero-observatoire-territoire-1200.webp");
+    --hero-projects-image: url("assets/hero-programme-fort-de-france-1200.webp");
+    --photo-eau-image: url("assets/photo-eau-resilience-1200.webp");
+    --photo-agriculture-image: url("assets/photo-agriculture-martinique-1200.webp");
+    --photo-culture-image: url("assets/photo-culture-carnaval-1200.webp");
+    --photo-talents-image: url("assets/photo-retour-talents-1200.webp");
+    --photo-peche-image: url("assets/photo-peche-martinique-1200.webp");
   }
 }
 
@@ -136,6 +166,14 @@ textarea {
   text-transform: uppercase;
   white-space: nowrap;
   cursor: pointer;
+}
+
+.main-nav .understand-nav-link {
+  max-width: 136px;
+  justify-content: center;
+  white-space: normal;
+  text-align: center;
+  line-height: 1.05;
 }
 
 .main-nav a::after,
@@ -299,7 +337,7 @@ textarea {
   overflow: hidden;
   background:
     linear-gradient(90deg, rgba(0, 31, 18, 0.99) 0%, rgba(0, 31, 18, 0.88) 38%, rgba(0, 31, 18, 0.26) 78%),
-    var(--martinique-landscape-image) center / cover no-repeat;
+    var(--hero-accueil-image) center / cover no-repeat;
   color: var(--white);
 }
 
@@ -1334,6 +1372,319 @@ textarea {
   font-weight: 760;
 }
 
+.observatory-grid {
+  width: min(1320px, 100%);
+  max-width: 100%;
+  grid-template-columns: repeat(auto-fit, minmax(min(260px, 100%), 1fr));
+  margin: 0 auto;
+}
+
+.observatory-card {
+  display: grid;
+  min-width: 0;
+  align-content: start;
+  gap: 14px;
+  background:
+    linear-gradient(180deg, rgba(255, 194, 10, 0.07), rgba(255, 255, 255, 0)),
+    var(--paper);
+}
+
+.observatory-card h3 {
+  margin-bottom: 0;
+}
+
+.observatory-list {
+  display: grid;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.observatory-list li {
+  display: flex;
+  min-width: 0;
+  align-items: flex-start;
+  gap: 8px;
+  color: var(--green-900);
+  font-weight: 780;
+  line-height: 1.35;
+}
+
+.observatory-list li::before {
+  flex: 0 0 8px;
+  width: 8px;
+  height: 8px;
+  margin-top: 0.45em;
+  border-radius: 999px;
+  background: linear-gradient(135deg, var(--green-500), var(--gold));
+  content: "";
+}
+
+.observatory-focus-card,
+.water-priority-card {
+  position: relative;
+  isolation: isolate;
+  width: min(1240px, 100%);
+  max-width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+  border: 1px solid rgba(0, 48, 28, 0.14);
+  border-radius: 8px;
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.94), rgba(247, 249, 245, 0.92)),
+    radial-gradient(circle at top right, rgba(255, 194, 10, 0.18), transparent 34%),
+    var(--photo-eau-image) center / cover no-repeat;
+  box-shadow: 0 22px 48px rgba(0, 31, 18, 0.1);
+  padding: clamp(24px, 4vw, 44px);
+}
+
+.water-priority-grid,
+.observatory-priority-grid,
+.observatory-dashboard-grid {
+  display: grid;
+  width: 100%;
+  max-width: 100%;
+  grid-template-columns: repeat(auto-fit, minmax(min(260px, 100%), 1fr));
+  gap: 16px;
+  margin-top: 26px;
+}
+
+.water-priority-grid article,
+.observatory-priority-grid article,
+.observatory-dashboard-grid article {
+  min-width: 0;
+  border: 1px solid rgba(0, 48, 28, 0.12);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.82);
+  padding: 22px;
+}
+
+.water-priority-grid h3,
+.observatory-priority-grid h3 {
+  margin: 0 0 10px;
+  color: var(--green-950);
+  font-size: clamp(19px, 2vw, 25px);
+  line-height: 1.05;
+  font-weight: 950;
+  text-transform: uppercase;
+}
+
+.water-priority-grid p,
+.observatory-priority-grid p,
+.observatory-dashboard-grid p {
+  margin: 0;
+  color: var(--muted);
+  font-weight: 760;
+  line-height: 1.45;
+}
+
+.observatory-dashboard-grid {
+  width: min(1240px, 100%);
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.observatory-dashboard-grid span {
+  display: inline-grid;
+  width: 38px;
+  aspect-ratio: 1;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--green-950);
+  color: var(--gold);
+  font-weight: 950;
+}
+
+.observatory-dashboard-grid strong {
+  display: block;
+  margin: 14px 0 8px;
+  color: var(--green-950);
+  font-size: clamp(20px, 2.2vw, 28px);
+  line-height: 1.05;
+  font-weight: 950;
+  text-transform: uppercase;
+}
+
+.water-project-meta {
+  margin: 26px 0 0;
+}
+
+.territory-stat-grid {
+  display: grid;
+  width: min(1240px, 100%);
+  max-width: 100%;
+  grid-template-columns: repeat(auto-fit, minmax(min(230px, 100%), 1fr));
+  gap: 14px;
+  margin: 0 auto;
+}
+
+.territory-stat-grid article {
+  position: relative;
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 8px;
+  background:
+    linear-gradient(145deg, rgba(255, 194, 10, 0.12), rgba(255, 255, 255, 0.04)),
+    rgba(255, 255, 255, 0.07);
+  padding: 24px;
+}
+
+.territory-stat-grid article::after {
+  position: absolute;
+  right: -36px;
+  bottom: -42px;
+  width: 120px;
+  aspect-ratio: 1;
+  border: 1px solid rgba(255, 194, 10, 0.24);
+  border-radius: 50%;
+  content: "";
+}
+
+.territory-stat-grid span {
+  display: block;
+  color: var(--gold);
+  font-size: clamp(36px, 5vw, 64px);
+  line-height: 1;
+  font-weight: 950;
+}
+
+.territory-stat-grid strong {
+  display: block;
+  margin-top: 12px;
+  color: var(--white);
+  font-size: 14px;
+  font-weight: 950;
+  text-transform: uppercase;
+}
+
+.territory-stat-grid p {
+  margin: 10px 0 0;
+  color: rgba(255, 255, 255, 0.82);
+  font-weight: 720;
+  line-height: 1.42;
+}
+
+.territory-stat-grid code {
+  color: var(--gold);
+  font-weight: 900;
+}
+
+.observatory-method-grid,
+.commune-operating-grid,
+.commune-priority-grid {
+  display: grid;
+  width: min(1240px, 100%);
+  max-width: 100%;
+  grid-template-columns: repeat(auto-fit, minmax(min(270px, 100%), 1fr));
+  gap: 16px;
+  margin: 0 auto;
+}
+
+.observatory-method-grid article,
+.commune-operating-grid article,
+.commune-priority-grid article {
+  position: relative;
+  min-width: 0;
+  border: 1px solid rgba(0, 48, 28, 0.12);
+  border-radius: 8px;
+  background:
+    linear-gradient(180deg, rgba(255, 194, 10, 0.08), rgba(255, 255, 255, 0)),
+    var(--white);
+  box-shadow: 0 18px 38px rgba(0, 31, 18, 0.08);
+  padding: clamp(22px, 3vw, 32px);
+}
+
+.observatory-method-grid span,
+.commune-operating-grid span,
+.commune-priority-grid span {
+  display: inline-grid;
+  min-width: 42px;
+  min-height: 42px;
+  place-items: center;
+  border-radius: 999px;
+  background: var(--green-950);
+  color: var(--gold);
+  font-size: 13px;
+  font-weight: 950;
+  text-transform: uppercase;
+  padding: 0 12px;
+}
+
+.observatory-method-grid h3,
+.commune-operating-grid h3,
+.commune-priority-grid h3 {
+  margin: 18px 0 10px;
+  color: var(--green-950);
+  font-size: clamp(20px, 2.2vw, 28px);
+  line-height: 1.06;
+  font-weight: 950;
+  text-transform: uppercase;
+}
+
+.observatory-method-grid p,
+.commune-operating-grid p,
+.commune-priority-grid p {
+  margin: 0;
+  color: var(--muted);
+  font-weight: 740;
+  line-height: 1.48;
+}
+
+.data-schema-panel {
+  display: grid;
+  gap: 12px;
+  min-width: 0;
+}
+
+.data-schema-panel article {
+  display: grid;
+  grid-template-columns: minmax(120px, 0.38fr) minmax(0, 1fr);
+  gap: 14px;
+  align-items: start;
+  min-width: 0;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--white);
+  box-shadow: 0 12px 24px rgba(0, 31, 18, 0.05);
+  padding: 16px;
+}
+
+.data-schema-panel strong {
+  color: var(--gold-700);
+  font-size: 13px;
+  font-weight: 950;
+  text-transform: uppercase;
+}
+
+.data-schema-panel span {
+  color: var(--muted);
+  font-weight: 740;
+  line-height: 1.42;
+}
+
+.commune-network-section,
+.observatory-mission-section {
+  background:
+    radial-gradient(circle at 12% 18%, rgba(255, 194, 10, 0.15), transparent 32%),
+    linear-gradient(150deg, var(--green-950), var(--green-850));
+}
+
+@media (max-width: 760px) {
+  .data-schema-panel article {
+    grid-template-columns: 1fr;
+  }
+
+  .territory-stat-grid,
+  .observatory-method-grid,
+  .commune-operating-grid,
+  .commune-priority-grid {
+    width: 100%;
+    max-width: 340px;
+  }
+}
+
 .profile-grid {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
@@ -1591,8 +1942,20 @@ textarea {
   overflow: hidden;
   background:
     linear-gradient(90deg, rgba(0, 31, 18, 0.98), rgba(0, 31, 18, 0.78)),
-    var(--martinique-landscape-image) center / cover no-repeat;
+    var(--page-hero-image, var(--martinique-landscape-image)) center / cover no-repeat;
   color: var(--white);
+}
+
+.hero-programme {
+  --page-hero-image: var(--hero-programme-image);
+}
+
+.hero-communes {
+  --page-hero-image: var(--hero-communes-image);
+}
+
+.hero-observatoire {
+  --page-hero-image: var(--hero-observatoire-image);
 }
 
 .page-hero h1 {
@@ -1727,6 +2090,14 @@ textarea {
     min-height: 40px;
     padding: 10px 0;
     font-size: 13px;
+  }
+
+  .main-nav .understand-nav-link {
+    max-width: 100%;
+    justify-content: flex-start;
+    white-space: nowrap;
+    text-align: left;
+    line-height: 1.2;
   }
 
   .nav-item {
@@ -3193,6 +3564,579 @@ textarea {
   font-weight: 760;
 }
 
+.objectives-hero .vision-page-hero-inner {
+  width: min(1120px, 100%);
+}
+
+.objectives-counter-grid {
+  width: min(1320px, 100%);
+}
+
+.objectives-grid {
+  display: grid;
+  width: min(1320px, 100%);
+  max-width: 100%;
+  grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+  gap: 18px;
+  margin: 0 auto;
+}
+
+.objectives-card {
+  position: relative;
+  display: grid;
+  min-width: 0;
+  align-content: start;
+  gap: 16px;
+  overflow: hidden;
+  border: 1px solid rgba(0, 48, 28, 0.12);
+  border-radius: 8px;
+  background:
+    linear-gradient(145deg, rgba(255, 194, 10, 0.1), transparent 46%),
+    var(--white);
+  box-shadow: 0 18px 38px rgba(0, 31, 18, 0.08);
+  padding: clamp(24px, 3vw, 34px);
+}
+
+.objectives-card::before {
+  position: absolute;
+  inset: 0 0 auto;
+  height: 6px;
+  background: linear-gradient(90deg, var(--green-500), var(--gold), var(--red));
+  content: "";
+}
+
+.objectives-card-water {
+  background:
+    radial-gradient(circle at top right, rgba(17, 162, 160, 0.16), transparent 36%),
+    linear-gradient(145deg, var(--white), #f7fbfa);
+}
+
+.objectives-card span {
+  color: var(--gold-700);
+  font-weight: 950;
+}
+
+.objectives-card h2 {
+  margin: 0;
+  color: var(--green-950);
+  font-size: clamp(23px, 2.4vw, 34px);
+  line-height: 1.05;
+  font-weight: 950;
+  text-transform: uppercase;
+}
+
+.objectives-card .check-list {
+  margin-top: 0;
+}
+
+.objectives-timeline {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.objectives-table-wrap {
+  width: min(1280px, 100%);
+  max-width: 100%;
+  margin: 0 auto;
+  overflow-x: auto;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--white);
+  box-shadow: 0 18px 34px rgba(0, 31, 18, 0.08);
+}
+
+.objectives-table {
+  width: 100%;
+  min-width: 860px;
+  border-collapse: collapse;
+}
+
+.objectives-table th,
+.objectives-table td {
+  border-bottom: 1px solid var(--line);
+  padding: 16px 18px;
+  text-align: left;
+  vertical-align: top;
+}
+
+.objectives-table thead th {
+  background: var(--green-950);
+  color: var(--gold);
+  font-size: 13px;
+  font-weight: 950;
+  text-transform: uppercase;
+}
+
+.objectives-table tbody th {
+  color: var(--green-950);
+  font-weight: 950;
+  text-transform: uppercase;
+}
+
+.objectives-table td {
+  color: var(--muted);
+  font-weight: 720;
+  line-height: 1.35;
+}
+
+.objectives-table tr:last-child th,
+.objectives-table tr:last-child td {
+  border-bottom: 0;
+}
+
+.financing-flow {
+  display: grid;
+  width: min(1180px, 100%);
+  max-width: 100%;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+  margin: 0 auto;
+}
+
+.financing-flow article {
+  position: relative;
+  min-width: 0;
+  border: 1px solid rgba(0, 48, 28, 0.12);
+  border-radius: 8px;
+  background:
+    linear-gradient(145deg, rgba(255, 194, 10, 0.12), transparent 54%),
+    var(--white);
+  box-shadow: 0 16px 32px rgba(0, 31, 18, 0.08);
+  padding: 24px;
+  text-align: center;
+}
+
+.financing-flow article::after {
+  position: absolute;
+  top: 50%;
+  right: -18px;
+  width: 22px;
+  height: 2px;
+  background: var(--gold);
+  content: "";
+}
+
+.financing-flow article:last-child::after {
+  display: none;
+}
+
+.financing-flow strong {
+  display: block;
+  color: var(--green-950);
+  font-size: clamp(20px, 2vw, 28px);
+  font-weight: 950;
+  text-transform: uppercase;
+}
+
+.financing-flow span {
+  display: block;
+  margin-top: 10px;
+  color: var(--muted);
+  font-weight: 760;
+  line-height: 1.35;
+}
+
+.financing-source-grid {
+  display: grid;
+  width: min(1320px, 100%);
+  max-width: 100%;
+  grid-template-columns: repeat(auto-fit, minmax(min(310px, 100%), 1fr));
+  gap: 18px;
+  margin: 0 auto;
+}
+
+.financing-card {
+  display: grid;
+  min-width: 0;
+  align-content: start;
+  gap: 16px;
+  border: 1px solid rgba(0, 48, 28, 0.12);
+  border-top: 6px solid var(--gold);
+  border-radius: 8px;
+  background: var(--white);
+  box-shadow: 0 18px 38px rgba(0, 31, 18, 0.08);
+  padding: clamp(24px, 3vw, 34px);
+}
+
+.financing-card-diaspora {
+  border-top-color: var(--green-500);
+  background:
+    radial-gradient(circle at top right, rgba(111, 186, 44, 0.16), transparent 36%),
+    var(--white);
+}
+
+.financing-card span,
+.financing-eyebrow {
+  color: var(--gold-700);
+  font-weight: 950;
+  text-transform: uppercase;
+}
+
+.financing-card h2 {
+  margin: 0;
+  color: var(--green-950);
+  font-size: clamp(22px, 2.3vw, 32px);
+  line-height: 1.05;
+  font-weight: 950;
+  text-transform: uppercase;
+}
+
+.financing-card p {
+  margin: 0;
+  color: var(--muted);
+  font-weight: 760;
+  line-height: 1.45;
+}
+
+.financing-table-wrap {
+  width: min(1120px, 100%);
+}
+
+.financing-table {
+  min-width: 720px;
+}
+
+.financing-commitment-section {
+  background:
+    radial-gradient(circle at 14% 18%, rgba(255, 194, 10, 0.16), transparent 30%),
+    linear-gradient(150deg, var(--green-950), var(--green-850));
+}
+
+.financing-commitment-card {
+  width: min(1040px, 100%);
+  max-width: 100%;
+  margin: 0 auto;
+  border: 1px solid rgba(255, 194, 10, 0.24);
+  border-radius: 8px;
+  background: rgba(0, 18, 10, 0.64);
+  box-shadow: 0 24px 50px rgba(0, 0, 0, 0.24);
+  padding: clamp(28px, 5vw, 54px);
+  text-align: center;
+}
+
+.financing-commitment-card h2 {
+  margin: 8px 0 18px;
+  color: var(--white);
+  font-size: clamp(30px, 4vw, 56px);
+  line-height: 1;
+  font-weight: 950;
+  text-transform: uppercase;
+}
+
+.financing-commitment-card blockquote {
+  margin: 0 auto 18px;
+  color: var(--gold);
+  font-size: clamp(22px, 3vw, 36px);
+  font-weight: 850;
+  line-height: 1.2;
+}
+
+.financing-commitment-card p:not(.section-label) {
+  width: min(780px, 100%);
+  margin: 0 auto;
+  color: rgba(255, 255, 255, 0.86);
+  font-weight: 720;
+  line-height: 1.55;
+}
+
+@media (max-width: 1040px) {
+  .financing-flow {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .financing-flow article::after {
+    display: none;
+  }
+}
+
+@media (max-width: 760px) {
+  .financing-flow,
+  .financing-source-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .financing-table {
+    min-width: 640px;
+  }
+}
+
+.understand-hero {
+  background:
+    radial-gradient(circle at 18% 18%, rgba(255, 194, 10, 0.18), transparent 34%),
+    linear-gradient(135deg, rgba(0, 31, 18, 0.95), rgba(0, 14, 8, 0.88)),
+    var(--hero-observatoire-image) center / cover no-repeat;
+}
+
+.understand-principle-grid,
+.understand-responsibility-grid,
+.understand-institution-grid,
+.understand-investment-grid,
+.understand-spending-grid {
+  display: grid;
+  width: min(1280px, 100%);
+  max-width: 100%;
+  grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
+  gap: 16px;
+  margin: 0 auto;
+}
+
+.understand-principle-grid article,
+.understand-responsibility-grid article,
+.understand-institution-grid article,
+.understand-use-card {
+  min-width: 0;
+  border: 1px solid rgba(0, 48, 28, 0.12);
+  border-radius: 8px;
+  background:
+    linear-gradient(145deg, rgba(255, 194, 10, 0.09), transparent 48%),
+    var(--white);
+  box-shadow: 0 18px 38px rgba(0, 31, 18, 0.08);
+  padding: clamp(24px, 3vw, 34px);
+}
+
+.understand-principle-grid span,
+.understand-investment-grid span,
+.understand-institution-grid span {
+  display: inline-flex;
+  width: fit-content;
+  align-items: center;
+  min-height: 34px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: rgba(255, 194, 10, 0.16);
+  color: var(--gold-700);
+  font-size: 12px;
+  font-weight: 950;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.understand-principle-grid h3,
+.understand-responsibility-grid h3,
+.understand-institution-grid h3,
+.understand-investment-grid h3,
+.understand-use-card h3 {
+  margin: 12px 0 10px;
+  color: var(--green-950);
+  font-size: clamp(22px, 2.2vw, 30px);
+  line-height: 1.08;
+  font-weight: 950;
+  text-transform: uppercase;
+}
+
+.understand-principle-grid p,
+.understand-institution-grid p,
+.understand-investment-grid p,
+.understand-use-card p {
+  margin: 0;
+  color: var(--muted);
+  font-weight: 720;
+  line-height: 1.5;
+}
+
+.understand-budget-layout {
+  display: grid;
+  width: min(1280px, 100%);
+  max-width: 100%;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 360px);
+  gap: 18px;
+  align-items: start;
+  margin: 0 auto;
+}
+
+.understand-table-wrap {
+  width: 100%;
+}
+
+.understand-table {
+  min-width: 760px;
+}
+
+.understand-use-card {
+  position: sticky;
+  top: 118px;
+}
+
+.understand-use-card .check-list {
+  margin-bottom: 0;
+}
+
+.understand-spending-grid article {
+  display: grid;
+  min-width: 0;
+  gap: 14px;
+  border: 1px solid rgba(0, 48, 28, 0.12);
+  border-radius: 8px;
+  background: var(--white);
+  box-shadow: 0 16px 32px rgba(0, 31, 18, 0.07);
+  padding: 22px;
+}
+
+.understand-spending-grid strong {
+  display: block;
+  color: var(--green-950);
+  font-size: 18px;
+  font-weight: 950;
+  text-transform: uppercase;
+}
+
+.understand-spending-grid span:not(.understand-bar) {
+  display: block;
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.understand-bar {
+  display: block;
+  width: 100%;
+  height: 10px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: #e7ece6;
+}
+
+.understand-bar i {
+  display: block;
+  width: var(--bar);
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, var(--green-500), var(--gold));
+}
+
+.understand-investment-grid article {
+  min-width: 0;
+  border: 1px solid rgba(255, 194, 10, 0.22);
+  border-radius: 8px;
+  background:
+    linear-gradient(145deg, rgba(255, 194, 10, 0.12), rgba(255, 255, 255, 0.04)),
+    rgba(0, 18, 10, 0.58);
+  box-shadow: 0 22px 42px rgba(0, 0, 0, 0.16);
+  padding: clamp(24px, 3vw, 34px);
+}
+
+.understand-investment-grid h3 {
+  color: var(--white);
+}
+
+.understand-investment-grid p {
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.understand-responsibility-grid article {
+  background:
+    radial-gradient(circle at top right, rgba(255, 194, 10, 0.12), transparent 34%),
+    var(--white);
+}
+
+.understand-autonomy-card,
+.understand-final-message {
+  width: min(1120px, 100%);
+  max-width: 100%;
+  margin: 0 auto;
+  border-radius: 8px;
+  padding: clamp(30px, 5vw, 58px);
+}
+
+.understand-autonomy-card {
+  border: 1px solid rgba(255, 194, 10, 0.26);
+  background:
+    radial-gradient(circle at top left, rgba(255, 194, 10, 0.16), transparent 34%),
+    rgba(0, 18, 10, 0.62);
+  box-shadow: 0 24px 50px rgba(0, 0, 0, 0.22);
+}
+
+.understand-autonomy-card h2,
+.understand-final-message h2 {
+  margin: 8px 0 18px;
+  color: var(--white);
+  font-size: clamp(30px, 4vw, 56px);
+  line-height: 1;
+  font-weight: 950;
+  text-transform: uppercase;
+}
+
+.understand-autonomy-steps {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 24px;
+}
+
+.understand-autonomy-steps article {
+  min-width: 0;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.06);
+  padding: 22px;
+}
+
+.understand-autonomy-steps strong {
+  display: block;
+  color: var(--gold);
+  font-size: 18px;
+  font-weight: 950;
+  text-transform: uppercase;
+}
+
+.understand-autonomy-steps p {
+  margin: 10px 0 0;
+  color: rgba(255, 255, 255, 0.82);
+  font-weight: 720;
+}
+
+.understand-final-message {
+  border: 1px solid rgba(0, 48, 28, 0.14);
+  background:
+    linear-gradient(145deg, rgba(255, 194, 10, 0.12), transparent 50%),
+    var(--white);
+  box-shadow: 0 22px 48px rgba(0, 31, 18, 0.1);
+  text-align: center;
+}
+
+.understand-final-message blockquote {
+  margin: 0 auto 18px;
+  color: var(--green-950);
+  font-size: clamp(26px, 3.8vw, 48px);
+  line-height: 1.1;
+  font-weight: 950;
+}
+
+.understand-final-message p:not(.section-label) {
+  width: min(800px, 100%);
+  margin: 0 auto 24px;
+  color: var(--muted);
+  font-weight: 760;
+  line-height: 1.55;
+}
+
+@media (max-width: 1020px) {
+  .understand-budget-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .understand-use-card {
+    position: static;
+  }
+
+  .understand-autonomy-steps {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 760px) {
+  .understand-table {
+    min-width: 680px;
+  }
+
+  .understand-principle-grid,
+  .understand-responsibility-grid,
+  .understand-institution-grid,
+  .understand-investment-grid,
+  .understand-spending-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 .vision-final-quote {
   padding: clamp(70px, 10vw, 132px) clamp(18px, 5vw, 72px);
   background:
@@ -3552,7 +4496,7 @@ textarea {
   padding: clamp(76px, 10vw, 140px) clamp(18px, 5vw, 78px);
   background:
     linear-gradient(90deg, rgba(0, 31, 18, 0.96), rgba(0, 31, 18, 0.74) 46%, rgba(0, 0, 0, 0.38)),
-    var(--martinique-landscape-image) center/cover;
+    var(--hero-projects-image) center/cover;
 }
 
 .projects-hero::before,
@@ -3744,6 +4688,30 @@ textarea {
   border: 1px solid rgba(255, 255, 255, 0.24);
   border-radius: 50%;
   content: "";
+}
+
+.project-alimentaire .grand-project-visual {
+  background:
+    linear-gradient(150deg, rgba(0, 31, 18, 0.82), rgba(0, 31, 18, 0.58)),
+    var(--photo-agriculture-image) center / cover no-repeat;
+}
+
+.project-bleue .grand-project-visual {
+  background:
+    linear-gradient(150deg, rgba(0, 31, 18, 0.82), rgba(0, 31, 18, 0.58)),
+    var(--photo-peche-image) center / cover no-repeat;
+}
+
+.project-talents .grand-project-visual {
+  background:
+    linear-gradient(150deg, rgba(0, 31, 18, 0.82), rgba(0, 31, 18, 0.58)),
+    var(--photo-talents-image) center / cover no-repeat;
+}
+
+.project-culture .grand-project-visual {
+  background:
+    linear-gradient(150deg, rgba(0, 31, 18, 0.84), rgba(0, 31, 18, 0.58)),
+    var(--photo-culture-image) center / cover no-repeat;
 }
 
 .grand-project-visual span {
@@ -4498,5 +5466,145 @@ textarea {
 
   .dashboard-axis-row {
     gap: 12px;
+  }
+}
+
+/* Publication polish: calmer hero scale across the MADA platform. */
+.hero h1,
+.page-hero h1,
+.serment-hero h1,
+.vision-page-hero h1,
+.axes-hero h1,
+.projects-hero h1,
+.dashboard-hero h1,
+.welcome-content h1 {
+  font-size: clamp(3rem, 6vw, 6rem);
+  line-height: 0.95;
+}
+
+.page-hero.compact-hero {
+  min-height: 360px;
+  padding-top: clamp(44px, 6vw, 76px);
+  padding-bottom: clamp(44px, 6vw, 76px);
+}
+
+.commune-zones {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
+  gap: 18px;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.commune-zone-card {
+  display: grid;
+  gap: 18px;
+  min-width: 0;
+  padding: clamp(22px, 3vw, 32px);
+  border: 1px solid rgba(0, 48, 28, 0.12);
+  border-radius: 8px;
+  background:
+    linear-gradient(180deg, rgba(255, 190, 18, 0.08), rgba(255, 255, 255, 0)),
+    var(--white);
+  box-shadow: 0 18px 40px rgba(0, 31, 18, 0.08);
+}
+
+.commune-zone-card > div {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 14px;
+  min-width: 0;
+}
+
+.commune-zone-card h3 {
+  margin: 0;
+  color: var(--green-950);
+  font-size: clamp(19px, 2vw, 25px);
+  line-height: 1.08;
+  font-weight: 950;
+  text-transform: uppercase;
+}
+
+.commune-zone-card span {
+  flex: 0 0 auto;
+  padding: 7px 10px;
+  border-radius: 999px;
+  background: var(--gold);
+  color: #171400;
+  font-size: 12px;
+  font-weight: 950;
+  text-transform: uppercase;
+}
+
+.commune-zone-card ul {
+  display: grid;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.commune-zone-card li {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  min-width: 0;
+  color: var(--green-900);
+  font-weight: 800;
+}
+
+.commune-zone-card li::before {
+  width: 8px;
+  height: 8px;
+  flex: 0 0 8px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, var(--green-500), var(--gold));
+  content: "";
+}
+
+.center-row {
+  justify-content: center;
+}
+
+@media (min-width: 761px) and (max-width: 1100px) {
+  .hero h1,
+  .page-hero h1,
+  .serment-hero h1,
+  .vision-page-hero h1,
+  .axes-hero h1,
+  .projects-hero h1,
+  .dashboard-hero h1,
+  .welcome-content h1 {
+    font-size: clamp(2.4rem, 8vw, 4.5rem);
+    line-height: 0.95;
+  }
+}
+
+@media (max-width: 760px) {
+  .hero h1,
+  .page-hero h1,
+  .serment-hero h1,
+  .vision-page-hero h1,
+  .axes-hero h1,
+  .projects-hero h1,
+  .dashboard-hero h1,
+  .welcome-content h1 {
+    font-size: clamp(2rem, 11vw, 3.2rem);
+    line-height: 0.96;
+  }
+
+  .page-hero.compact-hero {
+    padding-top: 48px;
+    padding-bottom: 54px;
+  }
+
+  .commune-zone-card > div {
+    display: grid;
+  }
+
+  .commune-zone-card span {
+    width: fit-content;
   }
 }

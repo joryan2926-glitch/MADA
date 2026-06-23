@@ -50,6 +50,17 @@ const FORM_CONFIG: Record<string, FormConfig> = {
   },
 };
 
+const FORM_LABELS: Record<string, string> = {
+  memberships: "Adhésion",
+  volunteers: "Bénévolat",
+  newsletter_subscribers: "Newsletter",
+  contacts: "Contact citoyen",
+  program_contributions: "Contribution Programme 2028",
+  local_relays: "Relais communal",
+  donation_intents: "Intention de don",
+  project_votes: "Vote citoyen sur projet",
+};
+
 function envList(name: string, fallback: string[]) {
   const value = Deno.env.get(name);
   if (!value) return fallback;
@@ -94,6 +105,83 @@ function getClientIp(request: Request) {
     request.headers.get("x-forwarded-for")?.split(",")[0]?.trim() ||
     ""
   );
+}
+
+function escapeHtml(value: unknown) {
+  return String(value ?? "")
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#039;");
+}
+
+function formatPayloadLines(payload: Record<string, unknown>) {
+  return Object.entries(payload)
+    .filter(([key]) => !["user_agent"].includes(key))
+    .map(([key, value]) => `${key}: ${value === null || value === undefined ? "" : String(value)}`);
+}
+
+async function sendSubmissionAlert(table: string, payload: Record<string, unknown>) {
+  const apiKey = Deno.env.get("RESEND_API_KEY");
+  const recipients = envList("MADA_ALERT_EMAIL_TO", []);
+  const from = Deno.env.get("MADA_ALERT_EMAIL_FROM");
+
+  if (!apiKey || !from || recipients.length === 0) {
+    console.warn("Email alert skipped: RESEND_API_KEY, MADA_ALERT_EMAIL_FROM or MADA_ALERT_EMAIL_TO is missing.");
+    return false;
+  }
+
+  const label = FORM_LABELS[table] || table;
+  const submittedAt = new Date().toLocaleString("fr-FR", { timeZone: "America/Martinique" });
+  const lines = formatPayloadLines(payload);
+  const subject = `Nouvelle soumission MADA - ${label}`;
+  const text = [
+    subject,
+    "",
+    `Formulaire: ${label}`,
+    `Date: ${submittedAt}`,
+    "",
+    ...lines,
+  ].join("\n");
+  const htmlRows = lines
+    .map((line) => {
+      const separatorIndex = line.indexOf(":");
+      const key = separatorIndex >= 0 ? line.slice(0, separatorIndex) : line;
+      const value = separatorIndex >= 0 ? line.slice(separatorIndex + 1).trim() : "";
+      return `<tr><th align="left" style="padding:8px 12px;border-bottom:1px solid #e6ece6;color:#00301c;">${escapeHtml(key)}</th><td style="padding:8px 12px;border-bottom:1px solid #e6ece6;">${escapeHtml(value)}</td></tr>`;
+    })
+    .join("");
+  const html = `
+    <div style="font-family:Arial,sans-serif;color:#102015;line-height:1.45;">
+      <h1 style="margin:0 0 12px;color:#00301c;">${escapeHtml(subject)}</h1>
+      <p><strong>Formulaire :</strong> ${escapeHtml(label)}</p>
+      <p><strong>Date :</strong> ${escapeHtml(submittedAt)}</p>
+      <table cellpadding="0" cellspacing="0" style="border-collapse:collapse;width:100%;max-width:720px;">${htmlRows}</table>
+    </div>
+  `;
+
+  const response = await fetch("https://api.resend.com/emails", {
+    method: "POST",
+    headers: {
+      Authorization: `Bearer ${apiKey}`,
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      from,
+      to: recipients,
+      subject,
+      text,
+      html,
+    }),
+  });
+
+  if (!response.ok) {
+    console.error("Email alert failed:", await response.text());
+    return false;
+  }
+
+  return true;
 }
 
 function cleanPayload(table: string, payload: unknown) {
@@ -191,7 +279,8 @@ Deno.serve(async (request) => {
       return jsonResponse({ error: error.message }, 400, origin);
     }
 
-    return jsonResponse({ ok: true }, 200, origin);
+    const emailSent = await sendSubmissionAlert(table, payload);
+    return jsonResponse({ ok: true, emailSent }, 200, origin);
   } catch (error) {
     const message = error instanceof Error ? error.message : "Erreur serveur.";
     return jsonResponse({ error: message }, 400, origin);
