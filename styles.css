@@ -6165,12 +6165,148 @@ textarea {
   background: #fbfcfb;
 }
 
+.mobile-responsibility-cards {
+  display: none;
+  width: min(1180px, 100%);
+  margin: 1rem auto 0;
+}
+
+.mobile-responsibility-cards details {
+  border: 1px solid rgba(2, 64, 38, 0.14);
+  border-radius: 5px;
+  background: #fff;
+}
+
+.mobile-responsibility-cards details + details {
+  margin-top: 0.55rem;
+}
+
+.mobile-responsibility-cards summary {
+  cursor: pointer;
+  padding: 0.9rem;
+  color: var(--deep-green);
+  font-weight: 850;
+  list-style: none;
+}
+
+.mobile-responsibility-cards summary::-webkit-details-marker {
+  display: none;
+}
+
+.mobile-responsibility-cards p {
+  margin: 0;
+  padding: 0 0.9rem 0.9rem;
+  color: #526258;
+  font-size: 0.82rem;
+  line-height: 1.55;
+}
+
 .citizen-data-note {
   width: min(1180px, 100%);
   margin: 1rem auto 0;
   color: #5d6c64;
   font-size: 0.78rem;
   line-height: 1.55;
+}
+
+.contact-path-grid,
+.territory-example-grid,
+.glossary-grid,
+.resource-card-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+  width: min(1180px, 100%);
+  margin: 2rem auto 0;
+}
+
+.contact-path-grid article,
+.territory-example-grid article,
+.glossary-grid article,
+.resource-card-grid article,
+.resource-card-grid a {
+  min-width: 0;
+  padding: 1rem;
+  border: 1px solid rgba(2, 64, 38, 0.13);
+  border-radius: 6px;
+  background: #fff;
+  box-shadow: 0 12px 28px rgba(0, 42, 25, 0.06);
+}
+
+.contact-path-grid span,
+.contact-path-grid strong,
+.territory-example-grid span,
+.territory-example-grid h3,
+.glossary-grid strong,
+.glossary-grid span,
+.resource-card-grid strong,
+.resource-card-grid span {
+  display: block;
+  letter-spacing: 0;
+}
+
+.contact-path-grid span,
+.territory-example-grid span {
+  color: #9b6c00;
+  font-size: 0.68rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.contact-path-grid strong,
+.territory-example-grid h3,
+.glossary-grid strong {
+  margin: 0.35rem 0;
+  color: var(--deep-green);
+  font-size: 0.95rem;
+}
+
+.contact-path-grid p,
+.territory-example-grid p,
+.glossary-grid span {
+  margin: 0;
+  color: #58675e;
+  font-size: 0.78rem;
+  line-height: 1.55;
+}
+
+.territory-example-grid article {
+  border-top: 4px solid var(--gold);
+}
+
+.glossary-grid article {
+  background: #f8faf8;
+}
+
+.citizen-resources {
+  background:
+    radial-gradient(circle at 82% 10%, rgba(244, 178, 27, 0.12), transparent 24%),
+    linear-gradient(135deg, #001f13 0%, #06311f 58%, #010906 100%);
+}
+
+.resource-card-grid article,
+.resource-card-grid a {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.07);
+  border-color: rgba(244, 178, 27, 0.22);
+  text-decoration: none;
+}
+
+.resource-card-grid a:hover,
+.resource-card-grid a:focus-visible {
+  border-color: var(--gold);
+  transform: translateY(-2px);
+}
+
+.resource-card-grid strong {
+  color: var(--gold);
+}
+
+.resource-card-grid span {
+  margin-top: 0.35rem;
+  color: #e0ece4;
+  font-size: 0.78rem;
+  line-height: 1.5;
 }
 
 .budget-kpi-grid {
@@ -6559,6 +6695,10 @@ textarea {
   .budget-kpi-grid,
   .budget-explainer-grid,
   .citizen-flow-grid,
+  .contact-path-grid,
+  .territory-example-grid,
+  .glossary-grid,
+  .resource-card-grid,
   .spending-summary-grid,
   .mada-change-grid,
   .autonomy-method,
@@ -6581,6 +6721,10 @@ textarea {
   .budget-kpi-grid,
   .budget-explainer-grid,
   .citizen-flow-grid,
+  .contact-path-grid,
+  .territory-example-grid,
+  .glossary-grid,
+  .resource-card-grid,
   .public-spending-chart,
   .spending-summary-grid,
   .mada-change-grid,
@@ -6629,6 +6773,10 @@ textarea {
   .budget-detail-table,
   .recovery-table {
     min-width: 820px;
+  }
+
+  .mobile-responsibility-cards {
+    display: block;
   }
 
   .responsibility-legend {
