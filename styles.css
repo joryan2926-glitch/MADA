@@ -7081,6 +7081,53 @@ textarea {
   line-height: 1.5;
 }
 
+.diagnostic-report-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(320px, 0.75fr);
+  gap: 2rem;
+  width: min(1180px, 100%);
+  margin: 0 auto;
+  align-items: start;
+}
+
+.diagnostic-report-layout,
+.diagnostic-report-layout * {
+  box-sizing: border-box;
+  max-width: 100%;
+}
+
+.diagnostic-report-layout h2 {
+  margin: 0 0 1rem;
+  color: #fff;
+}
+
+.diagnostic-report-layout p {
+  color: #dce9e1;
+  line-height: 1.65;
+}
+
+.diagnostic-report-list {
+  display: grid;
+  gap: 0.65rem;
+  margin: 1.25rem 0;
+  padding: 0;
+  list-style: none;
+}
+
+.diagnostic-report-list li {
+  padding: 0.85rem 0.95rem;
+  border: 1px solid rgba(244, 178, 27, 0.22);
+  border-radius: 6px;
+  color: #eef6f1;
+  background: rgba(255, 255, 255, 0.06);
+  font-weight: 750;
+}
+
+.diagnostic-report-form {
+  background: #fff;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.22);
+}
+
 .diagnostic-map-sketch {
   display: grid;
   grid-template-columns: repeat(5, minmax(0, 1fr));
@@ -7176,6 +7223,10 @@ textarea {
 }
 
 @media (max-width: 980px) {
+  .diagnostic-report-layout {
+    grid-template-columns: 1fr;
+  }
+
   .citizen-guide-nav,
   .budget-kpi-grid,
   .budget-explainer-grid,
