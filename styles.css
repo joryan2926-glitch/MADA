@@ -6682,6 +6682,296 @@ textarea {
   margin-top: 2rem;
 }
 
+/* Diagnostic du territoire */
+.dropdown-menu-diagnostic {
+  min-width: 280px;
+}
+
+.diagnostic-hero {
+  background:
+    linear-gradient(110deg, rgba(0, 33, 20, 0.94), rgba(0, 33, 20, 0.68), rgba(0, 0, 0, 0.46)),
+    url("assets/hero-observatoire-territoire-1600.webp") center/cover;
+}
+
+.diagnostic-counter-grid,
+.diagnostic-method-grid,
+.indicator-dashboard-grid,
+.problem-card-grid,
+.actions-balance-grid,
+.progress-review-grid,
+.plan-diagnostic-grid {
+  display: grid;
+  width: min(1180px, 100%);
+  margin: 2rem auto 0;
+  gap: 1rem;
+}
+
+.diagnostic-counter-grid {
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+}
+
+.diagnostic-counter-grid article {
+  min-width: 0;
+  padding: 1.15rem;
+  border-radius: 6px;
+  color: #fff;
+  background: var(--deep-green);
+  border-top: 4px solid var(--gold);
+  box-shadow: 0 14px 32px rgba(0, 42, 25, 0.09);
+}
+
+.diagnostic-counter-grid span,
+.diagnostic-counter-grid strong,
+.diagnostic-counter-grid small {
+  display: block;
+  letter-spacing: 0;
+}
+
+.diagnostic-counter-grid span {
+  color: #dce9e1;
+  font-size: 0.72rem;
+  font-weight: 800;
+}
+
+.diagnostic-counter-grid strong {
+  margin: 0.35rem 0;
+  color: var(--gold);
+  font-family: "Arial Black", Arial, sans-serif;
+  font-size: clamp(1.3rem, 3vw, 2.1rem);
+  line-height: 1;
+}
+
+.diagnostic-counter-grid small,
+.diagnostic-source-note {
+  color: #d7e4dc;
+  font-size: 0.72rem;
+  line-height: 1.45;
+}
+
+.diagnostic-source-note {
+  width: min(980px, 100%);
+  margin: 1rem auto 0;
+  color: #526258;
+  text-align: center;
+}
+
+.diagnostic-timeline,
+.mobilisation-timeline {
+  display: grid;
+  width: min(1120px, 100%);
+  margin: 2rem auto 0;
+  gap: 1rem;
+}
+
+.diagnostic-timeline article,
+.mobilisation-timeline article {
+  position: relative;
+  min-width: 0;
+  padding: 1.25rem 1.25rem 1.25rem 1.5rem;
+  border-left: 5px solid var(--gold);
+  border-radius: 6px;
+  background: #fff;
+  box-shadow: 0 14px 32px rgba(0, 42, 25, 0.07);
+}
+
+.diagnostic-timeline time,
+.mobilisation-timeline time {
+  display: inline-flex;
+  margin-bottom: 0.55rem;
+  padding: 0.25rem 0.55rem;
+  border-radius: 4px;
+  color: #071f15;
+  background: var(--gold);
+  font-size: 0.76rem;
+  font-weight: 900;
+}
+
+.diagnostic-timeline h3,
+.mobilisation-timeline h3 {
+  margin: 0 0 0.75rem;
+  color: var(--deep-green);
+}
+
+.diagnostic-timeline p,
+.mobilisation-timeline dd {
+  color: #4d5e55;
+  font-size: 0.86rem;
+  line-height: 1.58;
+}
+
+.diagnostic-timeline p {
+  margin: 0.35rem 0;
+}
+
+.mobilisation-timeline dl,
+.mobilisation-timeline dd {
+  margin: 0;
+}
+
+.mobilisation-timeline dl {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem;
+}
+
+.mobilisation-timeline dt {
+  color: #8a6100;
+  font-size: 0.68rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.diagnostic-method-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.diagnostic-method-grid article {
+  padding: 1rem;
+  border: 1px solid rgba(244, 178, 27, 0.24);
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.07);
+}
+
+.diagnostic-method-grid span {
+  color: var(--gold);
+  font-weight: 900;
+}
+
+.diagnostic-method-grid strong,
+.diagnostic-method-grid p {
+  display: block;
+  letter-spacing: 0;
+}
+
+.diagnostic-method-grid strong {
+  margin: 0.35rem 0;
+  color: #fff;
+}
+
+.diagnostic-method-grid p {
+  margin: 0;
+  color: #dbe8e0;
+  font-size: 0.8rem;
+  line-height: 1.5;
+}
+
+.indicator-dashboard-grid,
+.problem-card-grid,
+.plan-diagnostic-grid {
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.indicator-dashboard-grid article,
+.problem-card-grid article,
+.plan-diagnostic-grid article,
+.progress-review-grid article {
+  min-width: 0;
+  padding: 1.15rem;
+  border: 1px solid rgba(2, 64, 38, 0.13);
+  border-radius: 6px;
+  background: #fff;
+  box-shadow: 0 12px 28px rgba(0, 42, 25, 0.06);
+}
+
+.indicator-dashboard-grid h3,
+.problem-card-grid h2,
+.plan-diagnostic-grid h2,
+.progress-review-grid h3 {
+  margin: 0 0 0.7rem;
+  color: var(--deep-green);
+}
+
+.indicator-dashboard-grid ul,
+.problem-card-grid p,
+.plan-diagnostic-grid dd,
+.progress-review-grid p {
+  color: #526258;
+  font-size: 0.82rem;
+  line-height: 1.55;
+}
+
+.indicator-dashboard-grid ul {
+  margin: 0;
+  padding-left: 1.1rem;
+}
+
+.mini-chart {
+  display: block;
+  height: 8px;
+  margin-top: 1rem;
+  overflow: hidden;
+  border-radius: 2px;
+  background: #e3e9e5;
+}
+
+.mini-chart::before {
+  content: "";
+  display: block;
+  width: var(--level);
+  height: 100%;
+  background: linear-gradient(90deg, #087246, var(--gold));
+}
+
+.problem-card-grid h3 {
+  margin: 0.8rem 0 0.25rem;
+  color: #8a6100;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+}
+
+.actions-balance-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.actions-balance-grid article {
+  padding: 1.35rem;
+  border-radius: 6px;
+  background: #fff;
+  box-shadow: 0 12px 28px rgba(0, 42, 25, 0.06);
+}
+
+.actions-balance-grid .is-done {
+  border-left: 5px solid #087246;
+}
+
+.actions-balance-grid .is-waiting {
+  border-left: 5px solid var(--gold);
+}
+
+.progress-review-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.status-badge {
+  display: inline-flex;
+  margin-bottom: 0.6rem;
+  padding: 0.25rem 0.55rem;
+  border-radius: 4px;
+  font-size: 0.68rem;
+  font-weight: 900;
+}
+
+.status-badge.is-progress { color: #fff; background: #087246; }
+.status-badge.is-stall { color: #5d3f00; background: #ffedba; }
+.status-badge.is-risk { color: #fff; background: #9b2f22; }
+
+.plan-diagnostic-grid dl,
+.plan-diagnostic-grid dd {
+  margin: 0;
+}
+
+.plan-diagnostic-grid div {
+  padding: 0.6rem 0;
+  border-top: 1px solid rgba(2, 64, 38, 0.09);
+}
+
+.plan-diagnostic-grid dt {
+  color: #8a6100;
+  font-size: 0.68rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
 .anchor-offset {
   display: block;
   position: relative;
@@ -6699,6 +6989,8 @@ textarea {
   .territory-example-grid,
   .glossary-grid,
   .resource-card-grid,
+  .diagnostic-method-grid,
+  .progress-review-grid,
   .spending-summary-grid,
   .mada-change-grid,
   .autonomy-method,
@@ -6725,6 +7017,10 @@ textarea {
   .territory-example-grid,
   .glossary-grid,
   .resource-card-grid,
+  .diagnostic-method-grid,
+  .actions-balance-grid,
+  .progress-review-grid,
+  .mobilisation-timeline dl,
   .public-spending-chart,
   .spending-summary-grid,
   .mada-change-grid,
