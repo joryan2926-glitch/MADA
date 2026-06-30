@@ -2,9 +2,11 @@
   --green-950: #001f12;
   --green-900: #002b18;
   --green-850: #00351e;
+  --green-800: #004326;
   --green-760: #064a2a;
   --green-650: #0d6537;
   --green-500: #74a51f;
+  --deep-green: #001f12;
   --gold: #ffc20a;
   --gold-700: #bf8318;
   --brown: #7b4b14;
@@ -7095,9 +7097,10 @@ textarea {
   border: 1px solid rgba(248, 190, 42, 0.34);
   border-radius: 8px;
   color: #fff;
+  background-color: #001f12;
   background:
     linear-gradient(135deg, rgba(2, 64, 38, 0.96), rgba(1, 31, 19, 0.96)),
-    var(--deep-green);
+    #001f12;
   box-shadow: 0 18px 42px rgba(0, 42, 25, 0.16);
 }
 
@@ -7127,9 +7130,9 @@ textarea {
 .responsibility-reading-grid article {
   min-width: 0;
   padding: 1rem;
-  border: 1px solid rgba(255, 255, 255, 0.16);
+  border: 1px solid rgba(248, 190, 42, 0.28);
   border-radius: 6px;
-  background: rgba(255, 255, 255, 0.08);
+  background: #f8faf6;
 }
 
 .responsibility-reading-grid span {
@@ -7148,13 +7151,13 @@ textarea {
 .responsibility-reading-grid strong {
   display: block;
   margin-bottom: 0.35rem;
-  color: #fff;
+  color: #001f12;
   font-size: 0.9rem;
   line-height: 1.25;
 }
 
 .responsibility-reading-grid p {
-  color: rgba(255, 255, 255, 0.75);
+  color: #506057;
   font-size: 0.82rem;
   line-height: 1.5;
 }
