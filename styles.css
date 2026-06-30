@@ -7906,6 +7906,161 @@ textarea {
   text-align: center;
 }
 
+.diagnostic-why-panel {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+  gap: 1rem;
+  width: min(1180px, 100%);
+  margin: 0 auto;
+  padding: clamp(1.25rem, 3vw, 2rem);
+  border: 1px solid rgba(248, 190, 42, 0.3);
+  border-radius: 8px;
+  color: #fff;
+  background:
+    linear-gradient(135deg, rgba(0, 31, 18, 0.96), rgba(2, 64, 38, 0.92)),
+    #001f12;
+  box-shadow: 0 18px 42px rgba(0, 42, 25, 0.14);
+}
+
+.diagnostic-why-panel h2,
+.diagnostic-why-panel p {
+  margin: 0;
+}
+
+.diagnostic-why-panel h2 {
+  color: #fff;
+  font-size: clamp(1.7rem, 3.2vw, 3rem);
+  line-height: 1.03;
+  text-transform: uppercase;
+}
+
+.diagnostic-why-panel p:not(.section-label) {
+  margin-top: 1rem;
+  color: rgba(255, 255, 255, 0.82);
+  line-height: 1.65;
+}
+
+.diagnostic-why-panel .btn {
+  margin-top: 1.2rem;
+}
+
+.diagnostic-why-list {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.diagnostic-why-list article {
+  min-width: 0;
+  padding: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-left: 4px solid var(--gold);
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.diagnostic-why-list strong,
+.diagnostic-why-list span {
+  display: block;
+}
+
+.diagnostic-why-list strong {
+  margin-bottom: 0.35rem;
+  color: var(--gold);
+  font-size: 0.9rem;
+  text-transform: uppercase;
+}
+
+.diagnostic-why-list span {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.82rem;
+  line-height: 1.5;
+}
+
+.diagnostic-rationale-grid,
+.diagnostic-principle-grid {
+  display: grid;
+  width: min(1180px, 100%);
+  margin: 2rem auto 0;
+  gap: 1rem;
+}
+
+.diagnostic-rationale-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.diagnostic-rationale-grid article,
+.diagnostic-principle-grid article {
+  min-width: 0;
+  padding: 1.15rem;
+  border: 1px solid rgba(2, 64, 38, 0.13);
+  border-radius: 6px;
+  background: #fff;
+  box-shadow: 0 12px 28px rgba(0, 42, 25, 0.06);
+}
+
+.diagnostic-rationale-grid article:not(.diagnostic-rationale-main) {
+  border-top: 4px solid var(--gold);
+}
+
+.diagnostic-rationale-main {
+  grid-column: span 2;
+  color: #fff;
+  background:
+    linear-gradient(135deg, rgba(0, 31, 18, 0.97), rgba(3, 77, 45, 0.94)),
+    #001f12;
+}
+
+.diagnostic-rationale-main h3,
+.diagnostic-rationale-main p {
+  margin: 0;
+}
+
+.diagnostic-rationale-main h3 {
+  color: #fff;
+  font-size: clamp(1.45rem, 2.5vw, 2.2rem);
+  line-height: 1.08;
+}
+
+.diagnostic-rationale-main p:not(.section-label) {
+  margin-top: 0.9rem;
+  color: rgba(255, 255, 255, 0.82);
+  line-height: 1.65;
+}
+
+.diagnostic-rationale-grid article > span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  margin-bottom: 0.75rem;
+  border-radius: 999px;
+  color: #001f12;
+  background: var(--gold);
+  font-weight: 900;
+}
+
+.diagnostic-rationale-grid strong,
+.diagnostic-principle-grid strong {
+  display: block;
+  margin-bottom: 0.45rem;
+  color: var(--deep-green);
+  font-size: 0.95rem;
+  text-transform: uppercase;
+}
+
+.diagnostic-rationale-grid p,
+.diagnostic-principle-grid p {
+  margin: 0;
+  color: #526258;
+  font-size: 0.84rem;
+  line-height: 1.58;
+}
+
+.diagnostic-principle-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
 .diagnostic-timeline,
 .mobilisation-timeline {
   display: grid;
@@ -8396,7 +8551,8 @@ textarea {
   }
 
   .institution-accordion-grid,
-  .budget-source-layout {
+  .budget-source-layout,
+  .diagnostic-why-panel {
     grid-template-columns: 1fr;
   }
 
@@ -8405,8 +8561,14 @@ textarea {
   }
 
   .responsibility-reading-grid,
-  .responsibility-example-strip {
+  .responsibility-example-strip,
+  .diagnostic-rationale-grid,
+  .diagnostic-principle-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .diagnostic-rationale-main {
+    grid-column: span 2;
   }
 
   .budget-reading-card {
@@ -8439,8 +8601,14 @@ textarea {
   .spending-summary-grid,
   .mada-change-grid,
   .autonomy-method,
-  .source-link-grid {
+  .source-link-grid,
+  .diagnostic-rationale-grid,
+  .diagnostic-principle-grid {
     grid-template-columns: 1fr;
+  }
+
+  .diagnostic-rationale-main {
+    grid-column: auto;
   }
 
   .citizen-guide-nav a {
