@@ -155,8 +155,9 @@ textarea {
   display: inline-flex;
   align-items: center;
   gap: 6px;
+  min-height: 40px;
   min-width: 0;
-  padding: 12px 0;
+  padding: 0 2px;
   border: 0;
   background: transparent;
   color: var(--white);
@@ -5389,7 +5390,8 @@ textarea {
 .commune-dot {
   position: absolute;
   display: inline-flex;
-  min-height: 34px;
+  min-height: 42px;
+  min-width: 44px;
   align-items: center;
   justify-content: center;
   border: 1px solid rgba(255, 255, 255, 0.36);
@@ -5398,7 +5400,7 @@ textarea {
   color: var(--white);
   font-size: 11px;
   font-weight: 950;
-  padding: 8px 12px;
+  padding: 9px 14px;
   text-transform: uppercase;
   cursor: pointer;
 }
@@ -5637,8 +5639,8 @@ textarea {
 .projects-hero h1,
 .dashboard-hero h1,
 .welcome-content h1 {
-  font-size: clamp(3rem, 6vw, 6rem);
-  line-height: 0.95;
+  font-size: clamp(2.75rem, 5vw, 4.5rem);
+  line-height: 0.98;
 }
 
 .page-hero.compact-hero {
@@ -5734,10 +5736,10 @@ textarea {
   .vision-page-hero h1,
   .axes-hero h1,
   .projects-hero h1,
-  .dashboard-hero h1,
-  .welcome-content h1 {
-    font-size: clamp(2.4rem, 8vw, 4.5rem);
-    line-height: 0.95;
+    .dashboard-hero h1,
+    .welcome-content h1 {
+    font-size: clamp(2.3rem, 7vw, 4rem);
+    line-height: 0.98;
   }
 }
 
@@ -5748,10 +5750,10 @@ textarea {
   .vision-page-hero h1,
   .axes-hero h1,
   .projects-hero h1,
-  .dashboard-hero h1,
-  .welcome-content h1 {
-    font-size: clamp(2rem, 11vw, 3.2rem);
-    line-height: 0.96;
+    .dashboard-hero h1,
+    .welcome-content h1 {
+    font-size: clamp(2rem, 9.5vw, 3rem);
+    line-height: 1;
   }
 
   .page-hero.compact-hero {
