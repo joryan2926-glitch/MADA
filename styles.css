@@ -4608,6 +4608,230 @@ textarea {
   min-height: 100vh;
 }
 
+.mada2040-hero {
+  position: relative;
+  isolation: isolate;
+  display: grid;
+  min-height: clamp(590px, 78vh, 860px);
+  place-items: center;
+  overflow: hidden;
+  padding: clamp(92px, 11vw, 156px) clamp(18px, 5vw, 72px);
+  background:
+    linear-gradient(112deg, rgba(0, 31, 18, 0.98), rgba(0, 31, 18, 0.72) 52%, rgba(0, 0, 0, 0.16)),
+    radial-gradient(circle at 78% 20%, rgba(255, 194, 10, 0.42), transparent 34%),
+    var(--hero-projects-image) center / cover no-repeat;
+  color: var(--white);
+}
+
+.mada2040-hero::after {
+  position: absolute;
+  inset: auto -18% -42%;
+  z-index: -1;
+  height: 70%;
+  border: 1px solid rgba(255, 194, 10, 0.32);
+  border-radius: 50% 50% 0 0;
+  content: "";
+}
+
+.mada2040-hero-inner {
+  width: min(1120px, 100%);
+  text-align: center;
+}
+
+.mada2040-hero h1 {
+  margin: 10px 0 18px;
+  color: var(--white);
+  font-size: clamp(48px, 8vw, 118px);
+  line-height: 0.92;
+  font-weight: 950;
+  text-transform: uppercase;
+}
+
+.mada2040-hero p:not(.section-label) {
+  width: min(920px, 100%);
+  margin: 0 auto;
+  color: rgba(255, 255, 255, 0.92);
+  font-size: clamp(18px, 2.1vw, 28px);
+  font-weight: 740;
+}
+
+.mada2040-financing {
+  background:
+    linear-gradient(180deg, rgba(0, 31, 18, 0.04), rgba(255, 255, 255, 0.98));
+}
+
+.mada2040-axis8-note {
+  width: min(1080px, 100%);
+  margin: clamp(24px, 4vw, 42px) auto 0;
+  padding: clamp(22px, 4vw, 38px);
+  border: 1px solid rgba(255, 194, 10, 0.34);
+  border-radius: 8px;
+  background:
+    linear-gradient(135deg, rgba(0, 31, 18, 0.96), rgba(0, 45, 27, 0.92)),
+    var(--green-950);
+  color: var(--white);
+  box-shadow: 0 22px 44px rgba(0, 31, 18, 0.16);
+}
+
+.mada2040-axis8-note h3 {
+  margin: 0 0 10px;
+  color: var(--gold);
+  font-size: clamp(24px, 3.2vw, 40px);
+  line-height: 1;
+  font-weight: 950;
+  text-transform: uppercase;
+}
+
+.mada2040-axis8-note p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.88);
+  font-size: clamp(16px, 1.6vw, 20px);
+  font-weight: 700;
+}
+
+.mada2040-project-list {
+  display: grid;
+  gap: clamp(22px, 3vw, 34px);
+  width: min(1220px, 100%);
+  margin: 0 auto;
+}
+
+.mada2040-project {
+  position: relative;
+  isolation: isolate;
+  display: grid;
+  gap: clamp(20px, 3vw, 32px);
+  min-width: 0;
+  padding: clamp(24px, 4vw, 44px);
+  overflow: hidden;
+  border: 1px solid rgba(0, 31, 18, 0.12);
+  border-radius: 8px;
+  background:
+    linear-gradient(135deg, rgba(255, 194, 10, 0.11), transparent 34%),
+    var(--white);
+  box-shadow: 0 24px 50px rgba(0, 31, 18, 0.1);
+  scroll-margin-top: 120px;
+}
+
+.mada2040-project::before {
+  position: absolute;
+  inset: 0 0 auto;
+  height: 6px;
+  background: linear-gradient(90deg, var(--gold), var(--green-500), #ed171d);
+  content: "";
+}
+
+.mada2040-project-head {
+  display: grid;
+  gap: 10px;
+}
+
+.mada2040-project-head span {
+  color: var(--gold);
+  font-size: 14px;
+  font-weight: 950;
+  text-transform: uppercase;
+}
+
+.mada2040-project-head h3 {
+  margin: 0;
+  color: var(--green-950);
+  font-size: clamp(30px, 4.5vw, 62px);
+  line-height: 0.98;
+  font-weight: 950;
+  text-transform: uppercase;
+}
+
+.mada2040-project-head p {
+  max-width: 880px;
+  margin: 0;
+  color: var(--muted);
+  font-size: clamp(17px, 1.7vw, 22px);
+  font-weight: 720;
+}
+
+.mada2040-project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(260px, 100%), 1fr));
+  gap: 15px;
+}
+
+.mada2040-project-grid > div {
+  min-width: 0;
+  padding: clamp(18px, 2.4vw, 24px);
+  border: 1px solid rgba(0, 31, 18, 0.09);
+  border-radius: 8px;
+  background: rgba(0, 31, 18, 0.035);
+}
+
+.mada2040-project-grid > .mada2040-wide {
+  grid-column: span 2;
+}
+
+.mada2040-project-grid h4 {
+  margin: 0 0 8px;
+  color: var(--green-950);
+  font-size: 15px;
+  font-weight: 950;
+  text-transform: uppercase;
+}
+
+.mada2040-project-grid p,
+.mada2040-project-grid small {
+  color: var(--muted);
+  font-weight: 680;
+}
+
+.mada2040-project-grid p,
+.mada2040-project-grid strong,
+.mada2040-project-grid small {
+  display: block;
+  margin: 0;
+}
+
+.mada2040-project-grid strong {
+  color: var(--green-950);
+  font-size: clamp(24px, 3vw, 38px);
+  line-height: 1;
+  font-weight: 950;
+}
+
+@media (max-width: 760px) {
+  .mada2040-hero {
+    min-height: 0;
+    padding: 72px 18px;
+  }
+
+  .mada2040-hero-inner {
+    width: 100%;
+    max-width: 340px;
+  }
+
+  .mada2040-hero h1 {
+    font-size: clamp(32px, 9vw, 42px);
+    line-height: 0.96;
+  }
+
+  .mada2040-project {
+    width: 100%;
+    max-width: 350px;
+    margin: 0 auto;
+    padding: 22px 18px;
+  }
+
+  .mada2040-project-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .mada2040-project-grid > .mada2040-wide {
+    grid-column: auto;
+  }
+
+  .mada2040-project .project-support {
+    width: 100%;
+  }
+}
+
 /* Les 8 axes CTM 2028 */
 .axes-hero {
   position: relative;
