@@ -6862,9 +6862,112 @@ textarea {
 .axes-hero h1,
 .projects-hero h1,
 .dashboard-hero h1,
-.welcome-content h1 {
-  font-size: clamp(2.75rem, 5vw, 4.5rem);
-  line-height: 0.98;
+.welcome-content h1,
+.program-renaissance-inner h1,
+.mada2040-hero h1,
+.economy-hero h1 {
+  font-size: clamp(2.15rem, 4vw, 3.4rem);
+  line-height: 1;
+}
+
+.section-heading h2,
+.contact-card h2,
+.don-panel h2,
+.movement-manifesto h2,
+.movement-contract h2,
+.program-intro-card h2,
+.program-renaissance-band h2,
+.economy-method-card h2,
+.economy-mada-card h2,
+.financing-commitment-card h2,
+.axes-final-call h2,
+.projects-final-call h2,
+.dashboard-commune-card h3,
+.understand-role-card h2,
+.understand-autonomy-card h2,
+.understand-final-message h2,
+.serment-final h2 {
+  font-size: clamp(1.55rem, 2.95vw, 2.65rem);
+  line-height: 1.08;
+}
+
+.vision-page-subtitle,
+.hero-lead,
+.page-hero p:not(.kicker),
+.program-renaissance-inner p:not(.section-label),
+.mada2040-hero p:not(.section-label),
+.economy-hero p:not(.section-label),
+.axes-hero p:not(.section-label),
+.projects-hero p:not(.section-label),
+.dashboard-hero p:not(.section-label) {
+  font-size: clamp(1rem, 1.55vw, 1.25rem);
+  line-height: 1.48;
+}
+
+.section-heading p:not(.section-label),
+.large-copy,
+.card p,
+.info-panel p,
+.movement-manifesto p:not(.section-label),
+.movement-contract p:not(.section-label) {
+  font-size: clamp(0.95rem, 1.2vw, 1.05rem);
+  line-height: 1.6;
+}
+
+.card h3,
+.info-panel h2,
+.info-panel h3,
+.movement-objectives-grid h3,
+.movement-position-grid strong,
+.panel-heading h3,
+.emblem-project h3,
+.axis-card h3,
+.grand-project-content h3 {
+  font-size: clamp(1rem, 1.7vw, 1.35rem);
+  line-height: 1.18;
+}
+
+.welcome-slogan {
+  font-size: clamp(1.45rem, 2.9vw, 2.9rem);
+  line-height: 1.16;
+}
+
+.welcome-intro,
+.welcome-enter,
+.serment-final-lines p,
+.serment-final-choice,
+.serment-creole,
+.serment-translation {
+  font-size: clamp(0.98rem, 1.65vw, 1.22rem);
+  line-height: 1.45;
+}
+
+.welcome-enter {
+  min-height: clamp(52px, 6vw, 74px);
+}
+
+.welcome-signature {
+  font-size: clamp(1.35rem, 2.6vw, 2.35rem);
+}
+
+.serment-mada-mark {
+  font-size: clamp(2.4rem, 6vw, 4.75rem);
+}
+
+.vision-counter-grid strong,
+.territory-stat-grid span,
+.economy-kpi-grid strong,
+.dashboard-indicator-card strong,
+.commune-status-grid strong,
+.budget-kpi-grid strong,
+.diagnostic-counter-grid strong {
+  font-size: clamp(1.65rem, 3.6vw, 2.9rem);
+}
+
+.vision-final-quote blockquote,
+.understand-final-message blockquote {
+  font-size: clamp(1.4rem, 3vw, 2.6rem);
+  line-height: 1.18;
 }
 
 .page-hero.compact-hero {
@@ -6960,10 +7063,13 @@ textarea {
   .vision-page-hero h1,
   .axes-hero h1,
   .projects-hero h1,
-    .dashboard-hero h1,
-    .welcome-content h1 {
-    font-size: clamp(2.3rem, 7vw, 4rem);
-    line-height: 0.98;
+  .dashboard-hero h1,
+  .welcome-content h1,
+  .program-renaissance-inner h1,
+  .mada2040-hero h1,
+  .economy-hero h1 {
+    font-size: clamp(1.9rem, 5.8vw, 2.85rem);
+    line-height: 1;
   }
 }
 
@@ -6974,10 +7080,68 @@ textarea {
   .vision-page-hero h1,
   .axes-hero h1,
   .projects-hero h1,
-    .dashboard-hero h1,
-    .welcome-content h1 {
-    font-size: clamp(2rem, 9.5vw, 3rem);
-    line-height: 1;
+  .dashboard-hero h1,
+  .welcome-content h1,
+  .program-renaissance-inner h1,
+  .mada2040-hero h1,
+  .economy-hero h1 {
+    font-size: clamp(1.55rem, 7.2vw, 2.15rem);
+    line-height: 1.04;
+  }
+
+  .section-heading h2,
+  .contact-card h2,
+  .don-panel h2,
+  .movement-manifesto h2,
+  .movement-contract h2,
+  .program-intro-card h2,
+  .program-renaissance-band h2,
+  .economy-method-card h2,
+  .economy-mada-card h2,
+  .financing-commitment-card h2,
+  .axes-final-call h2,
+  .projects-final-call h2,
+  .dashboard-commune-card h3,
+  .understand-role-card h2,
+  .understand-autonomy-card h2,
+  .understand-final-message h2,
+  .serment-final h2 {
+    font-size: clamp(1.35rem, 5.7vw, 1.9rem);
+    line-height: 1.1;
+  }
+
+  .vision-page-subtitle,
+  .hero-lead,
+  .page-hero p:not(.kicker),
+  .program-renaissance-inner p:not(.section-label),
+  .mada2040-hero p:not(.section-label),
+  .economy-hero p:not(.section-label),
+  .axes-hero p:not(.section-label),
+  .projects-hero p:not(.section-label),
+  .dashboard-hero p:not(.section-label) {
+    font-size: clamp(0.95rem, 4.1vw, 1.08rem);
+    line-height: 1.5;
+  }
+
+  .welcome-slogan {
+    font-size: clamp(1.2rem, 5.8vw, 1.75rem);
+  }
+
+  .welcome-intro,
+  .welcome-enter,
+  .serment-final-lines p,
+  .serment-final-choice,
+  .serment-creole,
+  .serment-translation {
+    font-size: clamp(0.9rem, 4vw, 1rem);
+  }
+
+  .welcome-signature {
+    font-size: clamp(1.25rem, 6vw, 1.8rem);
+  }
+
+  .serment-mada-mark {
+    font-size: clamp(2rem, 10vw, 3rem);
   }
 
   .page-hero.compact-hero {
