@@ -4710,6 +4710,34 @@ textarea {
   font-weight: 720;
 }
 
+.axis-institutional-note {
+  display: grid;
+  gap: 8px;
+  max-width: 980px;
+  margin: 0 0 clamp(20px, 3vw, 30px);
+  padding: clamp(18px, 2.8vw, 26px);
+  border-left: 6px solid var(--axis-color);
+  border-radius: 8px;
+  background:
+    linear-gradient(90deg, color-mix(in srgb, var(--axis-color), transparent 86%), rgba(0, 31, 18, 0.035)),
+    rgba(255, 255, 255, 0.82);
+}
+
+.axis-institutional-note strong {
+  color: var(--green-950);
+  font-size: 13px;
+  font-weight: 950;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.axis-institutional-note p {
+  margin: 0;
+  color: var(--green-900);
+  font-size: clamp(16px, 1.4vw, 19px);
+  font-weight: 760;
+}
+
 .axis-detail-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
@@ -4722,6 +4750,10 @@ textarea {
   border: 1px solid rgba(0, 31, 18, 0.09);
   border-radius: 8px;
   background: rgba(255, 255, 255, 0.78);
+}
+
+.axis-detail-grid > .axis-wide {
+  grid-column: span 2;
 }
 
 .axis-detail-grid h3 {
@@ -4865,6 +4897,10 @@ textarea {
 
   .axis-detail-grid {
     grid-template-columns: 1fr;
+  }
+
+  .axis-detail-grid > .axis-wide {
+    grid-column: auto;
   }
 
   .axis-contribute-link {
