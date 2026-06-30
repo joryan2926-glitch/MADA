@@ -4796,6 +4796,205 @@ textarea {
   font-weight: 950;
 }
 
+/* Comprendre l'economie martiniquaise */
+.economy-hero {
+  position: relative;
+  isolation: isolate;
+  display: grid;
+  min-height: clamp(540px, 72vh, 800px);
+  place-items: center;
+  overflow: hidden;
+  padding: clamp(86px, 10vw, 140px) clamp(18px, 5vw, 72px);
+  background:
+    linear-gradient(112deg, rgba(0, 31, 18, 0.98), rgba(0, 31, 18, 0.76) 50%, rgba(0, 0, 0, 0.2)),
+    radial-gradient(circle at 78% 20%, rgba(255, 194, 10, 0.38), transparent 34%),
+    var(--hero-observatoire-image) center / cover no-repeat;
+  color: var(--white);
+}
+
+.economy-hero-inner {
+  width: min(1120px, 100%);
+  text-align: center;
+}
+
+.economy-hero h1 {
+  margin: 10px 0 18px;
+  color: var(--white);
+  font-size: clamp(46px, 7.5vw, 112px);
+  line-height: 0.92;
+  font-weight: 950;
+  text-transform: uppercase;
+}
+
+.economy-hero p:not(.section-label) {
+  width: min(900px, 100%);
+  margin: 0 auto;
+  color: rgba(255, 255, 255, 0.92);
+  font-size: clamp(18px, 2.1vw, 28px);
+  font-weight: 740;
+}
+
+.economy-kpi-grid {
+  display: grid;
+  width: min(1180px, 100%);
+  grid-template-columns: repeat(auto-fit, minmax(min(220px, 100%), 1fr));
+  gap: 16px;
+  margin: 0 auto;
+}
+
+.economy-kpi-grid article {
+  min-width: 0;
+  padding: clamp(20px, 3vw, 30px);
+  border: 1px solid rgba(0, 31, 18, 0.1);
+  border-radius: 8px;
+  background:
+    linear-gradient(145deg, rgba(255, 194, 10, 0.12), rgba(255, 255, 255, 0.98) 42%),
+    var(--white);
+  box-shadow: 0 18px 34px rgba(0, 31, 18, 0.08);
+}
+
+.economy-kpi-grid span {
+  color: var(--green-800);
+  font-size: 12px;
+  font-weight: 950;
+  text-transform: uppercase;
+}
+
+.economy-kpi-grid strong {
+  display: block;
+  margin: 8px 0;
+  color: var(--green-950);
+  font-size: clamp(30px, 4.4vw, 54px);
+  line-height: 0.95;
+  font-weight: 950;
+}
+
+.economy-kpi-grid p {
+  margin: 0;
+  color: var(--muted);
+  font-weight: 680;
+}
+
+.economy-method-section {
+  background:
+    linear-gradient(180deg, rgba(0, 31, 18, 0.04), rgba(255, 255, 255, 0.98));
+}
+
+.economy-method-card,
+.economy-mada-card {
+  width: min(1120px, 100%);
+  margin: 0 auto;
+  padding: clamp(24px, 4vw, 46px);
+  border: 1px solid rgba(0, 31, 18, 0.1);
+  border-radius: 8px;
+  background: var(--white);
+  box-shadow: 0 22px 44px rgba(0, 31, 18, 0.08);
+}
+
+.economy-method-card h2,
+.economy-mada-card h2 {
+  margin: 8px 0 22px;
+  color: var(--green-950);
+  font-size: clamp(30px, 5vw, 62px);
+  line-height: 0.98;
+  font-weight: 950;
+  text-transform: uppercase;
+}
+
+.economy-method-grid,
+.economy-production-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(230px, 100%), 1fr));
+  gap: 16px;
+}
+
+.economy-method-grid article,
+.economy-production-grid article {
+  min-width: 0;
+  padding: 20px;
+  border: 1px solid rgba(0, 31, 18, 0.09);
+  border-radius: 8px;
+  background: rgba(0, 31, 18, 0.035);
+}
+
+.economy-method-grid h3,
+.economy-production-grid h3 {
+  margin: 0 0 8px;
+  color: var(--green-950);
+  font-size: 18px;
+  font-weight: 950;
+  text-transform: uppercase;
+}
+
+.economy-method-grid p,
+.economy-production-grid p {
+  margin: 0;
+  color: var(--muted);
+  font-weight: 680;
+}
+
+.economy-sector-table-wrap {
+  width: min(1280px, 100%);
+  margin: 0 auto;
+  overflow-x: auto;
+  border: 1px solid rgba(0, 31, 18, 0.1);
+  border-radius: 8px;
+  background: var(--white);
+  box-shadow: 0 20px 40px rgba(0, 31, 18, 0.08);
+}
+
+.economy-sector-table {
+  width: 100%;
+  min-width: 980px;
+  border-collapse: collapse;
+}
+
+.economy-sector-table th,
+.economy-sector-table td {
+  padding: 16px;
+  border-bottom: 1px solid rgba(0, 31, 18, 0.09);
+  text-align: left;
+  vertical-align: top;
+}
+
+.economy-sector-table th {
+  background: var(--green-950);
+  color: var(--gold);
+  font-size: 12px;
+  font-weight: 950;
+  text-transform: uppercase;
+}
+
+.economy-sector-table td:first-child {
+  color: var(--green-950);
+  font-weight: 950;
+}
+
+.economy-sector-table td {
+  color: var(--muted);
+  font-size: 14px;
+  font-weight: 650;
+}
+
+.economy-mada-section {
+  background:
+    linear-gradient(120deg, rgba(0, 31, 18, 0.96), rgba(0, 45, 27, 0.9)),
+    var(--hero-programme-image) center / cover no-repeat;
+}
+
+.economy-mada-card {
+  background: rgba(0, 31, 18, 0.92);
+  color: var(--white);
+}
+
+.economy-mada-card h2 {
+  color: var(--white);
+}
+
+.economy-mada-card .check-list li {
+  color: rgba(255, 255, 255, 0.9);
+}
+
 @media (max-width: 760px) {
   .mada2040-hero {
     min-height: 0;
@@ -4829,6 +5028,30 @@ textarea {
 
   .mada2040-project .project-support {
     width: 100%;
+  }
+
+  .economy-hero {
+    min-height: 0;
+    padding: 72px 18px;
+  }
+
+  .economy-hero-inner {
+    width: 100%;
+    max-width: 340px;
+  }
+
+  .economy-hero h1 {
+    font-size: clamp(31px, 8.8vw, 42px);
+    line-height: 0.96;
+  }
+
+  .economy-sector-table-wrap {
+    width: 100%;
+  }
+
+  .economy-method-card,
+  .economy-mada-card {
+    padding: 22px 18px;
   }
 }
 
