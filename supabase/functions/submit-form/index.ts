@@ -40,6 +40,10 @@ const FORM_CONFIG: Record<string, FormConfig> = {
     allowedFields: ["full_name", "email", "city", "message", "consent", "source_page", "user_agent"],
     requiredFields: ["full_name", "email", "city", "consent"],
   },
+  commune_reports: {
+    allowedFields: ["full_name", "email", "city", "issue_type", "subject", "message", "consent", "source_page", "user_agent"],
+    requiredFields: ["full_name", "email", "city", "issue_type", "message", "consent"],
+  },
   donation_intents: {
     allowedFields: ["full_name", "email", "amount", "city", "message", "consent", "source_page", "user_agent"],
     requiredFields: ["full_name", "email", "consent"],
@@ -57,6 +61,7 @@ const FORM_LABELS: Record<string, string> = {
   contacts: "Contact citoyen",
   program_contributions: "Contribution Programme 2028",
   local_relays: "Relais communal",
+  commune_reports: "Signalement communal",
   donation_intents: "Intention de don",
   project_votes: "Vote citoyen sur projet",
 };

@@ -177,6 +177,43 @@
     return { error: null };
   }
 
+  function shouldUseFallback(error) {
+    const message = String(error?.message || "").toLowerCase();
+    return message.includes("formulaire non autorise")
+      || message.includes("formulaire non autorisé")
+      || message.includes("relation")
+      || message.includes("does not exist")
+      || message.includes("schema cache");
+  }
+
+  function buildFallbackPayload(table, payload) {
+    if (table !== "contacts") return payload;
+
+    const subjectParts = [
+      payload.city ? `Commune : ${payload.city}` : "",
+      payload.issue_type ? `Enjeu : ${payload.issue_type}` : "",
+      payload.subject ? `Sujet : ${payload.subject}` : "",
+    ].filter(Boolean);
+    const messageParts = [
+      "Signalement communal",
+      payload.city ? `Commune : ${payload.city}` : "",
+      payload.issue_type ? `Type d'enjeu : ${payload.issue_type}` : "",
+      payload.subject ? `Sujet : ${payload.subject}` : "",
+      "",
+      payload.message || "",
+    ].filter((line, index) => line !== "" || index === 4);
+
+    return {
+      full_name: payload.full_name,
+      email: payload.email,
+      subject: subjectParts.join(" - ") || "Signalement communal",
+      message: messageParts.join("\n"),
+      consent: payload.consent,
+      source_page: payload.source_page,
+      user_agent: payload.user_agent,
+    };
+  }
+
   async function handleFormSubmit(event) {
     const form = event.target;
     if (!form.matches("[data-supabase-table]")) return;
@@ -205,7 +242,12 @@
     if (button) button.disabled = true;
     setStatus(form, "Envoi en cours...", "info");
 
-    const { error } = await submitSecureForm(table, payload, turnstileToken);
+    let { error } = await submitSecureForm(table, payload, turnstileToken);
+    if (error && form.dataset.fallbackTable && shouldUseFallback(error)) {
+      const fallbackTable = form.dataset.fallbackTable;
+      const fallbackPayload = buildFallbackPayload(fallbackTable, payload);
+      ({ error } = await submitSecureForm(fallbackTable, fallbackPayload, turnstileToken));
+    }
     if (button) button.disabled = false;
 
     if (error) {

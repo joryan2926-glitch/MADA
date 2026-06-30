@@ -8,6 +8,7 @@ drop policy if exists "public insert newsletter" on public.newsletter_subscriber
 drop policy if exists "public insert contacts" on public.contacts;
 drop policy if exists "public insert program contributions" on public.program_contributions;
 drop policy if exists "public insert local relays" on public.local_relays;
+drop policy if exists "public insert commune reports" on public.commune_reports;
 drop policy if exists "public insert donation intents" on public.donation_intents;
 drop policy if exists "public insert project votes" on public.project_votes;
 

@@ -130,6 +130,7 @@
       { table: "contacts", label: "Contacts", columns: "id, created_at, full_name, email, subject, message" },
       { table: "program_contributions", label: "Contributions programme", columns: "id, created_at, full_name, email, theme, proposal" },
       { table: "local_relays", label: "Relais communaux", columns: "id, created_at, full_name, email, city, message" },
+      { table: "commune_reports", label: "Signalements communaux", columns: "id, created_at, full_name, email, city, issue_type, subject, message" },
       { table: "donation_intents", label: "Intentions de don", columns: "id, created_at, full_name, email, amount, city, message" },
       { table: "project_votes", label: "Votes citoyens", columns: "id, created_at, full_name, email, project_key, priority_level, comment" },
       { table: "territory_indicators", label: "Observatoire", columns: "id, updated_at, label, category, value, unit, period, status" },
@@ -164,7 +165,7 @@
         ul.className = "admin-news-list";
         rows.forEach((row) => {
           const item = document.createElement("li");
-          const detail = row.engagement_type || row.theme || row.subject || row.city || row.amount || row.project_key || row.category || row.team_area || row.document_type || row.phase || "";
+          const detail = row.engagement_type || row.theme || row.issue_type || row.subject || row.city || row.amount || row.project_key || row.category || row.team_area || row.document_type || row.phase || "";
           const primary = row.full_name || row.email || row.title || row.label || row.project_title || row.role_title || row.city || row.id || "";
           const dateValue = row.created_at || row.updated_at || row.published_at;
           const date = dateValue ? new Date(dateValue).toLocaleString("fr-FR") : "";

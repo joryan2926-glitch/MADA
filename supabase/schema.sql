@@ -75,6 +75,20 @@ create table if not exists public.local_relays (
   created_at timestamptz not null default now()
 );
 
+create table if not exists public.commune_reports (
+  id uuid primary key default gen_random_uuid(),
+  full_name text not null,
+  email text not null,
+  city text not null,
+  issue_type text not null,
+  subject text,
+  message text not null,
+  consent boolean not null default false,
+  source_page text,
+  user_agent text,
+  created_at timestamptz not null default now()
+);
+
 create table if not exists public.donation_intents (
   id uuid primary key default gen_random_uuid(),
   full_name text not null,
@@ -282,6 +296,7 @@ alter table public.newsletter_subscribers enable row level security;
 alter table public.contacts enable row level security;
 alter table public.program_contributions enable row level security;
 alter table public.local_relays enable row level security;
+alter table public.commune_reports enable row level security;
 alter table public.donation_intents enable row level security;
 alter table public.admin_profiles enable row level security;
 alter table public.admin_invites enable row level security;
@@ -299,6 +314,7 @@ drop policy if exists "public insert newsletter" on public.newsletter_subscriber
 drop policy if exists "public insert contacts" on public.contacts;
 drop policy if exists "public insert program contributions" on public.program_contributions;
 drop policy if exists "public insert local relays" on public.local_relays;
+drop policy if exists "public insert commune reports" on public.commune_reports;
 drop policy if exists "public insert donation intents" on public.donation_intents;
 drop policy if exists "admins read memberships" on public.memberships;
 drop policy if exists "admins read volunteers" on public.volunteers;
@@ -306,6 +322,7 @@ drop policy if exists "admins read newsletter" on public.newsletter_subscribers;
 drop policy if exists "admins read contacts" on public.contacts;
 drop policy if exists "admins read program contributions" on public.program_contributions;
 drop policy if exists "admins read local relays" on public.local_relays;
+drop policy if exists "admins read commune reports" on public.commune_reports;
 drop policy if exists "admins read donation intents" on public.donation_intents;
 drop policy if exists "admins read admin profiles" on public.admin_profiles;
 drop policy if exists "admins manage admin invites" on public.admin_invites;
@@ -335,6 +352,7 @@ create policy "admins read newsletter" on public.newsletter_subscribers for sele
 create policy "admins read contacts" on public.contacts for select to authenticated using (public.is_admin());
 create policy "admins read program contributions" on public.program_contributions for select to authenticated using (public.is_admin());
 create policy "admins read local relays" on public.local_relays for select to authenticated using (public.is_admin());
+create policy "admins read commune reports" on public.commune_reports for select to authenticated using (public.is_admin());
 create policy "admins read donation intents" on public.donation_intents for select to authenticated using (public.is_admin());
 
 create policy "admins read admin profiles" on public.admin_profiles for select to authenticated using (public.is_admin());
@@ -363,6 +381,7 @@ create index if not exists admin_profiles_email_lower_idx on public.admin_profil
 create index if not exists memberships_created_at_idx on public.memberships(created_at desc);
 create index if not exists volunteers_created_at_idx on public.volunteers(created_at desc);
 create index if not exists newsletter_created_at_idx on public.newsletter_subscribers(created_at desc);
+create index if not exists commune_reports_city_created_idx on public.commune_reports(city, created_at desc);
 create index if not exists territory_indicators_status_order_idx on public.territory_indicators(status, display_order);
 create index if not exists team_profiles_status_order_idx on public.team_profiles(status, display_order);
 create index if not exists documents_library_status_order_idx on public.documents_library(status, display_order, published_at desc);
