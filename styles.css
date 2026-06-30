@@ -6983,6 +6983,39 @@ textarea {
   line-height: 1.5;
 }
 
+.diagnostic-map-sketch {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 0.65rem;
+  width: min(980px, 100%);
+  margin: 1.4rem auto 0;
+  padding: 1rem;
+  border: 1px solid rgba(2, 64, 38, 0.14);
+  border-radius: 8px;
+  background:
+    linear-gradient(135deg, rgba(2, 64, 38, 0.08), rgba(244, 178, 27, 0.1)),
+    #fff;
+}
+
+.diagnostic-map-sketch span {
+  display: grid;
+  min-height: 76px;
+  place-items: center;
+  padding: 0.8rem;
+  border-radius: 6px;
+  color: #fff;
+  background: var(--deep-green);
+  font-size: 0.78rem;
+  font-weight: 900;
+  text-align: center;
+  box-shadow: 0 10px 22px rgba(0, 42, 25, 0.12);
+}
+
+.diagnostic-map-sketch span:nth-child(even) {
+  color: #061d13;
+  background: var(--gold);
+}
+
 .actions-balance-grid {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
