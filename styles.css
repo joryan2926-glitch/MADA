@@ -119,21 +119,21 @@ textarea {
   top: 0;
   z-index: 50;
   display: grid;
-  grid-template-columns: minmax(150px, 214px) minmax(0, 1fr) auto auto;
-  gap: clamp(10px, 1.6vw, 22px);
+  grid-template-columns: minmax(140px, 190px) minmax(0, 1fr) auto auto;
+  gap: clamp(6px, 0.8vw, 10px);
   align-items: center;
   width: 100%;
   max-width: 100%;
   min-width: 0;
   min-height: 92px;
-  padding: 12px clamp(18px, 4vw, 64px);
+  padding: 12px clamp(14px, 2vw, 30px);
   background: rgba(0, 31, 18, 0.98);
   border-bottom: 1px solid rgba(255, 194, 10, 0.24);
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.22);
 }
 
 .brand img {
-  width: clamp(154px, 13vw, 194px);
+  width: clamp(148px, 12vw, 184px);
   height: 66px;
   object-fit: contain;
   object-position: left center;
@@ -145,7 +145,7 @@ textarea {
   align-items: center;
   min-width: 0;
   max-width: 100%;
-  gap: clamp(8px, 0.85vw, 16px);
+  gap: clamp(4px, 0.45vw, 8px);
   overflow: visible;
 }
 
@@ -154,7 +154,7 @@ textarea {
   position: relative;
   display: inline-flex;
   align-items: center;
-  gap: 6px;
+  gap: 4px;
   min-height: 40px;
   min-width: 0;
   padding: 0 2px;
@@ -162,7 +162,7 @@ textarea {
   background: transparent;
   color: var(--white);
   font: inherit;
-  font-size: 11px;
+  font-size: 10px;
   font-weight: 850;
   text-transform: uppercase;
   white-space: nowrap;
@@ -2072,7 +2072,7 @@ textarea {
   font-size: 13px;
 }
 
-@media (max-width: 1180px) {
+@media (max-width: 1320px) {
   .site-header {
     grid-template-columns: minmax(150px, 190px) auto auto;
   }
@@ -2473,8 +2473,72 @@ textarea {
   text-transform: uppercase;
 }
 
+.admin-filter-panel {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) auto;
+  gap: 10px;
+  align-items: end;
+  margin: 0 0 14px;
+  padding: 12px;
+  border: 1px solid rgba(0, 48, 28, 0.12);
+  border-radius: 8px;
+  background: #f7faf7;
+}
+
+.admin-filter-panel label {
+  display: grid;
+  gap: 5px;
+  min-width: 0;
+  color: var(--green-950);
+  font-size: 12px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.admin-filter-panel input,
+.admin-filter-panel select {
+  width: 100%;
+  min-height: 40px;
+  border: 1px solid rgba(0, 48, 28, 0.18);
+  border-radius: 6px;
+  padding: 0 10px;
+  color: var(--green-950);
+  background: #fff;
+  font: inherit;
+  font-size: 13px;
+}
+
+.admin-filter-panel span {
+  min-height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 10px;
+  border-radius: 999px;
+  color: #171400;
+  background: var(--gold);
+  font-size: 12px;
+  font-weight: 950;
+  white-space: nowrap;
+}
+
+.admin-news-list em {
+  display: inline-flex;
+  margin-left: 6px;
+  padding: 2px 7px;
+  border-radius: 999px;
+  color: #171400;
+  background: rgba(244, 178, 27, 0.28);
+  font-size: 12px;
+  font-style: normal;
+}
+
 @media (max-width: 760px) {
   .admin-submissions {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-filter-panel {
     grid-template-columns: 1fr;
   }
 }

@@ -146,39 +146,120 @@
         .select(source.columns)
         .order("created_at", { ascending: false })
         .limit(50);
-      const section = document.createElement("section");
-      section.className = "admin-submission-group";
       const rows = data || [];
       submissionCache.set(source.table, { label: source.label, rows });
-      section.innerHTML = `
-        <div class="admin-group-header">
-          <h3>${escapeHtml(source.label)}</h3>
-          <button type="button" class="btn btn-line admin-small-button" data-export-table="${source.table}">Exporter CSV</button>
-        </div>
-      `;
-      if (error) {
-        section.innerHTML += `<p>${escapeHtml(error.message)}</p>`;
-      } else if (rows.length === 0) {
-        section.innerHTML += "<p>Aucune demande pour le moment.</p>";
-      } else {
-        const ul = document.createElement("ul");
-        ul.className = "admin-news-list";
-        rows.forEach((row) => {
-          const item = document.createElement("li");
-          const detail = row.engagement_type || row.theme || row.issue_type || row.subject || row.city || row.amount || row.project_key || row.category || row.team_area || row.document_type || row.phase || "";
-          const primary = row.full_name || row.email || row.title || row.label || row.project_title || row.role_title || row.city || row.id || "";
-          const dateValue = row.created_at || row.updated_at || row.published_at;
-          const date = dateValue ? new Date(dateValue).toLocaleString("fr-FR") : "";
-          item.innerHTML = `
-            <strong>${escapeHtml(primary)}</strong>
-            <span>${row.email ? escapeHtml(row.email) : ""}${detail ? " - " + escapeHtml(detail) : ""}${date ? " - " + escapeHtml(date) : ""}</span>
-          `;
-          ul.appendChild(item);
-        });
-        section.appendChild(ul);
-      }
+      const section = renderSubmissionSection(source, rows, error);
       submissions.appendChild(section);
     }
+  }
+
+  function renderSubmissionSection(source, rows, error) {
+    const section = document.createElement("section");
+    section.className = "admin-submission-group";
+    section.dataset.table = source.table;
+    section.innerHTML = `
+      <div class="admin-group-header">
+        <h3>${escapeHtml(source.label)}</h3>
+        <button type="button" class="btn btn-line admin-small-button" data-export-table="${source.table}">Exporter CSV</button>
+      </div>
+    `;
+
+    if (source.table === "commune_reports") {
+      section.appendChild(createCommuneReportFilters(rows));
+    }
+
+    const listHost = document.createElement("div");
+    listHost.setAttribute("data-admin-list-host", "");
+    section.appendChild(listHost);
+
+    if (error) {
+      listHost.innerHTML = `<p>${escapeHtml(error.message)}</p>`;
+      return section;
+    }
+
+    renderSubmissionRows(listHost, rows, source.table);
+    return section;
+  }
+
+  function createCommuneReportFilters(rows) {
+    const wrapper = document.createElement("div");
+    wrapper.className = "admin-filter-panel";
+    const cities = uniqueSorted(rows.map((row) => row.city).filter(Boolean));
+    const issues = uniqueSorted(rows.map((row) => row.issue_type).filter(Boolean));
+    wrapper.innerHTML = `
+      <label>Commune
+        <select data-admin-filter="city">
+          <option value="">Toutes les communes</option>
+          ${cities.map((city) => `<option value="${escapeHtml(city)}">${escapeHtml(city)}</option>`).join("")}
+        </select>
+      </label>
+      <label>Enjeu
+        <select data-admin-filter="issue_type">
+          <option value="">Tous les enjeux</option>
+          ${issues.map((issue) => `<option value="${escapeHtml(issue)}">${escapeHtml(issue)}</option>`).join("")}
+        </select>
+      </label>
+      <label>Recherche
+        <input data-admin-filter="query" type="search" placeholder="Nom, email, sujet, message">
+      </label>
+      <span data-admin-filter-count>${rows.length} signalement${rows.length > 1 ? "s" : ""}</span>
+    `;
+    return wrapper;
+  }
+
+  function uniqueSorted(values) {
+    return Array.from(new Set(values.map((value) => String(value).trim()).filter(Boolean)))
+      .sort((a, b) => a.localeCompare(b, "fr"));
+  }
+
+  function renderSubmissionRows(host, rows, table) {
+    if (rows.length === 0) {
+      host.innerHTML = "<p>Aucune demande pour le moment.</p>";
+      return;
+    }
+
+    const ul = document.createElement("ul");
+    ul.className = "admin-news-list";
+    rows.forEach((row) => {
+      const item = document.createElement("li");
+      const detail = row.engagement_type || row.theme || row.issue_type || row.subject || row.city || row.amount || row.project_key || row.category || row.team_area || row.document_type || row.phase || "";
+      const primary = row.full_name || row.email || row.title || row.label || row.project_title || row.role_title || row.city || row.id || "";
+      const dateValue = row.created_at || row.updated_at || row.published_at;
+      const date = dateValue ? new Date(dateValue).toLocaleString("fr-FR") : "";
+      const location = table === "commune_reports" && row.city ? `<em>${escapeHtml(row.city)}</em>` : "";
+      item.innerHTML = `
+        <strong>${escapeHtml(primary)} ${location}</strong>
+        <span>${row.email ? escapeHtml(row.email) : ""}${detail ? " - " + escapeHtml(detail) : ""}${date ? " - " + escapeHtml(date) : ""}</span>
+      `;
+      ul.appendChild(item);
+    });
+    host.innerHTML = "";
+    host.appendChild(ul);
+  }
+
+  function applyCommuneReportFilters(section) {
+    const cached = submissionCache.get("commune_reports");
+    if (!cached) return;
+    const city = section.querySelector('[data-admin-filter="city"]')?.value || "";
+    const issueType = section.querySelector('[data-admin-filter="issue_type"]')?.value || "";
+    const query = normalize(section.querySelector('[data-admin-filter="query"]')?.value || "");
+    const rows = cached.rows.filter((row) => {
+      const matchesCity = !city || row.city === city;
+      const matchesIssue = !issueType || row.issue_type === issueType;
+      const searchable = normalize([row.full_name, row.email, row.city, row.issue_type, row.subject, row.message].filter(Boolean).join(" "));
+      return matchesCity && matchesIssue && (!query || searchable.includes(query));
+    });
+    const host = section.querySelector("[data-admin-list-host]");
+    const counter = section.querySelector("[data-admin-filter-count]");
+    if (counter) counter.textContent = `${rows.length} signalement${rows.length > 1 ? "s" : ""}`;
+    if (host) renderSubmissionRows(host, rows, "commune_reports");
+  }
+
+  function normalize(value) {
+    return String(value || "")
+      .toLowerCase()
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "");
   }
 
   function downloadCsv(table) {
@@ -277,6 +358,13 @@
     const button = event.target.closest("[data-export-table]");
     if (!button) return;
     downloadCsv(button.dataset.exportTable);
+  });
+
+  submissions?.addEventListener("input", (event) => {
+    const field = event.target.closest("[data-admin-filter]");
+    if (!field) return;
+    const section = field.closest('[data-table="commune_reports"]');
+    if (section) applyCommuneReportFilters(section);
   });
 
   postForm?.addEventListener("submit", async (event) => {
