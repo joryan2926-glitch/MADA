@@ -4452,6 +4452,162 @@ textarea {
   }
 }
 
+/* Grand programme MADA CTM 2028 */
+.program-renaissance-hero {
+  position: relative;
+  isolation: isolate;
+  display: grid;
+  min-height: clamp(560px, 76vh, 820px);
+  place-items: center;
+  overflow: hidden;
+  padding: clamp(86px, 11vw, 150px) clamp(18px, 5vw, 72px);
+  background:
+    linear-gradient(110deg, rgba(0, 31, 18, 0.98), rgba(0, 31, 18, 0.78) 50%, rgba(0, 0, 0, 0.2)),
+    radial-gradient(circle at 76% 22%, rgba(255, 194, 10, 0.42), transparent 34%),
+    var(--hero-programme-image) center / cover no-repeat;
+  color: var(--white);
+}
+
+.program-renaissance-hero::after {
+  position: absolute;
+  inset: auto -12% -38%;
+  z-index: -1;
+  height: 68%;
+  border: 1px solid rgba(255, 194, 10, 0.34);
+  border-radius: 50% 50% 0 0;
+  content: "";
+}
+
+.program-renaissance-inner {
+  width: min(1120px, 100%);
+  text-align: center;
+}
+
+.program-renaissance-inner h1 {
+  margin: 10px 0 18px;
+  color: var(--white);
+  font-size: clamp(48px, 8.2vw, 118px);
+  line-height: 0.92;
+  font-weight: 950;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.program-renaissance-inner p:not(.section-label) {
+  width: min(900px, 100%);
+  margin: 0 auto;
+  color: rgba(255, 255, 255, 0.92);
+  font-size: clamp(18px, 2.2vw, 29px);
+  font-weight: 740;
+}
+
+.program-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 14px;
+  margin-top: clamp(28px, 4vw, 46px);
+}
+
+.program-intro-section {
+  background:
+    linear-gradient(180deg, #f6f8f2, #ffffff);
+}
+
+.program-intro-card {
+  width: min(1180px, 100%);
+  margin: 0 auto;
+  padding: clamp(26px, 5vw, 56px);
+  border: 1px solid rgba(0, 31, 18, 0.1);
+  border-radius: 8px;
+  background:
+    linear-gradient(135deg, rgba(255, 194, 10, 0.11), transparent 34%),
+    var(--white);
+  box-shadow: 0 24px 48px rgba(0, 31, 18, 0.1);
+}
+
+.program-intro-card h2,
+.program-renaissance-band h2 {
+  margin: 8px 0 18px;
+  color: var(--green-950);
+  font-size: clamp(34px, 5.8vw, 76px);
+  line-height: 0.98;
+  font-weight: 950;
+  text-transform: uppercase;
+}
+
+.program-intro-card > p:not(.section-label) {
+  width: min(940px, 100%);
+  color: var(--muted);
+  font-size: clamp(17px, 1.7vw, 22px);
+  font-weight: 700;
+}
+
+.program-principles-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(230px, 100%), 1fr));
+  gap: 16px;
+  margin-top: clamp(24px, 4vw, 42px);
+}
+
+.program-principles-grid article {
+  min-width: 0;
+  padding: 22px;
+  border: 1px solid rgba(0, 31, 18, 0.09);
+  border-radius: 8px;
+  background: rgba(0, 31, 18, 0.035);
+}
+
+.program-principles-grid span {
+  color: var(--gold);
+  font-size: 13px;
+  font-weight: 950;
+}
+
+.program-principles-grid h3 {
+  margin: 8px 0;
+  color: var(--green-950);
+  font-size: 20px;
+  font-weight: 950;
+  text-transform: uppercase;
+}
+
+.program-principles-grid p {
+  margin: 0;
+  color: var(--muted);
+  font-weight: 680;
+}
+
+.program-renaissance-band {
+  padding: clamp(58px, 8vw, 104px) clamp(18px, 5vw, 72px);
+  background:
+    linear-gradient(115deg, rgba(0, 31, 18, 0.97), rgba(0, 45, 27, 0.9)),
+    var(--martinique-landscape-image) center / cover no-repeat;
+  color: var(--white);
+}
+
+.program-renaissance-band > div {
+  width: min(980px, 100%);
+  margin: 0 auto;
+  text-align: center;
+}
+
+.program-renaissance-band h2 {
+  color: var(--white);
+}
+
+.program-renaissance-band p:not(.section-label) {
+  width: min(780px, 100%);
+  margin: 0 auto;
+  color: rgba(255, 255, 255, 0.88);
+  font-size: clamp(18px, 2vw, 25px);
+  font-weight: 720;
+}
+
+.program-redirect-hero {
+  min-height: 100vh;
+}
+
 /* Les 8 axes CTM 2028 */
 .axes-hero {
   position: relative;
@@ -4958,6 +5114,38 @@ textarea {
 }
 
 @media (max-width: 760px) {
+  .program-renaissance-hero {
+    min-height: 0;
+    padding: 70px 18px;
+  }
+
+  .program-renaissance-inner {
+    width: 100%;
+    max-width: 340px;
+  }
+
+  .program-renaissance-inner h1 {
+    font-size: clamp(32px, 9vw, 42px);
+    line-height: 0.96;
+  }
+
+  .program-hero-actions {
+    width: 100%;
+  }
+
+  .program-hero-actions .btn {
+    width: 100%;
+  }
+
+  .program-intro-card {
+    padding: 24px 18px;
+  }
+
+  .program-intro-card h2,
+  .program-renaissance-band h2 {
+    font-size: clamp(28px, 8vw, 38px);
+  }
+
   .axes-hero {
     min-height: 0;
     padding: 64px 18px;
