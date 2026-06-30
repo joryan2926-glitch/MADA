@@ -2072,7 +2072,7 @@ textarea {
   font-size: 13px;
 }
 
-@media (max-width: 1320px) {
+@media (max-width: 1180px) {
   .site-header {
     grid-template-columns: minmax(150px, 190px) auto auto;
   }
