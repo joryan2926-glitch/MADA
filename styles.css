@@ -9981,3 +9981,247 @@ th, td {
     grid-template-columns: 1fr;
   }
 }
+/* Diagnostic documentaire enrichi */
+.diagnostic-feature-grid,
+.media-source-grid,
+.source-dossier-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
+  gap: clamp(0.9rem, 1.8vw, 1.25rem);
+  width: min(1180px, 100%);
+  margin: 0 auto;
+}
+
+.diagnostic-feature-grid article {
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid rgba(0, 31, 18, 0.1);
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 20px 40px rgba(0, 31, 18, 0.09);
+}
+
+.diagnostic-feature-grid img {
+  display: block;
+  width: 100%;
+  height: clamp(150px, 18vw, 210px);
+  object-fit: cover;
+  filter: saturate(1.05) contrast(1.02);
+}
+
+.diagnostic-feature-grid div {
+  padding: clamp(1rem, 2vw, 1.35rem);
+}
+
+.diagnostic-feature-grid span,
+.documented-timeline time {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  min-height: 1.65rem;
+  padding: 0.22rem 0.62rem;
+  border-radius: 999px;
+  background: var(--gold);
+  color: #151000;
+  font-size: 0.72rem;
+  font-weight: 950;
+  text-transform: uppercase;
+}
+
+.diagnostic-feature-grid h3 {
+  margin: 0.72rem 0 0.45rem;
+  color: var(--green-950);
+  font-size: clamp(1.02rem, 1.35vw, 1.22rem);
+  line-height: 1.14;
+  text-transform: uppercase;
+}
+
+.diagnostic-feature-grid p,
+.diagnostic-feature-grid a,
+.media-source-grid span,
+.source-dossier-grid span,
+.documented-timeline dd,
+.actor-warning,
+.actor-table td {
+  color: var(--muted);
+  font-size: clamp(0.84rem, 0.96vw, 0.94rem);
+  font-weight: 650;
+  line-height: 1.5;
+}
+
+.diagnostic-feature-grid a {
+  display: inline-flex;
+  margin-top: 0.8rem;
+  color: var(--green-850);
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.documented-timeline {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(310px, 100%), 1fr));
+  gap: clamp(0.85rem, 1.7vw, 1.2rem);
+  width: min(1240px, 100%);
+  margin: 0 auto;
+}
+
+.documented-timeline article {
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid rgba(0, 31, 18, 0.1);
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 18px 36px rgba(0, 31, 18, 0.08);
+}
+
+.documented-timeline article > :not(.timeline-photo) {
+  margin-left: clamp(0.95rem, 1.7vw, 1.2rem);
+  margin-right: clamp(0.95rem, 1.7vw, 1.2rem);
+}
+
+.documented-timeline time {
+  margin-top: clamp(0.95rem, 1.7vw, 1.2rem);
+}
+
+.documented-timeline h3 {
+  margin-top: 0.75rem;
+  color: var(--green-950);
+  font-size: clamp(1.04rem, 1.35vw, 1.24rem);
+  line-height: 1.15;
+  text-transform: uppercase;
+}
+
+.timeline-photo,
+.problem-card-grid article::before {
+  display: block;
+  width: 100%;
+  min-height: 150px;
+  background: linear-gradient(rgba(0, 31, 18, 0.28), rgba(0, 0, 0, 0.4)), var(--diag-image, url("assets/hero-observatoire-territoire-768.webp")) center/cover;
+}
+
+.timeline-photo.is-strike { --diag-image: url("assets/hero-programme-fort-de-france-768.webp"); }
+.timeline-photo.is-institution { --diag-image: url("assets/hero-communes-mairie-768.webp"); }
+.timeline-photo.is-youth { --diag-image: url("assets/photo-retour-talents-768.webp"); }
+.timeline-photo.is-prices { --diag-image: url("assets/photo-agriculture-martinique-768.webp"); }
+.timeline-photo.is-health { --diag-image: url("assets/hero-observatoire-territoire-768.webp"); }
+.timeline-photo.is-social { --diag-image: url("assets/hero-programme-fort-de-france-768.webp"); }
+.timeline-photo.is-market { --diag-image: url("assets/photo-agriculture-martinique-768.webp"); }
+.timeline-photo.is-2024 { --diag-image: url("assets/hero-programme-fort-de-france-768.webp"); }
+.timeline-photo.is-economy { --diag-image: url("assets/hero-programme-fort-de-france-768.webp"); }
+.timeline-photo.is-mada { --diag-image: url("assets/martinique-landscape-only-768.webp"); }
+
+.documented-timeline dl {
+  display: grid;
+  gap: 0.55rem;
+  margin-bottom: clamp(0.95rem, 1.7vw, 1.2rem);
+}
+
+.documented-timeline dl div {
+  padding: 0.72rem;
+  border-radius: 8px;
+  background: rgba(0, 31, 18, 0.045);
+}
+
+.documented-timeline dt {
+  color: var(--green-950);
+  font-size: 0.74rem;
+  font-weight: 950;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.documented-timeline dd {
+  margin: 0.25rem 0 0;
+}
+
+.media-source-grid a,
+.source-dossier-grid a {
+  min-width: 0;
+  padding: clamp(0.95rem, 1.8vw, 1.25rem);
+  border: 1px solid rgba(0, 31, 18, 0.09);
+  border-radius: 8px;
+  background: #fff;
+  text-decoration: none;
+  box-shadow: 0 16px 34px rgba(0, 31, 18, 0.08);
+}
+
+.media-source-grid strong,
+.source-dossier-grid strong {
+  display: block;
+  margin-bottom: 0.35rem;
+  color: var(--green-950);
+  text-transform: uppercase;
+}
+
+.problem-card-grid article {
+  overflow: hidden;
+}
+
+.problem-card-grid article::before {
+  content: "";
+  margin: calc(clamp(1.1rem, 2vw, 1.4rem) * -1) calc(clamp(1.1rem, 2vw, 1.4rem) * -1) clamp(0.9rem, 1.7vw, 1.1rem);
+  min-height: 135px;
+}
+
+.problem-card-grid article#vie-chere::before,
+.problem-card-grid article#equite-tarifaire::before { --diag-image: url("assets/photo-agriculture-martinique-768.webp"); }
+.problem-card-grid article#eau::before { --diag-image: url("assets/photo-eau-resilience-768.webp"); }
+.problem-card-grid article#sante::before { --diag-image: url("assets/hero-observatoire-territoire-768.webp"); }
+.problem-card-grid article#logement::before,
+.problem-card-grid article#foncier-dormant::before { --diag-image: url("assets/hero-communes-mairie-768.webp"); }
+.problem-card-grid article#jeunesse::before { --diag-image: url("assets/photo-retour-talents-768.webp"); }
+.problem-card-grid article#agriculture::before { --diag-image: url("assets/photo-agriculture-martinique-768.webp"); }
+.problem-card-grid article#energie::before { --diag-image: url("assets/martinique-landscape-only-768.webp"); }
+.problem-card-grid article#littoral-sargasses::before { --diag-image: url("assets/photo-eau-resilience-768.webp"); }
+.problem-card-grid article#securite::before { --diag-image: url("assets/hero-programme-fort-de-france-768.webp"); }
+
+.actor-warning {
+  width: min(1040px, 100%);
+  margin: 0 auto clamp(1rem, 2vw, 1.35rem);
+  padding: clamp(0.9rem, 1.7vw, 1.15rem);
+  border-left: 4px solid var(--gold);
+  border-radius: 8px;
+  background: rgba(0, 31, 18, 0.06);
+}
+
+.actor-table-wrap {
+  width: min(1240px, 100%);
+  margin: 0 auto;
+  overflow-x: auto;
+  border: 1px solid rgba(0, 31, 18, 0.1);
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 18px 36px rgba(0, 31, 18, 0.08);
+}
+
+.actor-table {
+  width: 100%;
+  min-width: 820px;
+  border-collapse: collapse;
+}
+
+.actor-table th {
+  color: var(--green-950);
+  font-weight: 950;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.actor-table th,
+.actor-table td {
+  border-bottom: 1px solid rgba(0, 31, 18, 0.08);
+  vertical-align: top;
+}
+
+@media (max-width: 720px) {
+  .documented-timeline,
+  .diagnostic-feature-grid,
+  .media-source-grid,
+  .source-dossier-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .actor-table {
+    min-width: 760px;
+  }
+}
