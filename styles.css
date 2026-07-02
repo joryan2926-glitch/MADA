@@ -10536,3 +10536,39 @@ th, td {
     text-align: left;
   }
 }
+/* Gestion publique controlee */
+.public-control-hero {
+  background:
+    linear-gradient(112deg, rgba(0, 31, 18, 0.98), rgba(0, 31, 18, 0.78) 52%, rgba(0, 0, 0, 0.28)),
+    radial-gradient(circle at 78% 20%, rgba(255, 194, 10, 0.34), transparent 34%),
+    var(--hero-communes-image) center / cover no-repeat;
+}
+
+.public-control-grid article,
+.public-control-sector-grid article {
+  min-width: 0;
+}
+
+.public-control-table {
+  min-width: 1120px;
+}
+
+.public-control-table .status-badge.is-review {
+  color: var(--green-950);
+  background: rgba(255, 194, 10, 0.28);
+}
+
+.public-control-signal-card .program-hero-actions {
+  justify-content: flex-start;
+  margin-top: 22px;
+}
+
+.public-control-intro {
+  border-top: 5px solid var(--gold);
+}
+
+@media (max-width: 760px) {
+  .public-control-table {
+    min-width: 980px;
+  }
+}
