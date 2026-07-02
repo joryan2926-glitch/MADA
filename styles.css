@@ -1,4 +1,4 @@
-:root {
+﻿:root {
   --green-950: #001f12;
   --green-900: #002b18;
   --green-850: #00351e;
@@ -164,7 +164,7 @@ textarea {
   background: transparent;
   color: var(--white);
   font: inherit;
-  font-size: 10px;
+  font-size: 9px;
   font-weight: 850;
   text-transform: uppercase;
   white-space: nowrap;
@@ -215,7 +215,7 @@ textarea {
 
 .nav-parent .chevron {
   color: var(--gold);
-  font-size: 10px;
+  font-size: 9px;
   line-height: 1;
 }
 
@@ -254,7 +254,7 @@ textarea {
   padding: 9px 12px;
   border-radius: 6px;
   color: var(--white);
-  font-size: 12px;
+  font-size: 10.8px;
   line-height: 1.2;
   text-transform: none;
   white-space: normal;
@@ -278,7 +278,7 @@ textarea {
 
 .dropdown-menu-understand a {
   min-height: 36px;
-  font-size: 11.5px;
+  font-size: 10.35px;
   font-weight: 850;
 }
 
@@ -301,7 +301,7 @@ textarea {
   padding: 0 24px;
   border: 0;
   border-radius: 6px;
-  font-size: 12px;
+  font-size: 10.8px;
   font-weight: 950;
   text-transform: uppercase;
   white-space: nowrap;
@@ -385,7 +385,7 @@ textarea {
 .form-note {
   margin: 0 0 12px;
   color: var(--gold);
-  font-size: 13px;
+  font-size: 11.7px;
   font-weight: 950;
   text-transform: uppercase;
 }
@@ -395,7 +395,7 @@ textarea {
   max-width: 950px;
   margin: 0;
   color: var(--white);
-  font-size: clamp(46px, 7.4vw, 94px);
+  font-size: clamp(41.4px, 6.66vw, 84.6px);
   line-height: 0.98;
   font-weight: 950;
   text-transform: uppercase;
@@ -417,7 +417,7 @@ textarea {
   max-width: 780px;
   margin: 28px 0 0;
   color: #f2f7f2;
-  font-size: clamp(18px, 2vw, 24px);
+  font-size: clamp(16.2px, 1.8vw, 21.6px);
   line-height: 1.42;
 }
 
@@ -436,7 +436,7 @@ textarea {
   border-left: 5px solid var(--gold);
   background: rgba(255, 194, 10, 0.14);
   color: var(--green-950);
-  font-size: clamp(20px, 2.5vw, 30px);
+  font-size: clamp(18px, 2.25vw, 27px);
   font-weight: 950;
   line-height: 1.15;
 }
@@ -474,14 +474,14 @@ textarea {
 .quick-answer h3 {
   margin: 0 0 4px;
   color: var(--gold);
-  font-size: 14px;
+  font-size: 12.6px;
   text-transform: uppercase;
 }
 
 .quick-answer p {
   margin: 0;
   color: #e9f0ea;
-  font-size: 14px;
+  font-size: 12.6px;
 }
 
 .stats-strip {
@@ -507,7 +507,7 @@ textarea {
 .stats-strip strong {
   display: block;
   color: var(--gold);
-  font-size: 20px;
+  font-size: 18px;
   text-transform: uppercase;
 }
 
@@ -558,7 +558,7 @@ textarea {
 .don-panel h2 {
   margin: 0;
   color: var(--green-950);
-  font-size: clamp(30px, 4.5vw, 58px);
+  font-size: clamp(27px, 4.05vw, 52.2px);
   line-height: 1.05;
   font-weight: 950;
   text-transform: uppercase;
@@ -575,7 +575,7 @@ textarea {
   max-width: 880px;
   margin: 24px 0 0;
   color: var(--muted);
-  font-size: 18px;
+  font-size: 16.2px;
 }
 
 .section-dark .section-heading p:not(.section-label),
@@ -636,7 +636,7 @@ textarea {
 .card h3 {
   margin: 0 0 10px;
   color: var(--green-950);
-  font-size: 18px;
+  font-size: 16.2px;
   line-height: 1.22;
   font-weight: 950;
   text-transform: uppercase;
@@ -692,7 +692,7 @@ textarea {
 .info-panel h3 {
   margin: 0 0 18px;
   color: var(--green-950);
-  font-size: 22px;
+  font-size: 19.8px;
   font-weight: 950;
   text-transform: uppercase;
 }
@@ -804,7 +804,7 @@ textarea {
 .emblem-project h3 {
   margin: 0;
   color: var(--green-950);
-  font-size: clamp(22px, 3vw, 34px);
+  font-size: clamp(19.8px, 2.7vw, 30.6px);
   line-height: 1.05;
   font-weight: 950;
   text-transform: uppercase;
@@ -899,7 +899,7 @@ textarea {
 .emblem-project p {
   margin: 0;
   color: #edf4ee !important;
-  font-size: 18px;
+  font-size: 16.2px;
   overflow-wrap: anywhere;
 }
 
@@ -941,7 +941,7 @@ textarea {
 .vision-copy h3 {
   margin: 0;
   color: var(--gold);
-  font-size: clamp(28px, 4vw, 48px);
+  font-size: clamp(25.2px, 3.6vw, 43.2px);
   line-height: 1.04;
   font-weight: 950;
   text-transform: uppercase;
@@ -950,7 +950,7 @@ textarea {
 .vision-copy p:not(.section-label) {
   margin: 18px 0 0;
   color: #edf4ee;
-  font-size: 18px;
+  font-size: 16.2px;
 }
 
 .vision-pillars {
@@ -977,14 +977,14 @@ textarea {
 .vision-pillars span,
 .project-sheet-header > span {
   color: var(--gold);
-  font-size: 14px;
+  font-size: 12.6px;
   font-weight: 950;
   letter-spacing: 0;
 }
 
 .vision-pillars strong {
   color: var(--white);
-  font-size: 19px;
+  font-size: 17.1px;
   font-weight: 950;
   text-transform: uppercase;
 }
@@ -1046,7 +1046,7 @@ textarea {
 .constat-grid span {
   display: block;
   color: var(--green-950);
-  font-size: 19px;
+  font-size: 17.1px;
   font-weight: 950;
   text-transform: uppercase;
 }
@@ -1093,7 +1093,7 @@ textarea {
 .project-sheet-kicker {
   margin: 0 0 6px !important;
   color: var(--gold-700) !important;
-  font-size: 12px;
+  font-size: 10.8px;
   font-weight: 950;
   text-transform: uppercase;
 }
@@ -1101,7 +1101,7 @@ textarea {
 .project-detail-grid h3 {
   margin: 0;
   color: var(--green-950);
-  font-size: clamp(22px, 2.6vw, 30px);
+  font-size: clamp(19.8px, 2.34vw, 27px);
   line-height: 1.15;
   font-weight: 950;
   text-transform: uppercase;
@@ -1115,7 +1115,7 @@ textarea {
 
 .project-summary {
   color: var(--ink) !important;
-  font-size: 17px;
+  font-size: 15.3px;
   font-weight: 720;
 }
 
@@ -1141,7 +1141,7 @@ textarea {
 .project-sheet-body h4 {
   display: block;
   color: var(--green-950);
-  font-size: 13px;
+  font-size: 11.7px;
   font-weight: 950;
   text-transform: uppercase;
 }
@@ -1224,7 +1224,7 @@ textarea {
 .participation-copy h2 {
   margin: 0;
   color: var(--white);
-  font-size: clamp(28px, 4vw, 46px);
+  font-size: clamp(25.2px, 3.6vw, 41.4px);
   line-height: 1.06;
   font-weight: 950;
   text-transform: uppercase;
@@ -1233,7 +1233,7 @@ textarea {
 .participation-copy p:not(.section-label) {
   margin: 18px 0 0;
   color: #e5eee7;
-  font-size: 18px;
+  font-size: 16.2px;
 }
 
 .participation-actions {
@@ -1295,7 +1295,7 @@ textarea {
   border-radius: 8px;
   background: rgba(0, 31, 18, 0.84);
   color: var(--white);
-  font-size: 13px;
+  font-size: 11.7px;
   font-weight: 950;
   text-transform: uppercase;
   text-align: center;
@@ -1334,7 +1334,7 @@ textarea {
 .commune-groups h3 {
   margin: 0;
   color: var(--green-950);
-  font-size: 22px;
+  font-size: 19.8px;
   font-weight: 950;
   text-transform: uppercase;
 }
@@ -1372,7 +1372,7 @@ textarea {
 .commune-profile-card h3 {
   margin: 0 0 10px;
   color: var(--green-950);
-  font-size: 22px;
+  font-size: 19.8px;
   font-weight: 950;
   text-transform: uppercase;
 }
@@ -1381,7 +1381,7 @@ textarea {
   display: block;
   margin: 10px 0;
   color: var(--gold-700);
-  font-size: 24px;
+  font-size: 21.6px;
   font-weight: 950;
 }
 
@@ -1484,7 +1484,7 @@ textarea {
 .observatory-priority-grid h3 {
   margin: 0 0 10px;
   color: var(--green-950);
-  font-size: clamp(19px, 2vw, 25px);
+  font-size: clamp(17.1px, 1.8vw, 22.5px);
   line-height: 1.05;
   font-weight: 950;
   text-transform: uppercase;
@@ -1520,7 +1520,7 @@ textarea {
   display: block;
   margin: 14px 0 8px;
   color: var(--green-950);
-  font-size: clamp(20px, 2.2vw, 28px);
+  font-size: clamp(18px, 1.98vw, 25.2px);
   line-height: 1.05;
   font-weight: 950;
   text-transform: uppercase;
@@ -1565,7 +1565,7 @@ textarea {
 .territory-stat-grid span {
   display: block;
   color: var(--gold);
-  font-size: clamp(36px, 5vw, 64px);
+  font-size: clamp(32.4px, 4.5vw, 57.6px);
   line-height: 1;
   font-weight: 950;
 }
@@ -1574,7 +1574,7 @@ textarea {
   display: block;
   margin-top: 12px;
   color: var(--white);
-  font-size: 14px;
+  font-size: 12.6px;
   font-weight: 950;
   text-transform: uppercase;
 }
@@ -1626,7 +1626,7 @@ textarea {
   border-radius: 999px;
   background: var(--green-950);
   color: var(--gold);
-  font-size: 13px;
+  font-size: 11.7px;
   font-weight: 950;
   text-transform: uppercase;
   padding: 0 12px;
@@ -1637,7 +1637,7 @@ textarea {
 .commune-priority-grid h3 {
   margin: 18px 0 10px;
   color: var(--green-950);
-  font-size: clamp(20px, 2.2vw, 28px);
+  font-size: clamp(18px, 1.98vw, 25.2px);
   line-height: 1.06;
   font-weight: 950;
   text-transform: uppercase;
@@ -1673,7 +1673,7 @@ textarea {
 
 .data-schema-panel strong {
   color: var(--gold-700);
-  font-size: 13px;
+  font-size: 11.7px;
   font-weight: 950;
   text-transform: uppercase;
 }
@@ -1730,7 +1730,7 @@ textarea {
 .profile-card h3 {
   margin: 0 0 8px;
   color: var(--green-950);
-  font-size: 21px;
+  font-size: 18.9px;
   font-weight: 950;
   text-transform: uppercase;
 }
@@ -1781,7 +1781,7 @@ textarea {
 .dashboard-actions h2 {
   margin: 0 0 20px;
   color: var(--green-950);
-  font-size: clamp(28px, 3vw, 42px);
+  font-size: clamp(25.2px, 2.7vw, 37.8px);
   line-height: 1.06;
   font-weight: 950;
   text-transform: uppercase;
@@ -1816,7 +1816,7 @@ textarea {
   border-radius: 999px;
   background: var(--white);
   color: var(--green-950);
-  font-size: 13px;
+  font-size: 11.7px;
   font-weight: 850;
 }
 
@@ -1873,7 +1873,7 @@ textarea {
 .featured-news h3 {
   margin: 0 0 18px;
   color: var(--white);
-  font-size: clamp(28px, 4vw, 44px);
+  font-size: clamp(25.2px, 3.6vw, 39.6px);
   line-height: 1.05;
   text-transform: uppercase;
 }
@@ -1946,7 +1946,7 @@ textarea {
   border-radius: 8px;
   background: var(--gold);
   color: #171400;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 950;
   cursor: pointer;
 }
@@ -1979,7 +1979,7 @@ textarea {
 }
 
 .page-hero h1 {
-  font-size: clamp(42px, 6.4vw, 82px);
+  font-size: clamp(37.8px, 5.76vw, 73.8px);
 }
 
 .objective-bar {
@@ -2007,7 +2007,7 @@ textarea {
 .movement-contract h2 {
   margin: 0;
   color: var(--green-950);
-  font-size: clamp(2rem, 4vw, 3.4rem);
+  font-size: clamp(1.8rem, 3.6vw, 3.06rem);
   line-height: 1.02;
   text-transform: uppercase;
 }
@@ -2016,7 +2016,7 @@ textarea {
 .movement-contract p:not(.section-label) {
   margin: 1rem 0 0;
   color: #526258;
-  font-size: 1rem;
+  font-size: 0.9rem;
   line-height: 1.68;
 }
 
@@ -2041,14 +2041,14 @@ textarea {
 .movement-manifesto-points strong {
   margin-bottom: 0.35rem;
   color: var(--green-950);
-  font-size: 0.9rem;
+  font-size: 0.81rem;
   font-weight: 950;
   text-transform: uppercase;
 }
 
 .movement-manifesto-points span {
   color: #53655b;
-  font-size: 0.84rem;
+  font-size: 0.756rem;
   line-height: 1.55;
 }
 
@@ -2090,7 +2090,7 @@ textarea {
 .movement-objectives-grid h3 {
   margin: 0 0 0.55rem;
   color: var(--green-950);
-  font-size: 1rem;
+  font-size: 0.9rem;
   line-height: 1.2;
   text-transform: uppercase;
 }
@@ -2098,7 +2098,7 @@ textarea {
 .movement-objectives-grid p {
   margin: 0;
   color: #526258;
-  font-size: 0.86rem;
+  font-size: 0.774rem;
   line-height: 1.58;
 }
 
@@ -2118,7 +2118,7 @@ textarea {
   display: block;
   margin-bottom: 0.85rem;
   color: var(--gold);
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-weight: 950;
   text-transform: uppercase;
 }
@@ -2205,7 +2205,7 @@ textarea {
 .contact-card address a:first-child,
 .contact-list a:first-child {
   color: var(--gold);
-  font-size: 24px;
+  font-size: 21.6px;
 }
 
 .site-footer {
@@ -2247,7 +2247,7 @@ textarea {
   grid-column: 1 / -1;
   padding-top: 18px;
   border-top: 1px solid rgba(255, 255, 255, 0.14);
-  font-size: 13px;
+  font-size: 11.7px;
 }
 
 @media (max-width: 1180px) {
@@ -2279,7 +2279,7 @@ textarea {
     width: 100%;
     min-height: 40px;
     padding: 10px 0;
-    font-size: 13px;
+    font-size: 11.7px;
   }
 
   .main-nav .understand-nav-link {
@@ -2320,7 +2320,7 @@ textarea {
     min-height: 34px;
     padding: 7px 10px;
     color: #e7eee8;
-    font-size: 12px;
+    font-size: 10.8px;
   }
 
   .mobile-join-link {
@@ -2440,7 +2440,7 @@ textarea {
 
   .hero h1,
   .page-hero h1 {
-    font-size: clamp(40px, 12vw, 62px);
+    font-size: clamp(36px, 10.8vw, 55.8px);
   }
 
   .stats-strip {
@@ -2530,7 +2530,7 @@ textarea {
   align-items: start;
   gap: 10px;
   color: var(--muted);
-  font-size: 14px;
+  font-size: 12.6px;
   font-weight: 650;
 }
 
@@ -2587,7 +2587,7 @@ textarea {
 .turnstile-warning {
   margin: 0;
   color: #8f1717;
-  font-size: 13px;
+  font-size: 11.7px;
   font-weight: 850;
 }
 
@@ -2610,7 +2610,7 @@ textarea {
 
 .admin-news-list span {
   color: var(--muted);
-  font-size: 14px;
+  font-size: 12.6px;
 }
 
 .admin-item-main {
@@ -2635,7 +2635,7 @@ textarea {
 .admin-small-button {
   min-height: 34px;
   padding: 0 12px;
-  font-size: 11px;
+  font-size: 9.9px;
 }
 
 .admin-submissions {
@@ -2674,7 +2674,7 @@ textarea {
   gap: 5px;
   min-width: 0;
   color: var(--green-950);
-  font-size: 12px;
+  font-size: 10.8px;
   font-weight: 900;
   text-transform: uppercase;
 }
@@ -2689,7 +2689,7 @@ textarea {
   color: var(--green-950);
   background: #fff;
   font: inherit;
-  font-size: 13px;
+  font-size: 11.7px;
 }
 
 .admin-filter-panel span {
@@ -2701,7 +2701,7 @@ textarea {
   border-radius: 999px;
   color: #171400;
   background: var(--gold);
-  font-size: 12px;
+  font-size: 10.8px;
   font-weight: 950;
   white-space: nowrap;
 }
@@ -2713,7 +2713,7 @@ textarea {
   border-radius: 999px;
   color: #171400;
   background: rgba(244, 178, 27, 0.28);
-  font-size: 12px;
+  font-size: 10.8px;
   font-style: normal;
 }
 
@@ -2764,7 +2764,7 @@ textarea {
   max-width: 100%;
   margin: 12px 0 10px;
   color: var(--white);
-  font-size: clamp(52px, 9vw, 118px);
+  font-size: clamp(46.8px, 8.1vw, 106.2px);
   line-height: 0.92;
   font-weight: 950;
   letter-spacing: 0;
@@ -2776,7 +2776,7 @@ textarea {
   max-width: 100%;
   margin: 0 auto;
   color: var(--gold);
-  font-size: clamp(20px, 3vw, 34px);
+  font-size: clamp(18px, 2.7vw, 30.6px);
   font-weight: 900;
   overflow-wrap: anywhere;
 }
@@ -2789,7 +2789,7 @@ textarea {
   border-top: 1px solid rgba(255, 194, 10, 0.5);
   border-bottom: 1px solid rgba(255, 194, 10, 0.5);
   color: rgba(255, 255, 255, 0.94);
-  font-size: clamp(18px, 2.2vw, 26px);
+  font-size: clamp(16.2px, 1.98vw, 23.4px);
   font-weight: 720;
   line-height: 1.5;
   overflow-wrap: anywhere;
@@ -2826,7 +2826,7 @@ textarea {
 .serment-opening p {
   margin: 0;
   color: var(--ink);
-  font-size: clamp(17px, 2vw, 22px);
+  font-size: clamp(15.3px, 1.8vw, 19.8px);
   font-weight: 650;
   overflow-wrap: anywhere;
 }
@@ -2854,14 +2854,14 @@ textarea {
 
 .serment-card span {
   color: var(--gold-700);
-  font-size: 13px;
+  font-size: 11.7px;
   font-weight: 950;
 }
 
 .serment-card h3 {
   margin: 0;
   color: var(--green-950);
-  font-size: clamp(20px, 2.4vw, 28px);
+  font-size: clamp(18px, 2.16vw, 25.2px);
   line-height: 1.12;
   font-weight: 950;
   text-transform: uppercase;
@@ -2903,7 +2903,7 @@ textarea {
 
 .serment-values strong {
   color: var(--gold);
-  font-size: 19px;
+  font-size: 17.1px;
   font-weight: 950;
   text-transform: uppercase;
 }
@@ -2945,14 +2945,14 @@ textarea {
 .serment-pacte-grid h3 {
   margin: 0 0 16px;
   color: var(--green-950);
-  font-size: clamp(24px, 3vw, 36px);
+  font-size: clamp(21.6px, 2.7vw, 32.4px);
   font-weight: 950;
   text-transform: uppercase;
 }
 
 .serment-pacte-grid p {
   margin: 10px 0 0;
-  font-size: 18px;
+  font-size: 16.2px;
   font-weight: 760;
 }
 
@@ -2990,7 +2990,7 @@ textarea {
   width: min(920px, 100%);
   margin: 12px auto 30px;
   color: var(--gold);
-  font-size: clamp(34px, 6vw, 78px);
+  font-size: clamp(30.6px, 5.4vw, 70.2px);
   line-height: 1;
   font-weight: 950;
   text-transform: uppercase;
@@ -3009,14 +3009,14 @@ textarea {
   border-radius: 8px;
   background: rgba(0, 0, 0, 0.22);
   color: var(--white);
-  font-size: clamp(18px, 2vw, 24px);
+  font-size: clamp(16.2px, 1.8vw, 21.6px);
   font-weight: 850;
 }
 
 .serment-final-choice {
   margin: clamp(32px, 5vw, 54px) 0 16px;
   color: var(--white);
-  font-size: clamp(22px, 3vw, 34px);
+  font-size: clamp(19.8px, 2.7vw, 30.6px);
   font-weight: 950;
   line-height: 1.25;
 }
@@ -3027,7 +3027,7 @@ textarea {
 
 .serment-mada-mark {
   color: var(--gold);
-  font-size: clamp(54px, 10vw, 124px);
+  font-size: clamp(48.6px, 9vw, 111.6px);
   line-height: 1;
   font-weight: 950;
 }
@@ -3036,13 +3036,13 @@ textarea {
 .serment-translation {
   margin: 10px 0 0;
   color: #f3f7f0;
-  font-size: clamp(20px, 3vw, 34px);
+  font-size: clamp(18px, 2.7vw, 30.6px);
   font-weight: 850;
 }
 
 .serment-translation {
   color: rgba(255, 255, 255, 0.82);
-  font-size: clamp(17px, 2vw, 24px);
+  font-size: clamp(15.3px, 1.8vw, 21.6px);
 }
 
 @media (max-width: 760px) {
@@ -3062,11 +3062,11 @@ textarea {
   }
 
   .serment-hero h1 {
-    font-size: clamp(44px, 14vw, 68px);
+    font-size: clamp(39.6px, 12.6vw, 61.2px);
   }
 
   .serment-subtitle {
-    font-size: clamp(18px, 5vw, 24px);
+    font-size: clamp(16.2px, 4.5vw, 21.6px);
   }
 
   .serment-hero blockquote {
@@ -3248,7 +3248,7 @@ textarea {
   align-items: center;
   margin-bottom: clamp(18px, 3vh, 36px);
   color: var(--gold);
-  font-size: clamp(13px, 1.4vw, 18px);
+  font-size: clamp(11.7px, 1.26vw, 16.2px);
   font-weight: 950;
   letter-spacing: 0.16em;
   text-transform: uppercase;
@@ -3265,7 +3265,7 @@ textarea {
   max-width: 100%;
   margin: 0;
   color: var(--white);
-  font-size: clamp(54px, 10vw, 132px);
+  font-size: clamp(48.6px, 9vw, 118.8px);
   line-height: 0.9;
   font-weight: 950;
   letter-spacing: 0;
@@ -3294,7 +3294,7 @@ textarea {
   max-width: 100%;
   margin: 0;
   color: var(--white);
-  font-size: clamp(31px, 5vw, 66px);
+  font-size: clamp(27.9px, 4.5vw, 59.4px);
   line-height: 1.12;
   font-weight: 850;
 }
@@ -3323,7 +3323,7 @@ textarea {
   padding-top: clamp(18px, 3vh, 34px);
   border-top: 1px solid rgba(255, 194, 10, 0.28);
   color: rgba(255, 255, 255, 0.94);
-  font-size: clamp(18px, 2.1vw, 28px);
+  font-size: clamp(16.2px, 1.89vw, 25.2px);
   line-height: 1.42;
   font-weight: 650;
 }
@@ -3369,7 +3369,7 @@ textarea {
 
 .welcome-values span {
   color: var(--green-500);
-  font-size: clamp(12px, 1.4vw, 18px);
+  font-size: clamp(10.8px, 1.26vw, 16.2px);
   font-weight: 950;
   text-transform: uppercase;
 }
@@ -3387,7 +3387,7 @@ textarea {
   background: linear-gradient(180deg, #ffb21c, #ff970e);
   color: #0b120c;
   box-shadow: 0 20px 44px rgba(255, 153, 14, 0.28), inset 0 -3px 0 rgba(0, 0, 0, 0.16);
-  font-size: clamp(18px, 2.6vw, 31px);
+  font-size: clamp(16.2px, 2.34vw, 27.9px);
   font-weight: 950;
   letter-spacing: 0.04em;
   text-shadow: none;
@@ -3402,7 +3402,7 @@ textarea {
 }
 
 .welcome-enter span {
-  font-size: 1.45em;
+  font-size: 1.305em;
   line-height: 1;
 }
 
@@ -3411,7 +3411,7 @@ textarea {
   margin: clamp(34px, 6vh, 62px) 0 0;
   color: var(--white);
   font-family: "Segoe Script", "Brush Script MT", cursive;
-  font-size: clamp(28px, 4.2vw, 54px);
+  font-size: clamp(25.2px, 3.78vw, 48.6px);
   line-height: 1.1;
 }
 
@@ -3420,7 +3420,7 @@ textarea {
   margin-bottom: -12px;
   color: rgba(255, 194, 10, 0.62);
   font-family: Georgia, serif;
-  font-size: 2em;
+  font-size: 1.8em;
   line-height: 0.6;
 }
 
@@ -3483,7 +3483,7 @@ textarea {
   }
 
   .welcome-content h1 {
-    font-size: clamp(72px, 7.4vw, 106px);
+    font-size: clamp(64.8px, 6.66vw, 95.4px);
   }
 
   .welcome-divider {
@@ -3491,13 +3491,13 @@ textarea {
   }
 
   .welcome-slogan {
-    font-size: clamp(36px, 4vw, 56px);
+    font-size: clamp(32.4px, 3.6vw, 50.4px);
   }
 
   .welcome-intro {
     margin-top: 22px;
     padding-top: 18px;
-    font-size: clamp(18px, 1.7vw, 24px);
+    font-size: clamp(16.2px, 1.53vw, 21.6px);
   }
 
   .welcome-values {
@@ -3510,12 +3510,12 @@ textarea {
 
   .welcome-enter {
     min-height: 66px;
-    font-size: 24px;
+    font-size: 21.6px;
   }
 
   .welcome-signature {
     margin-top: 30px;
-    font-size: clamp(30px, 3.2vw, 44px);
+    font-size: clamp(27px, 2.88vw, 39.6px);
   }
 }
 
@@ -3536,11 +3536,11 @@ textarea {
   }
 
   .welcome-content h1 {
-    font-size: clamp(40px, 12.2vw, 54px);
+    font-size: clamp(36px, 10.98vw, 48.6px);
   }
 
   .welcome-slogan {
-    font-size: clamp(25px, 7.4vw, 34px);
+    font-size: clamp(22.5px, 6.66vw, 30.6px);
   }
 
   .welcome-mobile-break {
@@ -3549,7 +3549,7 @@ textarea {
 
   .welcome-intro {
     max-width: 340px;
-    font-size: 17px;
+    font-size: 15.3px;
   }
 
   .welcome-values {
@@ -3562,7 +3562,7 @@ textarea {
     max-width: 340px;
     min-height: 62px;
     border-radius: 14px;
-    font-size: 17px;
+    font-size: 15.3px;
   }
 
   .palm-cluster {
@@ -3629,7 +3629,7 @@ textarea {
 .vision-page-hero h1 {
   margin: 10px 0 8px;
   color: var(--white);
-  font-size: clamp(64px, 10vw, 150px);
+  font-size: clamp(57.6px, 9vw, 135px);
   line-height: 0.9;
   font-weight: 950;
   letter-spacing: 0;
@@ -3640,7 +3640,7 @@ textarea {
 .vision-page-subtitle {
   margin: 0 auto;
   color: var(--gold);
-  font-size: clamp(24px, 3.4vw, 44px);
+  font-size: clamp(21.6px, 3.06vw, 39.6px);
   font-weight: 950;
 }
 
@@ -3648,7 +3648,7 @@ textarea {
   width: min(840px, 100%);
   margin: clamp(24px, 4vw, 42px) auto 0;
   color: rgba(255, 255, 255, 0.94);
-  font-size: clamp(18px, 2.1vw, 26px);
+  font-size: clamp(16.2px, 1.89vw, 23.4px);
   font-weight: 700;
 }
 
@@ -3711,7 +3711,7 @@ textarea {
 .vision-pillar-grid h3 {
   margin: 0;
   color: var(--green-950);
-  font-size: clamp(22px, 2.4vw, 32px);
+  font-size: clamp(19.8px, 2.16vw, 28.8px);
   line-height: 1.08;
   font-weight: 950;
   text-transform: uppercase;
@@ -3812,7 +3812,7 @@ textarea {
 .vision-counter-grid strong {
   display: block;
   color: var(--green-950);
-  font-size: clamp(40px, 6vw, 72px);
+  font-size: clamp(36px, 5.4vw, 64.8px);
   line-height: 1;
   font-weight: 950;
 }
@@ -3820,7 +3820,7 @@ textarea {
 .vision-counter-grid p {
   margin: 14px 0 0;
   color: var(--muted);
-  font-size: 17px;
+  font-size: 15.3px;
   font-weight: 760;
 }
 
@@ -3879,7 +3879,7 @@ textarea {
 .objectives-card h2 {
   margin: 0;
   color: var(--green-950);
-  font-size: clamp(23px, 2.4vw, 34px);
+  font-size: clamp(20.7px, 2.16vw, 30.6px);
   line-height: 1.05;
   font-weight: 950;
   text-transform: uppercase;
@@ -3921,7 +3921,7 @@ textarea {
 .objectives-table thead th {
   background: var(--green-950);
   color: var(--gold);
-  font-size: 13px;
+  font-size: 11.7px;
   font-weight: 950;
   text-transform: uppercase;
 }
@@ -3982,7 +3982,7 @@ textarea {
 .financing-flow strong {
   display: block;
   color: var(--green-950);
-  font-size: clamp(20px, 2vw, 28px);
+  font-size: clamp(18px, 1.8vw, 25.2px);
   font-weight: 950;
   text-transform: uppercase;
 }
@@ -4034,7 +4034,7 @@ textarea {
 .financing-card h2 {
   margin: 0;
   color: var(--green-950);
-  font-size: clamp(22px, 2.3vw, 32px);
+  font-size: clamp(19.8px, 2.07vw, 28.8px);
   line-height: 1.05;
   font-weight: 950;
   text-transform: uppercase;
@@ -4076,7 +4076,7 @@ textarea {
 .financing-commitment-card h2 {
   margin: 8px 0 18px;
   color: var(--white);
-  font-size: clamp(30px, 4vw, 56px);
+  font-size: clamp(27px, 3.6vw, 50.4px);
   line-height: 1;
   font-weight: 950;
   text-transform: uppercase;
@@ -4085,7 +4085,7 @@ textarea {
 .financing-commitment-card blockquote {
   margin: 0 auto 18px;
   color: var(--gold);
-  font-size: clamp(22px, 3vw, 36px);
+  font-size: clamp(19.8px, 2.7vw, 32.4px);
   font-weight: 850;
   line-height: 1.2;
 }
@@ -4161,7 +4161,7 @@ textarea {
   border-radius: 999px;
   background: var(--white);
   color: var(--green-950);
-  font-size: 12px;
+  font-size: 10.8px;
   font-weight: 900;
   text-align: center;
   box-shadow: 0 10px 20px rgba(0, 31, 18, 0.06);
@@ -4202,7 +4202,7 @@ textarea {
   border-radius: 999px;
   background: rgba(255, 194, 10, 0.16);
   color: var(--gold-700);
-  font-size: 12px;
+  font-size: 10.8px;
   font-weight: 950;
   letter-spacing: 0;
   text-transform: uppercase;
@@ -4216,7 +4216,7 @@ textarea {
 .understand-power-grid h3 {
   margin: 12px 0 10px;
   color: var(--green-950);
-  font-size: clamp(22px, 2.2vw, 30px);
+  font-size: clamp(19.8px, 1.98vw, 27px);
   line-height: 1.08;
   font-weight: 950;
   text-transform: uppercase;
@@ -4257,7 +4257,7 @@ textarea {
 }
 
 .understand-competence-table td {
-  font-size: 14px;
+  font-size: 12.6px;
 }
 
 .understand-use-card {
@@ -4283,7 +4283,7 @@ textarea {
 .understand-spending-grid strong {
   display: block;
   color: var(--green-950);
-  font-size: 18px;
+  font-size: 16.2px;
   font-weight: 950;
   text-transform: uppercase;
 }
@@ -4291,7 +4291,7 @@ textarea {
 .understand-spending-grid span:not(.understand-bar) {
   display: block;
   color: var(--muted);
-  font-size: 13px;
+  font-size: 11.7px;
   font-weight: 800;
 }
 
@@ -4361,7 +4361,7 @@ textarea {
   display: block;
   margin: 14px 0 6px;
   color: var(--gold-700);
-  font-size: 13px;
+  font-size: 11.7px;
   font-weight: 950;
   text-transform: uppercase;
 }
@@ -4375,7 +4375,7 @@ textarea {
 .understand-role-card h2 {
   margin: 8px 0 18px;
   color: var(--green-950);
-  font-size: clamp(32px, 4.8vw, 58px);
+  font-size: clamp(28.8px, 4.32vw, 52.2px);
   line-height: 1;
   font-weight: 950;
   text-transform: uppercase;
@@ -4406,7 +4406,7 @@ textarea {
 .understand-final-message h2 {
   margin: 8px 0 18px;
   color: var(--white);
-  font-size: clamp(30px, 4vw, 56px);
+  font-size: clamp(27px, 3.6vw, 50.4px);
   line-height: 1;
   font-weight: 950;
   text-transform: uppercase;
@@ -4430,7 +4430,7 @@ textarea {
 .understand-autonomy-steps strong {
   display: block;
   color: var(--gold);
-  font-size: 18px;
+  font-size: 16.2px;
   font-weight: 950;
   text-transform: uppercase;
 }
@@ -4453,7 +4453,7 @@ textarea {
 .understand-final-message blockquote {
   margin: 0 auto 18px;
   color: var(--green-950);
-  font-size: clamp(26px, 3.8vw, 48px);
+  font-size: clamp(23.4px, 3.42vw, 43.2px);
   line-height: 1.1;
   font-weight: 950;
 }
@@ -4484,7 +4484,7 @@ textarea {
 .understand-follow-grid strong {
   display: block;
   color: var(--green-950);
-  font-size: 18px;
+  font-size: 16.2px;
   font-weight: 950;
   text-transform: uppercase;
 }
@@ -4560,7 +4560,7 @@ textarea {
   border-top: 1px solid rgba(255, 194, 10, 0.54);
   border-bottom: 1px solid rgba(255, 194, 10, 0.54);
   color: var(--white);
-  font-size: clamp(28px, 5vw, 60px);
+  font-size: clamp(25.2px, 4.5vw, 54px);
   line-height: 1.15;
   font-weight: 900;
   text-align: center;
@@ -4583,11 +4583,11 @@ textarea {
   }
 
   .vision-page-hero h1 {
-    font-size: clamp(36px, 9.2vw, 42px);
+    font-size: clamp(32.4px, 8.28vw, 37.8px);
   }
 
   .vision-page-subtitle {
-    font-size: clamp(18px, 4.8vw, 22px);
+    font-size: clamp(16.2px, 4.32vw, 19.8px);
   }
 
   .vision-page-hero-inner {
@@ -4670,7 +4670,7 @@ textarea {
 .program-renaissance-inner h1 {
   margin: 10px 0 18px;
   color: var(--white);
-  font-size: clamp(48px, 8.2vw, 118px);
+  font-size: clamp(43.2px, 7.38vw, 106.2px);
   line-height: 0.92;
   font-weight: 950;
   letter-spacing: 0;
@@ -4681,7 +4681,7 @@ textarea {
   width: min(900px, 100%);
   margin: 0 auto;
   color: rgba(255, 255, 255, 0.92);
-  font-size: clamp(18px, 2.2vw, 29px);
+  font-size: clamp(16.2px, 1.98vw, 26.1px);
   font-weight: 740;
 }
 
@@ -4714,7 +4714,7 @@ textarea {
 .program-renaissance-band h2 {
   margin: 8px 0 18px;
   color: var(--green-950);
-  font-size: clamp(34px, 5.8vw, 76px);
+  font-size: clamp(30.6px, 5.22vw, 68.4px);
   line-height: 0.98;
   font-weight: 950;
   text-transform: uppercase;
@@ -4723,7 +4723,7 @@ textarea {
 .program-intro-card > p:not(.section-label) {
   width: min(940px, 100%);
   color: var(--muted);
-  font-size: clamp(17px, 1.7vw, 22px);
+  font-size: clamp(15.3px, 1.53vw, 19.8px);
   font-weight: 700;
 }
 
@@ -4744,14 +4744,14 @@ textarea {
 
 .program-principles-grid span {
   color: var(--gold);
-  font-size: 13px;
+  font-size: 11.7px;
   font-weight: 950;
 }
 
 .program-principles-grid h3 {
   margin: 8px 0;
   color: var(--green-950);
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 950;
   text-transform: uppercase;
 }
@@ -4784,7 +4784,7 @@ textarea {
   width: min(780px, 100%);
   margin: 0 auto;
   color: rgba(255, 255, 255, 0.88);
-  font-size: clamp(18px, 2vw, 25px);
+  font-size: clamp(16.2px, 1.8vw, 22.5px);
   font-weight: 720;
 }
 
@@ -4825,7 +4825,7 @@ textarea {
 .mada2040-hero h1 {
   margin: 10px 0 18px;
   color: var(--white);
-  font-size: clamp(48px, 8vw, 118px);
+  font-size: clamp(43.2px, 7.2vw, 106.2px);
   line-height: 0.92;
   font-weight: 950;
   text-transform: uppercase;
@@ -4835,7 +4835,7 @@ textarea {
   width: min(920px, 100%);
   margin: 0 auto;
   color: rgba(255, 255, 255, 0.92);
-  font-size: clamp(18px, 2.1vw, 28px);
+  font-size: clamp(16.2px, 1.89vw, 25.2px);
   font-weight: 740;
 }
 
@@ -4860,7 +4860,7 @@ textarea {
 .mada2040-axis8-note h3 {
   margin: 0 0 10px;
   color: var(--gold);
-  font-size: clamp(24px, 3.2vw, 40px);
+  font-size: clamp(21.6px, 2.88vw, 36px);
   line-height: 1;
   font-weight: 950;
   text-transform: uppercase;
@@ -4869,7 +4869,7 @@ textarea {
 .mada2040-axis8-note p {
   margin: 0;
   color: rgba(255, 255, 255, 0.88);
-  font-size: clamp(16px, 1.6vw, 20px);
+  font-size: clamp(14.4px, 1.44vw, 18px);
   font-weight: 700;
 }
 
@@ -4912,7 +4912,7 @@ textarea {
 
 .mada2040-project-head span {
   color: var(--gold);
-  font-size: 14px;
+  font-size: 12.6px;
   font-weight: 950;
   text-transform: uppercase;
 }
@@ -4920,7 +4920,7 @@ textarea {
 .mada2040-project-head h3 {
   margin: 0;
   color: var(--green-950);
-  font-size: clamp(30px, 4.5vw, 62px);
+  font-size: clamp(27px, 4.05vw, 55.8px);
   line-height: 0.98;
   font-weight: 950;
   text-transform: uppercase;
@@ -4930,7 +4930,7 @@ textarea {
   max-width: 880px;
   margin: 0;
   color: var(--muted);
-  font-size: clamp(17px, 1.7vw, 22px);
+  font-size: clamp(15.3px, 1.53vw, 19.8px);
   font-weight: 720;
 }
 
@@ -4955,7 +4955,7 @@ textarea {
 .mada2040-project-grid h4 {
   margin: 0 0 8px;
   color: var(--green-950);
-  font-size: 15px;
+  font-size: 13.5px;
   font-weight: 950;
   text-transform: uppercase;
 }
@@ -4975,7 +4975,7 @@ textarea {
 
 .mada2040-project-grid strong {
   color: var(--green-950);
-  font-size: clamp(24px, 3vw, 38px);
+  font-size: clamp(21.6px, 2.7vw, 34.2px);
   line-height: 1;
   font-weight: 950;
 }
@@ -5004,7 +5004,7 @@ textarea {
 .economy-hero h1 {
   margin: 10px 0 18px;
   color: var(--white);
-  font-size: clamp(46px, 7.5vw, 112px);
+  font-size: clamp(41.4px, 6.75vw, 100.8px);
   line-height: 0.92;
   font-weight: 950;
   text-transform: uppercase;
@@ -5014,7 +5014,7 @@ textarea {
   width: min(900px, 100%);
   margin: 0 auto;
   color: rgba(255, 255, 255, 0.92);
-  font-size: clamp(18px, 2.1vw, 28px);
+  font-size: clamp(16.2px, 1.89vw, 25.2px);
   font-weight: 740;
 }
 
@@ -5039,7 +5039,7 @@ textarea {
 
 .economy-kpi-grid span {
   color: var(--green-800);
-  font-size: 12px;
+  font-size: 10.8px;
   font-weight: 950;
   text-transform: uppercase;
 }
@@ -5048,7 +5048,7 @@ textarea {
   display: block;
   margin: 8px 0;
   color: var(--green-950);
-  font-size: clamp(30px, 4.4vw, 54px);
+  font-size: clamp(27px, 3.96vw, 48.6px);
   line-height: 0.95;
   font-weight: 950;
 }
@@ -5079,7 +5079,7 @@ textarea {
 .economy-mada-card h2 {
   margin: 8px 0 22px;
   color: var(--green-950);
-  font-size: clamp(30px, 5vw, 62px);
+  font-size: clamp(27px, 4.5vw, 55.8px);
   line-height: 0.98;
   font-weight: 950;
   text-transform: uppercase;
@@ -5105,7 +5105,7 @@ textarea {
 .economy-production-grid h3 {
   margin: 0 0 8px;
   color: var(--green-950);
-  font-size: 18px;
+  font-size: 16.2px;
   font-weight: 950;
   text-transform: uppercase;
 }
@@ -5144,7 +5144,7 @@ textarea {
 .economy-sector-table th {
   background: var(--green-950);
   color: var(--gold);
-  font-size: 12px;
+  font-size: 10.8px;
   font-weight: 950;
   text-transform: uppercase;
 }
@@ -5156,7 +5156,7 @@ textarea {
 
 .economy-sector-table td {
   color: var(--muted);
-  font-size: 14px;
+  font-size: 12.6px;
   font-weight: 650;
 }
 
@@ -5191,7 +5191,7 @@ textarea {
   }
 
   .mada2040-hero h1 {
-    font-size: clamp(32px, 9vw, 42px);
+    font-size: clamp(28.8px, 8.1vw, 37.8px);
     line-height: 0.96;
   }
 
@@ -5225,7 +5225,7 @@ textarea {
   }
 
   .economy-hero h1 {
-    font-size: clamp(31px, 8.8vw, 42px);
+    font-size: clamp(27.9px, 7.92vw, 37.8px);
     line-height: 0.96;
   }
 
@@ -5274,7 +5274,7 @@ textarea {
 .axes-hero h1 {
   margin: 10px 0 18px;
   color: var(--white);
-  font-size: clamp(54px, 8.4vw, 126px);
+  font-size: clamp(48.6px, 7.56vw, 113.4px);
   line-height: 0.92;
   font-weight: 950;
   letter-spacing: 0;
@@ -5286,7 +5286,7 @@ textarea {
   width: min(860px, 100%);
   margin: 0 auto;
   color: rgba(255, 255, 255, 0.92);
-  font-size: clamp(18px, 2.1vw, 27px);
+  font-size: clamp(16.2px, 1.89vw, 24.3px);
   font-weight: 720;
 }
 
@@ -5348,7 +5348,7 @@ textarea {
 
 .axis-card span {
   color: var(--axis-color);
-  font-size: 13px;
+  font-size: 11.7px;
   font-weight: 950;
 }
 
@@ -5376,7 +5376,7 @@ textarea {
 .axis-card h3 {
   margin: 0;
   color: var(--green-950);
-  font-size: clamp(22px, 2.3vw, 31px);
+  font-size: clamp(19.8px, 2.07vw, 27.9px);
   line-height: 1.08;
   font-weight: 950;
   text-transform: uppercase;
@@ -5398,7 +5398,7 @@ textarea {
   border-radius: 6px;
   background: var(--green-950);
   color: var(--white);
-  font-size: 12px;
+  font-size: 10.8px;
   font-weight: 950;
   text-transform: uppercase;
 }
@@ -5476,14 +5476,14 @@ textarea {
   border-radius: 50%;
   background: var(--axis-color);
   color: var(--axis-dark);
-  font-size: 16px;
+  font-size: 14.4px;
   font-weight: 950;
 }
 
 .axis-detail-heading h2 {
   margin: 0;
   color: var(--green-950);
-  font-size: clamp(28px, 4vw, 52px);
+  font-size: clamp(25.2px, 3.6vw, 46.8px);
   line-height: 1;
   font-weight: 950;
   text-transform: uppercase;
@@ -5493,7 +5493,7 @@ textarea {
   max-width: 880px;
   margin: 0 0 clamp(20px, 3vw, 30px);
   color: var(--muted);
-  font-size: clamp(17px, 1.6vw, 21px);
+  font-size: clamp(15.3px, 1.44vw, 18.9px);
   font-weight: 720;
 }
 
@@ -5512,7 +5512,7 @@ textarea {
 
 .axis-institutional-note strong {
   color: var(--green-950);
-  font-size: 13px;
+  font-size: 11.7px;
   font-weight: 950;
   letter-spacing: 0;
   text-transform: uppercase;
@@ -5521,7 +5521,7 @@ textarea {
 .axis-institutional-note p {
   margin: 0;
   color: var(--green-900);
-  font-size: clamp(16px, 1.4vw, 19px);
+  font-size: clamp(14.4px, 1.26vw, 17.1px);
   font-weight: 760;
 }
 
@@ -5568,7 +5568,7 @@ textarea {
 .axis-key-figures > p {
   margin: 0;
   color: var(--gold);
-  font-size: 13px;
+  font-size: 11.7px;
   font-weight: 950;
   text-transform: uppercase;
 }
@@ -5591,7 +5591,7 @@ textarea {
 .axis-key-figures dt {
   margin: 0 0 5px;
   color: var(--gold);
-  font-size: clamp(25px, 3.2vw, 40px);
+  font-size: clamp(22.5px, 2.88vw, 36px);
   line-height: 0.96;
   font-weight: 950;
 }
@@ -5599,13 +5599,13 @@ textarea {
 .axis-key-figures dd {
   margin: 0;
   color: rgba(255, 255, 255, 0.88);
-  font-size: 13px;
+  font-size: 11.7px;
   font-weight: 720;
 }
 
 .axis-key-figures span {
   color: rgba(255, 255, 255, 0.68);
-  font-size: 12px;
+  font-size: 10.8px;
   font-weight: 700;
 }
 
@@ -5630,7 +5630,7 @@ textarea {
 .axis-detail-grid h3 {
   margin: 0 0 10px;
   color: var(--green-950);
-  font-size: 17px;
+  font-size: 15.3px;
   font-weight: 950;
   text-transform: uppercase;
 }
@@ -5658,7 +5658,7 @@ textarea {
   border-radius: 6px;
   background: var(--green-950);
   color: var(--white);
-  font-size: 12px;
+  font-size: 10.8px;
   font-weight: 950;
   text-transform: uppercase;
 }
@@ -5687,7 +5687,7 @@ textarea {
 .axis-sources-card h2 {
   margin: 8px 0 12px;
   color: var(--green-950);
-  font-size: clamp(26px, 4vw, 48px);
+  font-size: clamp(23.4px, 3.6vw, 43.2px);
   line-height: 1;
   font-weight: 950;
   text-transform: uppercase;
@@ -5730,7 +5730,7 @@ textarea {
 .axes-final-call h2 {
   margin: 10px 0 18px;
   color: var(--white);
-  font-size: clamp(34px, 5.8vw, 78px);
+  font-size: clamp(30.6px, 5.22vw, 70.2px);
   line-height: 1;
   font-weight: 950;
   text-transform: uppercase;
@@ -5740,7 +5740,7 @@ textarea {
   width: min(760px, 100%);
   margin: 0 auto clamp(28px, 4vw, 44px);
   color: rgba(255, 255, 255, 0.9);
-  font-size: clamp(18px, 2vw, 25px);
+  font-size: clamp(16.2px, 1.8vw, 22.5px);
   font-weight: 700;
 }
 
@@ -5756,7 +5756,7 @@ textarea {
   }
 
   .program-renaissance-inner h1 {
-    font-size: clamp(32px, 9vw, 42px);
+    font-size: clamp(28.8px, 8.1vw, 37.8px);
     line-height: 0.96;
   }
 
@@ -5774,7 +5774,7 @@ textarea {
 
   .program-intro-card h2,
   .program-renaissance-band h2 {
-    font-size: clamp(28px, 8vw, 38px);
+    font-size: clamp(25.2px, 7.2vw, 34.2px);
   }
 
   .axes-hero {
@@ -5789,7 +5789,7 @@ textarea {
   }
 
   .axes-hero h1 {
-    font-size: clamp(30px, 8.2vw, 36px);
+    font-size: clamp(27px, 7.38vw, 32.4px);
     overflow-wrap: normal;
     word-break: normal;
   }
@@ -5825,7 +5825,7 @@ textarea {
   }
 
   .axes-hero + .page-section .section-heading h2 {
-    font-size: clamp(28px, 8vw, 36px);
+    font-size: clamp(25.2px, 7.2vw, 32.4px);
   }
 
   .axis-detail {
@@ -5839,7 +5839,7 @@ textarea {
   }
 
   .axis-detail-heading h2 {
-    font-size: clamp(25px, 7.5vw, 32px);
+    font-size: clamp(22.5px, 6.75vw, 28.8px);
   }
 
   .axis-detail-grid {
@@ -5917,7 +5917,7 @@ textarea {
 .projects-hero h1 {
   margin: 10px 0 18px;
   color: var(--white);
-  font-size: clamp(54px, 8vw, 122px);
+  font-size: clamp(48.6px, 7.2vw, 109.8px);
   line-height: 0.9;
   font-weight: 950;
   text-transform: uppercase;
@@ -5928,7 +5928,7 @@ textarea {
   width: min(900px, 100%);
   margin: 0 auto;
   color: rgba(255, 255, 255, 0.92);
-  font-size: clamp(19px, 2.1vw, 30px);
+  font-size: clamp(17.1px, 1.89vw, 27px);
   font-weight: 760;
   line-height: 1.35;
 }
@@ -5951,7 +5951,7 @@ textarea {
   border-radius: 999px;
   background: rgba(0, 31, 18, 0.58);
   color: var(--white);
-  font-size: 12px;
+  font-size: 10.8px;
   font-weight: 950;
   padding: 8px 14px;
   text-transform: uppercase;
@@ -6003,7 +6003,7 @@ textarea {
   border-radius: 50%;
   background: var(--green-950);
   color: var(--gold);
-  font-size: 18px;
+  font-size: 16.2px;
   font-weight: 950;
 }
 
@@ -6100,7 +6100,7 @@ textarea {
 
 .grand-project-visual span {
   color: var(--gold);
-  font-size: 12px;
+  font-size: 10.8px;
   font-weight: 950;
   text-transform: uppercase;
 }
@@ -6136,7 +6136,7 @@ textarea {
 .grand-project-content h3 {
   margin: 0;
   color: var(--green-950);
-  font-size: clamp(25px, 3vw, 42px);
+  font-size: clamp(22.5px, 2.7vw, 37.8px);
   line-height: 1.02;
   font-weight: 950;
   text-transform: uppercase;
@@ -6145,7 +6145,7 @@ textarea {
 .grand-project-content p {
   margin: 0;
   color: var(--muted);
-  font-size: 16px;
+  font-size: 14.4px;
   font-weight: 720;
   line-height: 1.55;
 }
@@ -6167,7 +6167,7 @@ textarea {
   border-radius: 999px;
   background: color-mix(in srgb, var(--project-color), white 88%);
   color: var(--green-950);
-  font-size: 12px;
+  font-size: 10.8px;
   font-weight: 950;
   padding: 8px 11px;
   text-transform: uppercase;
@@ -6191,7 +6191,7 @@ textarea {
   display: block;
   margin-bottom: 6px;
   color: var(--gold-700);
-  font-size: 11px;
+  font-size: 9.9px;
   font-weight: 950;
   text-transform: uppercase;
 }
@@ -6199,7 +6199,7 @@ textarea {
 .project-meta-grid strong {
   display: block;
   color: var(--green-950);
-  font-size: 13px;
+  font-size: 11.7px;
   line-height: 1.3;
   font-weight: 850;
 }
@@ -6213,7 +6213,7 @@ textarea {
   border-radius: 6px;
   background: var(--green-950);
   color: var(--white);
-  font-size: 12px;
+  font-size: 10.8px;
   font-weight: 950;
   padding: 12px 18px;
   text-transform: uppercase;
@@ -6251,7 +6251,7 @@ textarea {
 .projects-final-call h2 {
   margin: 10px 0 18px;
   color: var(--white);
-  font-size: clamp(34px, 5.6vw, 78px);
+  font-size: clamp(30.6px, 5.04vw, 70.2px);
   line-height: 1;
   font-weight: 950;
   text-transform: uppercase;
@@ -6261,7 +6261,7 @@ textarea {
   width: min(760px, 100%);
   margin: 0 auto clamp(28px, 4vw, 44px);
   color: rgba(255, 255, 255, 0.9);
-  font-size: clamp(18px, 2vw, 24px);
+  font-size: clamp(16.2px, 1.8vw, 21.6px);
   font-weight: 720;
   line-height: 1.45;
 }
@@ -6289,13 +6289,13 @@ textarea {
   }
 
   .projects-hero h1 {
-    font-size: clamp(34px, 10vw, 44px);
+    font-size: clamp(30.6px, 9vw, 39.6px);
     overflow-wrap: normal;
     word-break: normal;
   }
 
   .projects-hero p:not(.section-label) {
-    font-size: 18px;
+    font-size: 16.2px;
   }
 
   .projects-hero-actions {
@@ -6383,7 +6383,7 @@ textarea {
 .dashboard-hero h1 {
   margin: 10px 0 18px;
   color: var(--white);
-  font-size: clamp(48px, 7.5vw, 112px);
+  font-size: clamp(43.2px, 6.75vw, 100.8px);
   line-height: 0.92;
   font-weight: 950;
   text-transform: uppercase;
@@ -6394,7 +6394,7 @@ textarea {
   width: min(780px, 100%);
   margin: 0 auto;
   color: rgba(255, 255, 255, 0.92);
-  font-size: clamp(22px, 2.6vw, 36px);
+  font-size: clamp(19.8px, 2.34vw, 32.4px);
   font-weight: 830;
   line-height: 1.22;
 }
@@ -6451,7 +6451,7 @@ textarea {
   display: block;
   margin-bottom: 8px;
   color: var(--gold-700);
-  font-size: 12px;
+  font-size: 10.8px;
   font-weight: 950;
   text-transform: uppercase;
 }
@@ -6459,7 +6459,7 @@ textarea {
 .dashboard-indicator-card strong {
   display: block;
   color: var(--green-950);
-  font-size: clamp(36px, 5vw, 58px);
+  font-size: clamp(32.4px, 4.5vw, 52.2px);
   line-height: 1;
   font-weight: 950;
 }
@@ -6492,7 +6492,7 @@ textarea {
 .dashboard-kpi-card strong {
   display: block;
   color: var(--green-950);
-  font-size: clamp(22px, 2.3vw, 34px);
+  font-size: clamp(19.8px, 2.07vw, 30.6px);
   line-height: 1.08;
   font-weight: 950;
   text-transform: uppercase;
@@ -6544,13 +6544,13 @@ textarea {
   border-radius: 50%;
   background: var(--gold);
   color: #171400;
-  font-size: 13px;
+  font-size: 11.7px;
   font-weight: 950;
 }
 
 .dashboard-axis-row strong {
   color: var(--white);
-  font-size: 14px;
+  font-size: 12.6px;
   font-weight: 950;
   text-transform: uppercase;
 }
@@ -6577,7 +6577,7 @@ textarea {
 
 .dashboard-axis-row b {
   color: var(--gold);
-  font-size: 18px;
+  font-size: 16.2px;
   font-weight: 950;
 }
 
@@ -6622,7 +6622,7 @@ textarea {
   border-radius: 999px;
   background: rgba(0, 31, 18, 0.84);
   color: var(--white);
-  font-size: 11px;
+  font-size: 9.9px;
   font-weight: 950;
   padding: 9px 14px;
   text-transform: uppercase;
@@ -6654,7 +6654,7 @@ textarea {
 .dashboard-commune-card h3 {
   margin: 0;
   color: var(--green-950);
-  font-size: clamp(32px, 4vw, 56px);
+  font-size: clamp(28.8px, 3.6vw, 50.4px);
   line-height: 1;
   font-weight: 950;
   text-transform: uppercase;
@@ -6676,14 +6676,14 @@ textarea {
 .commune-status-grid strong {
   display: block;
   color: var(--green-950);
-  font-size: 28px;
+  font-size: 25.2px;
   font-weight: 950;
 }
 
 .commune-status-grid small {
   display: block;
   color: var(--muted);
-  font-size: 12px;
+  font-size: 10.8px;
   font-weight: 820;
   line-height: 1.25;
   text-transform: uppercase;
@@ -6710,7 +6710,7 @@ textarea {
 .dashboard-status-card h2 {
   margin: 0 0 18px;
   color: var(--green-950);
-  font-size: clamp(26px, 3vw, 40px);
+  font-size: clamp(23.4px, 2.7vw, 36px);
   line-height: 1.04;
   font-weight: 950;
   text-transform: uppercase;
@@ -6768,7 +6768,7 @@ textarea {
   border-radius: 50%;
   background: var(--green-950);
   color: var(--gold);
-  font-size: 18px;
+  font-size: 16.2px;
   font-weight: 950;
 }
 
@@ -6810,11 +6810,11 @@ textarea {
   }
 
   .dashboard-hero h1 {
-    font-size: clamp(33px, 9.4vw, 43px);
+    font-size: clamp(29.7px, 8.46vw, 38.7px);
   }
 
   .dashboard-hero p:not(.section-label) {
-    font-size: 20px;
+    font-size: 18px;
   }
 
   .dashboard-hero-actions .btn {
@@ -6841,7 +6841,7 @@ textarea {
   }
 
   .commune-dot {
-    font-size: 10px;
+    font-size: 9px;
     padding: 7px 10px;
   }
 
@@ -6866,7 +6866,7 @@ textarea {
 .program-renaissance-inner h1,
 .mada2040-hero h1,
 .economy-hero h1 {
-  font-size: clamp(2.15rem, 4vw, 3.4rem);
+  font-size: clamp(1.935rem, 3.6vw, 3.06rem);
   line-height: 1;
 }
 
@@ -6887,7 +6887,7 @@ textarea {
 .understand-autonomy-card h2,
 .understand-final-message h2,
 .serment-final h2 {
-  font-size: clamp(1.55rem, 2.95vw, 2.65rem);
+  font-size: clamp(1.395rem, 2.655vw, 2.385rem);
   line-height: 1.08;
 }
 
@@ -6900,7 +6900,7 @@ textarea {
 .axes-hero p:not(.section-label),
 .projects-hero p:not(.section-label),
 .dashboard-hero p:not(.section-label) {
-  font-size: clamp(1rem, 1.55vw, 1.25rem);
+  font-size: clamp(0.9rem, 1.395vw, 1.125rem);
   line-height: 1.48;
 }
 
@@ -6910,7 +6910,7 @@ textarea {
 .info-panel p,
 .movement-manifesto p:not(.section-label),
 .movement-contract p:not(.section-label) {
-  font-size: clamp(0.95rem, 1.2vw, 1.05rem);
+  font-size: clamp(0.855rem, 1.08vw, 0.945rem);
   line-height: 1.6;
 }
 
@@ -6923,12 +6923,12 @@ textarea {
 .emblem-project h3,
 .axis-card h3,
 .grand-project-content h3 {
-  font-size: clamp(1rem, 1.7vw, 1.35rem);
+  font-size: clamp(0.9rem, 1.53vw, 1.215rem);
   line-height: 1.18;
 }
 
 .welcome-slogan {
-  font-size: clamp(1.45rem, 2.9vw, 2.9rem);
+  font-size: clamp(1.305rem, 2.61vw, 2.61rem);
   line-height: 1.16;
 }
 
@@ -6938,7 +6938,7 @@ textarea {
 .serment-final-choice,
 .serment-creole,
 .serment-translation {
-  font-size: clamp(0.98rem, 1.65vw, 1.22rem);
+  font-size: clamp(0.882rem, 1.485vw, 1.098rem);
   line-height: 1.45;
 }
 
@@ -6947,11 +6947,11 @@ textarea {
 }
 
 .welcome-signature {
-  font-size: clamp(1.35rem, 2.6vw, 2.35rem);
+  font-size: clamp(1.215rem, 2.34vw, 2.115rem);
 }
 
 .serment-mada-mark {
-  font-size: clamp(2.4rem, 6vw, 4.75rem);
+  font-size: clamp(2.16rem, 5.4vw, 4.275rem);
 }
 
 .vision-counter-grid strong,
@@ -6961,12 +6961,12 @@ textarea {
 .commune-status-grid strong,
 .budget-kpi-grid strong,
 .diagnostic-counter-grid strong {
-  font-size: clamp(1.65rem, 3.6vw, 2.9rem);
+  font-size: clamp(1.485rem, 3.24vw, 2.61rem);
 }
 
 .vision-final-quote blockquote,
 .understand-final-message blockquote {
-  font-size: clamp(1.4rem, 3vw, 2.6rem);
+  font-size: clamp(1.26rem, 2.7vw, 2.34rem);
   line-height: 1.18;
 }
 
@@ -7009,7 +7009,7 @@ textarea {
 .commune-zone-card h3 {
   margin: 0;
   color: var(--green-950);
-  font-size: clamp(19px, 2vw, 25px);
+  font-size: clamp(17.1px, 1.8vw, 22.5px);
   line-height: 1.08;
   font-weight: 950;
   text-transform: uppercase;
@@ -7021,7 +7021,7 @@ textarea {
   border-radius: 999px;
   background: var(--gold);
   color: #171400;
-  font-size: 12px;
+  font-size: 10.8px;
   font-weight: 950;
   text-transform: uppercase;
 }
@@ -7068,7 +7068,7 @@ textarea {
   .program-renaissance-inner h1,
   .mada2040-hero h1,
   .economy-hero h1 {
-    font-size: clamp(1.9rem, 5.8vw, 2.85rem);
+    font-size: clamp(1.71rem, 5.22vw, 2.565rem);
     line-height: 1;
   }
 }
@@ -7085,7 +7085,7 @@ textarea {
   .program-renaissance-inner h1,
   .mada2040-hero h1,
   .economy-hero h1 {
-    font-size: clamp(1.55rem, 7.2vw, 2.15rem);
+    font-size: clamp(1.395rem, 6.48vw, 1.935rem);
     line-height: 1.04;
   }
 
@@ -7106,7 +7106,7 @@ textarea {
   .understand-autonomy-card h2,
   .understand-final-message h2,
   .serment-final h2 {
-    font-size: clamp(1.35rem, 5.7vw, 1.9rem);
+    font-size: clamp(1.215rem, 5.13vw, 1.71rem);
     line-height: 1.1;
   }
 
@@ -7119,12 +7119,12 @@ textarea {
   .axes-hero p:not(.section-label),
   .projects-hero p:not(.section-label),
   .dashboard-hero p:not(.section-label) {
-    font-size: clamp(0.95rem, 4.1vw, 1.08rem);
+    font-size: clamp(0.855rem, 3.69vw, 0.972rem);
     line-height: 1.5;
   }
 
   .welcome-slogan {
-    font-size: clamp(1.2rem, 5.8vw, 1.75rem);
+    font-size: clamp(1.08rem, 5.22vw, 1.575rem);
   }
 
   .welcome-intro,
@@ -7133,15 +7133,15 @@ textarea {
   .serment-final-choice,
   .serment-creole,
   .serment-translation {
-    font-size: clamp(0.9rem, 4vw, 1rem);
+    font-size: clamp(0.81rem, 3.6vw, 0.9rem);
   }
 
   .welcome-signature {
-    font-size: clamp(1.25rem, 6vw, 1.8rem);
+    font-size: clamp(1.125rem, 5.4vw, 1.62rem);
   }
 
   .serment-mada-mark {
-    font-size: clamp(2rem, 10vw, 3rem);
+    font-size: clamp(1.8rem, 9vw, 2.7rem);
   }
 
   .page-hero.compact-hero {
@@ -7201,7 +7201,7 @@ textarea {
 .citizen-guide-nav span {
   flex: 0 0 auto;
   color: var(--gold);
-  font-size: 0.78rem;
+  font-size: 0.702rem;
   letter-spacing: 0;
 }
 
@@ -7229,7 +7229,7 @@ textarea {
 .citizen-flow-card h3 {
   margin: 0 0 1rem;
   color: #fff;
-  font-size: clamp(1.1rem, 2vw, 1.45rem);
+  font-size: clamp(0.99rem, 1.8vw, 1.305rem);
 }
 
 .citizen-flow-list {
@@ -7261,7 +7261,7 @@ textarea {
   border-radius: 50%;
   color: #061d13;
   background: var(--gold);
-  font-size: 0.72rem;
+  font-size: 0.648rem;
   font-weight: 900;
 }
 
@@ -7279,7 +7279,7 @@ textarea {
 .citizen-flow-list small {
   margin-top: 0.2rem;
   color: #d7e7dd;
-  font-size: 0.76rem;
+  font-size: 0.684rem;
   line-height: 1.45;
 }
 
@@ -7340,7 +7340,7 @@ textarea {
   content: "+";
   margin-left: auto;
   color: var(--gold);
-  font-size: 1.6rem;
+  font-size: 1.44rem;
   font-weight: 500;
   line-height: 1;
 }
@@ -7361,13 +7361,13 @@ textarea {
 }
 
 .citizen-institution-card summary strong {
-  font-size: 1rem;
+  font-size: 0.9rem;
 }
 
 .citizen-institution-card summary small {
   margin-top: 0.25rem;
   color: #607168;
-  font-size: 0.78rem;
+  font-size: 0.702rem;
   font-weight: 600;
 }
 
@@ -7381,7 +7381,7 @@ textarea {
   border-radius: 50%;
   color: var(--deep-green);
   background: #fffaf0;
-  font-size: 0.78rem;
+  font-size: 0.702rem;
   font-weight: 900;
 }
 
@@ -7413,14 +7413,14 @@ textarea {
 
 .institution-facts .institution-lead dd {
   color: #132a1d;
-  font-size: 0.92rem;
+  font-size: 0.828rem;
   font-weight: 650;
 }
 
 .institution-facts dt {
   margin-bottom: 0.25rem;
   color: #8c6200;
-  font-size: 0.7rem;
+  font-size: 0.63rem;
   font-weight: 900;
   text-transform: uppercase;
   letter-spacing: 0;
@@ -7429,7 +7429,7 @@ textarea {
 .institution-facts dd {
   margin: 0;
   color: #28372f;
-  font-size: 0.85rem;
+  font-size: 0.765rem;
   line-height: 1.55;
 }
 
@@ -7457,7 +7457,7 @@ textarea {
 .responsibility-use-panel h3 {
   margin: 0 0 0.55rem;
   color: #fff;
-  font-size: clamp(1.35rem, 2.4vw, 2rem);
+  font-size: clamp(1.215rem, 2.16vw, 1.8rem);
   line-height: 1.05;
 }
 
@@ -7498,13 +7498,13 @@ textarea {
   display: block;
   margin-bottom: 0.35rem;
   color: #001f12;
-  font-size: 0.9rem;
+  font-size: 0.81rem;
   line-height: 1.25;
 }
 
 .responsibility-reading-grid p {
   color: #506057;
-  font-size: 0.82rem;
+  font-size: 0.738rem;
   line-height: 1.5;
 }
 
@@ -7530,13 +7530,13 @@ textarea {
   display: block;
   margin-bottom: 0.35rem;
   color: var(--deep-green);
-  font-size: 0.88rem;
+  font-size: 0.792rem;
 }
 
 .responsibility-example-strip p {
   margin: 0;
   color: #56665d;
-  font-size: 0.78rem;
+  font-size: 0.702rem;
   line-height: 1.5;
 }
 
@@ -7557,7 +7557,7 @@ textarea {
   padding: 0.3rem 0.55rem;
   border: 1px solid transparent;
   border-radius: 4px;
-  font-size: 0.68rem;
+  font-size: 0.612rem;
   font-weight: 800;
   line-height: 1.2;
   text-align: center;
@@ -7625,7 +7625,7 @@ textarea {
   border-right: 1px solid #edf0ee;
   vertical-align: top;
   color: #2b3931;
-  font-size: 0.78rem;
+  font-size: 0.702rem;
   line-height: 1.45;
   overflow-wrap: anywhere;
 }
@@ -7638,7 +7638,7 @@ textarea {
   z-index: 2;
   color: #fff;
   background: var(--deep-green);
-  font-size: 0.72rem;
+  font-size: 0.648rem;
   text-transform: uppercase;
   letter-spacing: 0;
 }
@@ -7694,7 +7694,7 @@ textarea {
   margin: 0;
   padding: 0 0.9rem 0.9rem;
   color: #526258;
-  font-size: 0.82rem;
+  font-size: 0.738rem;
   line-height: 1.55;
 }
 
@@ -7702,7 +7702,7 @@ textarea {
   width: min(1180px, 100%);
   margin: 1rem auto 0;
   color: #5d6c64;
-  font-size: 0.78rem;
+  font-size: 0.702rem;
   line-height: 1.55;
 }
 
@@ -7745,7 +7745,7 @@ textarea {
 .contact-path-grid span,
 .territory-example-grid span {
   color: #9b6c00;
-  font-size: 0.68rem;
+  font-size: 0.612rem;
   font-weight: 900;
   text-transform: uppercase;
 }
@@ -7755,7 +7755,7 @@ textarea {
 .glossary-grid strong {
   margin: 0.35rem 0;
   color: var(--deep-green);
-  font-size: 0.95rem;
+  font-size: 0.855rem;
 }
 
 .contact-path-grid p,
@@ -7763,7 +7763,7 @@ textarea {
 .glossary-grid span {
   margin: 0;
   color: #58675e;
-  font-size: 0.78rem;
+  font-size: 0.702rem;
   line-height: 1.55;
 }
 
@@ -7802,7 +7802,7 @@ textarea {
 .resource-card-grid span {
   margin-top: 0.35rem;
   color: #e0ece4;
-  font-size: 0.78rem;
+  font-size: 0.702rem;
   line-height: 1.5;
 }
 
@@ -7832,7 +7832,7 @@ textarea {
 
 .budget-kpi-grid span {
   color: #dbe9df;
-  font-size: 0.75rem;
+  font-size: 0.675rem;
   font-weight: 750;
 }
 
@@ -7840,13 +7840,13 @@ textarea {
   margin: 0.45rem 0;
   color: #fff;
   font-family: "Arial Black", Arial, sans-serif;
-  font-size: clamp(1.45rem, 3vw, 2.25rem);
+  font-size: clamp(1.305rem, 2.7vw, 2.025rem);
   line-height: 1;
 }
 
 .budget-kpi-grid small {
   color: #f1c85f;
-  font-size: 0.7rem;
+  font-size: 0.63rem;
 }
 
 .budget-origin-section {
@@ -7895,7 +7895,7 @@ textarea {
 .budget-explainer-grid p {
   margin: 0.55rem 0 0;
   color: #e3efe8;
-  font-size: 0.78rem;
+  font-size: 0.702rem;
   line-height: 1.58;
 }
 
@@ -7955,12 +7955,12 @@ textarea {
 
 .budget-reading-card h3 {
   margin: 0.35rem 0 0.8rem;
-  font-size: 1.25rem;
+  font-size: 1.125rem;
 }
 
 .budget-reading-card p {
   color: #e0ebe4;
-  font-size: 0.84rem;
+  font-size: 0.756rem;
   line-height: 1.6;
 }
 
@@ -8002,12 +8002,12 @@ textarea {
 
 .public-spending-chart strong {
   color: var(--deep-green);
-  font-size: 0.86rem;
+  font-size: 0.774rem;
 }
 
 .public-spending-chart div span {
   color: #765300;
-  font-size: 0.72rem;
+  font-size: 0.648rem;
   font-weight: 800;
   white-space: nowrap;
 }
@@ -8053,13 +8053,13 @@ textarea {
 
 .spending-summary-grid strong {
   color: var(--deep-green);
-  font-size: 0.82rem;
+  font-size: 0.738rem;
 }
 
 .spending-summary-grid span {
   margin-top: 0.35rem;
   color: #55655c;
-  font-size: 0.75rem;
+  font-size: 0.675rem;
   line-height: 1.5;
 }
 
@@ -8073,20 +8073,20 @@ textarea {
 
 .mada-change-grid article > span {
   color: #f5be38;
-  font-size: 0.72rem;
+  font-size: 0.648rem;
   font-weight: 900;
 }
 
 .mada-change-grid h3 {
   margin: 0.55rem 0;
   color: #fff;
-  font-size: 1rem;
+  font-size: 0.9rem;
 }
 
 .mada-change-grid p {
   margin: 0;
   color: #dce8e0;
-  font-size: 0.8rem;
+  font-size: 0.72rem;
   line-height: 1.55;
 }
 
@@ -8101,7 +8101,7 @@ textarea {
   border-left: 4px solid var(--gold);
   color: #fff;
   background: rgba(255, 255, 255, 0.06);
-  font-size: clamp(1.05rem, 2.3vw, 1.45rem);
+  font-size: clamp(0.945rem, 2.07vw, 1.305rem);
   font-weight: 800;
   line-height: 1.45;
   text-align: center;
@@ -8125,7 +8125,7 @@ textarea {
 
 .autonomy-method span {
   color: #9c6e00;
-  font-size: 0.7rem;
+  font-size: 0.63rem;
   font-weight: 900;
 }
 
@@ -8137,7 +8137,7 @@ textarea {
 .autonomy-method p {
   margin: 0;
   color: #59685f;
-  font-size: 0.78rem;
+  font-size: 0.702rem;
   line-height: 1.5;
 }
 
@@ -8170,7 +8170,7 @@ textarea {
 .source-link-grid span {
   margin-top: 0.35rem;
   color: #5b6a61;
-  font-size: 0.76rem;
+  font-size: 0.684rem;
   line-height: 1.45;
 }
 
@@ -8226,7 +8226,7 @@ textarea {
 
 .diagnostic-counter-grid span {
   color: #dce9e1;
-  font-size: 0.72rem;
+  font-size: 0.648rem;
   font-weight: 800;
 }
 
@@ -8234,14 +8234,14 @@ textarea {
   margin: 0.35rem 0;
   color: var(--gold);
   font-family: "Arial Black", Arial, sans-serif;
-  font-size: clamp(1.3rem, 3vw, 2.1rem);
+  font-size: clamp(1.17rem, 2.7vw, 1.89rem);
   line-height: 1;
 }
 
 .diagnostic-counter-grid small,
 .diagnostic-source-note {
   color: #d7e4dc;
-  font-size: 0.72rem;
+  font-size: 0.648rem;
   line-height: 1.45;
 }
 
@@ -8275,7 +8275,7 @@ textarea {
 
 .diagnostic-why-panel h2 {
   color: #fff;
-  font-size: clamp(1.7rem, 3.2vw, 3rem);
+  font-size: clamp(1.53rem, 2.88vw, 2.7rem);
   line-height: 1.03;
   text-transform: uppercase;
 }
@@ -8312,13 +8312,13 @@ textarea {
 .diagnostic-why-list strong {
   margin-bottom: 0.35rem;
   color: var(--gold);
-  font-size: 0.9rem;
+  font-size: 0.81rem;
   text-transform: uppercase;
 }
 
 .diagnostic-why-list span {
   color: rgba(255, 255, 255, 0.8);
-  font-size: 0.82rem;
+  font-size: 0.738rem;
   line-height: 1.5;
 }
 
@@ -8363,7 +8363,7 @@ textarea {
 
 .diagnostic-rationale-main h3 {
   color: #fff;
-  font-size: clamp(1.45rem, 2.5vw, 2.2rem);
+  font-size: clamp(1.305rem, 2.25vw, 1.98rem);
   line-height: 1.08;
 }
 
@@ -8391,7 +8391,7 @@ textarea {
   display: block;
   margin-bottom: 0.45rem;
   color: var(--deep-green);
-  font-size: 0.95rem;
+  font-size: 0.855rem;
   text-transform: uppercase;
 }
 
@@ -8399,7 +8399,7 @@ textarea {
 .diagnostic-principle-grid p {
   margin: 0;
   color: #526258;
-  font-size: 0.84rem;
+  font-size: 0.756rem;
   line-height: 1.58;
 }
 
@@ -8434,7 +8434,7 @@ textarea {
   border-radius: 4px;
   color: #071f15;
   background: var(--gold);
-  font-size: 0.76rem;
+  font-size: 0.684rem;
   font-weight: 900;
 }
 
@@ -8447,7 +8447,7 @@ textarea {
 .diagnostic-timeline p,
 .mobilisation-timeline dd {
   color: #4d5e55;
-  font-size: 0.86rem;
+  font-size: 0.774rem;
   line-height: 1.58;
 }
 
@@ -8468,7 +8468,7 @@ textarea {
 
 .mobilisation-timeline dt {
   color: #8a6100;
-  font-size: 0.68rem;
+  font-size: 0.612rem;
   font-weight: 900;
   text-transform: uppercase;
 }
@@ -8503,7 +8503,7 @@ textarea {
 .diagnostic-method-grid p {
   margin: 0;
   color: #dbe8e0;
-  font-size: 0.8rem;
+  font-size: 0.72rem;
   line-height: 1.5;
 }
 
@@ -8538,7 +8538,7 @@ textarea {
 .plan-diagnostic-grid dd,
 .progress-review-grid p {
   color: #526258;
-  font-size: 0.82rem;
+  font-size: 0.738rem;
   line-height: 1.55;
 }
 
@@ -8567,7 +8567,7 @@ textarea {
 .problem-card-grid h3 {
   margin: 0.8rem 0 0.25rem;
   color: #8a6100;
-  font-size: 0.78rem;
+  font-size: 0.702rem;
   text-transform: uppercase;
 }
 
@@ -8588,7 +8588,7 @@ textarea {
   border-radius: 4px;
   color: var(--deep-green);
   background: #fff;
-  font-size: 0.78rem;
+  font-size: 0.702rem;
   font-weight: 850;
   text-decoration: none;
 }
@@ -8620,7 +8620,7 @@ textarea {
   display: block;
   margin-bottom: 0.5rem;
   color: var(--deep-green);
-  font-size: 0.78rem;
+  font-size: 0.702rem;
   font-weight: 900;
   letter-spacing: 0;
   text-transform: uppercase;
@@ -8651,7 +8651,7 @@ textarea {
 
 .commune-search-row span {
   color: #526258;
-  font-size: 0.82rem;
+  font-size: 0.738rem;
   font-weight: 800;
   white-space: nowrap;
 }
@@ -8671,7 +8671,7 @@ textarea {
   color: var(--deep-green);
   background: #f7faf7;
   font: inherit;
-  font-size: 0.76rem;
+  font-size: 0.684rem;
   font-weight: 900;
   letter-spacing: 0;
   cursor: pointer;
@@ -8729,7 +8729,7 @@ textarea {
   margin: 0 0 0.8rem;
   padding-left: 1.1rem;
   color: #526258;
-  font-size: 0.78rem;
+  font-size: 0.702rem;
   line-height: 1.5;
 }
 
@@ -8802,7 +8802,7 @@ textarea {
   border-radius: 6px;
   color: #fff;
   background: var(--deep-green);
-  font-size: 0.78rem;
+  font-size: 0.702rem;
   font-weight: 900;
   text-align: center;
   box-shadow: 0 10px 22px rgba(0, 42, 25, 0.12);
@@ -8841,7 +8841,7 @@ textarea {
   margin-bottom: 0.6rem;
   padding: 0.25rem 0.55rem;
   border-radius: 4px;
-  font-size: 0.68rem;
+  font-size: 0.612rem;
   font-weight: 900;
 }
 
@@ -8861,7 +8861,7 @@ textarea {
 
 .plan-diagnostic-grid dt {
   color: #8a6100;
-  font-size: 0.68rem;
+  font-size: 0.612rem;
   font-weight: 900;
   text-transform: uppercase;
 }
@@ -9017,7 +9017,7 @@ textarea {
   }
 
   .responsibility-badge {
-    font-size: 0.62rem;
+    font-size: 0.558rem;
   }
 }
 
@@ -9066,7 +9066,7 @@ textarea {
 .human-protection-alert {
   display: inline-flex;
   color: var(--gold);
-  font-size: 12px;
+  font-size: 10.8px;
   font-weight: 950;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -9076,7 +9076,7 @@ textarea {
   display: block;
   margin: 8px 0;
   color: var(--green-950);
-  font-size: clamp(32px, 5vw, 52px);
+  font-size: clamp(28.8px, 4.5vw, 46.8px);
   line-height: 1;
   font-weight: 950;
 }
@@ -9110,7 +9110,7 @@ textarea {
 .human-program-grid h3 {
   margin: 8px 0 12px;
   color: var(--green-950);
-  font-size: clamp(20px, 2.5vw, 28px);
+  font-size: clamp(18px, 2.25vw, 25.2px);
   line-height: 1.08;
   font-weight: 950;
 }
@@ -9179,7 +9179,7 @@ textarea {
 .human-budget-context span {
   display: block;
   color: rgba(255, 255, 255, 0.72);
-  font-size: 11px;
+  font-size: 9.9px;
   font-weight: 850;
   letter-spacing: 0.05em;
   line-height: 1.25;
@@ -9190,7 +9190,7 @@ textarea {
   display: block;
   margin-top: 8px;
   color: var(--gold);
-  font-size: clamp(20px, 3vw, 28px);
+  font-size: clamp(18px, 2.7vw, 25.2px);
   line-height: 1;
   font-weight: 950;
 }
@@ -9220,7 +9220,7 @@ textarea {
 .human-financing-table thead th {
   background: rgba(255, 194, 10, 0.18);
   color: var(--green-950);
-  font-size: 12px;
+  font-size: 10.8px;
   letter-spacing: 0.07em;
   text-transform: uppercase;
 }
@@ -9245,7 +9245,7 @@ textarea {
   display: block;
   margin-bottom: 8px;
   color: var(--green-950);
-  font-size: 18px;
+  font-size: 16.2px;
   font-weight: 950;
 }
 
@@ -9283,7 +9283,7 @@ textarea {
 .axis-policy-heading h3 {
   margin: 8px 0 12px;
   color: var(--green-950);
-  font-size: clamp(24px, 4vw, 42px);
+  font-size: clamp(21.6px, 3.6vw, 37.8px);
   line-height: 1.02;
   font-weight: 950;
 }
@@ -9322,7 +9322,7 @@ textarea {
 .axis-policy-grid span {
   display: inline-flex;
   color: var(--gold);
-  font-size: 12px;
+  font-size: 10.8px;
   font-weight: 950;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -9349,7 +9349,7 @@ textarea {
   display: block;
   margin-bottom: 10px;
   color: var(--gold);
-  font-size: 14px;
+  font-size: 12.6px;
   font-weight: 950;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -9384,7 +9384,7 @@ textarea {
   }
 
   .axis-policy-heading h3 {
-    font-size: clamp(22px, 8vw, 32px);
+    font-size: clamp(19.8px, 7.2vw, 28.8px);
   }
 }
 
@@ -9448,7 +9448,7 @@ textarea {
 .operational-axis-grid header span {
   display: inline-flex;
   color: var(--gold);
-  font-size: 12px;
+  font-size: 10.8px;
   font-weight: 950;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -9458,7 +9458,7 @@ textarea {
   display: block;
   margin: 8px 0;
   color: var(--green-950);
-  font-size: clamp(24px, 4vw, 38px);
+  font-size: clamp(21.6px, 3.6vw, 34.2px);
   line-height: 1;
   font-weight: 950;
 }
@@ -9489,7 +9489,7 @@ textarea {
   display: block;
   margin: 8px 0;
   color: var(--white);
-  font-size: clamp(20px, 2.5vw, 28px);
+  font-size: clamp(18px, 2.25vw, 25.2px);
   line-height: 1.08;
   font-weight: 950;
 }
@@ -9520,7 +9520,7 @@ textarea {
 .operational-axis-grid header h3 {
   margin: 8px 0 14px;
   color: var(--green-950);
-  font-size: clamp(20px, 2.2vw, 26px);
+  font-size: clamp(18px, 1.98vw, 23.4px);
   line-height: 1.08;
   font-weight: 950;
 }
@@ -9547,7 +9547,7 @@ textarea {
 .operational-axis-grid dt {
   margin-bottom: 4px;
   color: var(--green-950);
-  font-size: 12px;
+  font-size: 10.8px;
   font-weight: 950;
   letter-spacing: 0.07em;
   text-transform: uppercase;
@@ -9576,7 +9576,7 @@ textarea {
 
 /* Compactage global des tableaux, formulaires et messages */
 table {
-  font-size: clamp(0.78rem, 0.92vw, 0.9rem);
+  font-size: clamp(0.702rem, 0.828vw, 0.81rem);
   line-height: 1.42;
 }
 
@@ -9587,12 +9587,12 @@ th, td {
 :is(.objectives-table, .financing-table, .understand-table, .understand-competence-table, .economy-sector-table, .responsibility-table, .budget-detail-table, .recovery-table, .human-financing-table) th,
 :is(.objectives-table, .financing-table, .understand-table, .understand-competence-table, .economy-sector-table, .responsibility-table, .budget-detail-table, .recovery-table, .human-financing-table) td {
   padding: clamp(0.48rem, 0.8vw, 0.72rem) clamp(0.55rem, 0.9vw, 0.82rem);
-  font-size: clamp(0.76rem, 0.9vw, 0.88rem);
+  font-size: clamp(0.684rem, 0.81vw, 0.792rem);
   line-height: 1.38;
 }
 
 :is(.objectives-table, .financing-table, .understand-table, .understand-competence-table, .economy-sector-table, .responsibility-table, .budget-detail-table, .recovery-table, .human-financing-table) thead th {
-  font-size: clamp(0.66rem, 0.78vw, 0.76rem);
+  font-size: clamp(0.594rem, 0.702vw, 0.684rem);
   letter-spacing: 0.045em;
 }
 
@@ -9615,7 +9615,7 @@ th, td {
 
 :is(.form-shell label, .project-idea-form label, .diagnostic-report-form label, .contact-card label, .don-panel label) {
   gap: 0.32rem;
-  font-size: clamp(0.72rem, 0.82vw, 0.82rem);
+  font-size: clamp(0.648rem, 0.738vw, 0.738rem);
   line-height: 1.25;
 }
 
@@ -9623,7 +9623,7 @@ th, td {
   min-height: 42px;
   padding: 0.72rem 0.82rem;
   border-radius: 7px;
-  font-size: clamp(0.88rem, 1vw, 0.98rem);
+  font-size: clamp(0.792rem, 0.9vw, 0.882rem);
   line-height: 1.32;
 }
 
@@ -9633,7 +9633,7 @@ th, td {
 
 .form-note {
   margin-bottom: 0.65rem;
-  font-size: clamp(0.68rem, 0.75vw, 0.76rem);
+  font-size: clamp(0.612rem, 0.675vw, 0.684rem);
   letter-spacing: 0.055em;
 }
 
@@ -9641,14 +9641,14 @@ th, td {
   min-height: 42px;
   padding: 0.72rem 1rem;
   border-radius: 7px;
-  font-size: clamp(0.76rem, 0.86vw, 0.88rem);
+  font-size: clamp(0.684rem, 0.774vw, 0.792rem);
   letter-spacing: 0.035em;
 }
 
 :is(.form-status, [data-admin-status], .status-badge, .message-card, .notice-card, .alert-card, .submission-message) {
   padding: clamp(0.62rem, 1vw, 0.9rem) clamp(0.75rem, 1.2vw, 1rem);
   border-radius: 7px;
-  font-size: clamp(0.78rem, 0.9vw, 0.9rem);
+  font-size: clamp(0.702rem, 0.81vw, 0.81rem);
   line-height: 1.42;
 }
 
@@ -9691,7 +9691,7 @@ th, td {
 .movement-name-intro h2 {
   margin: 0.35rem 0 0.9rem;
   color: var(--green-950);
-  font-size: clamp(1.75rem, 3.5vw, 3.1rem);
+  font-size: clamp(1.575rem, 3.15vw, 2.79rem);
   line-height: 1.04;
   font-weight: 950;
   text-transform: uppercase;
@@ -9711,7 +9711,7 @@ th, td {
   border-radius: 8px;
   background: rgba(0, 31, 18, 0.055);
   color: var(--green-950);
-  font-size: clamp(1.05rem, 1.5vw, 1.28rem);
+  font-size: clamp(0.945rem, 1.35vw, 1.152rem);
   font-weight: 850;
   line-height: 1.42;
 }
@@ -9748,7 +9748,7 @@ th, td {
 .movement-colors-block h3 {
   margin: 0.75rem 0 0.45rem;
   color: var(--green-950);
-  font-size: clamp(1.05rem, 1.6vw, 1.35rem);
+  font-size: clamp(0.945rem, 1.44vw, 1.215rem);
   line-height: 1.12;
   font-weight: 950;
   text-transform: uppercase;
@@ -9797,7 +9797,7 @@ th, td {
   margin: clamp(1rem, 2.2vw, 1.6rem) 0 0;
   padding-top: 0.9rem;
   border-top: 1px dashed rgba(0, 31, 18, 0.16);
-  font-size: clamp(0.82rem, 0.95vw, 0.92rem);
+  font-size: clamp(0.738rem, 0.855vw, 0.828rem);
 }
 
 @media (max-width: 760px) {
@@ -9828,7 +9828,7 @@ th, td {
 .program-messages-section .section-heading h2,
 .program-source-card .section-heading h2 {
   margin: 0.3rem 0 0.75rem;
-  font-size: clamp(1.7rem, 3vw, 2.8rem);
+  font-size: clamp(1.53rem, 2.7vw, 2.52rem);
   line-height: 1.04;
   color: inherit;
   text-transform: uppercase;
@@ -9868,7 +9868,7 @@ th, td {
   border-radius: 999px;
   background: var(--gold);
   color: #161100;
-  font-size: 0.72rem;
+  font-size: 0.648rem;
   font-weight: 950;
   text-transform: uppercase;
 }
@@ -9877,7 +9877,7 @@ th, td {
   display: block;
   margin: 0.7rem 0 0.35rem;
   color: #fff;
-  font-size: clamp(0.98rem, 1.2vw, 1.12rem);
+  font-size: clamp(0.882rem, 1.08vw, 1.008rem);
   line-height: 1.18;
   text-transform: uppercase;
 }
@@ -9893,7 +9893,7 @@ th, td {
 
 .snapshot-grid p {
   color: rgba(255, 255, 255, 0.78);
-  font-size: clamp(0.84rem, 0.95vw, 0.95rem);
+  font-size: clamp(0.756rem, 0.855vw, 0.855rem);
 }
 
 .program-messages-section {
@@ -9918,7 +9918,7 @@ th, td {
 .source-grid strong {
   margin: 0.72rem 0 0.42rem;
   color: var(--green-950);
-  font-size: clamp(1rem, 1.25vw, 1.18rem);
+  font-size: clamp(0.9rem, 1.125vw, 1.062rem);
   line-height: 1.14;
   text-transform: uppercase;
 }
@@ -9926,7 +9926,7 @@ th, td {
 .program-message-grid p,
 .source-grid span {
   color: var(--muted);
-  font-size: clamp(0.86rem, 0.96vw, 0.95rem);
+  font-size: clamp(0.774rem, 0.864vw, 0.855rem);
 }
 
 .program-source-section {
@@ -10023,7 +10023,7 @@ th, td {
   border-radius: 999px;
   background: var(--gold);
   color: #151000;
-  font-size: 0.72rem;
+  font-size: 0.648rem;
   font-weight: 950;
   text-transform: uppercase;
 }
@@ -10031,7 +10031,7 @@ th, td {
 .diagnostic-feature-grid h3 {
   margin: 0.72rem 0 0.45rem;
   color: var(--green-950);
-  font-size: clamp(1.02rem, 1.35vw, 1.22rem);
+  font-size: clamp(0.918rem, 1.215vw, 1.098rem);
   line-height: 1.14;
   text-transform: uppercase;
 }
@@ -10044,7 +10044,7 @@ th, td {
 .actor-warning,
 .actor-table td {
   color: var(--muted);
-  font-size: clamp(0.84rem, 0.96vw, 0.94rem);
+  font-size: clamp(0.756rem, 0.864vw, 0.846rem);
   font-weight: 650;
   line-height: 1.5;
 }
@@ -10086,7 +10086,7 @@ th, td {
 .documented-timeline h3 {
   margin-top: 0.75rem;
   color: var(--green-950);
-  font-size: clamp(1.04rem, 1.35vw, 1.24rem);
+  font-size: clamp(0.936rem, 1.215vw, 1.116rem);
   line-height: 1.15;
   text-transform: uppercase;
 }
@@ -10124,7 +10124,7 @@ th, td {
 
 .documented-timeline dt {
   color: var(--green-950);
-  font-size: 0.74rem;
+  font-size: 0.666rem;
   font-weight: 950;
   letter-spacing: 0.05em;
   text-transform: uppercase;
@@ -10253,14 +10253,14 @@ th, td {
 .crisis-sector-grid h3 {
   margin-top: clamp(0.9rem, 1.5vw, 1.05rem);
   color: var(--green-950);
-  font-size: clamp(1.02rem, 1.35vw, 1.22rem);
+  font-size: clamp(0.918rem, 1.215vw, 1.098rem);
   line-height: 1.14;
   text-transform: uppercase;
 }
 
 .crisis-sector-grid p {
   color: var(--muted);
-  font-size: clamp(0.84rem, 0.96vw, 0.94rem);
+  font-size: clamp(0.756rem, 0.864vw, 0.846rem);
   font-weight: 650;
   line-height: 1.5;
 }
@@ -10312,14 +10312,14 @@ th, td {
 .crisis-common-grid strong {
   display: block;
   color: var(--green-950);
-  font-size: 0.9rem;
+  font-size: 0.81rem;
   font-weight: 950;
   text-transform: uppercase;
 }
 
 .crisis-common-grid p {
   color: var(--muted);
-  font-size: 0.9rem;
+  font-size: 0.81rem;
   font-weight: 650;
   line-height: 1.5;
 }
@@ -10351,7 +10351,7 @@ th, td {
   border-radius: 8px;
   background: rgba(0, 31, 18, 0.055);
   color: var(--green-950);
-  font-size: 14px;
+  font-size: 12.6px;
   font-weight: 760;
 }
 
@@ -10394,7 +10394,7 @@ th, td {
   border-radius: 999px;
   background: var(--green-950);
   color: var(--gold);
-  font-size: 12px;
+  font-size: 10.8px;
   font-weight: 950;
   letter-spacing: 0;
 }
@@ -10404,7 +10404,7 @@ th, td {
 .economy-balance-grid h3 {
   margin: 0 0 10px;
   color: var(--green-950);
-  font-size: clamp(18px, 2vw, 24px);
+  font-size: clamp(16.2px, 1.8vw, 21.6px);
   line-height: 1.08;
   font-weight: 950;
   text-transform: uppercase;
@@ -10415,7 +10415,7 @@ th, td {
 .economy-balance-grid li,
 .economy-final-card p {
   color: var(--muted);
-  font-size: 14px;
+  font-size: 12.6px;
   line-height: 1.58;
   font-weight: 680;
 }
@@ -10443,7 +10443,7 @@ th, td {
   display: inline-flex;
   margin-bottom: 14px;
   color: var(--gold);
-  font-size: 34px;
+  font-size: 30.6px;
   line-height: 1;
   font-weight: 950;
 }
@@ -10463,7 +10463,7 @@ th, td {
   border-radius: 8px;
   background: var(--green-950);
   color: var(--white);
-  font-size: clamp(18px, 2vw, 24px);
+  font-size: clamp(16.2px, 1.8vw, 21.6px);
   line-height: 1.35;
   font-weight: 850;
   text-align: center;
@@ -10509,7 +10509,7 @@ th, td {
 .economy-final-card h2 {
   margin: 8px 0 18px;
   color: var(--white);
-  font-size: clamp(30px, 5vw, 58px);
+  font-size: clamp(27px, 4.5vw, 52.2px);
   line-height: 0.98;
   font-weight: 950;
   text-transform: uppercase;
@@ -10517,7 +10517,7 @@ th, td {
 
 .economy-final-card p {
   color: rgba(255, 255, 255, 0.9);
-  font-size: clamp(16px, 1.8vw, 20px);
+  font-size: clamp(14.4px, 1.62vw, 18px);
 }
 
 @media (max-width: 760px) {
@@ -10600,7 +10600,7 @@ th, td {
   border-radius: 999px;
   background: rgba(0, 71, 43, 0.1);
   color: var(--green-900);
-  font-size: 12px;
+  font-size: 10.8px;
   font-weight: 900;
   letter-spacing: 0.04em;
   text-transform: uppercase;
@@ -10609,7 +10609,7 @@ th, td {
 .public-report-grid h3 {
   margin: 0;
   color: var(--green-950);
-  font-size: clamp(19px, 2.2vw, 26px);
+  font-size: clamp(17.1px, 1.98vw, 23.4px);
   line-height: 1.05;
 }
 
