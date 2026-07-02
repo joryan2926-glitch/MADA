@@ -10658,3 +10658,80 @@ th, td {
     padding: 18px;
   }
 }
+
+/* Echelle institutionnelle : titres, cartes, formulaires et messages plus sobres. */
+main :is(h1, .hero h1, .page-hero h1, .serment-hero h1, .vision-page-hero h1, .axes-hero h1, .projects-hero h1, .dashboard-hero h1, .program-renaissance-hero h1, .mada2040-hero h1, .economy-hero h1) {
+  font-size: clamp(1.75rem, 4.4vw, 4.2rem);
+  line-height: 1.02;
+}
+
+main :is(h2, .section-heading h2, .contact-card h2, .program-intro-card h2, .economy-method-card h2, .economy-mada-card h2, .financing-commitment-card h2, .understand-role-card h2, .understand-autonomy-card h2, .understand-final-message h2, .economy-final-card h2) {
+  font-size: clamp(1.35rem, 2.7vw, 2.75rem);
+  line-height: 1.08;
+}
+
+main :is(h3, .card h3, .axis-card h3, .grand-project-card h3, .dashboard-commune-card h3, .observatory-card h3, .profile-card h3, .problem-card-grid h3, .program-message-grid h3, .public-report-grid h3) {
+  font-size: clamp(1rem, 1.6vw, 1.35rem);
+  line-height: 1.18;
+}
+
+main :is(.hero-lead, .page-hero p:not(.kicker), .vision-page-hero-inner > p:not(.section-label):not(.vision-page-subtitle), .mada2040-hero p:not(.section-label), .economy-hero p:not(.section-label), .axes-hero p:not(.section-label), .projects-hero p:not(.section-label), .dashboard-hero p:not(.section-label)) {
+  font-size: clamp(0.92rem, 1.35vw, 1.12rem);
+  line-height: 1.55;
+}
+
+main :is(p, li, td, th, .card p, .axis-card p, .grand-project-card p, .program-message-grid p, .public-report-grid p) {
+  font-size: clamp(0.82rem, 1vw, 0.95rem);
+  line-height: 1.58;
+}
+
+main :is(.section-label, .card-kicker, .form-note, .status-badge, .public-report-grid span, .dashboard-indicator-card span, .dashboard-kpi-card span, .dashboard-commune-card span) {
+  font-size: clamp(0.62rem, 0.75vw, 0.72rem);
+  line-height: 1.25;
+}
+
+main :is(.card, .contact-card, .form-shell, .project-idea-form, .diagnostic-report-form, .don-panel, .newsletter-card, .action-form-card, .axis-card, .grand-project-card, .public-report-grid article, .program-intro-card, .economy-method-card, .economy-mada-card) {
+  padding: clamp(16px, 2.2vw, 28px);
+}
+
+main :is(.form-shell label, .project-idea-form label, .diagnostic-report-form label, .contact-card label, .don-panel label) {
+  font-size: clamp(0.68rem, 0.8vw, 0.78rem);
+  line-height: 1.2;
+}
+
+main :is(input, select, textarea, .form-shell input, .form-shell select, .form-shell textarea, .project-idea-form input, .project-idea-form select, .project-idea-form textarea, .diagnostic-report-form input, .diagnostic-report-form select, .diagnostic-report-form textarea, .contact-card input, .contact-card select, .contact-card textarea, .don-panel input, .don-panel select, .don-panel textarea) {
+  min-height: 40px;
+  padding: 9px 11px;
+  font-size: clamp(0.76rem, 0.9vw, 0.84rem);
+  line-height: 1.35;
+}
+
+main :is(textarea, .form-shell textarea, .project-idea-form textarea, .diagnostic-report-form textarea) {
+  min-height: 104px;
+}
+
+main :is(.btn, .join-button, .form-shell button, .project-idea-form button, .diagnostic-report-form button, .contact-card button, .don-panel button, button[type="submit"], .axis-card a, .projects-hero-actions a) {
+  min-height: 38px;
+  padding: 9px 16px;
+  font-size: clamp(0.7rem, 0.82vw, 0.78rem);
+  line-height: 1.15;
+}
+
+main :is(.form-status, [data-admin-status], .message-card, .notice-card, .alert-card, .submission-message) {
+  padding: 12px 14px;
+  font-size: clamp(0.74rem, 0.86vw, 0.82rem);
+}
+
+@media (max-width: 760px) {
+  main :is(h1, .hero h1, .page-hero h1, .serment-hero h1, .vision-page-hero h1, .axes-hero h1, .projects-hero h1, .dashboard-hero h1, .program-renaissance-hero h1, .mada2040-hero h1, .economy-hero h1) {
+    font-size: clamp(1.75rem, 8.5vw, 2.65rem);
+  }
+
+  main :is(h2, .section-heading h2, .contact-card h2, .program-intro-card h2, .economy-method-card h2, .economy-mada-card h2, .financing-commitment-card h2, .understand-role-card h2, .understand-autonomy-card h2, .understand-final-message h2, .economy-final-card h2) {
+    font-size: clamp(1.2rem, 5.6vw, 1.75rem);
+  }
+
+  main :is(.card, .contact-card, .form-shell, .project-idea-form, .diagnostic-report-form, .don-panel, .newsletter-card, .action-form-card, .axis-card, .grand-project-card, .public-report-grid article, .program-intro-card, .economy-method-card, .economy-mada-card) {
+    padding: 16px;
+  }
+}
