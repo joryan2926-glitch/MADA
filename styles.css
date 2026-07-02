@@ -9020,3 +9020,788 @@ textarea {
     font-size: 0.62rem;
   }
 }
+
+/* Pacte MADA - protection humaine */
+.human-protection-section {
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 18% 10%, rgba(255, 194, 10, 0.16), transparent 34%),
+    linear-gradient(180deg, #f8faf5 0%, #ffffff 42%, #f4f7ef 100%);
+}
+
+.human-protection-section .section-heading p:not(.section-label) {
+  max-width: 920px;
+}
+
+.human-protection-kpis,
+.human-program-grid,
+.human-indicators-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr));
+  gap: clamp(14px, 2vw, 20px);
+  width: min(1180px, 100%);
+  margin: clamp(24px, 4vw, 42px) auto 0;
+}
+
+.human-protection-kpis article,
+.human-program-grid article,
+.human-indicators-grid article,
+.human-protection-responsibilities > article,
+.human-protection-responsibilities > aside,
+.human-financing-panel {
+  min-width: 0;
+  box-sizing: border-box;
+  border: 1px solid rgba(0, 31, 18, 0.1);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.94);
+  box-shadow: 0 18px 42px rgba(0, 31, 18, 0.08);
+}
+
+.human-protection-kpis article {
+  padding: clamp(20px, 3vw, 28px);
+}
+
+.human-protection-kpis span,
+.human-program-grid span,
+.human-protection-alert {
+  display: inline-flex;
+  color: var(--gold);
+  font-size: 12px;
+  font-weight: 950;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.human-protection-kpis strong {
+  display: block;
+  margin: 8px 0;
+  color: var(--green-950);
+  font-size: clamp(32px, 5vw, 52px);
+  line-height: 1;
+  font-weight: 950;
+}
+
+.human-protection-kpis p,
+.human-program-grid p,
+.human-indicators-grid span,
+.human-protection-responsibilities p,
+.human-financing-panel p {
+  margin: 0;
+  color: var(--muted);
+  font-weight: 670;
+  line-height: 1.58;
+}
+
+.human-protection-responsibilities {
+  display: grid;
+  grid-template-columns: minmax(0, 1.55fr) minmax(280px, 0.7fr);
+  gap: clamp(16px, 3vw, 28px);
+  width: min(1180px, 100%);
+  margin: clamp(24px, 4vw, 42px) auto 0;
+}
+
+.human-protection-responsibilities > article,
+.human-protection-responsibilities > aside {
+  padding: clamp(22px, 4vw, 34px);
+}
+
+.human-protection-responsibilities h3,
+.human-financing-panel h3,
+.human-program-grid h3 {
+  margin: 8px 0 12px;
+  color: var(--green-950);
+  font-size: clamp(20px, 2.5vw, 28px);
+  line-height: 1.08;
+  font-weight: 950;
+}
+
+.human-protection-responsibilities p + p {
+  margin-top: 12px;
+}
+
+.human-protection-responsibilities aside {
+  background:
+    linear-gradient(145deg, rgba(0, 31, 18, 0.96), rgba(0, 60, 36, 0.94));
+}
+
+.human-protection-responsibilities aside p,
+.human-protection-responsibilities aside strong {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.human-program-grid article {
+  padding: clamp(22px, 3vw, 30px);
+  transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
+}
+
+.human-program-grid article:hover {
+  border-color: rgba(255, 194, 10, 0.42);
+  box-shadow: 0 22px 52px rgba(0, 31, 18, 0.12);
+  transform: translateY(-3px);
+}
+
+.human-financing-panel {
+  display: grid;
+  grid-template-columns: minmax(260px, 0.8fr) minmax(0, 1.5fr);
+  gap: clamp(18px, 3vw, 32px);
+  width: min(1180px, 100%);
+  margin: clamp(26px, 4vw, 46px) auto 0;
+  padding: clamp(22px, 4vw, 38px);
+  background:
+    linear-gradient(135deg, rgba(0, 31, 18, 0.97), rgba(0, 54, 32, 0.93));
+  color: var(--white);
+}
+
+.human-financing-panel h3,
+.human-financing-panel .section-label {
+  color: var(--white);
+}
+
+.human-financing-panel p {
+  color: rgba(255, 255, 255, 0.84);
+}
+
+.human-budget-context {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(150px, 100%), 1fr));
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.human-budget-context article {
+  min-width: 0;
+  padding: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.human-budget-context span {
+  display: block;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 11px;
+  font-weight: 850;
+  letter-spacing: 0.05em;
+  line-height: 1.25;
+  text-transform: uppercase;
+}
+
+.human-budget-context strong {
+  display: block;
+  margin-top: 8px;
+  color: var(--gold);
+  font-size: clamp(20px, 3vw, 28px);
+  line-height: 1;
+  font-weight: 950;
+}
+.human-financing-table-wrap {
+  max-width: 100%;
+  overflow-x: auto;
+  border-radius: 8px;
+}
+
+.human-financing-table {
+  width: 100%;
+  min-width: 720px;
+  border-collapse: collapse;
+  background: rgba(255, 255, 255, 0.97);
+  color: var(--green-950);
+}
+
+.human-financing-table th,
+.human-financing-table td {
+  padding: 14px 16px;
+  border-bottom: 1px solid rgba(0, 31, 18, 0.1);
+  text-align: left;
+  vertical-align: top;
+  line-height: 1.45;
+}
+
+.human-financing-table thead th {
+  background: rgba(255, 194, 10, 0.18);
+  color: var(--green-950);
+  font-size: 12px;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+
+.human-financing-table tbody th {
+  color: var(--green-950);
+  font-weight: 950;
+}
+
+.human-financing-table td {
+  color: var(--muted);
+  font-weight: 650;
+}
+
+.human-indicators-grid article {
+  padding: 20px;
+  background: rgba(0, 31, 18, 0.04);
+  box-shadow: none;
+}
+
+.human-indicators-grid strong {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--green-950);
+  font-size: 18px;
+  font-weight: 950;
+}
+
+@media (max-width: 900px) {
+  .human-protection-responsibilities,
+  .human-financing-panel {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 620px) {
+  .human-protection-section {
+    padding-right: 16px;
+    padding-left: 16px;
+  }
+
+  .human-financing-table {
+    min-width: 640px;
+  }
+}
+
+/* Blocs programme - équité tarifaire, littoral et biodiversité */
+.axis-policy-highlight {
+  width: min(1180px, 100%);
+  margin: clamp(24px, 4vw, 42px) auto 0;
+  padding: clamp(22px, 4vw, 38px);
+  border: 1px solid rgba(0, 31, 18, 0.1);
+  border-radius: 8px;
+  background:
+    linear-gradient(135deg, rgba(255, 194, 10, 0.1), transparent 34%),
+    rgba(255, 255, 255, 0.96);
+  box-shadow: 0 20px 46px rgba(0, 31, 18, 0.09);
+}
+
+.axis-policy-heading h3 {
+  margin: 8px 0 12px;
+  color: var(--green-950);
+  font-size: clamp(24px, 4vw, 42px);
+  line-height: 1.02;
+  font-weight: 950;
+}
+
+.axis-policy-heading p:not(.section-label) {
+  max-width: 980px;
+  margin: 0;
+  color: var(--muted);
+  font-weight: 700;
+  line-height: 1.6;
+}
+
+.axis-policy-grid,
+.axis-policy-finance {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(235px, 100%), 1fr));
+  gap: 14px;
+  margin-top: clamp(18px, 3vw, 28px);
+}
+
+.axis-policy-grid article,
+.axis-policy-finance article,
+.axis-policy-actions {
+  min-width: 0;
+  box-sizing: border-box;
+  border: 1px solid rgba(0, 31, 18, 0.08);
+  border-radius: 8px;
+  background: rgba(0, 31, 18, 0.035);
+}
+
+.axis-policy-grid article,
+.axis-policy-finance article {
+  padding: 18px;
+}
+
+.axis-policy-grid span {
+  display: inline-flex;
+  color: var(--gold);
+  font-size: 12px;
+  font-weight: 950;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.axis-policy-grid p,
+.axis-policy-finance p {
+  margin: 8px 0 0;
+  color: var(--muted);
+  font-weight: 670;
+  line-height: 1.55;
+}
+
+.axis-policy-actions {
+  margin-top: 14px;
+  padding: clamp(18px, 3vw, 26px);
+  background:
+    linear-gradient(135deg, rgba(0, 31, 18, 0.96), rgba(0, 60, 36, 0.93));
+  color: var(--white);
+}
+
+.axis-policy-actions strong,
+.axis-policy-finance strong {
+  display: block;
+  margin-bottom: 10px;
+  color: var(--gold);
+  font-size: 14px;
+  font-weight: 950;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.axis-policy-actions ul {
+  display: grid;
+  gap: 9px;
+  margin: 0;
+  padding-left: 20px;
+}
+
+.axis-policy-actions li {
+  color: rgba(255, 255, 255, 0.88);
+  font-weight: 660;
+  line-height: 1.5;
+}
+
+.axis-policy-finance article {
+  background: rgba(255, 194, 10, 0.09);
+}
+
+.nature-resilience-block {
+  background:
+    radial-gradient(circle at 92% 8%, rgba(91, 156, 57, 0.18), transparent 34%),
+    linear-gradient(135deg, rgba(0, 31, 18, 0.04), rgba(255, 255, 255, 0.98));
+}
+
+@media (max-width: 620px) {
+  .axis-policy-highlight {
+    padding: 20px 16px;
+  }
+
+  .axis-policy-heading h3 {
+    font-size: clamp(22px, 8vw, 32px);
+  }
+}
+
+.land-strategy-block {
+  background:
+    radial-gradient(circle at 12% 8%, rgba(255, 194, 10, 0.16), transparent 32%),
+    linear-gradient(135deg, rgba(255, 255, 255, 0.99), rgba(244, 248, 238, 0.98));
+}
+
+.land-strategy-block .axis-policy-actions {
+  background:
+    linear-gradient(135deg, rgba(0, 31, 18, 0.98), rgba(73, 50, 18, 0.92));
+}
+
+.land-facts-grid article:nth-child(2) {
+  background: rgba(255, 194, 10, 0.12);
+}
+
+/* Feuille de route opérationnelle du programme */
+.program-operational-section {
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 12% 5%, rgba(255, 194, 10, 0.14), transparent 30%),
+    linear-gradient(180deg, #ffffff 0%, #f5f8f1 48%, #ffffff 100%);
+}
+
+.program-operational-section .section-heading p:not(.section-label) {
+  max-width: 960px;
+}
+
+.program-cost-scale,
+.program-roadmap-timeline,
+.operational-axis-grid {
+  display: grid;
+  width: min(1180px, 100%);
+  margin: clamp(24px, 4vw, 42px) auto 0;
+  gap: clamp(14px, 2vw, 20px);
+}
+
+.program-cost-scale {
+  grid-template-columns: repeat(auto-fit, minmax(min(190px, 100%), 1fr));
+}
+
+.program-cost-scale article,
+.program-roadmap-timeline article,
+.operational-axis-grid article {
+  min-width: 0;
+  box-sizing: border-box;
+  border: 1px solid rgba(0, 31, 18, 0.1);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow: 0 18px 42px rgba(0, 31, 18, 0.08);
+}
+
+.program-cost-scale article {
+  padding: 20px;
+}
+
+.program-cost-scale span,
+.program-roadmap-timeline span,
+.operational-axis-grid header span {
+  display: inline-flex;
+  color: var(--gold);
+  font-size: 12px;
+  font-weight: 950;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.program-cost-scale strong {
+  display: block;
+  margin: 8px 0;
+  color: var(--green-950);
+  font-size: clamp(24px, 4vw, 38px);
+  line-height: 1;
+  font-weight: 950;
+}
+
+.program-cost-scale p,
+.program-roadmap-timeline p,
+.operational-axis-grid li,
+.operational-axis-grid dd {
+  color: var(--muted);
+  font-weight: 660;
+  line-height: 1.52;
+}
+
+.program-roadmap-timeline {
+  position: relative;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.program-roadmap-timeline article {
+  position: relative;
+  padding: clamp(20px, 3vw, 28px);
+  background:
+    linear-gradient(145deg, rgba(0, 31, 18, 0.96), rgba(0, 57, 34, 0.94));
+  color: var(--white);
+}
+
+.program-roadmap-timeline strong {
+  display: block;
+  margin: 8px 0;
+  color: var(--white);
+  font-size: clamp(20px, 2.5vw, 28px);
+  line-height: 1.08;
+  font-weight: 950;
+}
+
+.program-roadmap-timeline p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.operational-axis-grid {
+  grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr));
+}
+
+.operational-axis-grid article {
+  display: flex;
+  min-height: 100%;
+  flex-direction: column;
+  padding: clamp(20px, 3vw, 28px);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.operational-axis-grid article:hover {
+  border-color: rgba(255, 194, 10, 0.38);
+  box-shadow: 0 24px 56px rgba(0, 31, 18, 0.12);
+  transform: translateY(-3px);
+}
+
+.operational-axis-grid header h3 {
+  margin: 8px 0 14px;
+  color: var(--green-950);
+  font-size: clamp(20px, 2.2vw, 26px);
+  line-height: 1.08;
+  font-weight: 950;
+}
+
+.operational-axis-grid ul {
+  display: grid;
+  gap: 8px;
+  margin: 0 0 18px;
+  padding-left: 20px;
+}
+
+.operational-axis-grid dl {
+  display: grid;
+  gap: 10px;
+  margin: auto 0 0;
+}
+
+.operational-axis-grid dl div {
+  padding: 12px 14px;
+  border-radius: 8px;
+  background: rgba(0, 31, 18, 0.045);
+}
+
+.operational-axis-grid dt {
+  margin-bottom: 4px;
+  color: var(--green-950);
+  font-size: 12px;
+  font-weight: 950;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+
+.operational-axis-grid dd {
+  margin: 0;
+}
+
+@media (max-width: 820px) {
+  .program-roadmap-timeline {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 620px) {
+  .program-operational-section {
+    padding-right: 16px;
+    padding-left: 16px;
+  }
+
+  .operational-axis-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Compactage global des tableaux, formulaires et messages */
+table {
+  font-size: clamp(0.78rem, 0.92vw, 0.9rem);
+  line-height: 1.42;
+}
+
+th, td {
+  padding: clamp(0.52rem, 0.85vw, 0.78rem) clamp(0.58rem, 0.95vw, 0.9rem);
+}
+
+:is(.objectives-table, .financing-table, .understand-table, .understand-competence-table, .economy-sector-table, .responsibility-table, .budget-detail-table, .recovery-table, .human-financing-table) th,
+:is(.objectives-table, .financing-table, .understand-table, .understand-competence-table, .economy-sector-table, .responsibility-table, .budget-detail-table, .recovery-table, .human-financing-table) td {
+  padding: clamp(0.48rem, 0.8vw, 0.72rem) clamp(0.55rem, 0.9vw, 0.82rem);
+  font-size: clamp(0.76rem, 0.9vw, 0.88rem);
+  line-height: 1.38;
+}
+
+:is(.objectives-table, .financing-table, .understand-table, .understand-competence-table, .economy-sector-table, .responsibility-table, .budget-detail-table, .recovery-table, .human-financing-table) thead th {
+  font-size: clamp(0.66rem, 0.78vw, 0.76rem);
+  letter-spacing: 0.045em;
+}
+
+:is(.objectives-table-wrap, .financing-table-wrap, .understand-table-wrap, .economy-sector-table-wrap, .responsibility-table-wrap, .human-financing-table-wrap) {
+  border-radius: 7px;
+}
+
+:is(.form-shell, .project-idea-form, .diagnostic-report-form, .contact-card, .don-panel, .newsletter-card, .action-form-card) {
+  padding: clamp(1rem, 2vw, 1.6rem);
+  border-radius: 8px;
+}
+
+.form-grid {
+  gap: clamp(0.65rem, 1.15vw, 0.95rem);
+}
+
+.form-grid.compact {
+  gap: clamp(0.48rem, 0.9vw, 0.72rem);
+}
+
+:is(.form-shell label, .project-idea-form label, .diagnostic-report-form label, .contact-card label, .don-panel label) {
+  gap: 0.32rem;
+  font-size: clamp(0.72rem, 0.82vw, 0.82rem);
+  line-height: 1.25;
+}
+
+:is(.form-shell input, .form-shell select, .form-shell textarea, .project-idea-form input, .project-idea-form select, .project-idea-form textarea, .diagnostic-report-form input, .diagnostic-report-form select, .diagnostic-report-form textarea, .contact-card input, .contact-card select, .contact-card textarea, .don-panel input, .don-panel select, .don-panel textarea, input, select, textarea) {
+  min-height: 42px;
+  padding: 0.72rem 0.82rem;
+  border-radius: 7px;
+  font-size: clamp(0.88rem, 1vw, 0.98rem);
+  line-height: 1.32;
+}
+
+:is(textarea, .form-shell textarea, .project-idea-form textarea, .diagnostic-report-form textarea) {
+  min-height: 108px;
+}
+
+.form-note {
+  margin-bottom: 0.65rem;
+  font-size: clamp(0.68rem, 0.75vw, 0.76rem);
+  letter-spacing: 0.055em;
+}
+
+:is(.form-shell button, .project-idea-form button, .diagnostic-report-form button, .contact-card button, .don-panel button, button[type="submit"]) {
+  min-height: 42px;
+  padding: 0.72rem 1rem;
+  border-radius: 7px;
+  font-size: clamp(0.76rem, 0.86vw, 0.88rem);
+  letter-spacing: 0.035em;
+}
+
+:is(.form-status, [data-admin-status], .status-badge, .message-card, .notice-card, .alert-card, .submission-message) {
+  padding: clamp(0.62rem, 1vw, 0.9rem) clamp(0.75rem, 1.2vw, 1rem);
+  border-radius: 7px;
+  font-size: clamp(0.78rem, 0.9vw, 0.9rem);
+  line-height: 1.42;
+}
+
+:is(.dashboard-indicator-card, .dashboard-kpi-card, .dashboard-status-card, .budget-kpi-grid article, .human-protection-kpis article, .program-cost-scale article, .operational-axis-grid article, .axis-policy-highlight, .human-financing-panel) {
+  border-radius: 8px;
+}
+
+@media (max-width: 760px) {
+  th, td {
+    padding: 0.48rem 0.55rem;
+  }
+
+  :is(.form-shell, .project-idea-form, .diagnostic-report-form, .contact-card, .don-panel, .newsletter-card, .action-form-card) {
+    padding: 1rem;
+  }
+
+  :is(.form-shell input, .form-shell select, .form-shell textarea, .project-idea-form input, .project-idea-form select, .project-idea-form textarea, .diagnostic-report-form input, .diagnostic-report-form select, .diagnostic-report-form textarea, .contact-card input, .contact-card select, .contact-card textarea, .don-panel input, .don-panel select, .don-panel textarea, input, select, textarea) {
+    min-height: 40px;
+    padding: 0.66rem 0.74rem;
+  }
+
+  :is(textarea, .form-shell textarea, .project-idea-form textarea, .diagnostic-report-form textarea) {
+    min-height: 96px;
+  }
+}
+
+/* Identité du nom MADA */
+.movement-name-card {
+  width: min(1180px, 100%);
+  margin: 0 auto;
+  padding: clamp(1.4rem, 3.5vw, 2.8rem);
+  border: 1px solid rgba(0, 31, 18, 0.1);
+  border-radius: 8px;
+  background:
+    radial-gradient(circle at 10% 0%, rgba(255, 194, 10, 0.14), transparent 32%),
+    linear-gradient(135deg, rgba(255, 255, 255, 0.98), rgba(245, 248, 240, 0.96));
+  box-shadow: 0 22px 48px rgba(0, 31, 18, 0.1);
+}
+
+.movement-name-intro h2 {
+  margin: 0.35rem 0 0.9rem;
+  color: var(--green-950);
+  font-size: clamp(1.75rem, 3.5vw, 3.1rem);
+  line-height: 1.04;
+  font-weight: 950;
+  text-transform: uppercase;
+}
+
+.movement-name-intro p {
+  max-width: 980px;
+  color: var(--muted);
+  font-weight: 690;
+  line-height: 1.62;
+}
+
+.movement-name-intro blockquote {
+  margin: clamp(1rem, 2vw, 1.6rem) 0 0;
+  padding: clamp(1rem, 2vw, 1.4rem) clamp(1rem, 2.5vw, 1.8rem);
+  border-left: 4px solid var(--gold);
+  border-radius: 8px;
+  background: rgba(0, 31, 18, 0.055);
+  color: var(--green-950);
+  font-size: clamp(1.05rem, 1.5vw, 1.28rem);
+  font-weight: 850;
+  line-height: 1.42;
+}
+
+.movement-name-grid,
+.movement-color-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(230px, 100%), 1fr));
+  gap: clamp(0.85rem, 1.7vw, 1.2rem);
+  margin-top: clamp(1.2rem, 2.8vw, 2rem);
+}
+
+.movement-name-grid article,
+.movement-color-grid article {
+  min-width: 0;
+  padding: clamp(1rem, 2vw, 1.35rem);
+  border: 1px solid rgba(0, 31, 18, 0.09);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.movement-name-grid span {
+  display: inline-grid;
+  width: 2.35rem;
+  height: 2.35rem;
+  place-items: center;
+  border-radius: 999px;
+  background: var(--gold);
+  color: #161100;
+  font-weight: 950;
+}
+
+.movement-name-grid h3,
+.movement-colors-block h3 {
+  margin: 0.75rem 0 0.45rem;
+  color: var(--green-950);
+  font-size: clamp(1.05rem, 1.6vw, 1.35rem);
+  line-height: 1.12;
+  font-weight: 950;
+  text-transform: uppercase;
+}
+
+.movement-name-grid p,
+.movement-colors-block p,
+.movement-color-grid span,
+.movement-name-source {
+  color: var(--muted);
+  font-weight: 660;
+  line-height: 1.52;
+}
+
+.movement-colors-block {
+  margin-top: clamp(1.4rem, 3vw, 2.3rem);
+  padding-top: clamp(1.1rem, 2.4vw, 1.8rem);
+  border-top: 1px solid rgba(0, 31, 18, 0.1);
+}
+
+.movement-color-grid article {
+  display: grid;
+  gap: 0.45rem;
+}
+
+.movement-color-grid strong {
+  color: var(--green-950);
+  font-weight: 950;
+  text-transform: uppercase;
+}
+
+.swatch {
+  width: 2.1rem;
+  height: 2.1rem;
+  border: 2px solid rgba(0, 31, 18, 0.08);
+  border-radius: 999px;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.32);
+}
+
+.swatch-deep-green { background: #002b18; }
+.swatch-gold { background: #ffc20a; }
+.swatch-brown { background: #7a4a15; }
+.swatch-white { background: #ffffff; }
+
+.movement-name-source {
+  margin: clamp(1rem, 2.2vw, 1.6rem) 0 0;
+  padding-top: 0.9rem;
+  border-top: 1px dashed rgba(0, 31, 18, 0.16);
+  font-size: clamp(0.82rem, 0.95vw, 0.92rem);
+}
+
+@media (max-width: 760px) {
+  .movement-name-card {
+    padding: 1.1rem;
+  }
+}
