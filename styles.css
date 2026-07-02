@@ -10572,3 +10572,89 @@ th, td {
     min-width: 980px;
   }
 }
+.public-report-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 18px;
+  width: min(1180px, 100%);
+  margin: 0 auto;
+}
+
+.public-report-grid article {
+  display: flex;
+  min-width: 0;
+  min-height: 100%;
+  flex-direction: column;
+  gap: 12px;
+  padding: clamp(20px, 3vw, 30px);
+  border: 1px solid rgba(0, 71, 43, 0.12);
+  border-top: 4px solid var(--gold);
+  border-radius: var(--radius-md);
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.98), rgba(246, 248, 244, 0.94));
+  box-shadow: 0 20px 46px rgba(0, 31, 18, 0.08);
+}
+
+.public-report-grid span {
+  width: fit-content;
+  padding: 7px 11px;
+  border-radius: 999px;
+  background: rgba(0, 71, 43, 0.1);
+  color: var(--green-900);
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.public-report-grid h3 {
+  margin: 0;
+  color: var(--green-950);
+  font-size: clamp(19px, 2.2vw, 26px);
+  line-height: 1.05;
+}
+
+.public-report-grid p {
+  margin: 0;
+  color: var(--text-soft);
+  line-height: 1.65;
+}
+
+.public-report-grid a {
+  margin-top: auto;
+  color: var(--green-900);
+  font-weight: 900;
+  text-decoration: none;
+}
+
+.public-report-grid a:hover,
+.public-report-grid a:focus-visible {
+  color: var(--gold-dark);
+  text-decoration: underline;
+}
+
+.public-control-year-table th,
+.public-control-year-table td {
+  vertical-align: top;
+}
+
+.public-control-table td {
+  line-height: 1.52;
+}
+
+.public-control-sector-grid article p + p {
+  margin-top: 10px;
+}
+
+.public-control-table .status-badge {
+  white-space: nowrap;
+}
+
+@media (max-width: 760px) {
+  .public-report-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .public-report-grid article {
+    padding: 18px;
+  }
+}
