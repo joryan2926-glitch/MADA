@@ -10225,3 +10225,116 @@ th, td {
     min-width: 760px;
   }
 }
+
+/* Rapport global des crises depuis 2009 */
+.crisis-sector-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+  gap: clamp(0.85rem, 1.7vw, 1.2rem);
+  width: min(1240px, 100%);
+  margin: 0 auto;
+}
+
+.crisis-sector-grid article {
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid rgba(0, 31, 18, 0.1);
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 18px 38px rgba(0, 31, 18, 0.08);
+}
+
+.crisis-sector-grid h3,
+.crisis-sector-grid p {
+  margin-left: clamp(0.95rem, 1.7vw, 1.2rem);
+  margin-right: clamp(0.95rem, 1.7vw, 1.2rem);
+}
+
+.crisis-sector-grid h3 {
+  margin-top: clamp(0.9rem, 1.5vw, 1.05rem);
+  color: var(--green-950);
+  font-size: clamp(1.02rem, 1.35vw, 1.22rem);
+  line-height: 1.14;
+  text-transform: uppercase;
+}
+
+.crisis-sector-grid p {
+  color: var(--muted);
+  font-size: clamp(0.84rem, 0.96vw, 0.94rem);
+  font-weight: 650;
+  line-height: 1.5;
+}
+
+.crisis-sector-grid p:last-child {
+  margin-bottom: clamp(1rem, 1.7vw, 1.2rem);
+}
+
+.sector-photo {
+  width: 100%;
+  min-height: 142px;
+  background: linear-gradient(rgba(0, 31, 18, 0.2), rgba(0, 0, 0, 0.42)), var(--sector-image, url("assets/hero-observatoire-territoire-768.webp")) center/cover;
+}
+
+.sector-photo.is-prices,
+.sector-photo.is-economy { --sector-image: url("assets/hero-programme-fort-de-france-768.webp"); }
+.sector-photo.is-water,
+.sector-photo.is-sargassum { --sector-image: url("assets/photo-eau-resilience-768.webp"); }
+.sector-photo.is-health,
+.sector-photo.is-governance { --sector-image: url("assets/hero-observatoire-territoire-768.webp"); }
+.sector-photo.is-transport,
+.sector-photo.is-housing { --sector-image: url("assets/hero-communes-mairie-768.webp"); }
+.sector-photo.is-sea { --sector-image: url("assets/photo-peche-martinique-768.webp"); }
+.sector-photo.is-security { --sector-image: url("assets/hero-programme-fort-de-france-768.webp"); }
+.sector-photo.is-demography,
+.sector-photo.is-education { --sector-image: url("assets/photo-retour-talents-768.webp"); }
+.sector-photo.is-agriculture { --sector-image: url("assets/photo-agriculture-martinique-768.webp"); }
+.sector-photo.is-energy { --sector-image: url("assets/martinique-landscape-only-768.webp"); }
+.sector-photo.is-culture { --sector-image: url("assets/photo-culture-carnaval-768.webp"); }
+
+.crisis-common-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
+  gap: clamp(0.8rem, 1.6vw, 1.1rem);
+  width: min(1120px, 100%);
+  margin: 0 auto;
+}
+
+.crisis-common-grid article {
+  min-width: 0;
+  padding: clamp(0.95rem, 1.7vw, 1.2rem);
+  border: 1px solid rgba(0, 31, 18, 0.1);
+  border-left: 4px solid var(--gold);
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 14px 30px rgba(0, 31, 18, 0.07);
+}
+
+.crisis-common-grid strong {
+  display: block;
+  color: var(--green-950);
+  font-size: 0.9rem;
+  font-weight: 950;
+  text-transform: uppercase;
+}
+
+.crisis-common-grid p {
+  color: var(--muted);
+  font-size: 0.9rem;
+  font-weight: 650;
+  line-height: 1.5;
+}
+
+.crisis-response-table {
+  min-width: 1060px;
+}
+
+@media (max-width: 760px) {
+  .crisis-sector-grid,
+  .crisis-common-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .sector-photo {
+    min-height: 128px;
+  }
+}
