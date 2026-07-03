@@ -10190,6 +10190,274 @@ textarea {
   }
 }
 
+/* Grands Projets MADA CTM 2040 - lecture stratégique et méthode publique */
+.project-command-section {
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 8% 8%, rgba(255, 194, 10, 0.13), transparent 30%),
+    linear-gradient(180deg, #f7faf4 0%, #ffffff 52%, #f4f8ef 100%);
+}
+
+.project-command-section .section-heading p:not(.section-label) {
+  max-width: 980px;
+}
+
+.project-command-grid,
+.project-method-grid {
+  display: grid;
+  width: min(1180px, 100%);
+  margin: clamp(22px, 4vw, 42px) auto 0;
+  gap: clamp(14px, 2vw, 20px);
+}
+
+.project-command-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.project-command-grid article,
+.project-method-grid article,
+.project-summary-card,
+.project-method-panel {
+  min-width: 0;
+  box-sizing: border-box;
+  border: 1px solid rgba(0, 31, 18, 0.1);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.97);
+  box-shadow: 0 18px 44px rgba(0, 31, 18, 0.08);
+}
+
+.project-command-grid article {
+  display: flex;
+  min-height: 100%;
+  flex-direction: column;
+  padding: clamp(20px, 3vw, 30px);
+}
+
+.project-command-grid article:first-child {
+  border-color: rgba(237, 23, 29, 0.22);
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.98), rgba(255, 245, 244, 0.9));
+}
+
+.project-command-grid article:nth-child(2) {
+  border-color: rgba(255, 194, 10, 0.25);
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.98), rgba(255, 250, 226, 0.9));
+}
+
+.project-command-grid article:nth-child(3) {
+  border-color: rgba(0, 87, 51, 0.18);
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.98), rgba(238, 248, 238, 0.94));
+}
+
+.project-command-grid span,
+.project-method-grid span {
+  display: inline-flex;
+  width: fit-content;
+  color: var(--gold);
+  font-size: 10.8px;
+  font-weight: 950;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.project-command-grid h3,
+.project-summary-heading h3,
+.project-method-intro h3 {
+  margin: 8px 0 12px;
+  color: var(--green-950);
+  font-size: clamp(18px, 2.2vw, 28px);
+  line-height: 1.08;
+  font-weight: 950;
+}
+
+.project-command-grid p,
+.project-command-grid li,
+.project-summary-card p,
+.project-method-panel p {
+  color: var(--muted);
+  font-weight: 660;
+  line-height: 1.56;
+}
+
+.project-command-grid ul {
+  display: grid;
+  gap: 8px;
+  margin: auto 0 0;
+  padding: 16px 0 0 20px;
+}
+
+.project-summary-card,
+.project-method-panel {
+  width: min(1180px, 100%);
+  margin: clamp(22px, 4vw, 42px) auto 0;
+  padding: clamp(20px, 3vw, 32px);
+}
+
+.project-summary-heading {
+  display: grid;
+  grid-template-columns: minmax(0, 0.88fr) minmax(0, 1.12fr);
+  gap: clamp(16px, 3vw, 28px);
+  align-items: end;
+  margin-bottom: clamp(16px, 3vw, 26px);
+}
+
+.project-summary-heading p {
+  margin: 0;
+}
+
+.project-summary-table-wrap {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
+  border: 1px solid rgba(0, 31, 18, 0.09);
+  border-radius: 8px;
+  background: var(--white);
+  -webkit-overflow-scrolling: touch;
+}
+
+.project-summary-table {
+  width: 100%;
+  min-width: 980px;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.project-summary-table th,
+.project-summary-table td {
+  border-bottom: 1px solid rgba(0, 31, 18, 0.09);
+  vertical-align: top;
+  text-align: left;
+}
+
+.project-summary-table thead th {
+  background: var(--green-950);
+  color: var(--white);
+  font-weight: 950;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.project-summary-table tbody th {
+  color: var(--green-950);
+  font-weight: 950;
+}
+
+.project-summary-table td {
+  color: var(--muted);
+  font-weight: 650;
+}
+
+.project-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 28px;
+  border-radius: 999px;
+  padding: 6px 10px;
+  background: rgba(0, 31, 18, 0.08);
+  color: var(--green-950);
+  font-size: 10.8px;
+  font-weight: 950;
+  line-height: 1;
+  text-align: center;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.project-badge.is-urgent {
+  background: rgba(237, 23, 29, 0.1);
+  color: #9b1116;
+}
+
+.project-badge.is-high,
+.project-badge.is-structuring {
+  background: rgba(255, 194, 10, 0.18);
+  color: #5b4100;
+}
+
+.project-badge.is-action,
+.project-badge.is-partnership,
+.project-badge.is-study,
+.project-badge.is-strategic {
+  background: rgba(0, 87, 51, 0.1);
+  color: var(--green-950);
+}
+
+.project-method-panel {
+  display: grid;
+  grid-template-columns: minmax(0, 0.88fr) minmax(0, 1.32fr);
+  gap: clamp(18px, 3vw, 32px);
+  align-items: start;
+  background:
+    radial-gradient(circle at 95% 0%, rgba(255, 194, 10, 0.14), transparent 28%),
+    linear-gradient(135deg, rgba(0, 31, 18, 0.98), rgba(0, 55, 33, 0.96));
+  color: var(--white);
+}
+
+.project-method-intro h3,
+.project-method-intro p:not(.section-label) {
+  color: var(--white);
+}
+
+.project-method-intro p:not(.section-label) {
+  opacity: 0.86;
+}
+
+.project-method-grid {
+  width: 100%;
+  margin: 0;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.project-method-grid article {
+  padding: 16px;
+  border-color: rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: none;
+}
+
+.project-method-grid strong {
+  display: block;
+  margin: 6px 0 8px;
+  color: var(--white);
+  font-size: clamp(14px, 1.25vw, 16px);
+  line-height: 1.15;
+  font-weight: 950;
+}
+
+.project-method-grid p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: clamp(12.6px, 1vw, 14px);
+}
+
+@media (max-width: 980px) {
+  .project-command-grid,
+  .project-summary-heading,
+  .project-method-panel {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 620px) {
+  .project-command-section {
+    padding-right: 16px;
+    padding-left: 16px;
+  }
+
+  .project-method-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-summary-card,
+  .project-method-panel,
+  .project-command-grid article {
+    padding: 16px;
+  }
+
+  .project-badge {
+    white-space: normal;
+  }
+}
 /* Compactage global des tableaux, formulaires et messages */
 table {
   font-size: clamp(0.702rem, 0.828vw, 0.81rem);
