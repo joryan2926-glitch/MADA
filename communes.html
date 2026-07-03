@@ -170,73 +170,33 @@
         </section>
       <section class="page-section section-light" id="carte-interactive">
         <div class="section-heading center">
-          <p class="section-label">Les communes de Martinique</p>
-          <h2>34 communes, cinq zones de travail territorial.</h2>
-          <p>MADA organise son implantation par grands bassins de vie afin de respecter les équilibres du territoire et de répondre aux priorités locales.</p>
+          <p class="section-label">Carte interactive</p>
+          <h2>Cliquez directement sur une commune de Martinique.</h2>
+          <p>Cette carte utilise les contours communaux officiels. Sélectionnez une commune pour afficher son bassin de vie, puis ouvrez sa fiche dans l'atlas territorial MADA.</p>
         </div>
-        <div class="commune-zones" aria-label="Liste des 34 communes de Martinique par zone">
-          <article class="commune-zone-card">
-            <div><h3>Nord Caraïbe</h3><span>7 communes</span></div>
-            <ul>
-              <li>Bellefontaine</li>
-              <li>Case-Pilote</li>
-              <li>Le Carbet</li>
-              <li>Fonds-Saint-Denis</li>
-              <li>Le Morne-Vert</li>
-              <li>Le Prêcheur</li>
-              <li>Saint-Pierre</li>
-            </ul>
-          </article>
-          <article class="commune-zone-card">
-            <div><h3>Nord Atlantique</h3><span>10 communes</span></div>
-            <ul>
-              <li>L'Ajoupa-Bouillon</li>
-              <li>Basse-Pointe</li>
-              <li>Grand'Rivière</li>
-              <li>Gros-Morne</li>
-              <li>Le Lorrain</li>
-              <li>Macouba</li>
-              <li>Le Marigot</li>
-              <li>Le Morne-Rouge</li>
-              <li>Sainte-Marie</li>
-              <li>La Trinité</li>
-            </ul>
-          </article>
-          <article class="commune-zone-card">
-            <div><h3>Centre</h3><span>4 communes</span></div>
-            <ul>
-              <li>Fort-de-France</li>
-              <li>Le Lamentin</li>
-              <li>Saint-Joseph</li>
-              <li>Schoelcher</li>
-            </ul>
-          </article>
-          <article class="commune-zone-card">
-            <div><h3>Sud Caraïbe</h3><span>6 communes</span></div>
-            <ul>
-              <li>Les Anses-d'Arlet</li>
-              <li>Le Diamant</li>
-              <li>Ducos</li>
-              <li>Rivière-Salée</li>
-              <li>Sainte-Luce</li>
-              <li>Les Trois-Îlets</li>
-            </ul>
-          </article>
-          <article class="commune-zone-card">
-            <div><h3>Sud Atlantique</h3><span>7 communes</span></div>
-            <ul>
-              <li>Le François</li>
-              <li>Le Marin</li>
-              <li>Rivière-Pilote</li>
-              <li>Le Robert</li>
-              <li>Saint-Esprit</li>
-              <li>Sainte-Anne</li>
-              <li>Le Vauclin</li>
-            </ul>
-          </article>
+        <div class="interactive-map-shell" data-martinique-map>
+          <div class="interactive-map-card">
+            <div class="map-svg-wrap" data-map-svg aria-live="polite">
+              <p class="map-loading">Chargement de la carte des communes...</p>
+            </div>
+            <p class="map-status" data-map-status>Chargement des 34 communes de Martinique.</p>
+          </div>
+          <aside class="map-info-panel" data-map-panel>
+            <p class="section-label">Commune sélectionnée</p>
+            <h3>Fort-de-France</h3>
+            <p>Survolez ou cliquez sur une commune pour afficher ses informations et ouvrir sa fiche communale.</p>
+            <a class="btn btn-gold" href="portraits-communes.html">Ouvrir l'atlas communal</a>
+          </aside>
+          <div class="map-commune-list-panel">
+            <div>
+              <p class="section-label">Accès rapide</p>
+              <h3>Les 34 communes</h3>
+              <p>La liste sert aussi de navigation mobile et d'alternative accessible à la carte.</p>
+            </div>
+            <div class="map-commune-list" data-map-list aria-label="Liste cliquable des communes"></div>
+          </div>
         </div>
       </section>
-
       <section class="page-section section-soft">
         <div class="section-heading center">
           <p class="section-label">Priorités par bassin de vie</p>
@@ -350,6 +310,7 @@
 </footer>
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <script src="assets/js/supabase-config.js"></script>
+    <script src="assets/js/martinique-map.js" defer></script>
     <script src="assets/js/mada-supabase.js"></script>
   </body>
 </html>
