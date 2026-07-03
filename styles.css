@@ -10371,6 +10371,162 @@ th, td {
     grid-template-columns: 1fr;
   }
 }
+
+/* Chronologie des responsabilites publiques */
+.responsibility-chronology-hero {
+  background:
+    linear-gradient(110deg, rgba(0, 33, 20, 0.96), rgba(0, 33, 20, 0.7), rgba(0, 0, 0, 0.5)),
+    url("assets/hero-observatoire-territoire-1600.webp") center/cover;
+}
+
+.responsibility-principle-grid,
+.political-period-grid,
+.responsibility-level-grid {
+  display: grid;
+  width: min(1180px, 100%);
+  max-width: 100%;
+  margin: clamp(1.5rem, 3vw, 2rem) auto 0;
+  gap: clamp(0.85rem, 2vw, 1.1rem);
+  box-sizing: border-box;
+}
+
+.responsibility-principle-grid {
+  grid-template-columns: repeat(auto-fit, minmax(min(220px, 100%), 1fr));
+}
+
+.responsibility-principle-grid article,
+.responsibility-level-grid article,
+.political-period-grid article {
+  min-width: 0;
+  box-sizing: border-box;
+  border-radius: 8px;
+  box-shadow: 0 14px 34px rgba(0, 31, 18, 0.07);
+}
+
+.responsibility-principle-grid article {
+  padding: clamp(1rem, 2vw, 1.25rem);
+  border: 1px solid rgba(2, 64, 38, 0.11);
+  border-top: 4px solid var(--gold);
+  background: #fff;
+}
+
+.responsibility-principle-grid span {
+  display: inline-flex;
+  margin-bottom: 0.75rem;
+  padding: 0.25rem 0.55rem;
+  border-radius: 999px;
+  color: #171000;
+  background: var(--gold);
+  font-size: 0.675rem;
+  font-weight: 950;
+}
+
+.responsibility-principle-grid strong,
+.responsibility-level-grid h3,
+.political-period-grid h3 {
+  display: block;
+  margin: 0 0 0.45rem;
+  color: var(--deep-green);
+  font-size: 0.918rem;
+  font-weight: 950;
+  line-height: 1.18;
+  text-transform: uppercase;
+}
+
+.responsibility-principle-grid p,
+.responsibility-level-grid p,
+.political-period-grid dd {
+  margin: 0;
+  color: #526258;
+  font-size: 0.756rem;
+  line-height: 1.58;
+}
+
+.political-period-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.political-period-grid article {
+  padding: clamp(1rem, 2.2vw, 1.35rem);
+  border: 1px solid rgba(2, 64, 38, 0.11);
+  background: #fff;
+}
+
+.political-period-grid time {
+  display: inline-flex;
+  margin-bottom: 0.75rem;
+  padding: 0.28rem 0.65rem;
+  border-radius: 4px;
+  color: #071f15;
+  background: var(--gold);
+  font-size: 0.702rem;
+  font-weight: 950;
+}
+
+.political-period-grid dl {
+  display: grid;
+  gap: 0.75rem;
+  margin: 0.85rem 0 0;
+}
+
+.political-period-grid div {
+  padding-top: 0.7rem;
+  border-top: 1px solid rgba(2, 64, 38, 0.09);
+}
+
+.political-period-grid dt {
+  margin-bottom: 0.2rem;
+  color: #8a6100;
+  font-size: 0.648rem;
+  font-weight: 950;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.responsibility-level-grid {
+  grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+}
+
+.responsibility-level-grid article {
+  padding: clamp(1rem, 2vw, 1.25rem);
+  border: 1px solid rgba(248, 190, 42, 0.25);
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.96), rgba(248, 250, 246, 0.98));
+}
+
+.responsibility-level-grid p + p {
+  margin-top: 0.65rem;
+}
+
+.responsibility-level-grid strong {
+  color: #102a1d;
+  font-weight: 950;
+}
+
+.political-table-wrap {
+  width: min(1180px, 100%);
+  max-width: 100%;
+  margin: clamp(1.5rem, 3vw, 2rem) auto 0;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  border-radius: 8px;
+}
+
+.political-chronology-table {
+  min-width: 980px;
+}
+
+@media (max-width: 980px) {
+  .political-period-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 700px) {
+  .political-chronology-table {
+    min-width: 860px;
+  }
+}
 /* Diagnostic documentaire enrichi */
 .diagnostic-feature-grid,
 .media-source-grid,
