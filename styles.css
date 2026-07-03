@@ -10465,6 +10465,132 @@ textarea {
     padding: 20px 16px;
   }
 }
+
+.budget-scope-card {
+  width: min(1180px, 100%);
+  margin: clamp(22px, 4vw, 38px) auto 0;
+  padding: clamp(22px, 4vw, 34px);
+  border: 1px solid rgba(0, 31, 18, 0.1);
+  border-radius: 8px;
+  background:
+    radial-gradient(circle at 92% 8%, rgba(255, 194, 10, 0.15), transparent 32%),
+    linear-gradient(135deg, rgba(255, 255, 255, 0.99), rgba(244, 248, 238, 0.98));
+  box-shadow: 0 20px 46px rgba(0, 31, 18, 0.09);
+  box-sizing: border-box;
+}
+
+.budget-scope-heading h3 {
+  margin: 8px 0 12px;
+  color: var(--green-950);
+  font-size: clamp(22px, 3.2vw, 34px);
+  line-height: 1.08;
+  font-weight: 950;
+}
+
+.budget-scope-heading p:not(.section-label) {
+  max-width: 980px;
+  margin: 0;
+  color: var(--muted);
+  font-weight: 700;
+  line-height: 1.6;
+}
+
+.budget-scope-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(285px, 100%), 1fr));
+  gap: 14px;
+  margin-top: 20px;
+}
+
+.budget-scope-grid article {
+  min-width: 0;
+  padding: 18px;
+  border: 1px solid rgba(0, 31, 18, 0.08);
+  border-radius: 8px;
+  background: rgba(0, 31, 18, 0.035);
+  box-sizing: border-box;
+}
+
+.budget-scope-grid article.is-program {
+  background: rgba(60, 174, 73, 0.08);
+}
+
+.budget-scope-grid article.is-warning {
+  background: rgba(255, 194, 10, 0.12);
+}
+
+.budget-scope-grid span {
+  display: inline-flex;
+  color: var(--gold);
+  font-size: 10.8px;
+  font-weight: 950;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.budget-scope-grid h4 {
+  margin: 8px 0 10px;
+  color: var(--green-950);
+  font-size: 18px;
+  line-height: 1.15;
+  font-weight: 900;
+}
+
+.budget-scope-grid p,
+.budget-scope-grid li {
+  color: var(--muted);
+  font-weight: 670;
+  line-height: 1.5;
+}
+
+.budget-scope-grid ul {
+  display: grid;
+  gap: 8px;
+  margin: 0;
+  padding-left: 20px;
+}
+
+.budget-scope-table-wrap {
+  margin-top: 16px;
+  overflow-x: auto;
+  max-width: 100%;
+}
+
+.budget-scope-table {
+  width: 100%;
+  min-width: 720px;
+  border-collapse: collapse;
+  background: rgba(255, 255, 255, 0.92);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.budget-scope-table th,
+.budget-scope-table td {
+  padding: 14px 15px;
+  border-bottom: 1px solid rgba(0, 31, 18, 0.08);
+  color: var(--muted);
+  font-size: 13.5px;
+  line-height: 1.45;
+  text-align: left;
+  vertical-align: top;
+}
+
+.budget-scope-table thead th,
+.budget-scope-table tbody th {
+  color: var(--green-950);
+  font-weight: 900;
+}
+
+@media (max-width: 680px) {
+  .budget-scope-card {
+    padding: 20px 16px;
+  }
+
+  .budget-scope-table {
+    min-width: 640px;
+  }
+}
 /* Grands Projets MADA CTM 2040 - lecture stratégique et méthode publique */
 .project-command-section {
   overflow: hidden;
