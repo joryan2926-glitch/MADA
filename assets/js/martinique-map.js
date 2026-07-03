@@ -23,7 +23,7 @@
     "97218": "Nord Atlantique",
     "97228": "Nord Atlantique",
     "97230": "Nord Atlantique",
-    "97222": "Nord Atlantique",
+    "97222": "Sud Atlantique",
     "97209": "Centre",
     "97213": "Centre",
     "97224": "Centre",
