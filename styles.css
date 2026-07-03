@@ -10458,6 +10458,170 @@ textarea {
     white-space: normal;
   }
 }
+/* Méthode de chiffrage des Grands Projets */
+.budget-calculation-card {
+  width: min(1180px, 100%);
+  margin: clamp(24px, 4vw, 42px) auto 0;
+  box-sizing: border-box;
+  padding: clamp(20px, 3vw, 32px);
+  border: 1px solid rgba(255, 194, 10, 0.18);
+  border-radius: 8px;
+  background:
+    radial-gradient(circle at 92% 0%, rgba(255, 194, 10, 0.12), transparent 30%),
+    rgba(255, 255, 255, 0.98);
+  box-shadow: 0 18px 48px rgba(0, 31, 18, 0.1);
+}
+
+.budget-calculation-heading {
+  display: grid;
+  gap: 10px;
+  max-width: 980px;
+}
+
+.budget-calculation-heading h3 {
+  margin: 0;
+  color: var(--green-950);
+  font-size: clamp(18px, 2.2vw, 28px);
+  line-height: 1.08;
+  font-weight: 950;
+}
+
+.budget-calculation-heading p:not(.section-label),
+.budget-calculation-note,
+.budget-formula-grid p,
+.budget-equation span {
+  color: var(--muted);
+  font-weight: 660;
+  line-height: 1.56;
+}
+
+.budget-formula-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(220px, 100%), 1fr));
+  gap: 14px;
+  margin-top: clamp(18px, 3vw, 28px);
+}
+
+.budget-formula-grid article {
+  min-width: 0;
+  box-sizing: border-box;
+  padding: 16px;
+  border: 1px solid rgba(0, 31, 18, 0.09);
+  border-radius: 8px;
+  background: rgba(0, 31, 18, 0.035);
+}
+
+.budget-formula-grid span {
+  display: inline-flex;
+  color: var(--gold);
+  font-size: 10.8px;
+  font-weight: 950;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.budget-formula-grid strong {
+  display: block;
+  margin: 6px 0 8px;
+  color: var(--green-950);
+  font-size: clamp(14px, 1.25vw, 16px);
+  line-height: 1.15;
+  font-weight: 950;
+}
+
+.budget-formula-grid p {
+  margin: 0;
+}
+
+.budget-equation {
+  display: grid;
+  gap: 6px;
+  margin-top: clamp(16px, 3vw, 24px);
+  padding: 16px 18px;
+  border: 1px solid rgba(0, 31, 18, 0.1);
+  border-radius: 8px;
+  background: linear-gradient(135deg, rgba(0, 31, 18, 0.96), rgba(0, 58, 35, 0.94));
+}
+
+.budget-equation strong {
+  color: var(--gold);
+  font-size: 11px;
+  font-weight: 950;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.budget-equation span {
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.project-budget-table-wrap {
+  width: 100%;
+  max-width: 100%;
+  margin-top: clamp(18px, 3vw, 28px);
+  overflow-x: auto;
+  border: 1px solid rgba(0, 31, 18, 0.09);
+  border-radius: 8px;
+  background: var(--white);
+  -webkit-overflow-scrolling: touch;
+}
+
+.project-budget-table {
+  width: 100%;
+  min-width: 1180px;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.project-budget-table th,
+.project-budget-table td {
+  border-bottom: 1px solid rgba(0, 31, 18, 0.09);
+  vertical-align: top;
+  text-align: left;
+}
+
+.project-budget-table thead th {
+  background: var(--green-950);
+  color: var(--white);
+  font-weight: 950;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.project-budget-table tbody th {
+  color: var(--green-950);
+  font-weight: 950;
+}
+
+.project-budget-table td {
+  color: var(--muted);
+  font-weight: 650;
+}
+
+.project-budget-table th:nth-child(1) { width: 15%; }
+.project-budget-table th:nth-child(2) { width: 10%; }
+.project-budget-table th:nth-child(3) { width: 20%; }
+.project-budget-table th:nth-child(4) { width: 24%; }
+.project-budget-table th:nth-child(5) { width: 18%; }
+.project-budget-table th:nth-child(6) { width: 13%; }
+
+.budget-calculation-note {
+  margin: clamp(16px, 3vw, 24px) 0 0;
+  padding: 14px 16px;
+  border-left: 4px solid var(--gold);
+  border-radius: 0 8px 8px 0;
+  background: rgba(255, 194, 10, 0.09);
+}
+
+@media (max-width: 620px) {
+  .budget-calculation-card {
+    padding: 16px;
+  }
+
+  .project-budget-table {
+    min-width: 1040px;
+  }
+}
 /* Compactage global des tableaux, formulaires et messages */
 table {
   font-size: clamp(0.702rem, 0.828vw, 0.81rem);
