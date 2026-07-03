@@ -9808,6 +9808,132 @@ textarea {
 }
 
 
+
+/* Agro-transformation et souverainet&eacute; alimentaire */
+.agro-transformation-block {
+  background:
+    radial-gradient(circle at 14% 12%, rgba(60, 174, 73, 0.16), transparent 34%),
+    radial-gradient(circle at 88% 10%, rgba(255, 194, 10, 0.16), transparent 30%),
+    linear-gradient(135deg, rgba(255, 255, 255, 0.99), rgba(244, 248, 238, 0.98));
+}
+
+.agro-kpi-grid,
+.agro-economy-proof-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(205px, 100%), 1fr));
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.agro-kpi-grid article,
+.agro-economy-proof-grid article {
+  min-width: 0;
+  padding: 17px;
+  border: 1px solid rgba(0, 31, 18, 0.09);
+  border-radius: 8px;
+  background: rgba(0, 31, 18, 0.045);
+  box-sizing: border-box;
+}
+
+.agro-kpi-grid strong,
+.agro-economy-proof-grid strong {
+  display: block;
+  color: var(--green-950);
+  font-size: clamp(21px, 3vw, 31px);
+  line-height: 1;
+  font-weight: 950;
+}
+
+.agro-kpi-grid span,
+.agro-economy-proof-grid span {
+  display: inline-flex;
+  color: var(--gold);
+  font-size: 10.8px;
+  font-weight: 950;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.agro-kpi-grid span {
+  display: block;
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: 12px;
+  letter-spacing: 0;
+  text-transform: none;
+  font-weight: 680;
+  line-height: 1.45;
+}
+
+.agro-economy-proof-grid p {
+  margin: 8px 0 0;
+  color: var(--muted);
+  font-weight: 680;
+  line-height: 1.45;
+}
+
+.agro-economy-section {
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 10% 8%, rgba(255, 194, 10, 0.12), transparent 32%),
+    linear-gradient(180deg, #ffffff 0%, #f5f8f1 100%);
+}
+
+.agro-economy-grid {
+  width: min(1180px, 100%);
+  margin: clamp(18px, 3vw, 30px) auto 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(285px, 100%), 1fr));
+  gap: 16px;
+}
+
+.agro-economy-grid article {
+  min-width: 0;
+  padding: clamp(20px, 3vw, 28px);
+  border: 1px solid rgba(0, 31, 18, 0.09);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow: 0 18px 42px rgba(0, 31, 18, 0.08);
+  box-sizing: border-box;
+}
+
+.agro-economy-grid h3 {
+  margin: 0 0 10px;
+  color: var(--green-950);
+  font-size: clamp(19px, 2.4vw, 25px);
+  line-height: 1.1;
+}
+
+.agro-economy-grid p,
+.agro-economy-grid li {
+  color: var(--muted);
+  font-weight: 670;
+  line-height: 1.55;
+}
+
+.agro-economy-grid ul {
+  display: grid;
+  gap: 8px;
+  margin: 14px 0 0;
+  padding-left: 20px;
+}
+
+.agro-value-table-wrap,
+.agro-transformation-table-wrap {
+  margin-top: 16px;
+}
+
+.agro-finance-grid article:first-child {
+  background: rgba(255, 194, 10, 0.16);
+}
+
+@media (max-width: 680px) {
+  .agro-kpi-grid,
+  .agro-economy-proof-grid,
+  .agro-economy-grid {
+    grid-template-columns: 1fr;
+  }
+}
 .chlordecone-plan-block {
   background:
     radial-gradient(circle at 12% 8%, rgba(255, 194, 10, 0.18), transparent 34%),
@@ -10248,6 +10374,97 @@ textarea {
   }
 }
 
+
+/* Trajectoire budg&eacute;taire multi-mandats */
+.long-trajectory-card {
+  width: min(1180px, 100%);
+  margin: clamp(24px, 4vw, 42px) auto 0;
+  padding: clamp(22px, 4vw, 36px);
+  border: 1px solid rgba(0, 31, 18, 0.1);
+  border-radius: 8px;
+  background:
+    radial-gradient(circle at 10% 8%, rgba(255, 194, 10, 0.16), transparent 34%),
+    linear-gradient(135deg, rgba(0, 31, 18, 0.98), rgba(0, 58, 35, 0.94));
+  color: var(--white);
+  box-shadow: 0 22px 48px rgba(0, 31, 18, 0.16);
+  box-sizing: border-box;
+}
+
+.long-trajectory-heading h3 {
+  margin: 8px 0 12px;
+  color: var(--white);
+  font-size: clamp(22px, 3.4vw, 38px);
+  line-height: 1.05;
+  font-weight: 950;
+}
+
+.long-trajectory-heading p:not(.section-label) {
+  max-width: 1040px;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.82);
+  font-weight: 690;
+  line-height: 1.62;
+}
+
+.trajectory-budget-grid,
+.mandate-trajectory-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(230px, 100%), 1fr));
+  gap: 14px;
+  margin-top: clamp(18px, 3vw, 28px);
+}
+
+.trajectory-budget-grid article,
+.mandate-trajectory-grid article {
+  min-width: 0;
+  padding: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.07);
+  box-sizing: border-box;
+}
+
+.trajectory-budget-grid span,
+.mandate-trajectory-grid span {
+  display: inline-flex;
+  color: var(--gold);
+  font-size: 10.8px;
+  font-weight: 950;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.trajectory-budget-grid strong {
+  display: block;
+  margin-top: 8px;
+  color: var(--white);
+  font-size: clamp(23px, 3.6vw, 34px);
+  line-height: 1;
+  font-weight: 950;
+}
+
+.mandate-trajectory-grid strong {
+  display: block;
+  margin-top: 8px;
+  color: var(--white);
+  font-size: 17px;
+  line-height: 1.15;
+  font-weight: 900;
+}
+
+.trajectory-budget-grid p,
+.mandate-trajectory-grid p {
+  margin: 9px 0 0;
+  color: rgba(255, 255, 255, 0.78);
+  font-weight: 650;
+  line-height: 1.5;
+}
+
+@media (max-width: 680px) {
+  .long-trajectory-card {
+    padding: 20px 16px;
+  }
+}
 /* Grands Projets MADA CTM 2040 - lecture stratégique et méthode publique */
 .project-command-section {
   overflow: hidden;
