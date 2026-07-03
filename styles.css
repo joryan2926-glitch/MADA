@@ -11540,3 +11540,31 @@ main :is(.form-status, [data-admin-status], .message-card, .notice-card, .alert-
     grid-template-columns: 1fr;
   }
 }
+.atlas-validation-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 14px;
+  max-width: 1120px;
+}
+
+.atlas-validation-grid article {
+  padding: 18px;
+  border: 1px solid rgba(244, 183, 36, 0.28);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.06);
+  color: #fff;
+}
+
+.atlas-validation-grid h3 {
+  margin: 0 0 8px;
+  color: var(--gold);
+  font-size: 1rem;
+  font-weight: 950;
+  text-transform: uppercase;
+}
+
+.atlas-validation-grid p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.84);
+  font-size: 0.92rem;
+}
