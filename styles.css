@@ -9807,6 +9807,64 @@ textarea {
   background: rgba(255, 194, 10, 0.09);
 }
 
+
+.chlordecone-plan-block {
+  background:
+    radial-gradient(circle at 12% 8%, rgba(255, 194, 10, 0.18), transparent 34%),
+    radial-gradient(circle at 92% 12%, rgba(91, 156, 57, 0.16), transparent 32%),
+    linear-gradient(135deg, rgba(255, 255, 255, 0.98), rgba(244, 248, 238, 0.98));
+}
+
+.chlordecone-kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(205px, 100%), 1fr));
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.chlordecone-kpi-grid article {
+  min-width: 0;
+  padding: 17px;
+  border: 1px solid rgba(0, 31, 18, 0.09);
+  border-radius: 8px;
+  background: rgba(0, 31, 18, 0.05);
+  box-sizing: border-box;
+}
+
+.chlordecone-kpi-grid strong {
+  display: block;
+  color: var(--green-950);
+  font-size: clamp(21px, 3vw, 31px);
+  line-height: 1;
+  font-weight: 950;
+}
+
+.chlordecone-kpi-grid span {
+  display: block;
+  margin-top: 8px;
+  color: var(--muted);
+  font-weight: 680;
+  line-height: 1.45;
+}
+
+.chlordecone-table-wrap {
+  margin-top: 16px;
+}
+
+.chlordecone-action-table th,
+.chlordecone-action-table td {
+  vertical-align: top;
+}
+
+.chlordecone-finance-grid article:first-child {
+  background: rgba(255, 194, 10, 0.16);
+}
+
+@media (max-width: 680px) {
+  .chlordecone-kpi-grid {
+    grid-template-columns: 1fr;
+  }
+}
 .nature-resilience-block {
   background:
     radial-gradient(circle at 92% 8%, rgba(91, 156, 57, 0.18), transparent 34%),
