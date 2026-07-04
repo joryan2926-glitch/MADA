@@ -1,4 +1,4 @@
-﻿:root {
+:root {
   --green-950: #001f12;
   --green-900: #002b18;
   --green-850: #00351e;
@@ -9702,6 +9702,146 @@ textarea {
   }
 }
 
+
+/* Dossier zones economiques et mobilite */
+.economic-zones-hero {
+  background:
+    linear-gradient(110deg, rgba(0, 33, 20, 0.94), rgba(0, 33, 20, 0.68), rgba(0, 0, 0, 0.46)),
+    var(--hero-programme-image) center / cover no-repeat;
+}
+
+.zone-pressure-grid,
+.zone-basin-grid,
+.mobility-cost-grid,
+.zone-action-grid,
+.zone-indicator-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
+  gap: clamp(1rem, 2vw, 1.35rem);
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.zone-pressure-grid article,
+.zone-basin-grid article,
+.mobility-cost-grid article,
+.zone-action-grid article,
+.zone-indicator-grid article,
+.zone-doctrine-card {
+  max-width: 100%;
+  box-sizing: border-box;
+  border-radius: 14px;
+  border: 1px solid rgba(0, 45, 28, 0.12);
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.98), rgba(245, 248, 242, 0.95));
+  box-shadow: 0 18px 42px rgba(0, 31, 18, 0.08);
+  padding: clamp(1.15rem, 2vw, 1.55rem);
+}
+
+.zone-pressure-grid article span,
+.zone-action-grid article span,
+.zone-indicator-grid article span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 2.35rem;
+  height: 2.35rem;
+  border-radius: 999px;
+  background: var(--green-950);
+  color: var(--gold);
+  font-weight: 800;
+  margin-bottom: 0.85rem;
+}
+
+.zone-basin-grid article,
+.mobility-cost-grid article {
+  border-left: 5px solid var(--gold);
+}
+
+.zone-basin-grid strong,
+.mobility-cost-grid h3,
+.zone-action-grid h3,
+.zone-indicator-grid strong {
+  color: var(--green-950);
+}
+
+.zone-responsibility-wrap {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 194, 10, 0.2);
+  box-shadow: 0 18px 48px rgba(0, 31, 18, 0.12);
+}
+
+.zone-responsibility-table {
+  width: 100%;
+  min-width: 720px;
+  border-collapse: collapse;
+  background: #fff;
+}
+
+.zone-responsibility-table th,
+.zone-responsibility-table td {
+  padding: 0.95rem 1rem;
+  border-bottom: 1px solid rgba(0, 45, 28, 0.12);
+  text-align: left;
+  vertical-align: top;
+}
+
+.zone-responsibility-table th {
+  background: var(--green-950);
+  color: #fff;
+  font-weight: 800;
+}
+
+.responsibility-badge {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  padding: 0.32rem 0.7rem;
+  background: rgba(0, 45, 28, 0.08);
+  color: var(--green-950);
+  font-weight: 800;
+  font-size: 0.78rem;
+}
+
+.responsibility-badge.is-lead {
+  background: var(--gold);
+  color: #201400;
+}
+
+.zone-doctrine-card {
+  max-width: 980px;
+  margin: 0 auto;
+  text-align: center;
+  border-color: rgba(255, 194, 10, 0.35);
+  background: linear-gradient(145deg, rgba(0, 31, 18, 0.96), rgba(0, 55, 35, 0.94));
+  color: #fff;
+}
+
+.zone-doctrine-card h2,
+.zone-doctrine-card p {
+  color: #fff;
+}
+
+.zone-doctrine-card .section-label {
+  color: var(--gold);
+}
+
+@media (max-width: 760px) {
+  .zone-pressure-grid,
+  .zone-basin-grid,
+  .mobility-cost-grid,
+  .zone-action-grid,
+  .zone-indicator-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .zone-responsibility-table {
+    min-width: 620px;
+  }
+}
 /* Blocs programme - équité tarifaire, littoral et biodiversité */
 .axis-policy-highlight {
   width: min(1180px, 100%);
