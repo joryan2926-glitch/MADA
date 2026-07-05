@@ -9829,6 +9829,40 @@ textarea {
   color: var(--gold);
 }
 
+
+/* Contraste cible pour les cartes du dossier zones */
+.zone-pressure-grid article,
+.zone-basin-grid article,
+.mobility-cost-grid article,
+.zone-action-grid article,
+.zone-indicator-grid article {
+  color: var(--ink);
+}
+
+.zone-pressure-grid p,
+.zone-basin-grid p,
+.mobility-cost-grid p,
+.zone-action-grid p,
+.zone-indicator-grid small {
+  color: var(--muted);
+}
+
+.zone-action-grid strong,
+.zone-indicator-grid strong {
+  display: block;
+  color: var(--green-950);
+  font-weight: 900;
+}
+
+.zone-responsibility-table tbody th {
+  background: rgba(0, 45, 28, 0.055);
+  color: var(--green-950);
+}
+
+.zone-responsibility-table td {
+  color: var(--ink);
+}
+
 @media (max-width: 760px) {
   .zone-pressure-grid,
   .zone-basin-grid,
