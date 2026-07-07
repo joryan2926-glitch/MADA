@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>MADA - Les Voix de la Martinique</title>
+    <link>https://www.mada-martinique.fr/les-voix-de-la-martinique.html</link>
+    <language>fr-FR</language>
+    <copyright>2026 MADA</copyright>
+    <description>MADA - Les Voix de la Martinique est un media citoyen martiniquais pour ecouter le terrain, expliquer les enjeux publics et donner la parole aux Martiniquais.</description>
+    <itunes:author>MADA</itunes:author>
+    <itunes:owner>
+      <itunes:name>MADA</itunes:name>
+      <itunes:email>contact@mada-martinique.fr</itunes:email>
+    </itunes:owner>
+    <itunes:image href="https://www.mada-martinique.fr/assets/media/les-voix/cover-podcast-3000x3000.jpg" />
+    <itunes:category text="News">
+      <itunes:category text="Politics" />
+    </itunes:category>
+    <itunes:category text="Society &amp; Culture" />
+    <itunes:explicit>false</itunes:explicit>
+    <itunes:type>episodic</itunes:type>
+    <generator>MADA website</generator>
+    <lastBuildDate>Tue, 07 Jul 2026 00:00:00 +0200</lastBuildDate>
+    <!--
+      MODELE D'EPISODE A AJOUTER APRES ENREGISTREMENT DU PILOTE :
+      <item>
+        <title>Pourquoi creer Les Voix de la Martinique ?</title>
+        <description>Episode pilote de presentation du media MADA - Les Voix de la Martinique.</description>
+        <pubDate>Tue, 07 Jul 2026 00:00:00 +0200</pubDate>
+        <guid isPermaLink="false">mada-les-voix-episode-001</guid>
+        <itunes:duration>00:20:00</itunes:duration>
+        <itunes:episode>1</itunes:episode>
+        <itunes:episodeType>full</itunes:episodeType>
+        <enclosure url="https://www.mada-martinique.fr/assets/media/les-voix/audio/episode-001.mp3" length="00000000" type="audio/mpeg" />
+      </item>
+    -->
+  </channel>
+</rss>
