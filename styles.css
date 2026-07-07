@@ -13166,3 +13166,207 @@ main :is(.form-status, [data-admin-status], .message-card, .notice-card, .alert-
   color: rgba(255, 255, 255, 0.84);
   font-size: 0.92rem;
 }
+
+/* MADA Les Voix de la Martinique */
+.media-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(280px, 0.95fr);
+  gap: clamp(28px, 5vw, 72px);
+  align-items: center;
+  width: 100%;
+  min-height: clamp(660px, 88vh, 920px);
+  padding: clamp(110px, 12vw, 170px) clamp(18px, 5vw, 80px) clamp(54px, 7vw, 96px);
+  background:
+    radial-gradient(circle at 78% 22%, rgba(255, 194, 10, 0.24), transparent 30%),
+    linear-gradient(115deg, rgba(0, 15, 9, 0.98), rgba(0, 42, 25, 0.92) 55%, rgba(0, 0, 0, 0.9)),
+    var(--hero-observatoire-image) center / cover no-repeat;
+  color: var(--white);
+  overflow: hidden;
+}
+
+.media-hero-copy {
+  width: min(720px, 100%);
+  min-width: 0;
+}
+
+.media-hero h1 {
+  margin: 0.35rem 0 1rem;
+  color: var(--white);
+  font-size: clamp(2.25rem, 6vw, 5.4rem);
+  line-height: 0.95;
+  font-weight: 950;
+  text-transform: uppercase;
+}
+
+.media-hero-lead {
+  color: var(--gold);
+  font-size: clamp(1.15rem, 2.2vw, 1.7rem);
+  font-weight: 900;
+}
+
+.media-hero-copy p:not(.section-label):not(.media-hero-lead) {
+  color: rgba(255, 255, 255, 0.84);
+  font-size: clamp(0.98rem, 1.25vw, 1.12rem);
+  line-height: 1.65;
+}
+
+.media-hero-visual {
+  position: relative;
+  width: min(520px, 100%);
+  margin: 0 auto;
+  aspect-ratio: 1;
+}
+
+.media-hero-visual::before {
+  position: absolute;
+  inset: -8%;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 194, 10, 0.2), transparent 66%);
+  content: "";
+}
+
+.media-hero-visual img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 24px;
+  object-fit: cover;
+  box-shadow: 0 30px 90px rgba(0, 0, 0, 0.42);
+}
+
+.media-promise-grid,
+.media-show-grid,
+.media-kit-grid,
+.media-platform-grid {
+  display: grid;
+  width: min(1180px, 100%);
+  margin: clamp(1.4rem, 3vw, 2rem) auto 0;
+  gap: clamp(1rem, 2vw, 1.35rem);
+}
+
+.media-promise-grid,
+.media-show-grid,
+.media-platform-grid {
+  grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr));
+}
+
+.media-kit-grid {
+  grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
+}
+
+.media-promise-grid article,
+.media-show-grid article,
+.media-kit-grid article,
+.media-platform-grid article,
+.media-launch-card {
+  min-width: 0;
+  border: 1px solid rgba(0, 45, 28, 0.12);
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 18px 42px rgba(0, 31, 18, 0.08);
+  padding: clamp(1.05rem, 2vw, 1.45rem);
+}
+
+.media-promise-grid span,
+.media-platform-grid span {
+  display: inline-flex;
+  margin-bottom: 0.8rem;
+  color: var(--gold);
+  font-size: 1.65rem;
+  font-weight: 950;
+}
+
+.media-promise-grid h3,
+.media-kit-grid h3,
+.media-show-grid strong,
+.media-platform-grid strong {
+  display: block;
+  margin: 0 0 0.55rem;
+  color: var(--green-950);
+  font-weight: 950;
+  line-height: 1.15;
+  text-transform: uppercase;
+}
+
+.media-promise-grid p,
+.media-kit-grid p,
+.media-show-grid p,
+.media-platform-grid p {
+  color: var(--muted);
+  line-height: 1.58;
+}
+
+.media-kit-section {
+  background:
+    radial-gradient(circle at 10% 0%, rgba(255, 194, 10, 0.14), transparent 28%),
+    linear-gradient(180deg, #f5f8f1, #ffffff);
+}
+
+.media-kit-grid article {
+  overflow: hidden;
+  padding: 0;
+}
+
+.media-kit-grid img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  background: var(--green-950);
+}
+
+.media-kit-grid h3,
+.media-kit-grid p {
+  margin-right: 1.15rem;
+  margin-left: 1.15rem;
+}
+
+.media-kit-grid h3 {
+  margin-top: 1rem;
+}
+
+.media-kit-grid p {
+  margin-bottom: 1.2rem;
+}
+
+.media-platform-grid article {
+  border-top: 4px solid var(--gold);
+}
+
+.media-launch-card {
+  width: min(980px, 100%);
+  margin: 0 auto;
+  border-color: rgba(255, 194, 10, 0.26);
+  background: linear-gradient(145deg, rgba(0, 31, 18, 0.96), rgba(0, 56, 34, 0.94));
+  text-align: center;
+}
+
+.media-launch-card h2,
+.media-launch-card p {
+  color: var(--white);
+}
+
+.media-launch-card .section-label,
+.media-launch-card strong {
+  color: var(--gold);
+}
+
+@media (max-width: 900px) {
+  .media-hero {
+    grid-template-columns: 1fr;
+    min-height: auto;
+    text-align: center;
+  }
+
+  .media-hero-copy {
+    margin: 0 auto;
+  }
+
+  .media-hero .cta-row {
+    justify-content: center;
+  }
+
+  .media-hero-visual {
+    width: min(390px, 100%);
+  }
+}
