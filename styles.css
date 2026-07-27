@@ -14762,3 +14762,221 @@ main :is(.form-status, [data-admin-status], .message-card, .notice-card, .alert-
   font-size: 0.88rem;
   line-height: 1.45;
 }
+
+
+/* Harmonisation institutionnelle globale */
+:root {
+  --institutional-section-y: clamp(2.2rem, 4.2vw, 4.4rem);
+  --institutional-card-pad: clamp(0.95rem, 1.8vw, 1.35rem);
+  --institutional-copy: clamp(0.9rem, 1.05vw, 0.98rem);
+}
+
+body {
+  font-size: 15.5px;
+}
+
+.hero,
+.page-hero,
+.vision-page-hero,
+.serment-hero,
+.understand-dossier-hero {
+  min-height: clamp(360px, 54vh, 560px);
+  padding-top: clamp(5.2rem, 8vw, 7.2rem);
+  padding-bottom: clamp(2.2rem, 5vw, 4rem);
+}
+
+.hero h1,
+.page-hero h1,
+.vision-page-hero h1,
+.serment-hero h1,
+.welcome-content h1 {
+  font-size: clamp(2.1rem, 5.2vw, 4.8rem);
+  line-height: 0.98;
+  max-width: 980px;
+}
+
+.section-heading h2,
+.contact-card h2,
+.don-panel h2,
+.movement-manifesto h2,
+.movement-contract h2,
+.participation-copy h2,
+.dashboard-actions h2,
+.serment-final h2 {
+  font-size: clamp(1.45rem, 2.8vw, 2.45rem);
+  line-height: 1.08;
+}
+
+.page-section,
+.section-dark,
+.section-soft,
+.section-light {
+  padding-top: var(--institutional-section-y);
+  padding-bottom: var(--institutional-section-y);
+}
+
+.section-heading,
+.section-heading.center {
+  margin-bottom: clamp(1.15rem, 2.5vw, 2rem);
+}
+
+.section-heading p:not(.section-label),
+.hero-lead,
+.page-hero p:not(.kicker),
+.vision-page-subtitle,
+.program-intro-card p,
+.card p,
+.info-panel p,
+.observatory-card p,
+.commune-profile-card p,
+.profile-card p,
+.understand-dossier-block p,
+.understand-dossier-block li,
+.citizen-faq-grid p,
+.sources-public-grid p {
+  font-size: var(--institutional-copy);
+  line-height: 1.52;
+}
+
+.program-intro-card,
+.contact-card,
+.don-panel,
+.info-panel,
+.card,
+.metric-card,
+.progress-card,
+.observatory-card,
+.observatory-focus-card,
+.water-priority-card,
+.profile-card,
+.commune-profile-card,
+.serment-card,
+.understand-question-grid article,
+.understand-hub-grid a,
+.understand-dossier-block,
+.citizen-faq-grid article,
+.sources-public-grid article {
+  padding: var(--institutional-card-pad);
+  border-radius: 8px;
+}
+
+.program-intro-card {
+  display: grid;
+  gap: 0.8rem;
+}
+
+@media (min-width: 900px) {
+  .program-intro-card {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: clamp(1.5rem, 3vw, 2.6rem);
+  }
+
+  .program-intro-card > h2,
+  .program-intro-card > .section-label,
+  .program-intro-card > .cta-row,
+  .program-intro-card > blockquote,
+  .program-intro-card > ul,
+  .program-intro-card > .source-list,
+  .program-intro-card > .compact-source-list {
+    grid-column: 1 / -1;
+  }
+}
+
+.card h3,
+.metric-card h3,
+.progress-card h3,
+.commune-profile-card h3,
+.observatory-card h3,
+.profile-card h3,
+.serment-card h3,
+.understand-question-grid h3,
+.understand-hub-grid strong,
+.understand-dossier-block h2,
+.citizen-faq-grid h3,
+.sources-public-grid h3 {
+  font-size: clamp(1rem, 1.5vw, 1.18rem);
+  line-height: 1.16;
+}
+
+table,
+.data-table,
+.responsibility-table,
+.budget-table,
+.comparison-table {
+  width: 100%;
+  max-width: 100%;
+  border-collapse: collapse;
+  font-size: clamp(0.78rem, 0.95vw, 0.9rem);
+  line-height: 1.35;
+}
+
+th,
+td {
+  padding: clamp(0.45rem, 1vw, 0.7rem);
+  vertical-align: top;
+}
+
+.table-wrap,
+.table-responsive,
+.budget-table-wrap,
+.responsibility-table-wrap {
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+.btn,
+button,
+input,
+select,
+textarea {
+  font-size: 0.9rem;
+}
+
+.cta-row,
+.hero-actions,
+.participation-actions {
+  gap: 0.7rem;
+}
+
+@media (max-width: 900px) {
+  body {
+    font-size: 15px;
+  }
+
+  .hero,
+  .page-hero,
+  .vision-page-hero,
+  .serment-hero,
+  .understand-dossier-hero {
+    min-height: clamp(320px, 48vh, 480px);
+  }
+}
+
+@media (max-width: 640px) {
+  body {
+    font-size: 14.5px;
+  }
+
+  .hero,
+  .page-hero,
+  .vision-page-hero,
+  .serment-hero,
+  .understand-dossier-hero {
+    min-height: auto;
+    padding-top: 5.2rem;
+    padding-bottom: 2.2rem;
+  }
+
+  .hero h1,
+  .page-hero h1,
+  .vision-page-hero h1,
+  .serment-hero h1,
+  .welcome-content h1 {
+    font-size: clamp(1.9rem, 10vw, 3rem);
+  }
+
+  th,
+  td {
+    padding: 0.45rem;
+  }
+}
