@@ -1,4 +1,4 @@
-:root {
+﻿:root {
   --green-950: #001f12;
   --green-900: #002b18;
   --green-850: #00351e;
@@ -14472,5 +14472,75 @@ main :is(.form-status, [data-admin-status], .message-card, .notice-card, .alert-
   .ctm-balance-grid,
   .mada-2040-timeline {
     grid-template-columns: 1fr;
+  }
+}
+/* Livret citoyen Comprendre - Atouts et gestion */
+.understand-strategy-hero {
+  background:
+    linear-gradient(115deg, rgba(0, 43, 24, 0.92), rgba(0, 29, 18, 0.76)),
+    url("assets/photo-observatoire-1600.webp") center/cover no-repeat;
+}
+
+.citizen-book-callout {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  width: min(1080px, 100%);
+  margin: 1.4rem auto 0;
+  padding: clamp(1rem, 2.5vw, 1.35rem);
+  border: 1px solid rgba(0, 61, 36, 0.14);
+  border-left: 4px solid var(--gold);
+  border-radius: 10px;
+  background: #ffffff;
+  box-shadow: 0 18px 45px rgba(0, 35, 20, 0.08);
+  box-sizing: border-box;
+}
+
+.citizen-book-callout h3 {
+  margin: 0 0 0.45rem;
+  color: var(--deep-green);
+  font-size: clamp(1rem, 2vw, 1.25rem);
+}
+
+.citizen-book-callout p:not(.section-label) {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.92rem;
+  line-height: 1.5;
+}
+
+.citizen-book-conclusion {
+  margin-top: 1.4rem;
+}
+
+.citizen-book-conclusion blockquote {
+  margin: 0 0 1rem;
+  padding-left: 1rem;
+  border-left: 4px solid var(--gold);
+  color: var(--deep-green);
+  font-weight: 850;
+  line-height: 1.45;
+}
+
+.compact-source-list {
+  margin: 1rem 0 0;
+}
+
+.compact-source-list li {
+  margin: 0.35rem 0;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+@media (max-width: 720px) {
+  .citizen-book-callout {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .citizen-book-callout .btn {
+    width: 100%;
+    justify-content: center;
   }
 }

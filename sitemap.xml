@@ -119,6 +119,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://www.mada-martinique.fr/atouts-gestion-martinique.html</loc>
+    <lastmod>2026-07-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://www.mada-martinique.fr/economie-martinique.html</loc>
     <lastmod>2026-06-30</lastmod>
     <changefreq>weekly</changefreq>
