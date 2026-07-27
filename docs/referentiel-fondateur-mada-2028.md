@@ -9,7 +9,7 @@
 **Horizon politique :** CTM 2028, trajectoire Martinique 2040  
 **Statut de diffusion :** Interne - structuration du mouvement  
 **Confidentialité :** Document de travail stratégique réservé aux responsables, relais, bénévoles formés et équipes autorisées.  
-**Version :** 0.3  
+**Version :** 0.4  
 **Date de mise à jour :** 27 juillet 2026
 
 ---
@@ -21,6 +21,7 @@
 | 0.1 | 27 juillet 2026 | Architecture initiale | Création du socle documentaire MADA. |
 | 0.2 | 27 juillet 2026 | Référentiel fondateur | Renommage, intégration du Serment MADA et structuration des annexes. |
 | 0.3 | 27 juillet 2026 | Version documentaire renforcée | Ajout page de garde, confidentialité, versionnage et table des matières consolidée. |
+| 0.4 | 27 juillet 2026 | Doctrine renforcée | Ajout d'une doctrine économique, institutionnelle, sociale, territoriale et démocratique appuyée sur des données publiques sourcées. |
 
 ---
 
@@ -268,6 +269,172 @@ MADA refuse la politique des clans, l'immobilisme, les promesses sans financemen
 ## 3.5 Ce Que MADA Propose
 
 MADA propose une méthode politique nouvelle : partir des faits, écouter le terrain, expliquer les responsabilités, proposer des solutions réalistes, financer les projets, publier les résultats et corriger ce qui ne fonctionne pas.
+
+
+---
+
+# 3 bis. Doctrine MADA Approfondie
+
+## 3 bis.1 Principe général
+
+La doctrine MADA doit partir des faits réels du territoire. Elle ne doit pas reposer sur des slogans ou sur des impressions non vérifiées. Chaque grande orientation doit pouvoir être reliée à une donnée publique, à une compétence institutionnelle, à une responsabilité identifiable et à une capacité d'action réaliste.
+
+MADA distingue trois niveaux :
+
+- **le fait public vérifié** : donnée produite par une source institutionnelle ou statistique ;
+- **l'analyse politique** : lecture MADA de ce que cette donnée révèle ;
+- **l'orientation proposée** : direction que MADA veut porter pour le territoire.
+
+## 3 bis.2 Données de contexte à connaître
+
+| Sujet | Donnée vérifiée | Source |
+| --- | --- | --- |
+| Population | 360 630 habitants au 1er janvier 2023 ; baisse moyenne de 0,5 % par an entre 2017 et 2023. | INSEE, L'essentiel sur la Martinique, février 2026 |
+| Communes | 34 communes en Martinique. | ANCT, fiche territoriale Martinique, données actualisées juillet 2026 |
+| Population légale récente | 361 019 habitants, population légale 2022 entrée en vigueur au 1er janvier 2025. | ANCT / INSEE, fiche territoriale Martinique |
+| PIB | 10,1 milliards d'euros en 2023 ; PIB par habitant de 28 600 euros. | INSEE, comptes régionaux, données provisoires |
+| Emploi | 149 900 emplois en 2023 ; 58,6 % des 15-64 ans en emploi en 2022. | INSEE, estimations d'emploi et recensement |
+| Chômage | Taux de chômage annuel moyen de 12,3 % en 2024. | INSEE, taux de chômage localisés |
+| Jeunesse | 21 % des 15-29 ans ne sont ni en emploi, ni en études, ni en formation en 2024. | INSEE, L'essentiel sur la Martinique |
+| Pauvreté | Taux de pauvreté de 26,8 % en 2021 ; niveau de vie annuel médian de 19 770 euros. | INSEE, Filosofi 2021 |
+| Structure économique | En 2023, 84,3 % des emplois relèvent du tertiaire, dont 45,2 % dans le tertiaire marchand et 39,1 % dans le tertiaire non marchand ; l'industrie représente 6,6 % des emplois. | INSEE, estimations d'emploi |
+| Budget CTM | Budget primitif 2025 annoncé à un peu plus de 1,457 milliard d'euros. | FranceInfo Martinique, séance plénière CTM du 19 décembre 2024 |
+| Soutien de l'État à l'investissement local | Enveloppes 2025 annoncées en Martinique : 2,6 M€ de DETR et 2,8 M€ de DSIL. | Préfecture de Martinique, appel à projets DETR/DSIL 2025 |
+
+Ces chiffres ne sont pas des slogans. Ils constituent un point de départ pour construire une doctrine sérieuse : comprendre ce que produit le territoire, ce qui le fragilise, ce qui peut être financé et ce que les institutions peuvent réellement porter.
+
+## 3 bis.3 Doctrine économique
+
+La Martinique dispose d'un PIB d'environ 10,1 milliards d'euros en 2023, mais son économie reste fortement tertiarisée. L'industrie ne représente que 6,6 % des emplois et l'agriculture 3,9 % des emplois selon les données INSEE 2023. Cette structure montre que le territoire crée de la valeur, mais qu'il dépend encore trop de services, d'importations et de flux extérieurs.
+
+Doctrine MADA : **la Martinique doit augmenter sa capacité productive locale.**
+
+Cela implique :
+
+- renforcer les filières agricoles, halieutiques et agroalimentaires ;
+- développer la transformation locale ;
+- soutenir les PME, artisans, producteurs et entreprises martiniquaises ;
+- structurer l'économie bleue, l'économie circulaire, l'énergie, le numérique et les industries légères ;
+- favoriser l'export régional lorsque la production locale dépasse les besoins du territoire ;
+- orienter une partie de la commande publique vers des retombées économiques locales dans le respect du droit ;
+- financer les projets par une combinaison réaliste : CTM, État, fonds européens, Banque des Territoires, AFD, BEI, investisseurs privés et diaspora.
+
+MADA ne doit pas promettre une économie fermée. MADA doit proposer une économie martiniquaise plus forte, mieux organisée et capable de mieux négocier sa place dans la Caraïbe.
+
+## 3 bis.4 Doctrine institutionnelle
+
+La Martinique compte 34 communes, une Collectivité Territoriale de Martinique, des EPCI, des services de l'État, des parlementaires, des communes et des organismes publics. Beaucoup de problèmes territoriaux relèvent de compétences partagées.
+
+Doctrine MADA : **la première réforme démocratique est la clarification des responsabilités.**
+
+MADA doit expliquer systématiquement :
+
+- ce que l'État décide ;
+- ce que la CTM peut faire ;
+- ce que les communes peuvent faire ;
+- ce que les EPCI gèrent ;
+- ce que l'Union Européenne finance ou encadre ;
+- ce qui nécessite une coopération entre plusieurs acteurs.
+
+L'autodétermination responsable défendue par MADA ne doit pas être une formule abstraite. Elle doit être préparée compétence par compétence : moyens humains, budget, contrôle démocratique, capacité administrative, calendrier et consultation populaire.
+
+## 3 bis.5 Doctrine sociale
+
+Les données INSEE montrent une tension sociale forte : taux de pauvreté de 26,8 % en 2021, taux de chômage de 12,3 % en 2024, 21 % des 15-29 ans ni en emploi, ni en études, ni en formation en 2024. Ces chiffres imposent une doctrine sociale sérieuse.
+
+Doctrine MADA : **la solidarité doit protéger, accompagner et remettre en capacité d'agir.**
+
+MADA doit défendre :
+
+- la protection des familles modestes ;
+- l'accès à la santé de proximité ;
+- la lutte contre les violences faites aux femmes et aux enfants ;
+- la prévention du décrochage scolaire ;
+- l'accompagnement des jeunes vers le sport, la formation, l'emploi et l'entrepreneuriat ;
+- le soutien aux aînés et aux personnes isolées ;
+- l'accès à un logement digne ;
+- une politique alimentaire anti-gaspillage reliant producteurs, transformateurs, associations et familles à faibles revenus.
+
+La doctrine sociale MADA ne doit pas opposer solidarité et responsabilité. Elle doit unir protection, dignité, travail, prévention et retour vers l'autonomie.
+
+## 3 bis.6 Doctrine territoriale
+
+Le recul démographique, la concentration économique et les écarts entre communes obligent à penser le territoire dans son ensemble. MADA doit éviter une vision centrée uniquement sur les zones déjà les plus équipées.
+
+Doctrine MADA : **aucune commune ne doit être considérée comme périphérique dans son propre pays.**
+
+Cela implique :
+
+- portraits communaux des 34 communes ;
+- réseau de relais communaux ;
+- diagnostic par bassin de vie ;
+- suivi des équipements, services, transports, santé, eau, économie locale et logement ;
+- valorisation des identités culturelles et économiques de chaque commune ;
+- rééquilibrage entre zones concentrées et communes délaissées ;
+- revitalisation des centres-bourgs, zones d'activités de proximité, villages économiques et services publics accessibles.
+
+MADA doit parler de la Martinique comme d'un territoire vivant, pas comme d'une carte administrative abstraite.
+
+## 3 bis.7 Doctrine démocratique et budgétaire
+
+Le budget primitif 2025 de la CTM a été annoncé à un peu plus de 1,457 milliard d'euros. Ce niveau de budget impose une exigence démocratique forte : chaque citoyen doit pouvoir comprendre les grandes masses financières, les priorités, les contraintes et les résultats.
+
+Doctrine MADA : **un euro public doit produire un résultat public.**
+
+MADA doit défendre :
+
+- publication pédagogique du budget ;
+- distinction claire entre fonctionnement et investissement ;
+- suivi public des grands projets ;
+- publication des votes importants ;
+- évaluation annuelle des engagements ;
+- tableaux de bord citoyens ;
+- méthode de chiffrage transparente ;
+- identification des financeurs avant annonce d'un projet ;
+- refus des projets non financés ou impossibles à suivre.
+
+Cette doctrine ne signifie pas que tout peut être financé immédiatement. Elle signifie que chaque proposition doit être placée sur une trajectoire : urgence, mandat 2028-2032, consolidation 2032-2036, horizon 2040.
+
+## 3 bis.8 Méthode officielle de chiffrage MADA
+
+Avant de publier une mesure chiffrée, MADA doit distinguer :
+
+- coût d'étude ;
+- coût d'investissement ;
+- coût de fonctionnement annuel ;
+- coût de maintenance ;
+- coût humain ;
+- durée du projet ;
+- financeurs possibles ;
+- part CTM ;
+- part État ;
+- part européenne ;
+- part privée ou partenariale ;
+- risques de dépassement ;
+- indicateurs de réussite.
+
+MADA doit utiliser des fourchettes lorsqu'un coût n'est pas stabilisé. Une fourchette assumée est plus crédible qu'un chiffre précis inventé.
+
+## 3 bis.9 Sources institutionnelles de référence
+
+Pour ses chiffres, MADA doit privilégier :
+
+- INSEE : population, emploi, chômage, pauvreté, PIB, structure économique ;
+- IEDOM : conjoncture économique, secteurs, monnaie, finances, entreprises ;
+- CTM : budgets, rapports, politiques territoriales ;
+- Préfecture : État, dotations, sécurité civile, appels à projets ;
+- Cour des comptes et Chambre régionale des comptes : gestion publique, avis budgétaires, recommandations ;
+- ANCT : indicateurs territoriaux, services publics, cohésion territoriale ;
+- Union Européenne : programmes et financements ;
+- ministères et agences publiques : santé, logement, agriculture, énergie, environnement.
+
+## 3 bis.10 Sources utilisées dans cette version
+
+- INSEE, **L'essentiel sur la Martinique**, paru le 6 février 2026 : https://www.insee.fr/fr/statistiques/4482393
+- ANCT, **Fiche territoriale Martinique**, données actualisées en juillet 2026 : https://fiches.incubateur.anct.gouv.fr/fiches/globale/r%C3%A9gion/02/
+- FranceInfo Martinique, **Budget primitif 2025 de la CTM**, publié le 20 décembre 2024 : https://la1ere.franceinfo.fr/martinique/la-collectivite-territoriale-de-martinique-vote-un-budget-de-resistance-pour-2025-1547314.html
+- Préfecture de Martinique, **DETR/DSIL - subventions dédiées aux opérations d'investissement des collectivités territoriales**, mise à jour du 16 décembre 2024 : https://www.martinique.gouv.fr/Publications/Appels-a-projets/DETR-DSIL-Subventions-dediees-aux-operations-d-investissement-des-collectivites-territoriales/%28theme%29/29
+- IEDOM, **Rapport annuel économique de la Martinique 2024**, publié le 26 juin 2025 : https://www.iedom.fr/Rapport-annuel-economique-de-la-Martinique-2024
 
 ---
 
