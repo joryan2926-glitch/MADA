@@ -14980,3 +14980,136 @@ textarea {
     padding: 0.45rem;
   }
 }
+
+
+/* Correctifs de contraste - blocs clairs et sombres */
+main :where(
+  .program-intro-card,
+  .card:not(.dark),
+  .info-panel:not(.dark),
+  .contact-card,
+  .don-panel,
+  .metric-card,
+  .progress-card,
+  .observatory-card,
+  .observatory-focus-card,
+  .water-priority-card,
+  .profile-card,
+  .commune-profile-card,
+  .serment-card,
+  .understand-question-grid article,
+  .understand-hub-grid a,
+  .understand-dossier-block,
+  .citizen-faq-grid article,
+  .sources-public-grid article,
+  .quick-card,
+  .quick-answer,
+  .source-card,
+  .responsibility-card,
+  .budget-card,
+  .timeline-card,
+  .diagnostic-card,
+  .project-card,
+  .axis-card,
+  .method-card,
+  .territory-card,
+  .data-card
+) {
+  color: #062b1b;
+}
+
+main :where(
+  .program-intro-card,
+  .card:not(.dark),
+  .info-panel:not(.dark),
+  .contact-card,
+  .don-panel,
+  .metric-card,
+  .progress-card,
+  .observatory-card,
+  .observatory-focus-card,
+  .water-priority-card,
+  .profile-card,
+  .commune-profile-card,
+  .serment-card,
+  .understand-question-grid article,
+  .understand-hub-grid a,
+  .understand-dossier-block,
+  .citizen-faq-grid article,
+  .sources-public-grid article,
+  .quick-card,
+  .quick-answer,
+  .source-card,
+  .responsibility-card,
+  .budget-card,
+  .timeline-card,
+  .diagnostic-card,
+  .project-card,
+  .axis-card,
+  .method-card,
+  .territory-card,
+  .data-card
+) :where(p, li, span, small, em, dd, td) {
+  color: #27352f;
+}
+
+main :where(
+  .program-intro-card,
+  .card:not(.dark),
+  .info-panel:not(.dark),
+  .contact-card,
+  .don-panel,
+  .metric-card,
+  .progress-card,
+  .observatory-card,
+  .observatory-focus-card,
+  .water-priority-card,
+  .profile-card,
+  .commune-profile-card,
+  .serment-card,
+  .understand-question-grid article,
+  .understand-hub-grid a,
+  .understand-dossier-block,
+  .citizen-faq-grid article,
+  .sources-public-grid article,
+  .quick-card,
+  .quick-answer,
+  .source-card,
+  .responsibility-card,
+  .budget-card,
+  .timeline-card,
+  .diagnostic-card,
+  .project-card,
+  .axis-card,
+  .method-card,
+  .territory-card,
+  .data-card
+) :where(h1, h2, h3, h4, strong, dt, th) {
+  color: #062b1b;
+}
+
+main :where(.section-dark, .hero, .page-hero, .vision-page-hero, .serment-hero, .welcome-page, .welcome-shell, .footer-contact-band, .site-footer) :where(h1, h2, h3, h4, p, li, span, small, strong, em, a) {
+  color: inherit;
+}
+
+main :where(.card.dark, .info-panel.dark, .dark-card, .project-card.dark, .axis-card.dark) :where(h1, h2, h3, h4, p, li, span, small, strong, em, a) {
+  color: #ffffff;
+}
+
+main :where(table, .data-table, .responsibility-table, .budget-table, .comparison-table) :where(th) {
+  color: #062b1b;
+  background: #eef5ef;
+}
+
+main :where(table, .data-table, .responsibility-table, .budget-table, .comparison-table) :where(td) {
+  color: #27352f;
+  background: #ffffff;
+}
+
+main :where(.section-light, .section-soft, .citizen-question-intro) :where(h1, h2, h3, h4, p, li, span, small, strong, em):not(.btn):not(.section-label) {
+  color: #062b1b;
+}
+
+main :where(.section-light, .section-soft, .citizen-question-intro) :where(p, li, small, em) {
+  color: #27352f;
+}
