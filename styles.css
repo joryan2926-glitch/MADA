@@ -15113,3 +15113,191 @@ main :where(.section-light, .section-soft, .citizen-question-intro) :where(h1, h
 main :where(.section-light, .section-soft, .citizen-question-intro) :where(p, li, small, em) {
   color: #27352f;
 }
+
+
+/* Ajustement typographique compact - niveau institutionnel */
+:root {
+  --institutional-copy: clamp(0.84rem, 0.95vw, 0.92rem);
+  --institutional-section-y: clamp(1.9rem, 3.6vw, 3.7rem);
+  --institutional-card-pad: clamp(0.82rem, 1.5vw, 1.15rem);
+}
+
+body {
+  font-size: 14.5px;
+}
+
+.hero h1,
+.page-hero h1,
+.vision-page-hero h1,
+.serment-hero h1,
+.welcome-content h1 {
+  font-size: clamp(1.85rem, 4.35vw, 3.9rem);
+  line-height: 1;
+}
+
+.hero,
+.page-hero,
+.vision-page-hero,
+.serment-hero,
+.understand-dossier-hero {
+  min-height: clamp(310px, 46vh, 490px);
+  padding-top: clamp(4.7rem, 7vw, 6.4rem);
+  padding-bottom: clamp(1.8rem, 4vw, 3.2rem);
+}
+
+.section-heading h2,
+.contact-card h2,
+.don-panel h2,
+.movement-manifesto h2,
+.movement-contract h2,
+.participation-copy h2,
+.dashboard-actions h2,
+.serment-final h2,
+.quick-answer h2,
+.info-panel h2 {
+  font-size: clamp(1.25rem, 2.25vw, 2.05rem);
+  line-height: 1.12;
+}
+
+.card h3,
+.metric-card h3,
+.progress-card h3,
+.commune-profile-card h3,
+.observatory-card h3,
+.profile-card h3,
+.serment-card h3,
+.understand-question-grid h3,
+.understand-hub-grid strong,
+.understand-dossier-block h2,
+.citizen-faq-grid h3,
+.sources-public-grid h3,
+.program-intro-card h3,
+.project-card h3,
+.axis-card h3,
+.method-card h3,
+.territory-card h3,
+.data-card h3 {
+  font-size: clamp(0.92rem, 1.25vw, 1.08rem);
+  line-height: 1.16;
+}
+
+.section-label,
+.card-kicker,
+.kicker,
+.quick-card span,
+.understand-question-grid span,
+.understand-hub-grid span,
+.dossier-block-heading span {
+  font-size: 0.68rem;
+  letter-spacing: 0.06em;
+}
+
+.hero-lead,
+.page-hero p:not(.kicker),
+.vision-page-subtitle,
+.section-heading p:not(.section-label),
+.program-intro-card p,
+.card p,
+.info-panel p,
+.observatory-card p,
+.commune-profile-card p,
+.profile-card p,
+.understand-dossier-block p,
+.understand-dossier-block li,
+.citizen-faq-grid p,
+.sources-public-grid p,
+footer p,
+footer a,
+footer span {
+  font-size: var(--institutional-copy);
+  line-height: 1.48;
+}
+
+.btn,
+button,
+input,
+select,
+textarea,
+.dropdown-menu a,
+.main-nav a,
+.nav-parent {
+  font-size: 0.82rem;
+}
+
+.join-button,
+.mobile-join-link {
+  font-size: 0.78rem;
+}
+
+table,
+.data-table,
+.responsibility-table,
+.budget-table,
+.comparison-table {
+  font-size: clamp(0.72rem, 0.85vw, 0.82rem);
+}
+
+th,
+td {
+  padding: clamp(0.34rem, 0.8vw, 0.55rem);
+}
+
+.metric-card strong,
+.progress-card strong,
+.stat-number,
+.counter,
+.kpi-number {
+  font-size: clamp(1.35rem, 2.8vw, 2.35rem);
+}
+
+@media (max-width: 900px) {
+  body {
+    font-size: 14px;
+  }
+
+  .hero h1,
+  .page-hero h1,
+  .vision-page-hero h1,
+  .serment-hero h1,
+  .welcome-content h1 {
+    font-size: clamp(1.75rem, 7vw, 3.1rem);
+  }
+}
+
+@media (max-width: 640px) {
+  body {
+    font-size: 13.8px;
+  }
+
+  .hero h1,
+  .page-hero h1,
+  .vision-page-hero h1,
+  .serment-hero h1,
+  .welcome-content h1 {
+    font-size: clamp(1.65rem, 8.6vw, 2.55rem);
+  }
+
+  .section-heading h2,
+  .contact-card h2,
+  .don-panel h2,
+  .movement-manifesto h2,
+  .movement-contract h2,
+  .participation-copy h2,
+  .dashboard-actions h2,
+  .serment-final h2,
+  .quick-answer h2,
+  .info-panel h2 {
+    font-size: clamp(1.12rem, 5.4vw, 1.65rem);
+  }
+
+  .btn,
+  button,
+  input,
+  select,
+  textarea,
+  .dropdown-menu a,
+  .main-nav a,
+  .nav-parent {
+    font-size: 0.8rem;
+  }
+}
