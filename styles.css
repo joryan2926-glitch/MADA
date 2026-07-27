@@ -14724,3 +14724,41 @@ main :is(.form-status, [data-admin-status], .message-card, .notice-card, .alert-
     grid-template-columns: 1fr;
   }
 }
+
+/* Sources publiques */
+.sources-public-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1rem;
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+.sources-public-grid article {
+  background: #ffffff;
+  border: 1px solid rgba(0, 43, 24, 0.12);
+  border-radius: 8px;
+  padding: clamp(1rem, 2vw, 1.25rem);
+  box-shadow: 0 12px 28px rgba(0, 34, 20, 0.08);
+}
+
+.sources-public-grid h3 {
+  margin: 0 0 0.55rem;
+  color: #062b1b;
+  font-size: clamp(1.05rem, 1.6vw, 1.22rem);
+}
+
+.sources-public-grid p {
+  margin: 0 0 0.65rem;
+  color: #26352f;
+  line-height: 1.55;
+  font-size: 0.95rem;
+}
+
+.sources-public-grid span {
+  display: block;
+  color: #7a4d0b;
+  font-weight: 750;
+  font-size: 0.88rem;
+  line-height: 1.45;
+}
