@@ -1,4 +1,4 @@
 User-agent: *
-Disallow: /
+Allow: /
 
-# Site temporairement non public pendant finalisation.
+Sitemap: https://www.mada-martinique.fr/sitemap.xml
