@@ -14293,3 +14293,36 @@ main :is(.form-status, [data-admin-status], .message-card, .notice-card, .alert-
     font-size: 0.85rem;
   }
 }
+/* Filière Sargasses Martinique */
+.sargassum-program-card {
+  border-left: 4px solid var(--gold);
+  background: linear-gradient(135deg, rgba(0, 61, 36, 0.06), rgba(241, 176, 0, 0.1));
+}
+
+.sargassum-pillars {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 0.8rem;
+  margin: 1rem 0;
+  max-width: 100%;
+}
+
+.sargassum-pillars article {
+  border: 1px solid rgba(0, 61, 36, 0.14);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.88);
+  padding: 0.9rem;
+  box-sizing: border-box;
+}
+
+.sargassum-pillars strong {
+  display: block;
+  color: var(--deep-green);
+  margin-bottom: 0.35rem;
+}
+
+.sargassum-pillars span {
+  color: var(--ink-muted);
+  font-size: 0.92rem;
+  line-height: 1.45;
+}
