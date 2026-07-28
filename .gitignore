@@ -22,3 +22,9 @@ dist/
 build/
 .npm-cache/
 .npm-cache-vercel/
+
+# wrangler files
+.wrangler
+.dev.vars*
+!.dev.vars.example
+!.env.example
