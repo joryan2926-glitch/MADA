@@ -15301,3 +15301,219 @@ td {
     font-size: 0.8rem;
   }
 }
+
+
+/* Ajustement typographique compact - niveau 2 */
+:root {
+  --institutional-copy: clamp(0.78rem, 0.86vw, 0.86rem);
+  --institutional-section-y: clamp(1.55rem, 3vw, 3rem);
+  --institutional-card-pad: clamp(0.68rem, 1.2vw, 0.95rem);
+}
+
+body {
+  font-size: 13.5px;
+}
+
+.hero,
+.page-hero,
+.vision-page-hero,
+.serment-hero,
+.understand-dossier-hero {
+  min-height: clamp(260px, 38vh, 410px);
+  padding-top: clamp(4rem, 6vw, 5.4rem);
+  padding-bottom: clamp(1.35rem, 3.1vw, 2.55rem);
+}
+
+.hero h1,
+.page-hero h1,
+.vision-page-hero h1,
+.serment-hero h1,
+.welcome-content h1 {
+  font-size: clamp(1.55rem, 3.45vw, 3.05rem);
+  line-height: 1.03;
+  letter-spacing: 0;
+}
+
+.section-heading h2,
+.contact-card h2,
+.don-panel h2,
+.movement-manifesto h2,
+.movement-contract h2,
+.participation-copy h2,
+.dashboard-actions h2,
+.serment-final h2,
+.quick-answer h2,
+.info-panel h2,
+.program-intro-card h2 {
+  font-size: clamp(1.05rem, 1.85vw, 1.72rem);
+  line-height: 1.14;
+}
+
+.card h3,
+.metric-card h3,
+.progress-card h3,
+.commune-profile-card h3,
+.observatory-card h3,
+.profile-card h3,
+.serment-card h3,
+.understand-question-grid h3,
+.understand-hub-grid strong,
+.understand-dossier-block h2,
+.citizen-faq-grid h3,
+.sources-public-grid h3,
+.program-intro-card h3,
+.project-card h3,
+.axis-card h3,
+.method-card h3,
+.territory-card h3,
+.data-card h3 {
+  font-size: clamp(0.84rem, 1.05vw, 0.98rem);
+  line-height: 1.18;
+}
+
+.hero-lead,
+.page-hero p:not(.kicker),
+.vision-page-subtitle,
+.section-heading p:not(.section-label),
+.program-intro-card p,
+.card p,
+.info-panel p,
+.observatory-card p,
+.commune-profile-card p,
+.profile-card p,
+.understand-dossier-block p,
+.understand-dossier-block li,
+.citizen-faq-grid p,
+.sources-public-grid p,
+footer p,
+footer a,
+footer span,
+li,
+p {
+  font-size: var(--institutional-copy);
+  line-height: 1.44;
+}
+
+.section-label,
+.card-kicker,
+.kicker,
+.quick-card span,
+.understand-question-grid span,
+.understand-hub-grid span,
+.dossier-block-heading span {
+  font-size: 0.62rem;
+  letter-spacing: 0.055em;
+}
+
+.btn,
+button,
+input,
+select,
+textarea,
+.dropdown-menu a,
+.main-nav a,
+.nav-parent {
+  font-size: 0.74rem;
+}
+
+.join-button,
+.mobile-join-link {
+  font-size: 0.72rem;
+  padding: 0.62rem 0.85rem;
+}
+
+.site-header {
+  min-height: 68px;
+}
+
+.brand img {
+  max-height: 48px;
+}
+
+table,
+.data-table,
+.responsibility-table,
+.budget-table,
+.comparison-table {
+  font-size: clamp(0.66rem, 0.75vw, 0.76rem);
+}
+
+th,
+td {
+  padding: clamp(0.28rem, 0.62vw, 0.45rem);
+}
+
+.metric-card strong,
+.progress-card strong,
+.stat-number,
+.counter,
+.kpi-number {
+  font-size: clamp(1.05rem, 2.2vw, 1.85rem);
+}
+
+.page-section,
+.section-dark,
+.section-soft,
+.section-light {
+  padding-top: var(--institutional-section-y);
+  padding-bottom: var(--institutional-section-y);
+}
+
+@media (max-width: 900px) {
+  body {
+    font-size: 13.2px;
+  }
+
+  .hero,
+  .page-hero,
+  .vision-page-hero,
+  .serment-hero,
+  .understand-dossier-hero {
+    min-height: clamp(245px, 36vh, 380px);
+  }
+
+  .hero h1,
+  .page-hero h1,
+  .vision-page-hero h1,
+  .serment-hero h1,
+  .welcome-content h1 {
+    font-size: clamp(1.45rem, 5.8vw, 2.55rem);
+  }
+}
+
+@media (max-width: 640px) {
+  body {
+    font-size: 13px;
+  }
+
+  .hero,
+  .page-hero,
+  .vision-page-hero,
+  .serment-hero,
+  .understand-dossier-hero {
+    padding-top: 4.6rem;
+    padding-bottom: 1.7rem;
+  }
+
+  .hero h1,
+  .page-hero h1,
+  .vision-page-hero h1,
+  .serment-hero h1,
+  .welcome-content h1 {
+    font-size: clamp(1.35rem, 7.4vw, 2.15rem);
+  }
+
+  .section-heading h2,
+  .contact-card h2,
+  .don-panel h2,
+  .movement-manifesto h2,
+  .movement-contract h2,
+  .participation-copy h2,
+  .dashboard-actions h2,
+  .serment-final h2,
+  .quick-answer h2,
+  .info-panel h2,
+  .program-intro-card h2 {
+    font-size: clamp(1rem, 4.8vw, 1.42rem);
+  }
+}
